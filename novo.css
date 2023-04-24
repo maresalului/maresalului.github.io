@@ -21,8 +21,11 @@
   .toplink {font-size: 0.8rem !important;}
   img.avatar {margin-left: 5% !important;}
   div.mia {margin-left: 0 !important;}
-  img.logo {height: 1rem !important; width: auto !important;}
+  header.top {background-color: #AA0000 !important;}
+  img.logo {height: 1rem !important; width: auto !important; margin-left: 5%;}
   div.infolado {float: none !important; width: 90% !important; margin-left: 5% !important; margin-right: 5%!important;}
+  .sobre {font-size: 1rem !important;}
+  .info {font-size: 0.75rem !important;}
 }
 
 BODY {
