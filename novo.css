@@ -1,0 +1,602 @@
+/* =====================================*/
+/* Adjustments for Mobile Devices       */
+/* =====================================*/
+
+@media (max-width: 480px) {
+  p { font-size: 12pt; margin-left: 5% !important; margin-right: 5% !important; margin-bottom: 4pt; margin-top: 4pt; line-height: 125%; }
+  p.indentb { margin-left: 6%; margin-right: 1%; }
+  p.quoteb { margin-left: 6%; margin-right: 1%; }
+  p.index { margin-left: 6%; margin-right: 1%; }
+  h1 { font-size: 2.5rem !important; margin-left: 5% !important; margin-right: 5% !important; }
+  h2 { font-size: 16pt; margin-left: 5% !important; margin-right: 5% !important; }
+  h3 { font-size: 14pt; margin-left: 5% !important; margin-right: 5% !important; }
+  h4 { font-size: 13pt; }
+  h5 { margin-left: 1%; }
+  h6 { margin-left: 1%; }
+  img { width: 150px; height: auto; }
+  img.auto {width: auto ; height: auto; }
+  blockquote {margin-left: 1%; }
+  .sugestao {text-align: center; text-indent: 0; display: block !important;}
+  img.larga {width: 300px; height: auto;}
+  .toplink {font-size: 0.8rem !important;}
+  img.avatar {margin-left: 5% !important;}
+  div.mia {margin-left: 0 !important;}
+  img.logo {height: 1rem !important; width: auto !important;}
+  div.infolado {float: none !important; width: 90% !important; margin-left: 5% !important; margin-right: 5%!important;}
+}
+
+BODY {
+ color: #000000;
+ background-color: white;
+ font-family: "Ubuntu variable", Verdana, Arial, Helvetica, sans-serif;
+ margin-left: 0;
+ margin-right: 0;
+ margin-top: 0;
+}
+
+MAIN {
+ color: #000000;
+ background-color: white;
+ margin-top: 0;
+ padding-top: 1.5rem;
+ margin-bottom: 2.5rem;
+}
+
+A.link_ext:link { color: #CC0000; background: transparent; }
+ A.link_ext:visited { color: #CC0000; background: transparent; }
+ A.link_ext:hover { color: #FF3300; background: transparent; }
+ A.link_ext:active { color: #0000FF; background: transparent; }
+ 
+ A:link { color: #000099; background: transparent; }
+ A.guia {text-decoration: none; color: white;}
+ A:visited { color:#333399; background: transparent; }
+ A:hover { color: #FF3300; background: transparent; }
+ A:active { color: #0000FF; background: transparent; }
+
+/* Document Title */
+H1 {
+font-size: 2.9rem;
+font-weight: 100;
+line-height: 3.5rem;
+margin-top: 0;
+margin-bottom: 2rem;
+margin-left: 8%;
+margin-right: 8%;
+}
+header.top{
+display: flex;
+background-color: #222;
+}
+
+header.titulo {
+background-color: #F1F1F1;
+clear: both;
+display: block;
+padding-top: 2.5rem;
+padding-bottom: 2.5rem;
+position: relative;
+width: 100%;
+}
+
+/* Authors' name */
+H2 {
+ color: #06c;
+ text-align: left;
+ font-size: 1.3rem;
+ font-style: normal;
+ font-weight: 300;
+ line-height: 2rem;
+ margin-bottom: -0.05rem !important;
+ margin-top: 0;
+ padding-top: .05rem;
+ margin-left: 8%;
+ margin-right: 8%;
+}
+
+/* Chapter Title + Title date */
+H3 {
+ color: #000033;
+ line-height: 1.5rem;
+ margin-top: 0;
+ text-align: left;
+ max-width: 100rem;
+ padding-top: 0.4rem;
+ font-size: 1rem;
+ font-weight: 400;
+ margin-left: 8%;
+ margin-right: 8%;
+}
+
+/* Section Title */
+H4 {
+ font-size: 15pt;
+ text-align: center;
+}
+
+/* Sub Section (5) */
+H5 {
+ font-size: 14pt;
+ font-weight: bold;
+ text-align: center;
+}
+
+/* Sub Section (6) */
+H6 {
+ font-size: 13pt;
+ font-weight: bold;
+ text-align: center;
+}
+
+.sobre {
+font-size: 1.30rem;
+line-height: 2rem;
+margin-left: 1.25rem;
+padding-top: 0.5rem;
+font-weight: 300;
+}
+
+
+P {
+ font-size: 12pt;
+ text-align: justify;
+ line-height: 1.5em;
+margin-left: 8%;
+margin-right: 8%;
+}
+
+OL, UL, LI {
+ font-size: 12pt;
+ text-indent: 0em;
+ text-align:justify;
+ line-height: 140%;
+ margin-top: 0em;
+ margin-left: 4%;
+
+}
+
+HR {
+ color: #FF0000;
+}
+
+.link {
+ text-align: center;
+ text-indent: 0;
+ font-size: 11pt;
+ font-weight: bold;
+}
+
+img.avatar {
+border-radius: 50%;
+margin-right: 0.75rem;
+margin-left: 8%;
+max-height: 3rem;
+max-width: 3rem;
+width: auto;
+float: left;
+margin-top: 0.5rem;
+}
+
+.toplink {
+ color: white;
+ font-size: 1rem;
+ font-weight: 300;
+ line-height: 1rem;
+ display: flex;
+ flex: 0 0 auto;
+}
+ 
+ .toplink-centro {
+ text-align: center;
+ text-indent: 0;
+ font-size: 8pt;
+ font-weight: bold;
+ margin-top: 0pt;
+ }
+ 
+ .toq-citacao {
+ font-size: 12pt;
+ text-align: justify;
+ text-indent: 0;
+ margin-right: 4%;
+ margin-left: 8%;
+ margin-bottom: 0;
+}
+
+.info {
+margin-bottom: 1.25rem;
+margin-top: 1.25rem;
+margin-left: 1.25rem;
+margin-right: 1.25rem;
+}
+
+.author {
+ font-size: 8pt;
+ text-align: right;
+ font-weight: bold;
+ font-style: italic;
+ margin-right: 1%;
+}
+
+.Indice-Autor {
+ font-size: 26pt;
+ color: #000099;
+ text-align: center;
+ font-weight: bold;
+}
+
+ .tabela_datas {
+ font-size: 8pt;
+ text-align: center;
+ font-weight: normal;
+ }
+ 
+ .datas {
+ font-size: 8pt;
+ text-align: right;
+ font-weight: normal;
+ margin-right: 8%; 
+ }
+
+.centralizado {
+ text-align: center;
+ text-indent: 0;
+}
+
+.estrelavermelha {
+ text-align: center;
+ text-indent: 0;
+ color: #FF0000
+}
+
+p.lapide {
+ font-size: 8pt;
+ text-align: justify;
+ text-indent: 0;
+ margin-top: 2.5em;
+ margin-right: 10%;
+ margin-left: 10%;
+ margin-bottom: 2.5em;
+}
+
+.note {
+ text-indent: 0;
+ margin-bottom: 0;
+}
+
+.quote2 {
+ font-size: 12pt;
+ font-weight: bold;
+ text-align: justify;
+ text-indent: 0;
+ margin-right: 4%;
+ margin-left: 8%;
+ margin-bottom: 0;
+}
+
+
+.quote3 {
+ font-size: 12pt;
+ text-align: justify;
+ text-indent: 0;
+ margin-right: 4%;
+ margin-left: 8%;
+ margin-bottom: 0;
+}
+
+.quote4 {
+	font-size: 12pt;
+	text-align: justify;
+	text-indent: 0;
+	margin-right: 4%;
+	margin-left: 14%;
+	margin-bottom: 0pt; 
+}
+
+.quote5 {
+	font-size: 12pt;
+	text-align: justify;
+	text-indent: 0;
+	margin-right: 4%;
+	margin-left: 38%;
+	margin-bottom: 0pt; 
+}
+
+.quote6 {
+	font-size: 9pt;
+	text-align: justify;
+	text-indent: 0;
+	margin-right: 4%;
+	margin-left: 38%;
+	margin-bottom: 0pt; 
+}	
+
+.date {
+ text-align: right;
+ text-indent: 0;
+}
+
+	
+P.toc {
+	FONT-WEIGHT: bold; 
+	MARGIN-LEFT: 10%; 
+	TEXT-INDENT: 0px; 
+	TEXT-ALIGN: left
+}
+
+P.toc1 {
+	FONT-WEIGHT: bold;
+	margin-top: 0pt;
+ 	margin-bottom: 0pt; 
+	MARGIN-LEFT: 14%; 
+	TEXT-INDENT: 0px; 
+	TEXT-ALIGN: left
+}
+
+P.toc2 {
+	font-size: 10pt;
+	FONT-WEIGHT: bold; 
+	MARGIN-LEFT: 18%;
+	margin-top: 0pt;
+ 	margin-bottom: 0pt; 
+	TEXT-INDENT: 0px; 
+	TEXT-ALIGN: justify
+}
+
+P.toc3 {
+	font-size: 10pt;
+	MARGIN-LEFT: 22%;
+	margin-top: 0pt;
+ 	margin-bottom: 0pt; 
+	TEXT-INDENT: 0px; 
+	TEXT-ALIGN: left
+}
+
+
+P.toc4 {
+	font-size: 10pt;
+	MARGIN-LEFT: 26%;
+	margin-top: 0pt;
+ 	margin-bottom: 0pt; 
+	TEXT-INDENT: 0px; 
+	TEXT-ALIGN: left
+}
+
+P.toc5 {
+	font-size: 10pt;
+	MARGIN-LEFT: 30%;
+	margin-top: 0pt;
+ 	margin-bottom: 0pt; 
+	TEXT-INDENT: 0px; 
+	TEXT-ALIGN: left
+}
+	
+.H1reduzido {font-size: large
+}
+
+
+.Nome-obra {
+	 FONT-SIZE: 12pt; FONT-FAMILY: "Ubuntu variable", Verdana, Arial, Helvetica, sans-serif;
+}
+
+.titulo-capitulo {
+ font-size: 13pt;
+ margin-top: 0pt;
+ margin-bottom: 0pt; 
+ text-align: center;
+ FONT-WEIGHT: bold;
+}
+
+.titulo-cima-linha {
+ font-size: 14pt;
+ text-align: center;
+ margin-top: 0pt;
+ margin-bottom: 0pt;
+ FONT-WEIGHT: bold;
+ line-height: 120%;
+}
+
+.texto-sem-espaco {
+ text-indent: 2em;
+ font-size: 12pt;
+ text-align: justify;
+ margin-top: 0pt;
+ margin-bottom: 0pt;
+ line-height: 120%;
+}
+
+.titulo7 {
+ font-size: 12pt;
+ text-align: center;
+}
+
+HR.linha-preta {
+ color: #000000;
+}
+
+.bordafoto {
+display: block;
+margin-left: auto;
+margin-right: auto;
+padding: 7px;
+text-align: center;
+background-color: #ffffff;
+border: 1px solid #dbdbdb;
+}
+
+
+.bordalogotipo {
+display: block;
+margin-left: auto;
+margin-right: auto;
+padding: 7px;
+text-align: center;
+background-color: #f5f5f5;
+
+}
+
+
+ /* formatação de tabelas */ 
+
+.tabela-obras {
+
+padding: 10px;
+margin-left:auto;
+margin-right:auto;
+border-spacing: 10px;
+padding-bottom: 4px;
+padding-left: 4px;
+padding-right: 4px;
+padding-top: 4px;
+
+}
+
+.tabela-lado-direito {
+
+padding: 10px;
+float: right;
+border-spacing: 10px;
+padding-bottom: 4px;
+padding-left: 4px;
+padding-right: 4px;
+padding-top: 4px;
+
+}
+
+.tabela-lado-esquerdo {
+
+padding: 10px;
+float: left;
+border-spacing: 10px;
+padding-bottom: 4px;
+padding-left: 4px;
+padding-right: 4px;
+padding-top: 4px;
+
+}
+
+.tabela-centro-com-Borda {
+    padding: 10px;
+	margin-left:auto;
+	margin-right:auto;
+	border-collapse: collapse; 
+	
+}
+ 
+.tabela-centro-com-Borda td {
+    border: 1px solid black;
+	border-spacing: 10px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+}
+ 
+.tabela-centro-com-Borda th {
+    border: 1px solid black;
+	border-spacing: 10px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+}	
+
+.linha-centralizada {
+    text-align: center;
+}
+
+.linha-direita {
+	text-align:right
+}
+
+.linha-justificada {
+	text-align:justify
+}
+
+ /* fim formatação tabelas*/ 
+ 
+
+
+.bordafototexto {
+display: block;
+margin-left: 10px;
+margin-right: 10px;
+margin-bottom:10px;
+margin-top:10px;
+padding: 7px;
+background-color: #ffffff;
+border: 1px solid #dbdbdb;
+}
+
+
+.celula-cinza {
+background-color:#999999;
+text-align:center;
+font-size: 11pt;
+font-weight: bold;
+}
+
+.fotodireita {
+display: block;
+margin-left: 15px;
+margin-right: 0px;
+padding: 7px;
+border: 2px solid #dbdbdb;
+float:right
+}
+
+
+@font-face {
+font-family:"Ubuntu variable";
+font-stretch:100%;
+font-style:normal;
+font-weight:100 800;
+src:url("regular.woff2") format("woff2-variations")
+}
+
+@font-face {
+font-family:"Ubuntu variable";
+font-stretch:100%;
+font-style:italic;
+font-weight:100 800;
+src:url("italico.woff2") format("woff2-variations")
+}
+
+
+.sugestao {display: none;} 
+
+div.mia {
+background-color: #AA0000;
+margin-left: 8%;
+padding-left: 1rem;
+padding-top: 1rem;
+padding-bottom: 1rem;
+padding-right: 1rem;
+margin-bottom: 0;
+margin-right: 0;
+margin-top: 0;
+}
+
+img.logo {
+height: 1.25rem;
+width: auto;
+}
+
+div.infolado {
+ display:      block;
+ float:        right;
+ width:        25%;
+ clear:        none;
+ margin-top:     1rem;
+ margin-bottom:  2rem;
+ margin-left:    2rem;
+ margin-right:   8%;
+ border: 1.5px solid #d9d9d9; 
+ text-align: left;
+}
+
+footer {
+background-color: #F1F1F1;
+display: block;
+padding-top: 1.5rem;
+padding-bottom: 3rem;
+}
