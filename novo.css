@@ -1,31 +1,32 @@
-/* =====================================*/
-/* Adjustments for Mobile Devices       */
-/* =====================================*/
-
 @media (max-width: 480px) {
+  header.top {background-color: #AA0000 !important;}
+
   p { font-size: 12pt; margin-left: 5% !important; margin-right: 5% !important; margin-bottom: 4pt; margin-top: 4pt; line-height: 125%; }
   p.indentb { margin-left: 6%; margin-right: 1%; }
   p.quoteb { margin-left: 6%; margin-right: 1%; }
   p.index { margin-left: 6%; margin-right: 1%; }
+
   h1 { font-size: 2.5rem !important; margin-left: 5% !important; margin-right: 5% !important; }
   h2 { font-size: 16pt; margin-left: 5% !important; margin-right: 5% !important; }
   h3 { font-size: 14pt; margin-left: 5% !important; margin-right: 5% !important; }
   h4 { font-size: 13pt; }
   h5 { margin-left: 1%; }
   h6 { margin-left: 1%; }
+
   img { width: 150px; height: auto; }
   img.auto {width: auto ; height: auto; }
-  blockquote {margin-left: 1%; }
-  .sugestao {text-align: center; text-indent: 0; display: block !important;}
-  img.larga {width: 300px; height: auto;}
-  .toplink {font-size: 0.8rem !important;}
   img.avatar {margin-left: 5% !important;}
-  div.mia {margin-left: 0 !important;}
-  header.top {background-color: #AA0000 !important;}
-  img.logo {height: 1rem !important; width: auto !important; margin-left: 5%;}
-  div.infolado {float: none !important; width: 90% !important; margin-left: 5% !important; margin-right: 5%!important;}
+  img.larga {width: 300px; height: auto;}
+  img.logo {height: 16px !important; width: auto !important; margin-left: 5%;}
+  blockquote {margin-left: 1%; }
+
+  .sugestao {text-align: center; text-indent: 0; display: block !important;}
+  .toplink {font-size: 0.8rem !important;}
   .sobre {font-size: 1rem !important;}
   .info {font-size: 0.75rem !important;}
+  
+  div.mia {margin-left: 0 !important;}
+  div.infolado {float: none !important; width: 90% !important; margin-left: 5% !important; margin-right: 5%!important;}
 }
 
 BODY {
@@ -45,16 +46,38 @@ MAIN {
  margin-bottom: 2.5rem;
 }
 
+/*	Logotipo	*/
+
+div.mia {
+background-color: #AA0000;
+margin-left: 8%;
+padding-left: 16px;
+padding-top: 16px;
+padding-bottom: 16px;
+padding-right: 16px;
+margin-bottom: 0;
+margin-right: 0;
+margin-top: 0;
+}
+
+img.logo {
+height: 20px;
+width: auto;
+}
+
+/*	Logotipo	*/
+
+ A:link { color: #06c; background: transparent; text-decoration: none;}
+ A:visited { color:#333399; background: transparent; text-decoration: none; }
+ A:hover { color: #FF3300; background: transparent; text-decoration-line: underline; }
+ A:active { color: #0000FF; background: transparent; }
+
+
 A.link_ext:link { color: #CC0000; background: transparent; }
  A.link_ext:visited { color: #CC0000; background: transparent; }
  A.link_ext:hover { color: #FF3300; background: transparent; }
  A.link_ext:active { color: #0000FF; background: transparent; }
  
- A:link { color: #000099; background: transparent; }
- A.guia {text-decoration: none; color: white;}
- A:visited { color:#333399; background: transparent; }
- A:hover { color: #FF3300; background: transparent; }
- A:active { color: #0000FF; background: transparent; }
 
 /* Document Title */
 H1 {
@@ -69,6 +92,7 @@ margin-right: 8%;
 header.top{
 display: flex;
 background-color: #222;
+height: 52px;
 }
 
 header.titulo {
@@ -566,23 +590,6 @@ src:url("italico.woff2") format("woff2-variations")
 
 
 .sugestao {display: none;} 
-
-div.mia {
-background-color: #AA0000;
-margin-left: 8%;
-padding-left: 1rem;
-padding-top: 1rem;
-padding-bottom: 1rem;
-padding-right: 1rem;
-margin-bottom: 0;
-margin-right: 0;
-margin-top: 0;
-}
-
-img.logo {
-height: 1.25rem;
-width: auto;
-}
 
 div.infolado {
  display:      block;
