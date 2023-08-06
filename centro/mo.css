@@ -1,0 +1,77 @@
+html {
+ height: 100%;
+}
+
+body {
+ height: 100%;
+ background-image: url('Segovia.jpg');
+ background-size: cover;
+ background-attachment: fixed;
+ background-repeat: no-repeat;
+ background-position: center;
+ margin: 0;
+ padding: 0;
+ font-family: "Jost", Verdana, sans-serif;
+}
+
+nav {margin-right: 40px;}
+
+header {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ background-color: white;
+ margin: 0;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+main {
+ height: 100%;
+ padding: 0;
+ margin: 10%;
+ display: flex;
+ align-items: center;
+ justify-content: left;
+}
+
+footer {
+ background-color: black;
+ bottom: 0;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ color: white;
+ font-size: 0.8rem;
+ margin: 0;
+ width: 100%;
+}
+
+a {text-decoration: none; color: black;}
+a:hover {text-decoration: underline;}
+footer a {color: white;}
+
+b {font-weight: 600;}
+
+ul {list-style-type: none; padding: 0;}
+li {font-size: 0.8rem;}
+
+table {
+margin: 0;
+width: 100%;
+}
+
+select {
+ background-clip: padding-box;
+ background-color: white;
+ border: 1px solid black;
+ font-family: inherit;
+ font-size: 0.9rem;
+ padding: 0.4rem;
+ width: 100%;
+}
+
+.conteiner {padding: 7% 10% 7% 10%;}
+.foto {color: gray; margin: 0 70px 0 0; font-size: 0.5rem}
+.rightlista {}
+.logo {
+
+text-transform: uppercase; line-height: 1.10; margin: 0; font-weight: 400;}
