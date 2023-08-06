@@ -58,7 +58,7 @@ footer a {color: white;}
 b {font-weight: 600;}
 
 ul {list-style-type: none; margin-right: 70px; padding: 0; position: relative; display: flex; gap: 50px;}
-li {font-size: 0.8rem;}
+li {font-size: 0.9rem;}
 footer ul {margin: 0 0 0 70px;}
 footer nav.lista {display: none;}
 
