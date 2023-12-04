@@ -81,7 +81,7 @@ A.link_ext:link { color: #CC0000; background: transparent; }
 
 /* Document Title */
 H1 {
-font-size: 2.9rem;
+font-size: 2.875rem;
 font-weight: 100;
 line-height: 3.5rem;
 margin-top: 0;
@@ -155,7 +155,7 @@ H6 {
 }
 
 .sobre {
-font-size: 1.30rem;
+font-size: 1.25rem;
 line-height: 2rem;
 margin-left: 1.25rem;
 padding-top: 0.5rem;
