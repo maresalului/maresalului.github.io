@@ -80,30 +80,14 @@ A.link_ext:link { color: #CC0000; background: transparent; }
  
 
 /* Document Title */
-H1 {
-font-size: 2.875rem;
-font-weight: 100;
-line-height: 3.5rem;
-margin-top: 0;
-margin-bottom: 2rem;
-margin-left: 8%;
-margin-right: 8%;
-}
+H1 {font-size: 2rem;font-weight: 600;line-height: 135%;margin: 0 0 2rem 0;}
 header.top{
 display: flex;
 background-color: #222;
 height: 52px;
 }
 
-header.titulo {
-background-color: #F1F1F1;
-clear: both;
-display: block;
-padding-top: 2.5rem;
-padding-bottom: 2.5rem;
-position: relative;
-width: 100%;
-}
+header.titulo {background-color: #F1F1F1;clear: both;display: block;padding: 2.5rem 8%;position: relative;}
 
 /* Authors' name */
 H2 {
@@ -166,9 +150,10 @@ font-weight: 300;
 P {
  font-size: 12pt;
  text-align: justify;
- line-height: 1.5em;
-margin-left: 8%;
-margin-right: 8%;
+ line-height: 150%;
+ margin-left: 8%;
+ margin-right: 8%;
+ margin-bottom: 1.5rem;
 }
 
 OL, UL, LI {
@@ -192,16 +177,7 @@ HR {
  font-weight: bold;
 }
 
-img.avatar {
-border-radius: 50%;
-margin-right: 0.75rem;
-margin-left: 8%;
-max-height: 3rem;
-max-width: 3rem;
-width: auto;
-float: left;
-margin-top: 0.5rem;
-}
+img.avatar {border-radius: 50%;margin: 0 0.75rem 0 0;max-height: 3rem;max-width: 3rem;width: auto;float: left;margin-top: 0.5rem;}
 
 .toplink {
  color: white;
