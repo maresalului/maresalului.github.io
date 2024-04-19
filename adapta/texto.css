@@ -279,6 +279,6 @@ aside.sobre p.info {font-size: 0.875rem; margin: .25rem 0; text-indent: 0; text-
 footer {border-top: 2px solid black; padding-block: 2rem 1.5rem;}
 
 @media (max-width: 480px) {
-aside.sobre {float: none; width: auto; margin: 2rem;}
-aside.sobre img.capadelivro, aside.sobre img.capadelivro.grande {margin: 0.5rem 0 1rem 1rem; width: 30%; float: right;}
+aside.sobre {float: none; width: auto; margin: 2rem 0;}
+aside.sobre img.capadelivro, aside.sobre img.capadelivro.grande {margin: 0.5rem 0 1rem 1rem; width: 25%; float: right;}
 }
