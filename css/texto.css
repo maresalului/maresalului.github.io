@@ -1,0 +1,284 @@
+:root {
+font-size: 12pt;
+color-scheme: light dark;
+}
+
+body {
+background-color: whitesmoke;
+color: black;
+font-family: Verdana, "Open Sans", system-ui, sans-serif;
+margin: 0 auto;
+padding-bottom: .5rem;
+width: 100%;
+}
+
+/* Principais */
+
+p {font-size: 1rem; line-height: 1.75em; text-align: justify; text-indent: 0; margin: 1.5rem 0;}
+
+h1, .subtitulo, h2, h3, h4, h5, h6 {font-weight: bold; text-align: center; margin: 2.875rem 1.5rem;}
+
+h1 {font-size: 1.875rem; color: #000099; line-height: 1.25em; margin-top: 3rem; margin-bottom: 1.625rem;}
+.subtitulo {font-size: 0.9375rem; text-indent: 0; margin-top: 0.875rem; margin-bottom: 2rem;}
+h2 {font-size: 1.4375rem; color: #000033; margin-top: 1.5rem; margin-bottom: 1.5rem;}
+h3 {font-size: 1.375rem; color: #000033; margin-top: 1.5rem;}
+h4 {font-size: 1.25rem;}
+h5 {font-size: 1.175rem;}
+h6 {font-size: 1.1rem;}
+
+.H1reduzido, h1 sup {font-size: 0.9375rem;}
+
+/* Estrutura */
+
+.toplink, nav {font-size: 0.675rem; font-weight: bold; margin: 0 auto 1.25rem auto; text-align: center; text-indent: 0; line-height: 1.5em; display: block; height: 52px; background-color: #222; vertical-align: middle;}
+.info {font-size: 0.8325rem; font-weight: normal; line-height: 1rem; margin: 0; text-indent: 0;}
+.link {font-size: 0.915rem; font-weight: bold; text-align: center; text-indent: 0;}
+.note {font-size: 0.875rem; margin-top: 1.25rem; margin-bottom: 1.25rem; text-align: justify; text-indent: 0; line-height: 1.625em;}
+.datas {font-size: 0.675rem; font-weight: normal; text-align: right;}
+
+/* Links */
+
+a, a.link_ext {background: transparent;}
+
+a:link {color: #000099;}
+a:hover {color: #ff3300;}
+a:active {color: #0000ff;}
+a:visited {color:#333399;}
+
+a.link_ext:hover {color: #ff3300;}
+a.link_ext:active {color: #0000ff;}
+a.link_ext:link, a.link_ext:visited {color: #cc0000;}
+
+main a {text-decoration: none;}
+body.indice main a {text-decoration: revert;}
+
+/* Elementos */
+
+nav, header, main, footer {display: block;}
+cite {display: inline; font-style: italic;}
+
+hr {border: 1px solid #a90000;}
+ hr.transparente {border: 0 solid transparent; color: transparent; margin: 1.25rem; padding: 0.75rem;}
+
+ol, ul {font-size: 1rem; line-height: 1.675rem; margin-left: 2rem; margin-top: 0; text-align: justify; text-indent: 0;}
+ li {font-size: inherit; margin-top; 1.25rem; margin-bottom: 1.25rem;}
+
+  .editorial {font-size: 0.75rem; text-align: justify; text-indent: 0; margin: 1rem 0 1rem 40%;}
+ p.editorial {margin-bottom: 2rem;}
+hr.editorial {margin-top: 2rem; margin-bottom: 2rem;}
+
+.centralizado, .linha-centralizada {text-align: center; text-indent: 0;}
+.esquerda, .linha-esquerda {text-align: left;}
+.direita, .linha-direita {text-align: right;}
+.justificada, .linha-justificada {text-align: justify;}
+
+small {font-size: 0.675rem;}
+
+aside.versoes {display: block; float: right; max-width: 25%; margin: 0 0 1rem 2rem;}
+aside.versoes p {font-size: 0.875rem; text-indent: 0; margin-top: 0; margin-bottom: 0.5rem; line-height: 1rem; text-align: left;}
+aside.versoes img {height: 16px; width: auto; vertical-align: text-bottom; padding-right: 6px; image-rendering: pixelated;}
+
+img.versoes {height: 16px; image-rendering: pixelated; padding-right: 6px; vertical-align: text-bottom; width: auto;}
+img.licenca {height: 15px; image-rendering: pixelated; vertical-align: text-bottom; width: 80px;}
+
+.estrelavermelha {color: #a90000; text-align: center; text-indent: 0;}
+
+blockquote {margin: 1.25rem 10%;}
+ blockquote p {text-indent: 0;}
+ blockquote.abnt {margin: 1.25rem 0 1.25rem 40%;}
+ blockquote.trad {margin: 1.25rem 10%;}
+
+.fotodireita {border: 2px solid #dbdbdb; display: block; float: right; margin-left: 1rem; margin-right: 0px; padding: 7px;}
+
+div.colab {display: block; margin: 2rem auto; text-align: center;}
+div.colab > p {margin: 0 0 .25rem 0; text-align: center; text-indent: 0; font-size: .75rem; font-weight: bold;}
+img.colab {margin: 0; width: auto; height: auto; max-width: 40vw; max-height: 100px;}
+img.colab.alta {max-height: 200px;}
+
+/* Suporte estendido e obsolescencias */
+
+.quote2, .quote3, .quote4, .quote5, .quote6, .quote-apresentacao {font-size: 1rem; margin-bottom: 0; margin-right: 4%; text-align: justify; text-indent: 0;}
+
+.quote2 {margin-left: 8%; font-weight: bold;}
+.quote3 {margin-left: 8%;}
+.quote4 {margin-left: 14%;}
+.quote5 {margin-left: 38%;}
+.quote6 {margin-left: 38%; font-size: 0.75rem;}
+.quote-apresentacao {margin-left: 10%; font-size: 0.75rem; text-indent: 4rem;}
+
+.date {text-align: right; text-indent: 0;}
+.tabela_datas {font-size: 0.675rem; text-align: center; font-weight: normal;}
+.toplink-centro {text-align: center; text-indent: 0; font-size: 0.675rem; font-weight: bold; margin-top: 0;}
+.toq-citacao {font-size: 1rem; text-align: justify; text-indent: 0; margin-right: 4%; margin-left: 8%; margin-bottom: 0;} /* possivelmente obsoleto */
+.titulo-capitulo {font-size: 1.1rem; font-weight: bold; margin-bottom: 0; margin-top: 0; text-align: center;}
+.titulo-cima-linha {font-size: 1.165rem; text-align: center; margin-top: 0; margin-bottom: 0; font-weight: bold; line-height: 1.25em;}
+.titulo7 {font-size: 1rem; text-align: center;}
+
+hr.linha-preta {border: 1px solid black;}
+
+.bordalogotipo {display: block; margin-left: auto; margin-right: auto; padding: 7px; text-align: center; background-color: #f5f5f5;}
+.Nome-obra {font-size: 1rem;} /* possivelmente obsoleto */
+
+.heading {margin: 2rem;} /* tipo img */
+.section-img {text-align: center;} /* tipo div */
+
+	/* substituidas em autor.css */
+
+	.bordafoto {background-color: white; border: 1px solid #dbdbdb; display: block; margin-left: auto; margin-right: auto; padding: 7px; text-align: center;}
+	.tabela-obras {border-spacing: 10px; margin-left: auto; margin-right: auto; padding: 4px;}
+	.author {font-size: 0.675rem; text-align: right; font-weight: bold; font-style: italic; margin-right: 1%;}
+	.sugestao {display: none;}
+	.texto-sem-espaco {font-size: 1rem; line-height: 1.25em; margin-bottom: 0; margin-top: 0; text-align: justify; text-indent: 2rem;}
+	p.lapide {font-size: 0.675rem; text-align: justify; text-indent: 0; margin-top: 2.5rem; margin-right: 10%; margin-left: 10%; margin-bottom: 2.5rem;}
+
+/* Indices de livros */
+
+.capadelivro {margin: 5px 0 25px 25px; width: 10%; height: auto; float: right; max-width: fit-content; clear: right;}
+.capadelivro.grande {width: 15%;}
+
+.toc, .toc1, .toc2, .toc3, .toc4, .toc5 {text-indent: 0; text-align: left; margin-left: 5%;}
+.toc, .toc1, .toc2 {font-weight: bold;}
+.toc2, .toc3, .toc4, .toc5 {font-size: 0.8325rem;}
+
+ .toc {padding-left: 0; margin-top: 1rem; margin-bottom: 1rem;}
+.toc1 {padding-left: 3%; margin-top: 0; margin-bottom: 0;}
+.toc2 {padding-left: 6%; margin-top: 0; margin-bottom: 0;}
+.toc3 {padding-left: 9%; margin-top: 0; margin-bottom: 0;}
+.toc4 {padding-left: 12%; margin-top: 0; margin-bottom: 0;}
+.toc5 {padding-left: 15%; margin-top: 0; margin-bottom: 0;}
+
+/* Tabelas */
+
+
+.tabela-lado-esquerdo {border-spacing: 10px; float: left; padding: 4px;}
+.tabela-lado-direito {border-spacing: 10px; float: right; padding: 4px;}
+
+.tabela-centro-com-Borda {border-collapse: collapse; margin-left: auto; margin-right: auto; padding: 10px;}
+.tabela-centro-com-Borda td {border-spacing: 10px; border: 1px solid; padding: 4px;}
+.tabela-centro-com-Borda th {border-spacing: 10px; border: 1px solid; padding: 4px;}
+
+.celula-cinza {background-color: #999999; font-size: 0.915rem; font-weight: bold; text-align: center;}
+
+.bordafototexto {background-color: white; border: 1px solid #dbdbdb; display: block; margin: 10px; padding: 7px;}
+
+
+/* Espacamentos */
+
+h1 ~ hr:first-of-type {margin-top: 3rem;}						/* Primeira barra */
+h1 ~ hr:nth-of-type(2) {margin-bottom: 3rem;}						/* Segunda barra */
+p.link ~ hr {margin-top: 2rem;}								/* Ultima barra */
+a[href^="#n"] > sup, a[href^="#tr"] > sup {font-size: 0.75rem; font-weight: bold;}	/* Realca links para notas de rodape */
+p.editorial:has(+ p.editorial) {margin-bottom: 1rem;}					/* Espacamento entre paragrafos de um editorial */
+h1:has(+ .subtitulo) {margin-bottom: 0.875rem;}						/* Diminui o espaco em titulos com subtitulo */
+p.link:has(a[href="#topp"]) {margin-top: 2rem; margin-bottom: 2rem; clear: both;}	/* Link para o inicio da pagina*/
+
+/* Capitulos */
+
+body.capitulo h1 {font-size: 1.25rem; margin-top: 3rem; margin-bottom: 2rem; color: black;}
+body.capitulo .subtitulo {font-size: 1.1rem;}
+body.capitulo h1:has(+ .subtitulo) {margin-bottom: 0.875rem;}
+body.capitulo h2 {font-size: 1.175rem; margin-top: 2rem; margin-bottom: 3rem; color: black;}
+body.capitulo h3 {display: none;}							/* nao usar datas nas paginas de capitulo */
+body.capitulo h4 {font-size: 1.1rem; margin-top: 0; margin-bottom: 0;}
+body.capitulo .interna {display: flex; align-items: center; justify-content: space-between; margin-top: 2rem; margin-bottom: 2rem; width: 100%;}
+body.capitulo .anterior::before {content: "<<< ";}
+body.capitulo .proximo::after {content: " >>>";}
+
+/* Celular */
+
+@media (max-width: 480px) {
+p {margin-left: 1%; margin-right: 1%;}
+img {max-width: 150px; height: auto;}
+img.auto {width: auto; height: auto;}
+img.colab {max-width: 200px;}
+img.larga {max-width: 300px; height: auto;}
+ol, ul {margin-left: 1%; margin-right: 1%;}
+.toc, .toc1, .toc2, .toc3, .toc4, .toc5 {margin-left: 4%;}
+.capadelivro, .capadelivro.grande {width: 20%;}
+.abnt {margin-left: 20%;}
+}
+
+/* Impressao */
+
+@media print {
+body {background-color: white; line-height: 1.5em;}
+
+body, p, span, ul, ol, li, .quote2, .quote3, .quote4, .toq-citacao, .Nome-obra, .texto-sem-espaco, .titulo7 {font-size: 10pt;}
+
+h1 {font-size: 18pt;}
+h2 {font-size: 16pt;}
+h3 {font-size: 14pt;}
+h4 {font-size: 13pt;}
+h5 {font-size: 12pt;}
+h6 {font-size: 11pt;}
+
+.subtitulo {font-size: 11pt;}
+
+.info {font-size: 9pt;}
+
+nav, body > p.toplink:first-of-type {display: none;}	/* Esconde os links no topo */
+a[href="#topp"] {display: none;}			/* Esconde o link para o inicio da pagina */
+a:link {text-decoration: none; color: black;}
+a:visited {text-decoration: none; color: black;}
+a[href^="#r"], a[href^="#n"], a[href^="#tr"] {font-weight: bold; color: #000099;}
+}
+
+/* MRX.css v. 2.3.0 */
+
+/*
+@media screen and (prefers-color-scheme: dark) {
+ body {background-color: #111111; color: #fafafa;}
+ h1, h2, h3, h4, h5, h6 {color: #fafafa;}
+ a.link_ext:link {color: #d66a6a;}
+ a.link_ext:hover {color: #c74545;}
+ a.link_ext:active {color: #d66a6a;}
+ a.link_ext:visited {color: #d66a6a;}
+ a:link {color: #83a1cd;}
+ a:hover {color: #4281a4;}
+ a:active {color: #83a1cd;}
+ a:visited {color: #83a1cd;}
+ img.logo, img.inversivel, img.logotopo {filter: invert(1);}
+ img[src$="audio.png"] {filter: invert(1)}
+ img.bordafoto {background-color: #151515; border-color: black;}
+ img {filter: brightness(0.8) contrast(1.2);}
+ hr.linha-preta {color: #fafafa;}
+ .bordalogotipo {background-color: #141414;}
+ th {border-color: #fafafa;}
+ tr {border-color: #353535;}
+ .celula-cinza {background-color: dimgrey;}
+ body.capitulo h1 {color: #fafafa;}
+ body.capitulo h2 {color: #fafafa;}
+}*/
+
+main {background: white; padding-block: 1.5rem;}
+
+body > * {max-width: 956px; margin-inline: auto; padding-inline: max(calc((100vw - 956px) / 2), 5vw);}
+
+body > nav:first-of-type {display: flex; gap: 2rem; align-items: center;}
+
+nav a {margin: 0; display: inline-block; color: white !important; text-decoration: none;}
+nav a#topp {text-transform: uppercase; background-color: #a90000;}
+nav img {width: auto; height: 20px;}
+nav img.logo {width: auto; height: 20px; padding: 14px;}
+
+a#li-bi {content: url(bib.svg);width: 22px;height: auto;display: block;}
+a#li-no {content: url(nov.svg);width: 22px;height: auto;display: block;}
+
+header * {text-align: left; margin-inline: 0;}
+header h1 {color: black; margin-bottom: 2rem;}
+header img {clear: none; float: left; margin-right: 1rem; height: 56px; width: auto;}
+header h2 {font-size: 1.25rem; margin-bottom: 0.75rem; color: #06c;}
+header a:link, a:visited {text-decoration: none; color: inherit;}
+header h3 {font-size: 1rem; font-weight: normal; margin-top: 0.75rem;}
+
+aside.sobre {display: block; float: right; width: 25%; clear: both; margin: 1.5rem 0 2rem 2rem; border: 1.5px solid #d9d9d9; text-align: left; background-color: transparent; padding: 1.25rem;}
+
+aside.sobre img.capadelivro, aside.sobre img.capadelivro.grande {margin: 1rem 0; width: 50%; float: none;}
+aside.sobre p.info {font-size: 0.875rem; margin: .25rem 0; text-indent: 0; text-align: left;}
+
+footer {border-top: 2px solid black; padding-block: 2rem 1.5rem;}
+
+@media (max-width: 480px) {
+aside.sobre {float: none; width: auto; margin: 2rem 0;}
+aside.sobre img.capadelivro, aside.sobre img.capadelivro.grande {margin: 0.5rem 0 1rem 1rem; width: 25%; float: right;}
+}
