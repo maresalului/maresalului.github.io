@@ -252,7 +252,7 @@ a[href^="#r"], a[href^="#n"], a[href^="#tr"] {font-weight: bold; color: #000099;
 
 main {background: white; padding-block: 1.5rem;}
 
-body > * {max-width: 956px; margin-inline: auto; padding-inline: max(calc((100vw - 956px) / 2), 1.5rem);}
+body > * {max-width: 956px; margin-inline: auto; padding-inline: max(calc((100vw - 956px) / 2), 5vw);}
 
 body > nav:first-of-type {display: flex; gap: 2rem; align-items: center;}
 
