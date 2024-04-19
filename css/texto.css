@@ -278,6 +278,10 @@ aside.sobre p.info {font-size: 0.875rem; margin: .25rem 0; text-indent: 0; text-
 
 footer {border-top: 2px solid black; padding-block: 2rem 1.5rem;}
 
+div.colab {display: block; margin: 0.5rem 0 1rem 2rem; text-align: center; float: right; max-width: 100px;}
+div.colab > p {margin: 0 0 .375rem 0; text-align: right; text-indent: 0; font-size: .75rem; font-weight: bold; line-height: 1.2em;}
+img.colab {margin: 0; width: auto; height: auto; max-width: 100px; max-height: 50px;}
+
 @media (max-width: 480px) {
 aside.sobre {float: none; width: auto; margin: 2rem 0;}
 aside.sobre img.capadelivro, aside.sobre img.capadelivro.grande {margin: 0.5rem 0 1rem 1rem; width: 25%; float: right;}
