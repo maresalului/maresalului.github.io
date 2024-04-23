@@ -251,7 +251,6 @@ a[href^="#r"], a[href^="#n"], a[href^="#tr"] {font-weight: bold; color: #000099;
 }*/
 
 main {background: white; padding-block: 1.5rem;}
-main * + aside.sobre {margin-top: 0;}
 
 body > * {max-width: 956px; margin-inline: auto; padding-inline: max(calc((100vw - 956px) / 2), 5vw);}
 
@@ -273,7 +272,8 @@ header h2 {font-size: 1.25rem; margin-bottom: 0.75rem; color: #06c;}
 header a:link, a:visited {text-decoration: none; color: inherit;}
 header h3 {font-size: 1rem; font-weight: normal; margin-top: 0.75rem; margin-bottom: 0;}
 
-aside.sobre {display: block; float: right; width: 25%; clear: both; margin: 1.5rem 0 2rem 2rem; border: 1.5px solid #d9d9d9; text-align: left; background-color: transparent; padding: 1.25rem;}
+aside.sobre {display: block; float: right; width: 25%; clear: both; margin: 1.625rem 0 2rem 2rem; border: 1.5px solid #d9d9d9; text-align: left; background-color: transparent; padding: 1.25rem;}
+main * + aside.sobre {margin-top: 0.125rem;}
 
 aside.sobre img.capadelivro, aside.sobre img.capadelivro.grande {margin: 1rem 0; width: 50%; float: none;}
 aside.sobre p.info {font-size: 0.875rem; margin: .25rem 0; text-indent: 0; text-align: left;}
