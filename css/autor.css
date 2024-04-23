@@ -1,0 +1,100 @@
+body {
+background-color: whitesmoke;
+color: black;
+font-family: Verdana, "Open Sans", sans-serif, Helvetica, Arial;
+font-size: 12pt;
+margin: 0 4%;
+padding-bottom: 0.5rem;
+}
+
+p {font-size: 12pt; text-indent: 2rem; text-align: justify; line-height: 1.25em;}
+
+a {background: transparent;}
+a:link {color: #000099; text-decoration: none;}
+a:hover {color: #ff3300; text-decoration-line: underline;}
+a:active {color: #0000ff;}
+a:visited {color:#333399;}
+
+/* Ordem */
+
+.toplink-centro, nav {text-align: center; text-indent: 0; font-size: 8pt; font-weight: bold; margin: 0 0 0.75rem 0; line-height: 1.25em;}
+img.logo {display: block; margin-left: auto; margin-right: auto;}
+h1 {font-size: 26pt; color: #000099; text-align: center; font-weight: bold; margin: 0;}
+.bordafoto, img.retrato {display: block; margin: 0 auto; padding: 7px; text-align: center; background-color: white; border: 1px solid #dbdbdb;}
+.data {text-align: center; text-indent: 0; font-size: 11pt; font-weight: bold; margin-bottom: 1rem;}
+.sugestao {display: none;} 
+p.lapide {font-size: 8pt; text-align: justify; text-indent: 0; margin: 1.625rem 10%; line-height: 1.4em;}
+ blockquote {margin: 1.625rem 10%;}
+ blockquote p {font-size: 8pt; text-align: justify; text-indent: 0; font-weight: bold; line-height: 1.4em;}
+ blockquote cite {font-style: normal; font-weight: normal !important;}
+.texto-sem-espaco {font-size: 1rem; text-indent: 2rem; text-align: justify; margin-top: 0; margin-bottom: 0;}
+ p.biografia {font-size: 1rem; text-indent: 2rem; text-align: justify; margin: 0;}
+.author, p.fonte {font-size: 8pt; text-align: right; font-weight: bold; font-style: italic; margin-right: 0;}
+
+hr {color: #ff0000;}
+
+.datas {font-size: 8pt; text-align: right; font-weight: normal;}
+ small {font-size: 0.675rem; vertical-align: middle;}
+
+/* Legado */
+
+.link {text-align: center; text-indent: 0; font-size: 11pt; font-weight: bold;}
+.H1reduzido {font-size: large;}
+.tabela_datas {font-size: 8pt; text-align: center; font-weight: normal;}
+.centralizado {text-align: center; text-indent: 0;}
+
+/* Tabela */ 
+
+table, .tabela-obras {margin: 2.25rem auto 4rem auto; line-height: 1.375rem; border-collapse: collapse;}
+
+tr {border-bottom: 1px solid #d9d9d9;}
+tr:first-child th {padding-top: 0;}
+th {text-align: left; padding-top: 3.625rem; padding-bottom: 0.625rem; border-bottom: 2px solid black;}
+
+td:first-child {white-space: nowrap;}
+td:nth-child(2n) {padding-left: 2rem;}
+td:last-of-type {padding-top: 0.625rem; padding-bottom: 0.625rem;}
+
+img.versoes {height: 16px; width: auto; vertical-align: text-bottom; image-rendering: pixelated;}
+td > a:nth-of-type(2) > img {margin-left: 10px;}
+
+.rec {font-variant: normal !important; white-space: normal !important;}
+
+
+/* Celular */
+
+@media (max-width: 480px) {
+p {margin-left: 1%; margin-right: 1%;}
+.rec {padding-top: 1rem; padding-bottom: 1rem;}
+.sugestao {text-align: center; text-indent: 0; display: block; margin-bottom: 1rem;}
+img {width: 150px; height: auto;}
+img.logo {width: 300px; height: auto;}
+td:last-of-type {padding-bottom: 1rem; padding-top: 1rem;}
+}
+
+/* autor.css v. 1.1.4 */
+
+/*
+@media screen and (prefers-color-scheme: dark) {
+ body {background-color: #111111; color: #fafafa;}
+ h1, h2, h3, h4, h5, h6 {color: #fafafa;}
+ a.link_ext:link {color: #d66a6a;}
+ a.link_ext:hover {color: #c74545;}
+ a.link_ext:active {color: #d66a6a;}
+ a.link_ext:visited {color: #d66a6a;}
+ a:link {color: #83a1cd;}
+ a:hover {color: #4281a4;}
+ a:active {color: #83a1cd;}
+ a:visited {color: #83a1cd;}
+ img.logo, img.inversivel, img.logotopo {filter: invert(1);}
+ img[src$="audio.png"] {filter: invert(1)}
+ img.bordafoto {background-color: #3f3f3f; border-color: dimgrey;}
+ img {filter: brightness(0.8) contrast(1.2);}
+ hr.linha-preta {color: #fafafa;}
+ .bordalogotipo {background-color: #141414;}
+ th {border-color: #fafafa;}
+ tr {border-color: #353535;}
+ .celula-cinza {background-color: dimgrey;}
+ body.capitulo h1 {color: #fafafa;}
+ body.capitulo h2 {color: #fafafa;}
+}*/
