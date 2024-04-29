@@ -259,7 +259,7 @@ body > nav:first-of-type {display: flex; gap: 2rem; align-items: center; margin-
 nav a {margin: 0; display: inline-block; color: white !important; text-decoration: none;}
 nav a#topp {text-transform: uppercase; background-color: #a90000;}
 nav img {width: auto; height: 20px;}
-nav img.logo {width: auto; height: 20px; padding: 14px;}
+nav img.logo {width: auto; height: 26px; padding: 11px;}
 
 a#li-bi {content: url(bib.svg);width: 22px;height: auto;display: block;}
 a#li-no {content: url(nov.svg);width: 22px;height: auto;display: block;}
