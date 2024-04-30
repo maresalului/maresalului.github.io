@@ -59,6 +59,7 @@ cite {display: inline; font-style: italic;}
 
 hr {border: 1px solid #a90000;}
  hr.transparente {border: 0 solid transparent; color: transparent; margin: 1.25rem; padding: 0.75rem;}
+ hr.estrelavermelha:before {content: '★ ★ ★';}
 
 ol, ul {font-size: 1rem; line-height: 1.675rem; margin-left: 2rem; margin-top: 0; text-align: justify; text-indent: 0;}
  li {font-size: inherit; margin-top; 1.25rem; margin-bottom: 1.25rem;}
@@ -136,19 +137,27 @@ hr.linha-preta {border: 1px solid black;}
 .capadelivro {margin: 5px 0 25px 25px; width: 10%; height: auto; float: right; max-width: fit-content; clear: right;}
 .capadelivro.grande {width: 15%;}
 
-.toc, .toc1, .toc2, .toc3, .toc4, .toc5 {text-indent: 0; text-align: left; margin-left: 5%;}
+.toc, .toc1, .toc2, .toc3, .toc4, .toc5 {text-indent: 0; text-align: left; margin-left: 0;}
 .toc, .toc1, .toc2 {font-weight: bold;}
 .toc2, .toc3, .toc4, .toc5 {font-size: 0.8325rem;}
 
  .toc {padding-left: 0; margin-top: 1rem; margin-bottom: 1rem;}
-.toc1 {padding-left: 3%; margin-top: 0; margin-bottom: 0;}
-.toc2 {padding-left: 6%; margin-top: 0; margin-bottom: 0;}
-.toc3 {padding-left: 9%; margin-top: 0; margin-bottom: 0;}
-.toc4 {padding-left: 12%; margin-top: 0; margin-bottom: 0;}
-.toc5 {padding-left: 15%; margin-top: 0; margin-bottom: 0;}
+.toc1 {padding-left: 1.5rem; margin-top: 0; margin-bottom: 0;}
+.toc2 {padding-left: 3rem; margin-top: 0; margin-bottom: 0;}
+.toc3 {padding-left: 4.5rem; margin-top: 0; margin-bottom: 0;}
+.toc4 {padding-left: 6rem; margin-top: 0; margin-bottom: 0;}
+.toc5 {padding-left: 7.5rem; margin-top: 0; margin-bottom: 0;}
 
 /* Tabelas */
 
+table {margin: 1rem auto auto auto; border-collapse: collapse; border: none;}
+th {border: none; font-weight: bold; text-align: center; padding: 0.5rem 1rem; background-color: black; color: white;}
+td {border: none; black; padding: 0.5rem 1rem;}
+th[scope="row"] {background: lightgrey; color: black; text-align: left;}
+
+table.comborda, table.comborda th, table.comborda td {border: 1px solid black;}
+
+	/* obsoleto */
 
 .tabela-lado-esquerdo {border-spacing: 10px; float: left; padding: 4px;}
 .tabela-lado-direito {border-spacing: 10px; float: right; padding: 4px;}
@@ -160,6 +169,9 @@ hr.linha-preta {border: 1px solid black;}
 .celula-cinza {background-color: #999999; font-size: 0.915rem; font-weight: bold; text-align: center;}
 
 .bordafototexto {background-color: white; border: 1px solid #dbdbdb; display: block; margin: 10px; padding: 7px;}
+
+td.toplink, td.link {padding: 0.125rem; margin-bottom: 0.125rem;} /* corrige erros de espaçamento */
+
 
 
 /* Espacamentos */
@@ -193,9 +205,16 @@ img.auto {width: auto; height: auto;}
 img.colab {max-width: 200px;}
 img.larga {max-width: 300px; height: auto;}
 ol, ul {margin-left: 1%; margin-right: 1%;}
-.toc, .toc1, .toc2, .toc3, .toc4, .toc5 {margin-left: 4%;}
+.toc, .toc1, .toc2, .toc3, .toc4, .toc5 {margin-left: 1%;}
+ .toc {padding-left: 0;}
+.toc1 {padding-left: 3%;}
+.toc2 {padding-left: 6%;}
+.toc3 {padding-left: 9%;}
+.toc4 {padding-left: 12%;}
+.toc5 {padding-left: 15%;}
 .capadelivro, .capadelivro.grande {width: 20%;}
 .abnt {margin-left: 20%;}
+th, td {padding: 0.5rem;}
 }
 
 /* Impressao */
@@ -267,7 +286,7 @@ a#li-no {content: url(nov.svg);width: 22px;height: auto;display: block;}
 header {margin-top: 3rem; margin-bottom: 3rem;}
 header * {text-align: left; margin-inline: 0;}
 header h1 {color: black; margin-bottom: 2rem; margin-top: 0;}
-header .subtitulo {text-align: left;}
+header .subtitulo {text-align: left; margin-left: 0;}
 header img {clear: none; float: left; margin-right: 1rem; height: 56px; width: auto;}
 header h2 {font-size: 1.25rem; margin-bottom: 0.75rem; color: #06c;}
 header a:link, a:visited {text-decoration: none; color: inherit;}
