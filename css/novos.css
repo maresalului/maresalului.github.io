@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+.espacocima {margin-top: 2rem;}
+.espacobaixo {margin-bottom: 2rem;}
+
+aside.versoes {
+display: block;
+float:right;
+max-width: 25%;
+margin: 0 0 1rem 2rem;
+}
+
+aside.versoes p {
+font-size: 0.875rem;
+text-indent: 0;
+margin-top: 0;
+margin-bottom: 0.5rem;
+line-height: normal;
+text-align: left;
+}
+
+aside.versoes img {
+height: 16px;
+width: auto;
+vertical-align: text-bottom;
+padding-right: 6px;
+image-rendering: pixelated;
+}
+
+p.info img.versoes {padding-right: 0;}
+
+p.info.formatos:before {content: 'Também disponível em: '; font-weight: bold; display: inline;}
+p.info.formatos a[href*="audiolivros.htm"]::before {content: url(../img/audio.png);}
+p.info.formatos a[href$=".pdf"]::before {content: url(../img/pdf.png);}
+p.info.formatos a[href$=".epub"]::before {content: url(../img/epub.png);}
+
+p.info.formatos a[href*="audiolivros.htm"]::before, 
+p.info.formatos a[href$=".pdf"]::before, 
+p.info.formatos a[href$=".epub"]::before 
+{display: inline-block; vertical-align: text-bottom; image-rendering: pixelated; width: auto; height: 16px; padding-left: 2px; padding-right: 5px;}
+
+@media (max-width: 480px) {}
