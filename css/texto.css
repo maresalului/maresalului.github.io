@@ -267,6 +267,7 @@ a#li-no {content: url(nov.svg);width: 22px;height: auto;display: block;}
 header {margin-top: 3rem; margin-bottom: 3rem;}
 header * {text-align: left; margin-inline: 0;}
 header h1 {color: black; margin-bottom: 2rem; margin-top: 0;}
+header .subtitulo {text-align: left;}
 header img {clear: none; float: left; margin-right: 1rem; height: 56px; width: auto;}
 header h2 {font-size: 1.25rem; margin-bottom: 0.75rem; color: #06c;}
 header a:link, a:visited {text-decoration: none; color: inherit;}
