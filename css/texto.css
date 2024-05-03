@@ -271,7 +271,7 @@ nav img.logo {width: auto; height: 24px; padding: 12px 16px;}
 a#li-bi {content: url(bib.svg);width: 22px;height: auto;display: block;}
 a#li-no {content: url(nov.svg);width: 22px;height: auto;display: block;}
 
-header {margin-top: 3rem; margin-bottom: 3rem;}
+header {padding-block: 3rem;}
 header * {text-align: left; margin-inline: 0;}
 header h1 {color: black; margin-bottom: 2rem; margin-top: 0;}
 header .subtitulo {text-align: left; margin-left: 0;}
