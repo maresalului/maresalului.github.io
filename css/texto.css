@@ -285,8 +285,9 @@ body.capitulo .subtitulo {font-size: 1rem;}
 body.capitulo h1:has(+ .subtitulo) {margin-bottom: 0.875rem;}
 body.capitulo h4 {font-size: 1.25rem; margin-top: 3rem; margin-bottom: 3rem;}
 body.capitulo .interna {display: flex; align-items: center; justify-content: space-between; margin-top: 2rem; margin-bottom: 2rem; width: 100%; background-color: transparent; font-size: 0.675rem; color: black;}
-body.capitulo .anterior::before {content: "<<< ";}
-body.capitulo .proximo::after {content: " >>>";}
+body.capitulo .anterior::before, body.capitulo .proximo::before {display: block; margin-bottom: 1em; font-size: 1rem; font-weight: normal;}
+body.capitulo .anterior::before {content: "< "; text-align: left;}
+body.capitulo .proximo::before {content: " >"; text-align: right;}
 
 aside.sobre {display: block; margin: 2rem 0; border: 1.5px solid #d9d9d9; text-align: left; background-color: whitesmoke; padding: 1.25rem;}
 main * + aside.sobre {margin-top: 0.125rem;}
