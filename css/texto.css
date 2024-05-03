@@ -40,17 +40,13 @@ h6 {font-size: 1.1rem;}
 
 a, a.link_ext {background: transparent;}
 
-a:link {color: #000099;}
-a:hover {color: #ff3300;}
-a:active {color: #0000ff;}
-a:visited {color:#333399;}
+a:link {color: #000099; text-decoration: none;}
+a:active {color: #0000ff; text-decoration: none;}
 
-a.link_ext:hover {color: #ff3300;}
+a.link_ext:link {color: #cc0000;}
 a.link_ext:active {color: #0000ff;}
-a.link_ext:link, a.link_ext:visited {color: #cc0000;}
 
-main a {text-decoration: none;}
-body.indice main a {text-decoration: revert;}
+body.indice main a {text-decoration: underline;}
 
 /* Elementos */
 
