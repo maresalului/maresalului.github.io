@@ -184,18 +184,6 @@ p.editorial:has(+ p.editorial) {margin-bottom: 1rem;}					/* Espacamento entre p
 h1:has(+ .subtitulo) {margin-bottom: 0.875rem;}						/* Diminui o espaco em titulos com subtitulo */
 p.link:has(a[href="#topp"]) {margin-top: 2rem; margin-bottom: 2rem; clear: both;}	/* Link para o inicio da pagina*/
 
-/* Capitulos */
-
-body.capitulo h1 {font-size: 1.25rem; margin-top: 3rem; margin-bottom: 2rem; color: black;}
-body.capitulo .subtitulo {font-size: 1.1rem;}
-body.capitulo h1:has(+ .subtitulo) {margin-bottom: 0.875rem;}
-body.capitulo h2 {font-size: 1.175rem; margin-top: 2rem; margin-bottom: 3rem; color: black;}
-body.capitulo h3 {display: none;}							/* nao usar datas nas paginas de capitulo */
-body.capitulo h4 {font-size: 1.1rem; margin-top: 0; margin-bottom: 0;}
-body.capitulo .interna {display: flex; align-items: center; justify-content: space-between; margin-top: 2rem; margin-bottom: 2rem; width: 100%;}
-body.capitulo .anterior::before {content: "<<< ";}
-body.capitulo .proximo::after {content: " >>>";}
-
 /* Celular */
 
 @media (max-width: 480px) {
