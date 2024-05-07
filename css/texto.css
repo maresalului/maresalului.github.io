@@ -89,7 +89,7 @@ blockquote {margin: 1.25rem 10%;}
 
 div.colab {display: block; margin: 2rem auto; text-align: center;}
 div.colab > p {margin: 0 0 .25rem 0; text-align: center; text-indent: 0; font-size: .75rem; font-weight: bold;}
-img.colab {margin: 0; width: auto; height: auto; max-width: 40vw; max-height: 100px;}
+img.colab {margin: 0; width: auto; height: auto; max-width: 35%; max-height: 100px;}
 img.colab.alta {max-height: 200px;}
 
 /* Suporte estendido e obsolescencias */
