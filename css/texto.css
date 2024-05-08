@@ -40,8 +40,8 @@ h6 {font-size: 1.1rem;}
 
 a, a.link_ext {background: transparent;}
 
-a:link {color: #000099; text-decoration: none;}
-a:active {color: #0000ff; text-decoration: none;}
+a:link, a:visited, a:hover {color: #000099; text-decoration: none;}
+a:active {color: #06c; text-decoration: none;}
 
 a.link_ext:link {color: #cc0000;}
 a.link_ext:active {color: #0000ff;}
