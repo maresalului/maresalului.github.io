@@ -9,7 +9,7 @@ font-family: Verdana, "Open Sans", system-ui, sans-serif;
 margin: 0; 
 width: 100%;} 
 
-body > * {max-width: 956px; margin-left: auto; margin-right: auto; padding-left: max(calc((100vw - 956px) / 2), 5vw); padding-right: max(calc((100vw - 956px) / 2), 5vw);}
+body > * {max-width: 956px; margin-left: auto; margin-right: auto; padding-left: 10%; padding-right: 10%; padding-left: max(calc((100vw - 956px) / 2), 5vw); padding-right: max(calc((100vw - 956px) / 2), 5vw);}
 
 														/*
 -----
@@ -274,7 +274,7 @@ a[href^="#r"], a[href^="#n"], a[href^="#tr"] {font-weight: bold; color: #000099;
 main {background: white; padding-block: 1.5rem;}
 
 
-header {padding-block: 3rem;}
+header {padding-top: 3rem; padding-bottom: 3rem;}
 header * {text-align: left; margin-inline: 0;}
 header h1 {color: black; margin-bottom: 2rem; margin-top: 0;}
 header .subtitulo {text-align: left; margin-left: 0;}
