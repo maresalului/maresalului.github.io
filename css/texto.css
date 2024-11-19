@@ -17,12 +17,12 @@ body > * {max-width: 850px; margin-left: auto; margin-right: auto; padding-left:
 -----														*/
 
 nav {line-height: 1rem; margin: 0; text-indent: 0;}
-body > nav {align-items: center; background-color: #222; display: flex; gap: 2rem; height: 52px;}
+body > nav {align-items: center; background-color: #222; display: flex; gap: 2rem; height: 50px;}
 
 body > nav a {margin: 0; display: block; text-decoration: none;}
-nav img.logo {background-color: #a90000; display: block; width: auto; height: 24px; padding: 12px 16px 16px 16px;}
-a#li-bi {content: url(bib.svg); width: 22px; height: auto;}
-a#li-no {content: url(nov.svg); width: 22px; height: auto;}
+nav img.logo {background-color: #a90000; display: block; width: auto; height: 24px; padding: 12px 16px 14px 16px;}
+a#li-bi {content: url(bib.svg); width: 21px; height: auto;}
+a#li-no {content: url(nov.svg); width: 21px; height: auto;}
 
 														/*
 --------
@@ -277,11 +277,11 @@ main p {font-size: 13pt; line-height: 1.625em;}
 
 header {padding-top: 3rem; padding-bottom: 3rem;}
 header * {text-align: left; margin-inline: 0;}
-header h1 {color: black; margin-bottom: 2rem; margin-top: 0;}
+header h1 {color: black; margin-bottom: 2rem; margin-top: 0; font-size: 20pt;}
 header .subtitulo {text-align: left; margin-left: 0;}
-header img {clear: none; float: left; margin-right: 1rem; height: 56px; width: auto;}
-header h2 {font-size: 1.25rem; margin-bottom: 0.75rem; color: #06c;}
-header h3 {font-size: 1rem; font-weight: normal; margin-top: 0.75rem; margin-bottom: 0;}
+header img {clear: none; float: left; margin-right: 1rem; height: 54px; width: auto;}
+header h2 {font-size: 14pt; margin-bottom: 0.75rem; color: #06c;}
+header h3 {font-size: 12pt; font-weight: normal; margin-top: 0.75rem; margin-bottom: 0; text-transform: lowercase;}
 
 body.capitulo h1 {font-size: 1.375rem;}
 body.capitulo .subtitulo {font-size: 1rem;}
@@ -292,11 +292,11 @@ body.capitulo .anterior::before, body.capitulo .proximo::before {display: block;
 body.capitulo .anterior::before {content: "< "; text-align: left;}
 body.capitulo .proximo::before {content: " >"; text-align: right;}
 
-aside.sobre {display: block; margin: 2rem 0; border: 1.5px solid #d9d9d9; text-align: left; background-color: whitesmoke; padding: 1.25rem;}
+aside.sobre {display: block; margin: 2rem 0; border: 1.5px solid #d9d9d9; text-align: left; background-color: whitesmoke; padding: 1.25rem; font-family: Verdana;}
 main * + aside.sobre {margin-top: 0.125rem;}
 
 aside.sobre img.capadelivro, aside.sobre img.capadelivro.grande {margin: 0.5rem 0 1rem 1rem; width: 25%; float: right;}
-aside.sobre p.info {font-size: 0.875rem; margin: .25rem 0; text-indent: 0; text-align: left;}
+aside.sobre .info {font-size: 10pt; margin: .25rem 0; text-indent: 0; text-align: left;}
 
 footer {border-top: 2px solid black; padding-block: 2rem 1.5rem;}
 
