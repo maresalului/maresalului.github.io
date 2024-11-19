@@ -274,8 +274,11 @@ a[href^="#r"], a[href^="#n"], a[href^="#tr"] {font-weight: bold; color: #000099;
 main {background: white; padding-block: 1.5rem; font-family: Alegreya;}
 main p {font-size: 13pt; line-height: 1.625em;}
 
+main h4 {font-size: 16pt;}
+main h5 {font-size: 15pt;}
+main h6 {font-size: 14pt;}
 
-header {padding-top: 3rem; padding-bottom: 3rem;}
+header {padding-top: 46px; padding-bottom: 50px; padding-block: 3rem;}
 header * {text-align: left; margin-inline: 0;}
 header h1 {color: black; margin-bottom: 2rem; margin-top: 0; font-size: 20pt;}
 header .subtitulo {text-align: left; margin-left: 0;}
