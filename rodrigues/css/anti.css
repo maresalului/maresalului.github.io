@@ -1,7 +1,0 @@
-blockquote p {font-style: italic; font-weight: bold;}
-blockquote em {font-style: normal; font-weight: normal;}
-blockquote.abnt p:first-child {margin-bottom: 0.875rem;}
-blockquote.abnt p:nth-of-type(2) {margin-top: 0.875rem; font-style: normal; font-weight: normal;}
-
-ol li {font-weight: bold;}
-ol li::marker {content: counter(list-item) " – "; font-weight: bold;}
