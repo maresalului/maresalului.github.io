@@ -72,6 +72,7 @@ cite {display: inline; font-style: italic;}
 hr {border: 1px solid #a90000;}
  hr.transparente {border: 0 solid transparent; color: transparent; margin: 1.25rem; padding: 0.75rem;}
  hr.estrelavermelha:before {content: '★ ★ ★';}
+ hr.estrelavermelha {border: none;}
 
 ol, ul {font-size: 1rem; line-height: 1.675rem; margin-left: 2rem; margin-top: 0; text-align: justify; text-indent: 0;}
  li {font-size: inherit; margin-top; 1.25rem; margin-bottom: 1.25rem;}
