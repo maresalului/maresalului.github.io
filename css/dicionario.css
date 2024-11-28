@@ -1,0 +1,204 @@
+/* CSS Document */
+
+body {
+	margin: 0px;
+	}
+
+.site {
+	border-right: 1px solid #D4D4D4;
+	border-left: 1px solid #D4D4D4;
+	border-bottom: 1px solid #D4D4D4;		
+	}
+
+.borda {
+	border: 1px solid #DFDFDF;
+	}
+	
+.noborda {
+	border: 1px solid #FFF;
+	}
+
+.borda_logo td {
+	padding: 2px;
+	border-top: #D4D4D4 1px solid; 
+	border-bottom: #D4D4D4 1px solid;
+	}
+	
+.borda_logo a {
+	color: #000066;
+	 
+	text-decoration: none;
+	}
+	
+	
+.borda_logo a:visited {
+	color: #000066;
+	 
+	text-decoration: none;
+	}
+
+
+.borda_logo td a:hover {
+	color: #000066; 
+	text-decoration: none;
+	background: #F5F5F5;
+	display: block;
+	}	
+	
+.borda_semana td {
+	border-right: #F5F5F5 1px solid; 
+	border-top: #F5F5F5 1px solid; 
+	border-left: #F5F5F5 1px solid; 
+	border-bottom: #F5F5F5 1px solid
+	}	
+	
+td {
+	font-size: 11px;
+	 
+	color: #000000; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	text-decoration: none;
+	}
+
+td.texto {
+	font-size: 11px; 
+	color: #000000;
+	 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	text-decoration: none;
+	}
+
+td.notas {
+	font-size: 12px; 
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding: 3px; 
+	}
+
+td.notas2 {
+	font-size: 9px; 
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border-right: 1px solid #f5f5f5;
+	border-left: 1px solid #f5f5f5;
+	padding: 3px; 
+	}	
+	
+a {
+	color: #336699;
+	font-weight: bold;
+	text-decoration: none;
+	}
+	
+a:visited { 
+	color: #003366;
+	
+	text-decoration: none;
+	}	
+
+a:hover {
+	color: #003366;
+	
+	text-decoration: underline;
+	}
+	
+INPUT, SELECT, FILE, TEXTAREA {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	}
+	
+div#menu {
+	position:relative; 
+	width: 145px; 
+	font: bold 10px Verdana, Serif; 
+	}
+
+div#menu a {
+	width: 145px; 
+	display: block; 
+	 
+	padding: 6px 5px; 
+	border-bottom: 1px solid #D4D4D4;
+	text-decoration: none; 
+	color: #336699; 
+	background: #ffffff;
+	}
+
+div#menu a:hover {
+	color: #003399; 
+	text-decoration: none;
+	border-bottom:1px solid #6699CC;		
+	}
+	
+.fd a {
+	color: #000000;
+	 
+	text-decoration: none;
+	}
+
+.fd a:visited {
+	color: #000000;
+	text-decoration: none;
+	}
+
+
+.fd a:hover {
+	color: #003366;
+	 
+	text-decoration: underline;
+	}
+	
+.capap {
+	border-top: 1px solid #F5F5F5; 
+	border-left: 1px solid #F5F5F5; 
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	}	
+	
+.Nome-Letra {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; text-align:center; text-align:center;
+	 
+	}
+
+.Nome-obra {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #336699; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	 
+	}
+	
+.Dic-texto {
+	FONT-SIZE: 10pt; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; text-align:justify;
+	 
+	}
+
+.Dic-titulo {
+	FONT-WEIGHT: bold; FONT-SIZE: 11pt; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	 
+	}
+
+SPAN.date {
+	FONT-SIZE: 8pt; COLOR: #336699; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	 
+	}
+
+.Nome-autor {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #000066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;  
+	}	
+/* =====================================*/
+/* Adjustments for Mobile Devices       */
+/* =====================================*/
+
+@media (max-width: 480px) {
+  p { font-size: 12pt; margin-left: 1%; margin-right: 1%; margin-bottom: 4pt; margin-top: 4pt; line-height: 125%; }
+  p.indentb { margin-left: 6%; margin-right: 1%; }
+  p.quoteb { margin-left: 6%; margin-right: 1%; }
+  p.index { margin-left: 6%; margin-right: 1%; }
+  h1 { font-size: 18pt; margin-left: 1%; margin-right: 1%; }
+  h2 { font-size: 16pt; margin-left: 1%; margin-right: 1%; }
+  h3 { font-size: 14pt; margin-left: 1%; margin-right: 1%; }
+  h4 { font-size: 13pt; }
+  h5 { margin-left: 1%; }
+  h6 { margin-left: 1%; }
+  img.auto {width: auto ; height: auto; }
+  blockquote {margin-left: 1%; }
+  img.Nome-Letra {width: 11px !important;}
+}

@@ -313,12 +313,14 @@ p.info img.versoes {padding-right: 0;}
 p.info.formatos:before {content: 'Também disponível em: '; font-weight: bold; display: inline;}
 p.info.formatos a[href*="audiolivros.htm"]::before {content: url(../img/audio.png);}
 p.info.formatos a[href*=".mp3"]::before {content: url(../img/audio.png);}
+p.info.formatos a.audio::before {content: url(../img/audio.png);}
 p.info.formatos a[href$=".pdf"]::before {content: url(../img/pdf.png);}
 p.info.formatos a[href$=".epub"]::before {content: url(../img/epub.png);}
 
 p.info.formatos a[href*="audiolivros.htm"]::before, 
 p.info.formatos a[href$=".pdf"]::before, 
 p.info.formatos a[href$=".mp3"]::before, 
+p.info.formatos a.audio::before, 
 p.info.formatos a[href$=".epub"]::before 
 {display: inline-block; vertical-align: text-bottom; image-rendering: pixelated; width: auto; height: 16px; padding-left: 2px; padding-right: 5px;}
 
@@ -330,6 +332,7 @@ body.capitulo .anterior::before {content: "<<< ";}
 body.capitulo .proximo::after {content: " >>>";}
 
 img.imprensa {display: block; width: 20%; height: auto; margin: 2rem; max-width: 200px;}
+img.imprensa.longo {width: 25%; max-width: 212px;}
  @media screen and (max-width: 480px) {img.imprensa {width: 30%;}}
 
 /* footer .datas:first-of-type {margin-top: 3rem;} */
