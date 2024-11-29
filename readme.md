@@ -12,3 +12,5 @@ testes
 
 3. como última tarefa, verificar "novocap"s, grepar "mrxRestrutura" e verificar:
 althusser/1967/humanismo/index.htm
+
+4. pesquisar por tags em <title>s
