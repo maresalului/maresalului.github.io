@@ -1,3 +1,74 @@
+scriptencoding utf-8
+
+"	Plugins
+call plug#begin()
+
+" List your plugins here
+Plug 'skywind3000/vim-quickui'
+Plug 'junegunn/goyo.vim'
+Plug 'tpope/vim-surround'
+Plug 'ryanoasis/vim-devicons'
+Plug 'preservim/nerdtree'
+
+call plug#end()
+
+"	Pessoal
+
+set linebreak
+hi FoldColumn ctermbg=none
+highlight EndOfBuffer ctermfg=16
+set spelllang=pt-BR
+set laststatus=1
+au FileType htm,html,htmldjango setlocal indentexpr=
+
+iabbrev linkexterno class="link_ext" target="_blank"
+cabbrev linkexterno href="https://" class="link_ext" target="_blank"
+
+map <F1> :call MANDA()<cr>
+map m<F1> :call MANDAcap()<cr>
+map <F2> @t
+map <F3> @a
+map <F4> :Encapar<cr>
+map <F5> :call quickui#listbox#open(content, opts)<cr>
+map <F6> :call IgnorarH3()<cr>
+map m<F6> :%s/<h3>.*<\/header><\/h3>/\r<\/header>/<cr>
+map <F8> ysiw<
+noremap <F10> :call Notar()<CR>
+noremap <F11> :NERDTreeToggle<CR>
+map <F12> :call quickui#menu#open()<cr>
+map m<F12> :source ~/.config/nvim/nvimrc<cr>
+
+map ma :call ArrumaGeral()<cr>
+map md :call Descodificar()<cr>
+
+map ú :call CorrigeUltimaAlteracao()<cr>
+map Ú :call CorrigeUltimaAlteracao()<cr>
+map Q :call Quotar()<cr>
+map F :call Figurar()<cr>
+map ś :%s/<br>\n<span class="H1reduzido">\(.*\)<\/span><\/h1>/<\/h1>\r<p class="subtitulo">\1<\/p>/<cr>
+map ń :call NavegaSemCap()<cr>
+map ç :%s/<p class="toplink"><a href=".*\.htm">continua.*<\/a><\/p>//c<cr>
+map é :call EspecialEspecifico()<cr>
+
+
+"""					       '''					^__^
+""						''					(oo)\_______
+"				MARXISTS	 '					(__)\       )\/\
+""						''					    ||----w |
+"""					       '''					    ||     ||
+
+
+command InserirBase call Modelar()
+
+command Notar :call Notar()
+
+command Descodificar :call Descodificar()
+
+
+""			''
+"		Funções	 '	🪄
+""			''
+
 function! Notar()
   let curline = getline('.')
   let col = col('.')
@@ -185,12 +256,34 @@ function! ArrumaGeral()
  %s/@marxistsDATA/\=strftime("%d\/%m\/%Y")/ge
  %s/strong>/b>/ge
  %s/em>/i>/ge
+ %s/<h\([0-9]\) align="center"/<h\1/ge
+ %s/<h\([0-9]\) align="left"/<h\1/ge
+ %s/<p align="left"/<p/ge
+ %s/<p class="titulo-cima-linha">. . .<\/p>/<hr class="estrelavermelha">/ge
  %s/-&nbsp;/- /ge
  %s/&nbsp;-/ -/ge
  %s/ &nbsp;/ /ge
  %s/&nbsp; / /ge
  %s/&nbsp;/ /ge
  %s/<\/b> <b>/ /ge
+ %s/<span class="link"><a href="#topp">Início da página<\/a><\/span>/<p class="link"><a href="#topp">Início da página<\/a><\/p>/ge
+ %s/Inclusão:\([0-9]\)/Inclusão: \1/e
+ %s/<hr size="." noshade="noshade" class="infobot"/<hr>/ge
+ %s/<p align="center" class="titulo-capitulo">★ ★ ★<\/p>/<hr class="estrelavermelha">/ge
+ %s/<p class="titulo-capitulo">★ ★ ★<\/p>/<hr class="estrelavermelha">/ge
+ %s/<p class="titulo-capitulo">★★★<\/p>/<hr class="estrelavermelha">/ge
+ %s/<p class="titulo-capitulo style1">★ ★ ★<\/p>/<hr class="estrelavermelha">/ge
+ %s/<h4>\* \* \*<\/h4>/<hr class="estrelavermelha">/ge
+ %s/<p class="estrelavermelha">★★★<\/p>/<hr class="estrelavermelha">/ge
+ %s/<p class="estrelavermelha">★ ★ ★<\/p>/<hr class="estrelavermelha">/ge
+ %s/<br >/<br>/ge
+ %s/<style type="text\/css">\n<!--.*\n.*\n-->\n<\/style>\n//ge
+ %s/nº\./n.º/ge
+ %s/Inclusão: \([0-9][0-9]\)\([0-9][0-9]\)\/\([0-9][0-9][0-9][0-9]\)/Inclusão: \1\/\2\/\3/ge
+ %s/p class="date"/p class="direita"/ge
+ %s/<p class="centralizado.*>⁂<\/p>/<hr class="estrelavermelha">/ge
+ %s/<p class="estrelavermelha"><b>★ ★ ★<\/b><\/p>/<hr class="estrelavermelha">/ge
+ %s/<h[3-6]>★ ★ ★<\/h[3-6]>/<hr class="estrelavermelha">/ge
 endfunction
 
 function! Capitular()
@@ -283,6 +376,7 @@ endfunction
 
 
 
+
 function! Tidy()
  execute 'normal G$a<REMOVEtidy>'
  read !tidy --show-errors 0 %
@@ -345,12 +439,12 @@ function! PegaTAG()
  endif
 endfunction
 
-autocmd BufReadPost *.html call PegaUnicode()
-autocmd BufReadPost *.html call PegaTAG()
-autocmd BufReadPost *.html call PegaH1()
-autocmd BufReadPost *.html call PegaH2()
-autocmd BufReadPost *.html call PegaH3()
-autocmd BufReadPost *.html call PegaStyle()
+autocmd BufReadPost *.htm call PegaUnicode()
+autocmd BufReadPost *.htm call PegaTAG()
+autocmd BufReadPost *.htm call PegaH1()
+autocmd BufReadPost *.htm call PegaH2()
+autocmd BufReadPost *.htm call PegaH3()
+autocmd BufReadPost *.htm call PegaStyle()
 
 function! AnalisaErros()
  call PegaUnicode()
@@ -471,7 +565,7 @@ function! Converter()
   execute 'normal 17Gi</nav>'
   execute 'normal 19Gi<header>'
   execute 'normal 21G'
- 
+
   " assegura inexistência de tags conflitantes
   %s/<\/header>//ge
   %s/<main>//ge
@@ -520,6 +614,359 @@ function! IgnorarH3()
 endfunction
 
 command Indice :%s/<body>/<body class="indice">/
-command Encapar :%s/ .space="10" .space="10" align="right"/ class="capadelivro"/c
+command Encapar :call Encapar()
+
+function! Encapar()
+%s/ \(.space="10"\) border="."/ \1/e
+%s/ .space="10" .space="10" align="right"/ class="capadelivro"/c
+endfunction
+
+function! Contrib(arg)
+  execute 'normal G$?<div class="datas">Inc0i'
+  execute 'normal k'
+  execute 'normal a<div class="colab">'
+  execute 'normal a<p>Este texto foi uma contribuição do</p>'
+  execute 'normal a<a href="@mrxCONTRIBlink" target="_blank">'
+  execute 'normal a <img src="@mrxCONTRIBimg" class="colab" alt="@mrxCONTRIBalt" width="@mrxCONTRIBwid" height="@mrxCONTRIBhei">'
+  execute 'normal a</a></div>'
+
+  if a:arg == "averdade"
+   :%s/@mrxCONTRIBlink/https:\/\/averdade.org.br\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/averdade.jpg/
+   :%s/@mrxCONTRIBalt/Jornal A Verdade/
+   :%s/@mrxCONTRIBwid/834/
+   :%s/@mrxCONTRIBhei/209/
+  endif
+
+  if a:arg == "bibliotecaanarquista"
+   :%s/Este texto foi uma contribuição do<\/p>/Este texto foi uma contribuição da<\/p>/
+   :%s/@mrxCONTRIBlink/https:\/\/www.bibliotecaanarquista.org\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/bibliotecaanarquista.png/
+   :%s/@mrxCONTRIBalt/Biblioteca Anarquista/
+   :%s/@mrxCONTRIBwid/300/
+   :%s/@mrxCONTRIBhei/80/
+  endif
+
+  if a:arg == "blogdaboitempo"
+   :%s/@mrxCONTRIBlink/https:\/\/blogdaboitempo.com.br\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/blogdaboitempo.png/
+   :%s/@mrxCONTRIBalt/Blog da Boitempo/
+   :%s/@mrxCONTRIBwid/990/
+   :%s/@mrxCONTRIBhei/190/
+  endif
+
+  if a:arg == "cemflores"
+   :%s/@mrxCONTRIBlink/https:\/\/cemflores.org\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/cem-flores.jpg/
+   :%s/@mrxCONTRIBalt/Cem Flores/
+   :%s/@mrxCONTRIBwid/453/
+   :%s/@mrxCONTRIBhei/98/
+  endif
+
+  if a:arg == "revistaoutubro"
+   :%s/Este texto foi uma contribuição do<\/p>/Este texto foi uma contribuição da<\/p>/
+   :%s/@mrxCONTRIBlink/https:\/\/outubrorevista.com.br\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/revista-outubro.jpg/
+   :%s/@mrxCONTRIBalt/Revista Outubro/
+   :%s/@mrxCONTRIBwid/400/
+   :%s/@mrxCONTRIBhei/93/
+  endif
+
+  if a:arg == "traduagindo"
+   :%s/@mrxCONTRIBlink/https:\/\/traduagindo.com\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/traduagindo.png/
+   :%s/@mrxCONTRIBalt/TraduAgindo/
+   :%s/@mrxCONTRIBwid/1422/
+   :%s/@mrxCONTRIBhei/484/
+  endif
+
+  if a:arg == "criticamarxista"
+   :%s/Este texto foi uma contribuição do<\/p>/Este texto foi uma contribuição da<\/p>/
+   :%s/@mrxCONTRIBlink/https:\/\/econtents.bc.unicamp.br\/inpec\/index.php\/cma\/index/
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/critica_marxista.jpg/
+   :%s/@mrxCONTRIBalt/Revista Crítica Marxista/
+   :%s/@mrxCONTRIBwid/202/
+   :%s/@mrxCONTRIBhei/110/
+  endif
+
+  if a:arg == "fundacaograbois"
+   :%s/@mrxCONTRIBlink/https:\/\/grabois.org.br/
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/fundacao_grabois.jpg/
+   :%s/@mrxCONTRIBalt/Fundação Maurício Grabois/
+   :%s/@mrxCONTRIBwid/232/
+   :%s/@mrxCONTRIBhei/67/
+  endif
+
+  if a:arg == "lavrapalavra"
+   :%s/class="colab/& alta/
+   :%s/@mrxCONTRIBlink/https:\/\/lavrapalavra.com\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/logo_lavra_palavra.png/
+   :%s/@mrxCONTRIBalt/LavraPalavra/
+   :%s/@mrxCONTRIBwid/144/
+   :%s/@mrxCONTRIBhei/123/
+  endif
+
+  if a:arg == "novacultura"
+   :%s/Este texto foi uma contribuição do<\/p>/Este texto foi uma contribuição da<\/p>/
+   :%s/@mrxCONTRIBlink/https:\/\/www.novacultura.info\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/novacultura.png/
+   :%s/@mrxCONTRIBalt/Nova Cultura/
+   :%s/@mrxCONTRIBwid/250/
+   :%s/@mrxCONTRIBhei/133/
+  endif
+
+  if a:arg == "pco"
+   :%s/@mrxCONTRIBlink/https:\/\/www.pco.org.br\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/pco.svg/
+   :%s/@mrxCONTRIBalt/Partido da Causa Operária/
+   :%s/@mrxCONTRIBwid/1424/
+   :%s/@mrxCONTRIBhei/659/
+  endif
+
+  if a:arg == "overmelho"
+   :%s/@mrxCONTRIBlink/https:\/\/vermelho.org.br\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/o-vermelho.png/
+   :%s/@mrxCONTRIBalt/Portal O Vermelho/
+   :%s/@mrxCONTRIBwid/349/
+   :%s/@mrxCONTRIBhei/115/
+  endif
+  
+  if a:arg == "passapalavra"
+   %s/class="colab/& inversivel/
+   :%s/@mrxCONTRIBlink/https:\/\/passapalavra.info\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/passapalavra.png/
+   :%s/@mrxCONTRIBalt/Passa Palavra/
+   :%s/@mrxCONTRIBwid/544/
+   :%s/@mrxCONTRIBhei/179/
+  endif
+
+  if a:arg == "Modelo"
+   :%s/@mrxCONTRIBlink//
+   :%s/@mrxCONTRIBimg//
+   :%s/@mrxCONTRIBalt//
+   :%s/@mrxCONTRIBwid//
+   :%s/@mrxCONTRIBhei//
+  endif
+  
+  call Desespacar()
+endfunction
+
+function! Imprensa(arg)
+  execute 'normal go/<\/aside>$a'
+  execute 'normal j'
+  execute 'normal a<a href="@mrxIMPlink"><img src="../../../img/imprensa/@mrxIMPimg" class="imprensa" alt="@mrxIMPalt" width="@mrxIMPwid" height="@mrxIMPhei"></a>'
+
+  if a:arg == "aclasseoperaria"
+   %s/class="imprensa/& longo/
+   %s/@mrxIMPlink/..\/..\/..\/tematica\/jornais\/classe_operaria\/index.htm/
+   %s/@mrxIMPimg/aclasseoperaria.png/
+   %s/@mrxIMPalt/A Classe Operária/
+   %s/@mrxIMPwid/1542/
+   %s/@mrxIMPhei/256/
+  endif
+
+  if a:arg == "problemas"
+   %s/class="imprensa/& inversivel/
+   %s/@mrxIMPlink/..\/..\/..\/tematica\/rev_prob\/capas.htm/
+   %s/@mrxIMPimg/problemas.png/
+   %s/@mrxIMPalt/Revista Problemas/
+   %s/@mrxIMPwid/767/
+   %s/@mrxIMPhei/256/
+  endif
+
+  if a:arg == "Modelo"
+   %s/@mrxIMPlink//
+   %s/@mrxIMPimg//
+   %s/@mrxIMPalt//
+   %s/@mrxIMPwid//
+   %s/@mrxIMPhei//
+  endif
+
+  call Desespacar()
+endfunction
+
+
+function! NavegarCapitulos()
+ %s/<footer>/&\r\r<nav class="interna">\r<a href="capXX.htm" class="anterior">Anterior<\/a>\r<a href="index.htm" class="ao-meio">Índice<\/a>\r<a href="capYY.htm" class="proximo">Próximo<\/a>\r<\/nav>/ge
+ call DetectarCapitulo()
+endfunction
+
+" cópia
+
+function! AprovaCapitulo()
+ let l:nivel_tres = !empty(getbufline('%', 1, '$')->filter({_, line -> line =~ 'href="../../../css/texto'}))
+ let l:tem_tag_maiuscula = !empty(getbufline('%', 1, '$')->filter({_, line -> line =~ '<[A-Z]'}))
+ let l:eh_unicode = !empty(getbufline('%', 1, '$')->filter({_, line -> line =~ 'utf-8'}))
+ let l:tem_estilo = !empty(getbufline('%', 1, '$')->filter({_, line -> line =~ '<style'}))
+ let l:quantos_hr = len(getbufline('%', 1, '$')->filter({_, line -> line =~ '<hr'}))
+ let l:tem_final = len(getbufline('%', 1, '$')->filter({_, line -> line =~ '<p class="link"><a href="#topp">'}))
+
+if !l:tem_tag_maiuscula
+ if l:nivel_tres
+  if l:eh_unicode 
+   if !l:tem_estilo
+       if l:quantos_hr >= 3
+        if l:tem_final 
+
+           echohl WarningMsg
+           echo "✅ Documento aprovado"
+           echohl None
+	   call ConverterCapitulo()
+
+ 	else
+          echohl ErrorMsg
+          echo "Não possui âncora do cabeçalho"
+          echohl None
+ 	endif
+       else
+        echohl ErrorMsg
+        echo "Número inadequado de tags <hr>"
+        echohl None
+       endif
+   else
+    echohl ErrorMsg
+    echo "O documento tem estilo próprio"
+    echohl None
+   endif
+  else
+    echohl ErrorMsg
+    echo "O documento não está em UTF-8"
+    echohl None
+  endif
+ else
+  echohl ErrorMsg
+  echo "O documento não está no nível três"
+  echohl None
+ endif
+else
+ echohl ErrorMsg
+ echo "Há tags com maiúscula"
+ echohl None
+endif
+endfunction
+
+function! ConverterCapitulo()
+  %s/<header>//ge
+  %s/<\/header>//ge
+  %s/<main>//ge
+  %s/<\/main>//ge
+  %s/<footer>//ge
+  %s/<\/footer>//ge
+  %s/<hr >/<hr>/ge
+  call MacroLimpaAntesCapitulo()
+  %s/<h. class="titulo-capitulo">\(.\{-}\)<\/h.>/<h4>\1<\/h4>/g
+
+  execute '0put! =repeat(\"\n\",29)'
+  execute 'normal 1Gi<!DOCTYPE html>'
+  execute 'normal 2Gi<html lang="pt">'
+  execute 'normal 3Gi<head>'
+  execute 'normal 4Gi<meta charset="utf-8">'
+  execute 'normal 5Gi<meta name="viewport" content="width=device-width, initial-scale=1">'
+  execute 'normal 6Gi<meta name="keywords" content="Textos, Obras, Arquivo Marxista na Internet, Marxists">'
+  execute 'normal 7Gi<title></title>'
+  execute 'normal 8Gi<link href="../../../css/textos.css" rel="stylesheet" type="text/css">'
+  execute 'normal 9Gi</head>'
+  execute 'normal 11Gi<body class="capitulo">'
+  execute 'normal 13Gi<nav>'
+  execute 'normal 14Gi<a href="../../../index.htm" id="topp"><img src="../../../img/mia.svg" class="logo" alt="Arquivo Marxista" width="75" height="20"></a>'
+  execute 'normal 15Gi<a href="../../../biblioteca.htm" title="Biblioteca" id="li-bi"></a>'
+  execute 'normal 16Gi<a href="../../../admin/novidades.htm" title="Novidades" id="li-no"></a>'
+  execute 'normal 17Gi</nav>'
+  execute 'normal 19Gi<header>'
+  execute 'normal 20G'
+  execute 'normal 21Gi<h1></h1>'
+  execute 'normal 22Gi<a href="../../index.htm">'
+  execute 'normal 23Gi<img src="../../img/avatar.webp" alt="" width="42" height="56">'
+  execute 'normal 24Gi<h2></h2>'
+  execute 'normal 25Gi<h3></h3>'
+  execute 'normal 26Gi</header>'
+  execute 'normal 28Gi<main>'
+  execute 'normal 30G'
+ 
+  call feedkeys("yq") | %s/<hr\%( class="\%(transparente\|estrelavermelha\)"\)\@!.\{-}>//gc
+  %s/<p class="link"><a href="#topp">In.\{-}p>/<\/main>\r\r<footer>/g
+  g/<footer/.,$ s/<hr>//g
+ 
+ 
+ execute 'normal 21G'
+ read !grep -oP '(?<=<h1>).*(?=<\/h1)' index.htm
+ execute 'normal 21G'
+ s/<\/h1>\n//
+ s/$/<\/h1>/
+
+ execute 'normal 24G'
+ read !grep -oP '(?<=<h2>).*(?=<\/h2)' index.htm
+ execute 'normal 24G'
+ s/<\/h2>\n//
+ s/$/<\/h2><\/a>/
+
+ execute 'normal 25G'
+ read !grep -oP '(?<=<h3>).*(?=<\/h3)' index.htm
+ execute 'normal 25G'
+ s/<\/h3>\n//
+ s/$/<\/h3>/
+
+  %s/<\/body>/<!-- conversão automática em @marxistsDATA -->\r\r<\/footer>\r&/
+  %s/@marxistsDATA/\=strftime("%d\/%m\/%Y")/ge
+
+  %s/href="cap9.htm" class="anterior"/href="cap09.htm" class="anterior"/e
+  %s/<p class="toplink"><a href="[0-9][0-9].htm">continua&gt;&gt;&gt;<\/a><\/p>\n//e
+  %s/<p><span class="toplink"><a href="[0-9][0-9].htm">continua&gt;&gt;&gt;<\/a><\/span><\/p>\n//e
+
+  call NavegarCapitulos()
+
+  call MacroCopiaTituloCapitulo()
+  call Desespacar()
+  call MacroEscapar()
+endfunction
+
+
+function! MANDAcap()
+ call Tidy()
+ call Descodificar()
+ call ArrumaGeral()
+ call AprovaCapitulo()
+endfunction
+
+function! NavegaSemCap()
+ %s/href="cap\([0-9][0-9].htm" class="anterior"\)/href="\1/e
+ %s/href="cap\([0-9][0-9].htm" class="proximo"\)/href="\1/e
+endfunction
+
+function! CorrigeUltimaAlteracao()
+ %s/\([0-9]\)Últimaalteração/\1<\/div>\r<div class="datas">Última atualização/ge
+ %s/\([0-9]\)Últimaatualização/\1<\/div>\r<div class="datas">Última atualização/ge
+endfunction!
+
+function! Quotar()
+ :s/<p class="quote.">/<p>/e
+ :s/^/<blockquote>\r/
+ :s/$/\r<\/blockquote>/
+endfunction
+
+function! Figurar()
+ :s/^/<figure class="meio">\r/
+ :s/$/\r<\/figure>/
+endfunction
+
+function! DoisAutores()
+ execute 'normal go/<h1/<a '
+ :s/<a href="..\/..\/index.htm">/\r<img src="..\/..\/img\/avatar.webp" alt="" width="42" height="56">/
+ execute 'normal go/<h2'
+ :s/<h2>/&<a href="..\/..\/index.htm">/
+ :s/ e /<\/a> e <a href="..\/..\/index.htm">/
+ :s/<\/h2><\/a>/<\/a><\/h2>/
+endfunction
+
+function! EspecialEspecifico()
+ :%s/<p class="toplink"><a href=".*\.htm">continua.*<\/a><\/p>//
+ :%s/"\(cap.*.htm" class="[ap][nr][to][ex][ri][im]o\)/"p2\1/ge
+ call feedkeys("y") | call Encapar()
+endfunction
+
+
+command Atalhos echo "F1:  󰈙 | mF1:  󰉻 | F2: 󰓰   | F3:   | F4: 󰋪 | F5: 󱃱 | F6: 󱪗 󰉭 | F7: 󰚔 | F10: 󰊃 | F11:  | F12: 󰍜"
+
+autocmd BufReadPost *.htm Atalhos
 
 au FileType htm,html,htmldjango setlocal indentexpr=
