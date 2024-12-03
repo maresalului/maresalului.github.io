@@ -3,7 +3,7 @@
 :root {font-size: 12pt;}
 
 body {
-background-color: whitesmoke; 
+background-color: #f3f3f3; 
 color: black; 
 font-family: Verdana, "Open Sans", system-ui, sans-serif; 
 margin: 0; 
@@ -301,7 +301,7 @@ header img {clear: none; float: left; margin-right: 1rem; height: 54px; width: a
 header h2 {font-size: 14pt; margin-bottom: 0.75rem; color: #06c;}
 header h3 {font-size: 12pt; font-weight: normal; margin-top: 0.75rem; margin-bottom: 0; text-transform: lowercase;}
 
-aside.sobre {display: block; margin: 0 0 3rem 0; border: 1.5px solid #d9d9d9; text-align: left; background-color: whitesmoke; padding: 1.25rem; font-family: Verdana;}
+aside.sobre {display: block; margin: 0 0 3rem 0; border: 1.5px solid #d9d9d9; text-align: left; background-color: #f3f3f3; padding: 1.25rem; font-family: Verdana;}
 main * + aside.sobre {margin-top: 0.125rem;}
 
 aside.sobre img.capadelivro, aside.sobre img.capadelivro.grande {margin: 0.5rem 0 1rem 1rem; width: 25%; float: right;}
