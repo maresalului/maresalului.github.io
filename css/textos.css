@@ -117,10 +117,10 @@ figure {width: 20%;}
 
 .fotodireita {border: 2px solid #dbdbdb; display: block; float: right; margin-left: 1rem; margin-right: 0px; padding: 7px;}
 
-div.colab {display: block; margin: 2rem auto; text-align: center;}
-div.colab > p {margin: 0 0 .25rem 0; text-align: center; text-indent: 0; font-size: .75rem; font-weight: bold;}
-img.colab {margin: 0; width: auto; height: auto; max-width: 35%; max-height: 100px;}
-img.colab.alta {max-height: 200px;}
+div.colab, div.autorizada {display: block; margin: 2rem auto; text-align: center;}
+ div.colab > p, div.autorizada > p {margin: 0 0 .25rem 0; text-align: center; text-indent: 0; font-size: .75rem; font-weight: bold;}
+ img.colab {margin: 0; width: auto; height: auto; max-width: 35%; max-height: 100px;}
+ img.colab.alta {max-height: 200px;}
 
 /* Suporte estendido e obsolescencias */
 
@@ -272,6 +272,7 @@ a[href^="#r"], a[href^="#n"], a[href^="#tr"] {font-weight: bold; color: #000099;
  a:active {color: #83a1cd;}
  a:visited {color: #83a1cd;}
  img.logo, img.inversivel, img.logotopo {filter: invert(1);}
+ img.imutavel {}
  img[src$="audio.png"] {filter: invert(1)}
  img.bordafoto {background-color: #151515; border-color: black;}
  img {filter: brightness(0.8) contrast(1.2);}
@@ -333,7 +334,7 @@ body.capitulo h1 {font-size: 18pt;}
 body.capitulo .subtitulo {font-size: 1.1rem;}
 body.capitulo h1:has(+ .subtitulo) {margin-bottom: 0.875rem;}
 body.capitulo h4:first-of-type {margin-top: 1.375rem;}
-body.capitulo nav.interna {display: flex; align-items: center; justify-content: space-between; font-size: 9pt; font-weight: bold; margin-top: 2rem; margin-bottom: 2rem; width: 100%;}
+body.capitulo nav.interna {display: flex; align-items: center; justify-content: space-between; font-size: 9pt; font-weight: bold; margin-top: 1.5rem; margin-bottom: 3.25rem; width: 100%;}
 body.capitulo .anterior::before {content: "<<< ";}
 body.capitulo .proximo::after {content: " >>>";}
 
@@ -341,9 +342,16 @@ img.imprensa {display: block; width: 20%; height: auto; margin: 2rem; max-width:
 img.imprensa.longo {width: 25%; max-width: 212px;}
  @media screen and (max-width: 480px) {img.imprensa {width: 30%;}}
 
- h4, h5, h6 {clear: both;}
+h4, h5, h6 {clear: both;}
 
-/* footer .datas:first-of-type {margin-top: 3rem;} */
+figure.meio + figure.meio {margin-top: 4rem;}
+
+.info.autorizada img {display: inline; height: 1rem; width: auto; margin-inline: 1.5px; vertical-align: text-bottom;}
+.info.autorizada {text-align: center;}
+
+.note ~ .datas:first-of-type {margin-top: 3rem;}
+
+h4:has(+ .subtitulo) {margin-bottom: 0.875rem;}
 
 /* cyrillic-ext */
 @font-face {
