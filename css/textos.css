@@ -63,7 +63,7 @@ a.link_ext:hover {color: #ff3300;}
 a.link_ext:active {color: #0000ff;}
 a.link_ext:link, a.link_ext:visited {color: #cc0000;}
 
-body.indice main a {text-decoration: underline;}
+body.indice main a {text-decoration: underline; padding-block: 3rem;}
 
 /* Elementos */
 
@@ -107,9 +107,9 @@ blockquote {margin: 1.25rem 10%;}
  blockquote.abnt {margin: 1.25rem 0 1.25rem 40%;}
  blockquote.trad {margin: 1.25rem 10%;}
 
-figure {width: 20%;}
+figure {width: 20%; max-width: fit-content;}
  figure.total {width: 100%; margin: 2rem 0;}
- figure.meio {max-width: fit-content; margin: 2rem auto; width: 50%;}
+ figure.meio {margin: 2rem auto; width: 50%;}
  figure.esquerda {float: left; margin: .375rem 2rem 1.5rem 0; clear: left;}
  figure.direita {float: right; margin: .375rem 0 1.5rem 2rem; clear: right;}
  figure img {width: 100%; margin: 0 auto; height: auto; display: block;}
@@ -352,6 +352,10 @@ figure.meio + figure.meio {margin-top: 4rem;}
 .note ~ .datas:first-of-type {margin-top: 3rem;}
 
 h4:has(+ .subtitulo) {margin-bottom: 0.875rem;}
+
+.info.cc::before {content: 'Direitos de Reprodução: '; font-weight: bold;}
+ .by-sa a::before {content: url(../img/by-sa.svg) ' '; vertical-align: top;}
+ .by-sa::after {content: '.';}
 
 /* cyrillic-ext */
 @font-face {
