@@ -33,10 +33,10 @@ a#li-no {content: url(nov.svg); width: 21px; height: auto;}
 
 p {font-size: 1rem; line-height: 1.75em; text-align: justify; text-indent: 2rem; margin: 1.5rem 0;}
 
-h1, .subtitulo, h2, h3, h4, h5, h6 {font-weight: bold; text-align: center; margin: 2.875rem 1.5rem;}
+h1, .subtitulo, .parte, h2, h3, h4, h5, h6 {font-weight: bold; text-align: center; margin: 2.875rem 1.5rem;}
 
 h1 {font-size: 1.875rem; color: #000099; line-height: 1.25em; margin-top: 3rem; margin-bottom: 1.625rem;}
-.subtitulo {font-size: 0.9375rem; text-indent: 0; margin-top: 0.875rem; margin-bottom: 2rem;}
+.subtitulo, .parte {font-size: 0.9375rem; text-indent: 0; margin-top: 0.875rem; margin-bottom: 2rem;}
 h2 {font-size: 1.4375rem; color: #000033; margin-top: 1.5rem; margin-bottom: 1.5rem;}
 h3 {font-size: 1.375rem; color: #000033; margin-top: 1.5rem;}
 h4 {font-size: 1.25rem;}
@@ -160,7 +160,7 @@ hr.linha-preta {border: 1px solid black;}
 
 /* Indices de livros */
 
-.capadelivro {margin: 5px 0 25px 25px; width: 10%; height: auto; float: right; max-width: fit-content; clear: right;}
+.capadelivro {margin: 5px 0 25px 25px; width: 100px; height: auto; float: right; max-width: fit-content; clear: right;}
 .capadelivro.grande {width: 15%;}
 
 .toc, .toc1, .toc2, .toc3, .toc4, .toc5 {text-indent: 0; text-align: left; margin-left: 0;}
@@ -206,7 +206,7 @@ h1 ~ hr:nth-of-type(2) {margin-bottom: 3rem;}						/* Segunda barra */
 p.link ~ hr {margin-top: 2rem;}								/* Ultima barra */
 a[href^="#n"] > sup, a[href^="#tr"] > sup {font-size: 0.75rem; font-weight: bold; font-style: normal;}	/* Realca links para notas de rodape */
 p.editorial:has(+ p.editorial) {margin-bottom: 1rem;}					/* Espacamento entre paragrafos de um editorial */
-h1:has(+ .subtitulo) {margin-bottom: 0.875rem;}						/* Diminui o espaco em titulos com subtitulo */
+h1:has(+ .subtitulo), h1:has(+ .parte) {margin-bottom: 0.875rem;}						/* Diminui o espaco em titulos com subtitulo */
 p.link:has(a[href="#topp"]) {margin-top: 2rem; margin-bottom: 2rem; clear: both;}	/* Link para o inicio da pagina*/
 
 /* Celular */
@@ -246,7 +246,7 @@ h4 {font-size: 13pt;}
 h5 {font-size: 12pt;}
 h6 {font-size: 11pt;}
 
-.subtitulo {font-size: 11pt;}
+.subtitulo, .parte {font-size: 11pt;}
 
 .info {font-size: 9pt;}
 
@@ -287,17 +287,17 @@ a[href^="#r"], a[href^="#n"], a[href^="#tr"] {font-weight: bold; color: #000099;
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-main {background: white; padding-block: 3rem 1.5rem; font-family: Alegreya; font-variant-numeric: lining-nums;}
-main p {font-size: 14pt; line-height: 1.625em;}
+main {background: white; padding-block: 3rem 1.5rem; /* font-family: Alegreya; */ font-variant-numeric: lining-nums;}
+/* main p {font-size: 14pt; line-height: 1.625em;} */
 
-main h4 {font-size: 16pt;}
-main h5 {font-size: 15pt;}
-main h6 {font-size: 14pt;}
+main h4 {font-size: 15pt;}
+main h5 {font-size: 14pt;}
+main h6 {font-size: 13pt;}
 
 header {padding-top: 46px; padding-bottom: 50px; padding-block: 3rem;}
 header * {text-align: left; margin-inline: 0;}
 header h1 {color: black; margin-bottom: 2rem; margin-top: 0; font-size: 20pt;}
-header .subtitulo {text-align: left; margin-left: 0;}
+header .subtitulo, header .parte {text-align: left; margin-left: 0;}
 header img {clear: none; float: left; margin-right: 1rem; height: 54px; width: auto;}
 header h2 {font-size: 14pt; margin-bottom: 0.75rem; color: #06c;}
 header h3 {font-size: 12pt; font-weight: normal; margin-top: 0.75rem; margin-bottom: 0; text-transform: lowercase;}
@@ -332,7 +332,7 @@ p.info.formatos a[href$=".epub"]::before
 
 body.capitulo h1 {font-size: 18pt;}
 body.capitulo .subtitulo {font-size: 1.1rem;}
-body.capitulo h1:has(+ .subtitulo) {margin-bottom: 0.875rem;}
+body.capitulo h1:has(+ .subtitulo), body.capitulo h1:has(+ .subtitulo) {margin-bottom: 0.875rem;}
 body.capitulo h4:first-of-type {margin-top: 1.375rem;}
 body.capitulo nav.interna {display: flex; align-items: center; justify-content: space-between; font-size: 9pt; font-weight: bold; margin-top: 1.5rem; margin-bottom: 3.25rem; width: 100%;}
 body.capitulo .anterior::before {content: "<<< ";}
@@ -353,9 +353,14 @@ figure.meio + figure.meio {margin-top: 4rem;}
 
 h4:has(+ .subtitulo) {margin-bottom: 0.875rem;}
 
-.info.cc::before {content: 'Direitos de Reprodução: '; font-weight: bold;}
+.info.cc::before, .info.gnu::before {content: 'Direitos de reprodução: '; font-weight: bold;}
  .by-sa a::before {content: url(../img/by-sa.svg) ' '; vertical-align: top;}
- .by-sa::after {content: '.';}
+ .by-nc a::before {content: url(../img/by-nc.svg) ' '; vertical-align: top;}
+ .info.gnu a::before {content: url(../img/gfdl.svg) ' '; vertical-align: top;}
+ .by-sa::after, .by-nc::after, .info.gnu::after {content: '.';}
+
+.recomendacao {text-indent: 0; font-size: 10pt; font-weight: bold;}
+ .recomendacao::before {content: '❋ ';}
 
 /* cyrillic-ext */
 @font-face {
