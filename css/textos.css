@@ -299,6 +299,7 @@ header * {text-align: left; margin-inline: 0;}
 header h1 {color: black; margin-bottom: 2rem; margin-top: 0; font-size: 20pt;}
 header .subtitulo, header .parte {text-align: left; margin-left: 0;}
 header img {clear: none; float: left; margin-right: 1rem; height: 54px; width: auto;}
+ header img:has(+ img) {margin-right: 0.5rem;}						/* textos com dois autores */
 header h2 {font-size: 14pt; margin-bottom: 0.75rem; color: #06c;}
 header h3 {font-size: 12pt; font-weight: normal; margin-top: 0.75rem; margin-bottom: 0; text-transform: lowercase;}
 
