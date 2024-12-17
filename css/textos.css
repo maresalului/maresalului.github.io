@@ -9,7 +9,7 @@ font-family: Verdana, "Open Sans", system-ui, sans-serif;
 margin: 0; 
 width: 100%;} 
 
-body > * {max-width: 870px; margin-left: auto; margin-right: auto; padding-left: max(calc((100vw - 870px) / 2), 5vw); padding-right: max(calc((100vw - 870px) / 2), 5vw);}
+body > * {max-width: 860px; margin-left: auto; margin-right: auto; padding-left: max(calc((100vw - 860px) / 2), 5vw); padding-right: max(calc((100vw - 860px) / 2), 5vw);}
 
 														/*
 -----
