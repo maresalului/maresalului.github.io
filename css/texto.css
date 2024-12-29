@@ -224,6 +224,7 @@ p.info.formatos a[href$=".epub"]::before
 /* Celular */
 
 @media (max-width: 480px) {
+p {margin-left: 1%; margin-right: 1%;}
 img {max-width: 150px; height: auto;}
 img.auto {width: auto; height: auto;}
 img.colab {max-width: 200px;}
