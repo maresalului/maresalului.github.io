@@ -80,8 +80,13 @@ ol, ul {font-size: 1rem; line-height: 1.675rem; margin-left: 2rem; margin-top: 0
  p.editorial {margin-bottom: 2rem;}
 hr.editorial {margin-top: 2rem; margin-bottom: 2rem;}
 
+	/* novo estilo */
+section.editorial {margin: 1rem 0 2rem 40%;}
+section.editorial p, section.editorial h4 {font-size: 0.75rem; text-align: justify; text-indent: 0; margin: 1rem 0 1rem 0;}
+section.editorial hr {margin-top: 2rem; margin-bottom: 2rem;}
+
 .menor {font-size: 0.875rem;}
-.recuado {text-align: justify; text-indent: 0; margin: 1rem 0 1rem 40%;}
+.recuado {text-align: justify; text-indent: 0; margin-left: 40%; margin-right: 0;}
 .recuo.curto {margin-left: 4rem; text-indent: 0;}
 
 .centralizado, .linha-centralizada {text-align: center; text-indent: 0;}
