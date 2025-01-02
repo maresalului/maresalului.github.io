@@ -63,7 +63,7 @@ a.link_ext:hover {color: #ff3300;}
 a.link_ext:active {color: #0000ff;}
 a.link_ext:link, a.link_ext:visited {color: #cc0000;}
 
-body.indice main a {text-decoration: underline; padding-block: 3rem;}
+body.indice main a {text-decoration: underline;}
 
 /* Elementos */
 
@@ -130,7 +130,7 @@ div.colab, div.autorizada {display: block; margin: 2rem auto; text-align: center
 
 /* Suporte estendido e obsolescencias */
 
-.quote2, .quote3, .quote4, .quote5, .quote6, .quote-apresentacao {font-size: 1rem; margin-bottom: 0; margin-right: 4%; text-align: justify; text-indent: 0;}
+.quote2, .quote3, .quote4, .quote5, .quote6, .quote-apresentacao {margin-bottom: 0; margin-right: 4%; text-align: justify; text-indent: 0;}
 
 .quote2 {margin-left: 8%; font-weight: bold;}
 .quote3 {margin-left: 8%;}
@@ -375,6 +375,7 @@ h4:has(+ .subtitulo) {margin-bottom: 0.875rem;}
 @media (min-width: 480px) {
 p {font-size: 13pt; line-height: 1.7em; margin: 1.625rem 0;}
 header h1 {font-size: 22pt;}
+ body.capitulo h1 {font-size: 20pt;}
 header h2 {font-size: 16pt;}
 header h3 {font-size: 14pt;}
 main h4 {font-size: 16pt;}
@@ -383,6 +384,8 @@ main h6 {font-size: 14pt;}
 aside.sobre .info {font-size: 11pt; line-height: 1.125rem;}
 .note {font-size: 12pt;}
 .datas {font-size: 9pt;}
+.datas {font-size: 9pt;}
+body.capitulo nav.interna {font-size: 10pt;}
 }
 
 /* latin-ext */
