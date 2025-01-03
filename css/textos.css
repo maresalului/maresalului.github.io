@@ -112,6 +112,9 @@ blockquote {margin: 1.25rem 10%;}
  blockquote p {text-indent: 0;}
  blockquote.abnt, blockquote.direita {margin: 1.25rem 0 1.25rem 40%;}
  blockquote.trad {margin: 1.25rem 10%;}
+ blockquote.epigrafe {margin: 1.25rem 0 1.25rem 40%;}
+  .epigrafe p {font-size: 0.875rem;}
+
 
 figure {width: 20%; max-width: fit-content;}
  figure.total {width: 100%; margin: 2rem 0;}
