@@ -90,6 +90,8 @@ blockquote {margin: 1.25rem 10%;}
  blockquote p {text-indent: 0;}
  blockquote.abnt {margin: 1.25rem 0 1.25rem 40%;}
  blockquote.trad {margin: 1.25rem 10%;}
+ blockquote.epigrafe {margin: 1.25rem 0 1.25rem 40%;}
+  .epigrafe p {font-size: 0.875rem;}
 
 figure {width: 20%;}
  figure.total {width: 100%; margin: 2rem 0;}
@@ -221,6 +223,17 @@ p.info.formatos a[href$=".pdf"]::before,
 p.info.formatos a[href$=".epub"]::before 
 {display: inline-block; vertical-align: text-bottom; image-rendering: pixelated; width: auto; height: 16px; padding-left: 2px; padding-right: 5px;}
 
+img.imprensa {display: block; width: 20%; height: auto; margin: 2rem; max-width: 200px;}
+img.imprensa.longo {width: 25%; max-width: 212px;}
+
+.recuo.curto {margin-left: 4rem; text-indent: 0;}
+
+.info.cc::before, .info.gnu::before {content: 'Direitos de reprodução: '; font-weight: bold;}
+ .by-sa a::before {content: url(../img/by-sa.svg) ' '; vertical-align: top;}
+ .by-nc a::before {content: url(../img/by-nc.svg) ' '; vertical-align: top;}
+ .info.gnu a::before {content: url(../img/gfdl.svg) ' '; vertical-align: top;}
+ .by-sa::after, .by-nc::after, .info.gnu::after {content: '.';}
+
 /* Celular */
 
 @media (max-width: 480px) {
@@ -240,6 +253,8 @@ ol, ul {margin-left: 1%; margin-right: 1%;}
 .capadelivro, .capadelivro.grande {width: 20%;}
 .abnt {margin-left: 20%;}
 th, td {padding: 0.5rem;}
+blockquote.epigrafe {margin-left: 20%;}
+img.imprensa {width: 30%;}
 }
 
 /* Impressao */
@@ -267,7 +282,7 @@ a:link, a:visited {text-decoration: none; color: black;}
 sup {vertical-align: baseline; position: relative; top: -0.4em;}
 }
 
-/* MRX.css v. 2.4.1 */
+/* MRX.css v. 2.4.2 */
 
 /*
 @media screen and (prefers-color-scheme: dark) {

@@ -110,7 +110,7 @@ img.licenca {height: 15px; image-rendering: pixelated; vertical-align: text-bott
 
 blockquote {margin: 1.25rem 10%;}
  blockquote p {text-indent: 0;}
- blockquote.abnt {margin: 1.25rem 0 1.25rem 40%;}
+ blockquote.abnt, blockquote.direita {margin: 1.25rem 0 1.25rem 40%;}
  blockquote.trad {margin: 1.25rem 10%;}
 
 figure {width: 20%; max-width: fit-content;}
@@ -376,6 +376,7 @@ h4:has(+ .subtitulo) {margin-bottom: 0.875rem;}
 p {font-size: 13pt; line-height: 1.7em; margin: 1.625rem 0;}
 header h1 {font-size: 22pt;}
  body.capitulo h1 {font-size: 20pt;}
+.subtitulo, .parte {font-size: 13pt;}
 header h2 {font-size: 16pt;}
 header h3 {font-size: 14pt;}
 main h4 {font-size: 16pt;}
