@@ -367,8 +367,9 @@ h4:has(+ .subtitulo) {margin-bottom: 0.875rem;}
 .info.cc::before, .info.gnu::before {content: 'Direitos de reprodução: '; font-weight: bold;}
  .by-sa a::before {content: url(../img/by-sa.svg) ' '; vertical-align: top;}
  .by-nc a::before {content: url(../img/by-nc.svg) ' '; vertical-align: top;}
+ .by-nc-sa a::before {content: url(../img/by-nc-sa.svg) ' '; vertical-align: top;}
  .info.gnu a::before {content: url(../img/gfdl.svg) ' '; vertical-align: top;}
- .by-sa::after, .by-nc::after, .info.gnu::after {content: '.';}
+ .by-sa::after, .by-nc::after, .by-nc-sa::after, .info.gnu::after {content: '.';}
 
 .recomendacao {text-indent: 0; font-size: 10pt; font-weight: bold;}
  .recomendacao::before {content: '❋ ';}
