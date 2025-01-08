@@ -61,7 +61,7 @@ a:active {color: #06c; text-decoration: none;}
 
 a.link_ext:hover {color: #ff3300;}
 a.link_ext:active {color: #0000ff;}
-a.link_ext:link, a.link_ext:visited {color: #cc0000;}
+a.link_ext:link, a.link_ext:visited {color: #a90000;}
 
 body.indice main a {text-decoration: underline;}
 
@@ -238,7 +238,7 @@ ol, ul {margin-left: 1%; margin-right: 1%;}
 th, td {padding: 0.5rem;}
 
 /* main p {font-size: 13pt;} */
-.editorial, section.editorial {margin-left: 0;}
+.editorial, section.editorial {margin-left: 2rem;}
 figure.total img {width: calc(100% + 10vw); margin-left: -5vw; max-width: revert;}
 }
 
@@ -350,7 +350,7 @@ body.capitulo .anterior::before {content: "<<< ";}
 body.capitulo .proximo::after {content: " >>>";}
 
 img.imprensa {display: block; width: 20%; height: auto; margin: 2rem; max-width: 200px;}
-img.imprensa.longo {width: 25%; max-width: 212px;}
+img.imprensa.longo {width: 25%; max-width: unset;}
  @media screen and (max-width: 480px) {img.imprensa {width: 30%;}}
 
 h4, h5, h6 {clear: both;}
@@ -360,9 +360,6 @@ figure.meio + figure.meio {margin-top: 4rem;}
 .info.autorizada img {display: inline; height: 1rem; width: auto; margin-inline: 1.5px; vertical-align: text-bottom;}
 .info.autorizada {text-align: center;}
 
-.note ~ .datas:first-of-type {margin-top: 3rem;}
-
-h4:has(+ .subtitulo) {margin-bottom: 0.875rem;}
 
 .info.cc::before, .info.gnu::before {content: 'Direitos de reprodução: '; font-weight: bold;}
  .by-sa a::before {content: url(../img/by-sa.svg) ' '; vertical-align: top;}
@@ -370,12 +367,22 @@ h4:has(+ .subtitulo) {margin-bottom: 0.875rem;}
  .by-nc-sa a::before {content: url(../img/by-nc-sa.svg) ' '; vertical-align: top;}
  .info.gnu a::before {content: url(../img/gfdl.svg) ' '; vertical-align: top;}
  .by-sa::after, .by-nc::after, .by-nc-sa::after, .info.gnu::after {content: '.';}
+.info.cc a.link_ext::before {content: '';}
 
 .recomendacao {text-indent: 0; font-size: 10pt; font-weight: bold;}
  .recomendacao::before {content: '❋ ';}
 
 
-/* fonte atkinson hyperlegible */
+									/* ajustes */
+
+.note ~ .datas:first-of-type {margin-top: 3rem;}
+h4:has(+ .subtitulo) {margin-bottom: 0.875rem;}
+main > figure.direita:last-child {float: none; margin-right: 0; margin-left: auto;}
+main > figure.esquerda:last-child {float: none; margin-left: 0; margin-right: auto;}
+
+
+									/* fonte atkinson hyperlegible */
+
 @media (min-width: 480px) {
 p {font-size: 13pt; line-height: 1.7em; margin: 1.625rem 0;}
 header h1 {font-size: 22pt;}
@@ -391,6 +398,8 @@ aside.sobre .info {font-size: 11pt; line-height: 1.125rem;}
 .datas {font-size: 9pt;}
 .datas {font-size: 9pt;}
 body.capitulo nav.interna {font-size: 10pt;}
+div.colab p, div.autorizada p {font-size: 10pt;}
+ol, ul {font-size: 13pt;}
 }
 
 /* latin-ext */
