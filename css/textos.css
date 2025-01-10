@@ -192,6 +192,8 @@ th {border: none; font-weight: bold; text-align: center; padding: 0.5rem 1rem; b
 td {border: none; black; padding: 0.5rem 1rem;}
 th[scope="row"] {background: lightgrey; color: black; text-align: left;}
 caption {caption-side: bottom; margin-top: 1rem; font-size: 9pt;}
+td.cinza {background-color: lightgrey;}
+th.cinza {background-color: grey;}
 
 table.comborda, table.comborda th, table.comborda td {border: 1px solid black;}
 
