@@ -5,7 +5,7 @@
 body {
 background-color: #f3f3f3; 
 color: black; 
-font-family: "Atkinson Hyperlegible", Verdana, "Open Sans", system-ui, sans-serif; 
+font-family: "Lexica Ultralegible", "Atkinson Hyperlegible", Verdana, "Open Sans", system-ui, sans-serif; 
 margin: 0; 
 width: 100%;} 
 
@@ -376,6 +376,11 @@ figure.meio + figure.meio {margin-top: 4rem;}
 
 .recomendacao {text-indent: 0; font-size: 10pt; font-weight: bold;}
  .recomendacao::before {content: '❋ ';}
+
+
+.matematica {font-family: "Times New Roman", serif;}
+math {display: block; margin-left: auto; margin-right: auto; text-align: center;}
+p math {display: inline; font-family: "Times New Roman", serif;}
 
 
 									/* ajustes */

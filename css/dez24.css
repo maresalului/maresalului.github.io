@@ -1,0 +1,14 @@
+blockquote.epigrafe {margin: 1.25rem 0 1.25rem 40%;}
+.epigrafe p {font-size: 0.875rem;}
+.recuo.curto {margin-left: 4rem; text-indent: 0;}
+
+.info.cc::before, .info.gnu::before {content: 'Direitos de reprodução: '; font-weight: bold;}
+ .by-sa a::before {content: url(../img/by-sa.svg) ' '; vertical-align: top;}
+ .by-nc a::before {content: url(../img/by-nc.svg) ' '; vertical-align: top;}
+ .info.gnu a::before {content: url(../img/gfdl.svg) ' '; vertical-align: top;}
+ .by-sa::after, .by-nc::after, .info.gnu::after {content: '.';}
+
+
+@media (max-width: 480px) {
+blockquote.epigrafe {margin-left: 20%;}
+}
