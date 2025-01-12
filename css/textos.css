@@ -12,11 +12,29 @@ width: 100%;}
 body > * {max-width: 860px; margin-left: auto; margin-right: auto; padding-left: 5%; padding-right: 5%; padding-left: max(calc((100vw - 860px) / 2), 5vw); padding-right: max(calc((100vw - 860px) / 2), 5vw);}
 
 														/*
+-----------
+ ELEMENTOS
+-----------													*/
+
+p {line-height: 1.75em; text-align: justify; text-indent: 2rem; margin: 1.5rem 0;}
+
+a, a.link_ext {background: transparent;}
+
+a:link, a:visited, a:hover {color: #000099; text-decoration: none;}
+a:active {color: #06c; text-decoration: none;}
+
+a.link_ext:hover {color: #ff3300;}
+a.link_ext:active {color: #0000ff;}
+a.link_ext:link, a.link_ext:visited {color: #a90000;}
+nav, header, main, footer {display: block;}
+
+
+														/*
 -----
  NAV
 -----														*/
 
-nav {line-height: 1rem; margin: 0; text-indent: 0;}
+nav {margin: 0; text-indent: 0;}
 body > nav {align-items: center; background-color: #222; display: flex; gap: 0; height: 50px;}
 
 body > nav a {margin: 0; display: block; text-decoration: none;}
@@ -29,93 +47,104 @@ a#li-no {content: url(nov.svg); width: 21px; height: auto;}
  HEADER
 --------													*/
 
-/* Principais */
-
-p {font-size: 1rem; line-height: 1.75em; text-align: justify; text-indent: 2rem; margin: 1.5rem 0;}
 
 h1, .subtitulo, .parte, h2, h3, h4, h5, h6 {font-weight: bold; text-align: center; margin: 2.875rem 1.5rem;}
 
-h1 {font-size: 1.875rem; color: #000099; line-height: 1.25em; margin-top: 3rem; margin-bottom: 1.625rem;}
-.subtitulo, .parte {font-size: 0.9375rem; text-indent: 0; margin-top: 0.875rem; margin-bottom: 2rem;}
-h2 {font-size: 1.4375rem; color: #000033; margin-top: 1.5rem; margin-bottom: 1.5rem;}
-h3 {font-size: 1.375rem; color: #000033; margin-top: 1.5rem;}
-h4 {font-size: 1.25rem;}
-h5 {font-size: 1.175rem;}
-h6 {font-size: 1.1rem;}
+h1 {line-height: 1.25em; margin-top: 3rem; margin-bottom: 1.625rem;}
+.subtitulo, .parte {text-indent: 0; margin-top: 0.875rem; margin-bottom: 2rem;}
+h2 {color: #000033; margin-top: 1.5rem; margin-bottom: 1.5rem;}
+h3 {color: #000033; margin-top: 1.5rem;}
 
-.H1reduzido, h1 sup {font-size: 0.9375rem;}
+header {padding-top: 46px; padding-bottom: 50px; padding-top: 3rem; padding-bottom: 3rem;}
+header * {text-align: left; margin-left: 0; margin-right: 0;}
+header img {clear: none; float: left; margin-right: 1rem; height: 54px; width: auto;}
+ header img:has(+ img) {margin-right: 0.5rem;}						/* textos com dois autores */
 
-/* Estrutura */
+h1 {color: black; margin-bottom: 2rem; margin-top: 0;}
+h2 {margin-bottom: 0.75rem; color: #06c;}
+h3 {font-weight: normal; margin-top: 0.75rem; margin-bottom: 0; text-transform: lowercase;}
 
-.info {font-size: 0.8325rem; font-weight: normal; line-height: 1rem; margin: 0; text-indent: 0;}
-.link {font-size: 0.915rem; font-weight: bold; text-align: center; text-indent: 0;}
-.note {font-size: 0.875rem; margin-top: 1.25rem; margin-bottom: 1.25rem; text-align: justify; text-indent: 0; line-height: 1.625em;}
-.datas {font-size: 0.675rem; font-weight: normal; text-align: right;}
+h1:has(+ .subtitulo), h1:has(+ .parte) {margin-bottom: 0.875rem;}
+header .subtitulo, header .parte {text-align: left; margin-left: 0;}
 
-/* Links */
+														/*
+------
+ MAIN
+------														*/
 
-a, a.link_ext {background: transparent;}
+main {background: white; padding-top: 3rem; padding-bottom: 1.5rem; font-variant-numeric: lining-nums;}
 
-a:link, a:visited, a:hover {color: #000099; text-decoration: none;}
-a:active {color: #06c; text-decoration: none;}
+.info.autorizada img {display: inline; height: 1rem; width: auto; margin-inline: 1.5px; vertical-align: text-bottom;}
+.info.autorizada {text-align: center;}
 
-a.link_ext:hover {color: #ff3300;}
-a.link_ext:active {color: #0000ff;}
-a.link_ext:link, a.link_ext:visited {color: #a90000;}
+aside.sobre {display: block; margin: 0 0 3rem 0; border: 1.5px solid #d9d9d9; text-align: left; background-color: #f3f3f3; padding: 1.25rem;}
+aside.sobre .info {margin: 0.25rem 0; text-align: left; font-weight: normal; line-height: 1.125rem; text-indent: 0;}
+main * + aside.sobre {margin-top: 0.125rem;}			/* já foi usado em algum lugar? */
 
-body.indice main a {text-decoration: underline;}
+.by-sa::after, 
+.by-nc::after, 
+.by-nc-sa::after, 
+.info.gnu::after {content: '.';}
+.info.cc::before, .info.gnu::before {content: 'Direitos de reprodução: '; font-weight: bold;}
+ .by-sa a::before {content: url(../img/by-sa.svg) ' '; vertical-align: top;}
+ .by-nc a::before {content: url(../img/by-nc.svg) ' '; vertical-align: top;}
+ .by-nc-sa a::before {content: url(../img/by-nc-sa.svg) ' '; vertical-align: top;}
+.info.gnu a::before {content: url(../img/gfdl.svg) ' '; vertical-align: top;}
 
-/* Elementos */
+.info.cc a.link_ext::before {content: '';}
 
-nav, header, main, footer {display: block;}
+.info.formatos:before {content: 'Também disponível em: '; font-weight: bold; display: inline;}
+.info.formatos a[href*="audiolivros.htm"]::before {content: url(../img/audio.png);}
+.info.formatos a[href*=".mp3"]::before {content: url(../img/audio.png);}
+.info.formatos a.audio::before {content: url(../img/audio.png);}
+.info.formatos a[href$=".pdf"]::before {content: url(../img/pdf.png);}
+.info.formatos a[href$=".epub"]::before {content: url(../img/epub.png);}
+
+.info.formatos a[href*="audiolivros.htm"]::before, 
+.info.formatos a[href$=".pdf"]::before, 
+.info.formatos a[href$=".mp3"]::before, 
+.info.formatos a.audio::before, 
+.info.formatos a[href$=".epub"]::before  {display: inline-block; vertical-align: text-bottom; image-rendering: pixelated; width: auto; height: 16px; padding-left: 2px; padding-right: 5px;}
+
+a[href^="#n"] > sup, a[href^="#tr"] > sup {font-weight: bold; font-style: normal;}
 
 hr {border: 1px solid #a90000;}
  hr.transparente {border: 0 solid transparent; color: transparent; margin: 1.25rem; padding: 0.75rem;}
  hr.estrelavermelha:before {content: '★ ★ ★';}
 
-ol, ul {font-size: 1rem; line-height: 1.675rem; margin-left: 2rem; margin-top: 0; text-align: justify; text-indent: 0;}
+ol, ul {line-height: 1.675rem; margin-left: 2rem; margin-top: 0; text-align: justify; text-indent: 0;}
  li {font-size: inherit; margin-top: 1.25rem; margin-bottom: 1.25rem;}
 
-  .editorial {font-size: 0.75rem; text-align: justify; text-indent: 0; margin: 1rem 0 1rem 40%;}
- p.editorial {margin-bottom: 2rem;}
-hr.editorial {margin-top: 2rem; margin-bottom: 2rem;}
 
-	/* novo estilo */
+       .editorial {text-align: justify; text-indent: 0; margin: 1rem 0 1rem 40%;}
+      p.editorial {margin-bottom: 2rem;}
+      p.editorial:has(+ p.editorial) {margin-bottom: 1rem;}
+     hr.editorial {margin-top: 2rem; margin-bottom: 2rem;}
 section.editorial {margin: 1rem 0 2rem 40%;}
-section.editorial p, section.editorial h4, section.editorial h5 {font-size: 0.75rem; text-indent: 0; margin: 1rem 0 1rem 0;}
+section.editorial p, section.editorial h4, section.editorial h5 {text-indent: 0; margin: 1rem 0 1rem 0;}
 section.editorial h4 {text-align: left;}
 section.editorial h5 {text-align: left; margin-left: 1rem;}
 section.editorial hr {margin-top: 2rem; margin-bottom: 2rem;}
 
-.menor {font-size: 0.875rem;}
+img.imprensa {display: block; width: 20%; height: auto; margin: 2rem; max-width: 200px;}
+img.imprensa.longo {width: 25%; max-width: unset;}
+
+ @media screen and (max-width: 480px) {img.imprensa {width: 30%;}}
 .recuado {text-align: justify; text-indent: 0; margin-left: 40%; margin-right: 0;}
 .recuo.curto {margin-left: 4rem; text-indent: 0;}
 
-.centralizado, .linha-centralizada {text-align: center; text-indent: 0;}
-.esquerda, .linha-esquerda {text-align: left;}
-.direita, .linha-direita {text-align: right;}
-.justificada, .linha-justificada {text-align: justify;}
+.centralizado {text-align: center; text-indent: 0;}
+.esquerda {text-align: left;}
+.direita {text-align: right;}
+.justificada {text-align: justify;}
 
 img.centralizado {margin-left: auto; margin-right: auto; display: block;}
-
-small {font-size: 0.675rem;}
-
-aside.versoes {display: block; float: right; max-width: 25%; margin: 0 0 1rem 2rem;}
-aside.versoes p {font-size: 0.875rem; text-indent: 0; margin-top: 0; margin-bottom: 0.5rem; line-height: 1rem; text-align: left;}
-aside.versoes img {height: 16px; width: auto; vertical-align: text-bottom; padding-right: 6px; image-rendering: pixelated;}
-
-img.versoes {height: 16px; image-rendering: pixelated; padding-right: 6px; vertical-align: text-bottom; width: auto;}
-img.licenca {height: 15px; image-rendering: pixelated; vertical-align: text-bottom; width: 80px;}
-
-.estrelavermelha {color: #a90000; text-align: center; text-indent: 0; border: none; margin: 1.5rem 0;}
 
 blockquote {margin: 1.25rem 10%;}
  blockquote p {text-indent: 0;}
  blockquote.abnt, blockquote.direita {margin: 1.25rem 0 1.25rem 40%;}
  blockquote.trad {margin: 1.25rem 10%;}
  blockquote.epigrafe {margin: 1.25rem 0 1.25rem 40%;}
-  .epigrafe p {font-size: 0.875rem;}
-
 
 figure {width: 20%; max-width: fit-content;}
  figure.total {width: 100%; margin: 2rem 0;}
@@ -123,60 +152,55 @@ figure {width: 20%; max-width: fit-content;}
  figure.esquerda {float: left; margin: .375rem 2rem 1.5rem 0; clear: left;}
  figure.direita {float: right; margin: .375rem 0 1.5rem 2rem; clear: right;}
  figure img {width: 100%; margin: 0 auto; height: auto; display: block;}
- figcaption {font-size: 0.75rem; margin: 1rem 0 0 0; text-align: center;}
+ figcaption {margin: 1rem 0 0 0; text-align: center;}
+figure.meio + figure.meio {margin-top: 4rem;}
 
-.fotodireita {border: 2px solid #dbdbdb; display: block; float: right; margin-left: 1rem; margin-right: 0px; padding: 7px;}
+table {margin: 1rem auto auto auto; border-collapse: collapse; border: none;}
+ th {border: none; font-weight: bold; text-align: center; padding: 0.5rem 1rem; background-color: black; color: white;}
+ td {border: none; color: black; padding: 0.5rem 1rem;}
+ th[scope="row"] {background: lightgrey; color: black; text-align: left;}
+ caption {caption-side: bottom; margin-top: 1rem; font-size: 9pt;}
+ td.cinza {background-color: lightgrey;}
+ th.cinza {background-color: grey;}
+table.comborda, table.comborda th, table.comborda td {border: 1px solid black;}
+
+h4, h5, h6 {clear: both;}
+
+.matematica {font-family: "Times New Roman", serif;}
+math {display: block; margin-left: auto; margin-right: auto; text-align: center;}
+p math {display: inline; font-family: "Times New Roman", serif;}
+														/*
+--------
+ FOOTER
+--------													*/
+
+footer {border-top: 2px solid black; padding-top: 2rem; padding-bottom: 1.5rem;}
+
+.recomendacao {text-indent: 0; font-weight: bold;}
+ .recomendacao::before {content: '❋ ';}
+
+.note {margin-top: 1.25rem; margin-bottom: 1.25rem; text-align: justify; text-indent: 0; line-height: 1.625em;}
 
 div.colab, div.autorizada {display: block; margin: 2rem auto; text-align: center;}
- div.colab > p, div.autorizada > p {margin: 0 0 .25rem 0; text-align: center; text-indent: 0; font-size: .75rem; font-weight: bold;}
+ div.colab > p, div.autorizada > p {margin: 0 0 .25rem 0; text-align: center; text-indent: 0; font-weight: bold;}
  img.colab {margin: 0; width: auto; height: auto; max-width: 35%; max-height: 100px;}
  img.colab.alta {max-height: 200px;}
  img.colab.longa {max-width: 45%;}
 
-/* Suporte estendido e obsolescencias */
+ .datas {font-weight: normal; text-align: right;}
 
-.quote2, .quote3, .quote4, .quote5, .quote6, .quote-apresentacao {margin-bottom: 0; margin-right: 4%; text-align: justify; text-indent: 0;}
+														/*
+-----------
+ CAPITULOS
+-----------													*/
 
-.quote2 {margin-left: 8%; font-weight: bold;}
-.quote3 {margin-left: 8%;}
-.quote4 {margin-left: 14%;}
-.quote5 {margin-left: 38%;}
-.quote6 {margin-left: 38%; font-size: 0.75rem;}
-.quote-apresentacao {margin-left: 10%; font-size: 0.75rem; text-indent: 4rem;}
-
-.date {text-align: right; text-indent: 0;}
-.tabela_datas {font-size: 0.675rem; text-align: center; font-weight: normal;}
-.toplink-centro {text-align: center; text-indent: 0; font-size: 0.675rem; font-weight: bold; margin-top: 0;}
-.toq-citacao {font-size: 1rem; text-align: justify; text-indent: 0; margin-right: 4%; margin-left: 8%; margin-bottom: 0;} /* possivelmente obsoleto */
-.titulo-capitulo {font-size: 1.1rem; font-weight: bold; margin-bottom: 0; margin-top: 0; text-align: center;}
-.titulo-cima-linha {font-size: 1.165rem; text-align: center; margin-top: 0; margin-bottom: 0; font-weight: bold; line-height: 1.25em;}
-.titulo7 {font-size: 1rem; text-align: center;}
-
-hr.linha-preta {border: 1px solid black;}
-
-.bordalogotipo {display: block; margin-left: auto; margin-right: auto; padding: 7px; text-align: center; background-color: #f5f5f5;}
-.Nome-obra {font-size: 1rem;} /* possivelmente obsoleto */
-
-.heading {margin: 2rem;} /* tipo img */
-.section-img {text-align: center;} /* tipo div */
-
-	/* substituidas em autor.css */
-
-	.bordafoto {background-color: white; border: 1px solid #dbdbdb; display: block; margin-left: auto; margin-right: auto; padding: 7px; text-align: center;}
-	.tabela-obras {border-spacing: 10px; margin-left: auto; margin-right: auto; padding: 4px;}
-	.author {font-size: 0.675rem; text-align: right; font-weight: bold; font-style: italic; margin-right: 1%;}
-	.sugestao {display: none;}
-	.texto-sem-espaco {font-size: 1rem; line-height: 1.25em; margin-bottom: 0; margin-top: 0; text-align: justify; text-indent: 2rem;}
-	p.lapide {font-size: 0.675rem; text-align: justify; text-indent: 0; margin-top: 2.5rem; margin-right: 10%; margin-left: 10%; margin-bottom: 2.5rem;}
-
-/* Indices de livros */
+body.indice main a {text-decoration: underline;}
+body.indice aside.sobre a {text-decoration: none;}
 
 .capadelivro {margin: 5px 0 25px 25px; width: 15%; height: auto; float: right; max-width: fit-content; clear: right;}
-.capadelivro.grande {width: 15%;}
 
 .toc, .toc1, .toc2, .toc3, .toc4, .toc5 {text-indent: 0; text-align: left; margin-left: 0;}
 .toc, .toc1, .toc2 {font-weight: bold;}
-.toc2, .toc3, .toc4, .toc5 {font-size: 0.8325rem;}
 
  .toc {padding-left: 0; margin-top: 1rem; margin-bottom: 1rem;}
 .toc1 {padding-left: 1.5rem; margin-top: 0; margin-bottom: 0;}
@@ -185,17 +209,51 @@ hr.linha-preta {border: 1px solid black;}
 .toc4 {padding-left: 6rem; margin-top: 0; margin-bottom: 0;}
 .toc5 {padding-left: 7.5rem; margin-top: 0; margin-bottom: 0;}
 
-/* Tabelas */
+body.capitulo h1 {font-size: 18pt;}
+body.capitulo h4:first-of-type {margin-top: 1.375rem;}
+body.capitulo nav.interna {display: flex; align-items: center; justify-content: space-between; font-weight: bold; margin-top: 1.5rem; margin-bottom: 3.25rem; width: 100%;}
+body.capitulo .anterior::before {content: "<<< ";}
+body.capitulo .proximo::after {content: " >>>";}
 
-table {margin: 1rem auto auto auto; border-collapse: collapse; border: none;}
-th {border: none; font-weight: bold; text-align: center; padding: 0.5rem 1rem; background-color: black; color: white;}
-td {border: none; black; padding: 0.5rem 1rem;}
-th[scope="row"] {background: lightgrey; color: black; text-align: left;}
-caption {caption-side: bottom; margin-top: 1rem; font-size: 9pt;}
-td.cinza {background-color: lightgrey;}
-th.cinza {background-color: grey;}
 
-table.comborda, table.comborda th, table.comborda td {border: 1px solid black;}
+
+  /*------------------*/
+ /*  DESCONTINUADOS  */
+/*------------------*/
+
+	.quote2, .quote3, .quote4, .quote5, .quote6, .quote-apresentacao {margin-bottom: 0; margin-right: 4%; text-align: justify; text-indent: 0;}
+	.quote2 {margin-left: 8%; font-weight: bold;}
+	.quote3 {margin-left: 8%;}
+	.quote4 {margin-left: 14%;}
+	.quote5 {margin-left: 38%;}
+	.quote6 {margin-left: 38%; font-size: 0.75rem;}
+	.quote-apresentacao {margin-left: 10%; font-size: 0.75rem; text-indent: 4rem;}
+
+	.date {text-align: right; text-indent: 0;}
+	.tabela_datas {font-size: 0.675rem; text-align: center; font-weight: normal;}
+	.toplink-centro {text-align: center; text-indent: 0; font-size: 0.675rem; font-weight: bold; margin-top: 0;}
+	.toq-citacao {font-size: 1rem; text-align: justify; text-indent: 0; margin-right: 4%; margin-left: 8%; margin-bottom: 0;} /* possivelmente obsoleto */
+	.titulo-capitulo {font-size: 1.1rem; font-weight: bold; margin-bottom: 0; margin-top: 0; text-align: center;}
+	.titulo-cima-linha {font-size: 1.165rem; text-align: center; margin-top: 0; margin-bottom: 0; font-weight: bold; line-height: 1.25em;}
+	.titulo7 {font-size: 1rem; text-align: center;}
+
+	hr.linha-preta {border: 1px solid black;}
+
+	.bordalogotipo {display: block; margin-left: auto; margin-right: auto; padding: 7px; text-align: center; background-color: #f5f5f5;}
+	.Nome-obra {font-size: 1rem;} /* possivelmente obsoleto */
+
+	.heading {margin: 2rem;} /* tipo img */
+	.section-img {text-align: center;} /* tipo div */
+
+	header div.colab {display: block; margin: 0.25rem 0 1rem 2rem; text-align: center; float: right; max-width: 100px;}
+	header div.colab > p {margin: 0 0 .375rem 0; text-align: right; text-indent: 0; font-size: .75rem; font-weight: bold; line-height: 1.2em;}
+	header img.colab {margin: 0; width: auto; height: auto; max-width: 100px; max-height: 50px;}
+
+	.H1reduzido, h1 sup {font-size: 0.9375rem;}
+
+	.link {font-size: 0.915rem; font-weight: bold; text-align: center; text-indent: 0;}
+	
+	.capadelivro.grande {width: 15%;}
 
 	/* obsoleto */
 
@@ -213,17 +271,42 @@ table.comborda, table.comborda th, table.comborda td {border: 1px solid black;}
 	td.toplink, td.link {padding: 0.125rem; margin-bottom: 0.125rem;} /* corrige erros de espaçamento */
 
 
-/* Espacamentos */
+	aside.versoes {display: block; float: right; max-width: 25%; margin: 0 0 1rem 2rem;}
+	aside.versoes p {font-size: 0.875rem; text-indent: 0; margin-top: 0; margin-bottom: 0.5rem; line-height: 1rem; text-align: left;}
+	aside.versoes img {height: 16px; width: auto; vertical-align: text-bottom; padding-right: 6px; image-rendering: pixelated;}
 
-h1 ~ hr:first-of-type {margin-top: 3rem;}						/* Primeira barra */
-h1 ~ hr:nth-of-type(2) {margin-bottom: 3rem;}						/* Segunda barra */
-p.link ~ hr {margin-top: 2rem;}								/* Ultima barra */
-a[href^="#n"] > sup, a[href^="#tr"] > sup {font-size: 0.75rem; font-weight: bold; font-style: normal;}	/* Realca links para notas de rodape */
-p.editorial:has(+ p.editorial) {margin-bottom: 1rem;}					/* Espacamento entre paragrafos de um editorial */
-h1:has(+ .subtitulo), h1:has(+ .parte) {margin-bottom: 0.875rem;}						/* Diminui o espaco em titulos com subtitulo */
-p.link:has(a[href="#topp"]) {margin-top: 2rem; margin-bottom: 2rem; clear: both;}	/* Link para o inicio da pagina*/
+	/* substituidas em autor.css */
 
-/* Celular */
+	.bordafoto {background-color: white; border: 1px solid #dbdbdb; display: block; margin-left: auto; margin-right: auto; padding: 7px; text-align: center;}
+	.tabela-obras {border-spacing: 10px; margin-left: auto; margin-right: auto; padding: 4px;}
+	.author {font-size: 0.675rem; text-align: right; font-weight: bold; font-style: italic; margin-right: 1%;}
+	.sugestao {display: none;}
+	.texto-sem-espaco {font-size: 1rem; line-height: 1.25em; margin-bottom: 0; margin-top: 0; text-align: justify; text-indent: 2rem;}
+	p.lapide {font-size: 0.675rem; text-align: justify; text-indent: 0; margin-top: 2.5rem; margin-right: 10%; margin-left: 10%; margin-bottom: 2.5rem;}
+	.linha-centralizada {text-align: center; text-indent: 0;}
+	.linha-esquerda {text-align: left;}
+	.linha-direita {text-align: right;}
+	.linha-justificada {text-align: justify;}
+
+	img.versoes {height: 16px; image-rendering: pixelated; padding-right: 6px; vertical-align: text-bottom; width: auto;}
+	img.licenca {height: 15px; image-rendering: pixelated; vertical-align: text-bottom; width: 80px;}
+
+	.estrelavermelha {color: #a90000; text-align: center; text-indent: 0; border: none; margin: 1.5rem 0;}
+
+	.fotodireita {border: 2px solid #dbdbdb; display: block; float: right; margin-left: 1rem; margin-right: 0px; padding: 7px;}
+	
+
+	/* Espacamentos */
+
+	h1 ~ hr:first-of-type {margin-top: 3rem;}						/* Primeira barra */
+	h1 ~ hr:nth-of-type(2) {margin-bottom: 3rem;}						/* Segunda barra */
+	p.link ~ hr {margin-top: 2rem;}								/* Ultima barra */
+	p.link:has(a[href="#topp"]) {margin-top: 2rem; margin-bottom: 2rem; clear: both;}	/* Link para o inicio da pagina*/
+
+														/*
+-----------
+ CELULARES
+-----------													*/
 
 @media (max-width: 480px) {
 img {max-width: 150px; height: auto;}
@@ -242,12 +325,14 @@ ol, ul {margin-left: 1%; margin-right: 1%;}
 .abnt {margin-left: 20%;}
 th, td {padding: 0.5rem;}
 
-/* main p {font-size: 13pt;} */
 .editorial, section.editorial {margin-left: 2rem;}
 figure.total img {width: calc(100% + 10vw); margin-left: -5vw; max-width: revert;}
 }
 
-/* Impressao */
+														/*
+------------
+ IMPRESSORA
+------------													*/
 
 @media print {
 body {background-color: white; line-height: 1.5em;}
@@ -272,7 +357,88 @@ a:visited {text-decoration: none; color: black;}
 a[href^="#r"], a[href^="#n"], a[href^="#tr"] {font-weight: bold; color: #000099;}
 }
 
-/* MRX.css v. 2.3.0, contrastado com 2.4.1 e orientado ao 3.0.0 */
+														/*
+---------
+ AJUSTES
+---------													*/
+
+.note ~ .datas:first-of-type {margin-top: 3rem;}
+h4:has(+ .subtitulo) {margin-bottom: 0.875rem;}
+main > figure.direita:last-child {float: none; margin-right: 0; margin-left: auto;}
+main > figure.esquerda:last-child {float: none; margin-left: 0; margin-right: auto;}
+
+
+									/* recursos visuais para correção */
+
+footer .tabela_datas {font-size: 10rem;}
+
+
+														/*
+-------
+ FONTE
+-------														*/
+
+									/* tamanho dinâmico */
+
+h1 {font-size: 1.675rem;}
+body.capitulo h1 {font-size: 1.625rem;}
+h2 {font-size: 1.175rem;}
+h3 {font-size: 1rem;}
+h4 {font-size: 1.25rem;}
+h5 {font-size: 1.175rem;}
+h6 {font-size: 1rem;}
+p, ol, ul, li, .subtitulo, .parte {font-size: 1rem;}
+.note, .menor, .epigrafe p {font-size: 0.875rem;}
+aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 0.8325rem;}
+.editorial, section.editorial p, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p {font-size: 0.75rem;}
+ .datas, small, a[href^="#n"] > sup, a[href^="#tr"] > sup {font-size: 0.75rem;}
+
+@media (min-width: 480px) {
+h1 {font-size: 22pt;}
+body.capitulo h1 {font-size: 20pt;}
+h2 {font-size: 16pt;}
+h3 {font-size: 14pt;}
+h4 {font-size: 16pt;}
+h5 {font-size: 15pt;}
+h6 {font-size: 14pt;}
+p, ol, ul, li, .subtitulo, .parte {font-size: 13pt;}
+.note, .menor, .epigrafe p {font-size: 12pt;}
+aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 11pt;}
+.editorial, section.editorial p, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p {font-size: 10pt;}
+ .datas, small, a[href^="#n"] > sup, a[href^="#tr"] > sup {font-size: 9pt;}
+
+header img {height: 60px;}
+p {line-height: 1.7em; margin: 1.625rem 0;}
+}
+
+/* latin-ext */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: italic; font-weight: 400; font-display: swap; src: url(fontes/atkinson/latin-ext-i.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+
+/* latin */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: italic; font-weight: 400; font-display: swap; src: url(fontes/atkinson/latin-i.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+
+/* latin-ext */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: italic; font-weight: 700; font-display: swap; src: url(fontes/atkinson/latin-ext-bi.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+
+/* latin */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: italic; font-weight: 700; font-display: swap; src: url(fontes/atkinson/latin-bi.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+
+/* latin-ext */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: normal; font-weight: 400; font-display: swap; src: url(fontes/atkinson/latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+
+/* latin */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: normal; font-weight: 400; font-display: swap; src: url(fontes/atkinson/latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+
+/* latin-ext */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: normal; font-weight: 700; font-display: swap; src: url(fontes/atkinson/latin-ext-b.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+
+/* latin */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: normal; font-weight: 700; font-display: swap; src: url(fontes/atkinson/latin-b.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+
+														/*
+-------------
+ MODO ESCURO
+-------------													*/
 
 /*
 @media screen and (prefers-color-scheme: dark) {
@@ -300,146 +466,29 @@ a[href^="#r"], a[href^="#n"], a[href^="#tr"] {font-weight: bold; color: #000099;
  body.capitulo h2 {color: #fafafa;}
 }*/
 
-/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-main {background: white; padding-top: 3rem; padding-bottom: 1.5rem; font-variant-numeric: lining-nums;}
-/* main p {font-size: 14pt; line-height: 1.625em;} */
-
-main h4 {font-size: 15pt;}
-main h5 {font-size: 14pt;}
-main h6 {font-size: 13pt;}
-
-header {padding-top: 46px; padding-bottom: 50px; padding-top: 3rem; padding-bottom: 3rem;}
-header * {text-align: left; margin-left: 0; margin-right: 0;}
-header h1 {color: black; margin-bottom: 2rem; margin-top: 0; font-size: 20pt;}
-header .subtitulo, header .parte {text-align: left; margin-left: 0;}
-header img {clear: none; float: left; margin-right: 1rem; height: 54px; width: auto;}
- header img:has(+ img) {margin-right: 0.5rem;}						/* textos com dois autores */
-header h2 {font-size: 14pt; margin-bottom: 0.75rem; color: #06c;}
-header h3 {font-size: 12pt; font-weight: normal; margin-top: 0.75rem; margin-bottom: 0; text-transform: lowercase;}
-
-aside.sobre {display: block; margin: 0 0 3rem 0; border: 1.5px solid #d9d9d9; text-align: left; background-color: #f3f3f3; padding: 1.25rem;}
-main * + aside.sobre {margin-top: 0.125rem;}
-
-aside.sobre img.capadelivro, aside.sobre img.capadelivro.grande {margin: 0.5rem 0 1rem 1rem; width: 25%; float: right;}
-aside.sobre .info {font-size: 10pt; margin: .25rem 0; text-indent: 0; text-align: left;}
-
-footer {border-top: 2px solid black; padding-top: 2rem; padding-bottom: 1.5rem;}
-
-header div.colab {display: block; margin: 0.25rem 0 1rem 2rem; text-align: center; float: right; max-width: 100px;}
-header div.colab > p {margin: 0 0 .375rem 0; text-align: right; text-indent: 0; font-size: .75rem; font-weight: bold; line-height: 1.2em;}
-header img.colab {margin: 0; width: auto; height: auto; max-width: 100px; max-height: 50px;}
-
-p.info img.versoes {padding-right: 0;}
-
-p.info.formatos:before {content: 'Também disponível em: '; font-weight: bold; display: inline;}
-p.info.formatos a[href*="audiolivros.htm"]::before {content: url(../img/audio.png);}
-p.info.formatos a[href*=".mp3"]::before {content: url(../img/audio.png);}
-p.info.formatos a.audio::before {content: url(../img/audio.png);}
-p.info.formatos a[href$=".pdf"]::before {content: url(../img/pdf.png);}
-p.info.formatos a[href$=".epub"]::before {content: url(../img/epub.png);}
-
-p.info.formatos a[href*="audiolivros.htm"]::before, 
-p.info.formatos a[href$=".pdf"]::before, 
-p.info.formatos a[href$=".mp3"]::before, 
-p.info.formatos a.audio::before, 
-p.info.formatos a[href$=".epub"]::before 
-{display: inline-block; vertical-align: text-bottom; image-rendering: pixelated; width: auto; height: 16px; padding-left: 2px; padding-right: 5px;}
-
-body.capitulo h1 {font-size: 18pt;}
-body.capitulo .subtitulo {font-size: 1.1rem;}
-body.capitulo h1:has(+ .subtitulo), body.capitulo h1:has(+ .subtitulo) {margin-bottom: 0.875rem;}
-body.capitulo h4:first-of-type {margin-top: 1.375rem;}
-body.capitulo nav.interna {display: flex; align-items: center; justify-content: space-between; font-size: 9pt; font-weight: bold; margin-top: 1.5rem; margin-bottom: 3.25rem; width: 100%;}
-body.capitulo .anterior::before {content: "<<< ";}
-body.capitulo .proximo::after {content: " >>>";}
-
-img.imprensa {display: block; width: 20%; height: auto; margin: 2rem; max-width: 200px;}
-img.imprensa.longo {width: 25%; max-width: unset;}
- @media screen and (max-width: 480px) {img.imprensa {width: 30%;}}
-
-h4, h5, h6 {clear: both;}
-
-figure.meio + figure.meio {margin-top: 4rem;}
-
-.info.autorizada img {display: inline; height: 1rem; width: auto; margin-inline: 1.5px; vertical-align: text-bottom;}
-.info.autorizada {text-align: center;}
-
-
-.info.cc::before, .info.gnu::before {content: 'Direitos de reprodução: '; font-weight: bold;}
- .by-sa a::before {content: url(../img/by-sa.svg) ' '; vertical-align: top;}
- .by-nc a::before {content: url(../img/by-nc.svg) ' '; vertical-align: top;}
- .by-nc-sa a::before {content: url(../img/by-nc-sa.svg) ' '; vertical-align: top;}
- .info.gnu a::before {content: url(../img/gfdl.svg) ' '; vertical-align: top;}
- .by-sa::after, .by-nc::after, .by-nc-sa::after, .info.gnu::after {content: '.';}
-.info.cc a.link_ext::before {content: '';}
-
-.recomendacao {text-indent: 0; font-size: 10pt; font-weight: bold;}
- .recomendacao::before {content: '❋ ';}
-
-
-.matematica {font-family: "Times New Roman", serif;}
-math {display: block; margin-left: auto; margin-right: auto; text-align: center;}
-p math {display: inline; font-family: "Times New Roman", serif;}
-
-
-									/* ajustes */
-
-.note ~ .datas:first-of-type {margin-top: 3rem;}
-h4:has(+ .subtitulo) {margin-bottom: 0.875rem;}
-main > figure.direita:last-child {float: none; margin-right: 0; margin-left: auto;}
-main > figure.esquerda:last-child {float: none; margin-left: 0; margin-right: auto;}
-
-
-									/* recursos visuais para correção */
-
-footer .tabela_datas {font-size: 10rem;}
-
-
-									/* fonte atkinson hyperlegible */
-
-@media (min-width: 480px) {
-p {font-size: 13pt; line-height: 1.7em; margin: 1.625rem 0;}
-header h1 {font-size: 22pt;}
- body.capitulo h1 {font-size: 20pt;}
-.subtitulo, .parte {font-size: 13pt;}
-header h2 {font-size: 16pt;}
-header h3 {font-size: 14pt;}
-main h4 {font-size: 16pt;}
-main h5 {font-size: 15pt;}
-main h6 {font-size: 14pt;}
-aside.sobre .info {font-size: 11pt; line-height: 1.125rem;}
-.note {font-size: 12pt;}
-.datas {font-size: 9pt;}
-.datas {font-size: 9pt;}
-body.capitulo nav.interna {font-size: 10pt;}
-div.colab p, div.autorizada p {font-size: 10pt;}
-caption {font-size: 10pt;}
-ol, ul {font-size: 13pt;}
-}
-
-/* latin-ext */
-@font-face {font-family: 'Atkinson Hyperlegible'; font-style: italic; font-weight: 400; font-display: swap; src: url(fontes/atkinson/latin-ext-i.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
-
-/* latin */
-@font-face {font-family: 'Atkinson Hyperlegible'; font-style: italic; font-weight: 400; font-display: swap; src: url(fontes/atkinson/latin-i.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
-
-
-/* latin-ext */
-@font-face {font-family: 'Atkinson Hyperlegible'; font-style: italic; font-weight: 700; font-display: swap; src: url(fontes/atkinson/latin-ext-bi.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
-
-/* latin */
-@font-face {font-family: 'Atkinson Hyperlegible'; font-style: italic; font-weight: 700; font-display: swap; src: url(fontes/atkinson/latin-bi.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
-
-/* latin-ext */
-@font-face {font-family: 'Atkinson Hyperlegible'; font-style: normal; font-weight: 400; font-display: swap; src: url(fontes/atkinson/latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
-
-/* latin */
-@font-face {font-family: 'Atkinson Hyperlegible'; font-style: normal; font-weight: 400; font-display: swap; src: url(fontes/atkinson/latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
-
-/* latin-ext */
-@font-face {font-family: 'Atkinson Hyperlegible'; font-style: normal; font-weight: 700; font-display: swap; src: url(fontes/atkinson/latin-ext-b.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
-
-/* latin */
-@font-face {font-family: 'Atkinson Hyperlegible'; font-style: normal; font-weight: 700; font-display: swap; src: url(fontes/atkinson/latin-b.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
-
+/*
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠐⠀⠀⠂⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⠀⠠⠀⣀⢄⡠⣔⢬⠃⠵⠯⠂⡠⢦⠀⠀⡀⠄⠄⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⢀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⢀⡔⣌⣔⣏⠋⠄⡪⡹⡝⠋⡛⣃⠃⠆⡅⡄⠂⠀⠐⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐
+⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡴⡰⣷⠾⡃⡌⢍⠉⠈⠈⠀⠈⠀⠉⠂⠀⠀⠀⠀⠄⠀⠀⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠂⠀⠀⠀⠀⠀⡼⣷⣽⡋⠉⠁⠀⠀⠀⠀⠀⠐⠀⠀⠀⡀⠄⠀⠀⠐⠈⠀⢀⠄⢈⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀			-------		-----			
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⢄⡔⣿⣯⠋⠂⠀⠈⠀⠀⢄⣠⡌⡤⡆⣄⠦⣧⡒⠠⠄⢐⡀⠀⠀⠀⠀⠀⡠⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀			MRX.css		2.9.9
+⠀⠀⠀⢀⠀⠀⠀⠀⠈⠄⠑⣯⡟⡗⠳⠀⠀⠀⠀⣀⡨⣿⡯⡋⡍⡉⢙⠮⠹⢗⠟⡓⢣⢥⢂⣁⠄⡀⠃⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠈			
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣣⣿⠿⡧⠊⠀⠀⠁⡀⣵⡿⠞⡁⠔⠅⠀⠀⠁⠀⠀⠉⠉⠨⠽⢕⠧⣜⠅⡺⡇⠄⠠⠄⠀⠀⠀⠀⠀⠀⠀⠀			"Novas vitórias virão"
+⠀⠀⠀⠀⢈⠀⠂⠀⠂⡸⣾⣷⠠⠀⡀⠀⣠⣚⡕⡁⠁⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠕⡥⠭⣦⢈⡄⠀⠁⠀⠀⠀⠁⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠐⠀⢦⡧⡇⡀⠀⡂⠀⠂⣝⣃⠁⠠⠁⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠈⢣⡕⡷⡕⠀⠱⠑⠀⠀⠀⠀⠀⠀			base		2.3.0
+⠀⠀⠀⠀⠀⠀⠀⠐⠌⣻⡯⡃⡀⡀⠀⠀⠁⠾⡕⠅⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡽⠭⣻⠢⠀⠀⠀⠀⠀⠀⠀⠈			contraste	2.4.1
+⠀⠀⠀⠁⠀⠈⠠⠀⠠⣿⡣⡀⠀⠀⠀⠀⠐⢿⡅⡋⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠠⡿⠵⠀⠀⠀⠀⠄⢀⠀⠀⠀			orientação	3.0.0
+⠀⠀⠀⡀⠀⠀⠐⠀⠤⣾⡏⡒⠄⠀⠀⠀⡈⠉⠟⠿⣷⣯⠦⠆⠤⠠⢀⣀⠄⠀⠀⢀⠀⠁⠀⠀⠀⠀⠆⣜⣷⠀⠃⠀⠀⠀⠀⠀⠀⠀			----------	-----
+⠀⠀⠀⠀⠀⠀⠀⡘⠀⢘⣷⠓⠀⡀⠀⠀⠁⠀⠀⠉⠈⢚⡋⡲⡧⠍⣨⣀⠄⠀⠀⠀⠀⠀⠀⠀⣀⢡⣹⣞⡗⠉⠂⠠⠀⠀⠀⠀⠁⠀
+⠀⠀⠀⠀⠀⠀⠀⢠⠀⢼⣽⡷⡄⠈⠂⠁⠀⠀⠀⠀⠁⠄⠐⠊⡣⢆⠀⢒⠄⠀⠀⠀⠀⠀⠀⠈⡁⢅⣏⡟⢥⠀⠀⠀⠀⠀⠀⠀⠀⠂
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠏⡻⣿⣃⡔⠀⠂⡀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⡀⠀⠠⢰⠂⠥⠶⡿⡛⡁⠂⠀⠂⡀⠄⠀⠀⠈⠀⠀
+⠀⠀⠉⠀⠀⠀⠀⠀⠁⠁⡩⣽⠧⢁⡌⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⢀⡀⠠⠆⢨⣷⢭⡙⠨⠠⡀⠁⠐⠀⠀⠈⠀⠁⠀⢄⢁
+⠀⠀⠀⠀⠀⠀⠀⠀⠄⠁⠡⡛⢪⠝⣦⣥⡢⠀⠀⠀⡀⠀⠀⡀⠀⠀⡔⠔⠔⢀⣥⣡⢆⡜⣟⠌⡀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠀
+⠀⠄⠀⠀⠀⠀⠀⠀⠀⠀⠉⠝⣅⡀⣴⣽⡽⡇⢧⡮⢂⣀⡶⣊⢪⢙⠘⣽⡕⣋⠥⡏⠅⡁⠀⠀⠁⠀⠀⠢⡀⠀⠀⠀⠀⠁⠀⠀⠀⠐
+⠀⠀⠀⠀⠀⠀⠀⠀⠁⠠⠀⠀⠈⠌⠀⠑⢉⠻⠋⠳⢥⠧⡤⠅⠂⠏⢁⠼⡯⠋⠈⠀⠀⠀⠀⠀⠠⠀⠀⠀⠀⠀⠀⠀⠀⠔⠀⠂⠀⠀
+⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠢⠁⣑⠎⠄⡠⡆⡰⡁⠸⠋⠉⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠨⠐⠈⠀⠀⠀⠀⠀⠄⠀⠄⠀
+⠀⠀⠁⡀⠀⠀⠀⠠⠀⠀⠀⠀⠀⠂⠀⠀⠈⠁⠁⠈⠀⠁⠀⠄⠀⡄⠀⠀⠀⠀⠀⠑⠀⠀⠂⠀⠀⠄⠀⠀⠀⠄⠄⠂⠁⠀⠀⠀⠀⠀
+⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠠⠂⠀⠀⠀⠄⠀⠀⠀⠀⠐⠐⠀⠀⠀⠀⠀⠀⠀											*/
