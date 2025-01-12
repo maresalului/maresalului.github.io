@@ -9,7 +9,7 @@ font-family: "Atkinson Hyperlegible", Verdana, "Open Sans", system-ui, sans-seri
 margin: 0; 
 width: 100%;} 
 
-body > * {max-width: 860px; margin-left: auto; margin-right: auto; padding-left: max(calc((100vw - 860px) / 2), 5vw); padding-right: max(calc((100vw - 860px) / 2), 5vw);}
+body > * {max-width: 860px; margin-left: auto; margin-right: auto; padding-left: 5%; padding-right: 5%; padding-left: max(calc((100vw - 860px) / 2), 5vw); padding-right: max(calc((100vw - 860px) / 2), 5vw);}
 
 														/*
 -----
