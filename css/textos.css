@@ -370,6 +370,7 @@ h4:has(+ .subtitulo) {margin-bottom: 0.875rem;}
 main > figure.direita:last-child {float: none; margin-right: 0; margin-left: auto;}
 main > figure.esquerda:last-child {float: none; margin-left: 0; margin-right: auto;}
 header a:last-child h2 {margin-bottom: 2.25rem;}
+header > h2:last-child {margin-bottom: 2.25rem;}
 
 
 									/* recursos visuais para correção */
