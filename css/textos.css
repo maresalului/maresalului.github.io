@@ -210,7 +210,10 @@ body.indice aside.sobre a {text-decoration: none;}
 .toc5 {padding-left: 7.5rem; margin-top: 0; margin-bottom: 0;}
 
 body.capitulo h1 {font-size: 18pt;}
+
 body.capitulo h4:first-of-type {margin-top: 1.375rem;}
+p.parte:has(+ h4) {margin-bottom: 1.375rem;}
+
 body.capitulo nav.interna {display: flex; align-items: center; justify-content: space-between; font-weight: bold; margin-top: 1.5rem; margin-bottom: 3.25rem; width: 100%;}
 body.capitulo .anterior::before {content: "<<< ";}
 body.capitulo .proximo::after {content: " >>>";}
@@ -366,6 +369,7 @@ a[href^="#r"], a[href^="#n"], a[href^="#tr"] {font-weight: bold; color: #000099;
 h4:has(+ .subtitulo) {margin-bottom: 0.875rem;}
 main > figure.direita:last-child {float: none; margin-right: 0; margin-left: auto;}
 main > figure.esquerda:last-child {float: none; margin-left: 0; margin-right: auto;}
+header a:last-child h2 {margin-bottom: 2.25rem;}
 
 
 									/* recursos visuais para correção */
