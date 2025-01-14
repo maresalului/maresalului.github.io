@@ -26,8 +26,9 @@ cabbrev linkexterno href="https://" class="link_ext" target="_blank"
 
 map <F1> :call MANDA()<cr>
 map m<F1> :call MANDAcap()<cr>
-map <F2> @t
-map <F3> @a
+map m4<F1> :call NivelarCapituloEm4()<cr>
+map <F2> :call MacroInclusaoTabela()<cr>
+map <F3> :call MacroCorrigeAside()<cr>
 map <F4> :Encapar<cr>
 map <F5> :call quickui#listbox#open(content, opts)<cr>
 map <F6> :call IgnorarH3()<cr>
@@ -40,6 +41,11 @@ map m<F12> :source ~/.config/nvim/nvimrc<cr>
 
 map ma :call ArrumaGeral()<cr>
 map md :call Descodificar()<cr>
+map c <Nop>
+map cc 200@l
+map . :s/<\/p>/.&/<cr>
+map <a> :s/> \(.\{-}\) - \(http.\{-}\)</> <a href="\2">\1<\/a></
+map <A> :s/\(http.\{-}\) /<a href="\1"><\/a>/
 
 map ú :call CorrigeUltimaAlteracao()<cr>
 map Ú :call CorrigeUltimaAlteracao()<cr>
@@ -47,9 +53,17 @@ map Q :call Quotar()<cr>
 map F :call Figurar()<cr>
 map ś :%s/<br>\n<span class="H1reduzido">\(.*\)<\/span><\/h1>/<\/h1>\r<p class="subtitulo">\1<\/p>/<cr>
 map ń :call NavegaSemCap()<cr>
-map ç :%s/<p class="toplink"><a href=".*\.htm">continua.*<\/a><\/p>//c<cr>
+map ĺ :s/\(<a href=".\{-}"\)>/\1 class="link_ext" target="_blank">/<cr>
+map ṕ i<AQUI:s/<AQUI/<\/p>\r<p class="info">/<cr>
 map é :call EspecialEspecifico()<cr>
 
+map <C-e> :%s/<a href="http.\{-}<img src=".\{-}soldado-ideias.jpg.\{-}<.a>\n<cr>
+map ww :w<cr>
+map qq :q<cr>
+
+map >> :s/\([A-z]\)>/\1 class="direita">/<cr>
+map >< :s/\([A-z]\)>/\1 class="centralizado">/<cr>
+map m/c /class=
 
 """					       '''					^__^
 ""						''					(oo)\_______
@@ -66,7 +80,7 @@ command Descodificar :call Descodificar()
 
 
 ""			''
-"		Funções	 '	🪄
+"		Bruxas 	 '	🪄
 ""			''
 
 function! Notar()
@@ -276,6 +290,7 @@ function! ArrumaGeral()
  %s/<h4>\* \* \*<\/h4>/<hr class="estrelavermelha">/ge
  %s/<p class="estrelavermelha">★★★<\/p>/<hr class="estrelavermelha">/ge
  %s/<p class="estrelavermelha">★ ★ ★<\/p>/<hr class="estrelavermelha">/ge
+ %s/<p class="centralizado">★ ★ ★<\/p>/<hr class="estrelavermelha">/ge
  %s/<br >/<br>/ge
  %s/<style type="text\/css">\n<!--.*\n.*\n-->\n<\/style>\n//ge
  %s/nº\./n.º/ge
@@ -284,6 +299,22 @@ function! ArrumaGeral()
  %s/<p class="centralizado.*>⁂<\/p>/<hr class="estrelavermelha">/ge
  %s/<p class="estrelavermelha"><b>★ ★ ★<\/b><\/p>/<hr class="estrelavermelha">/ge
  %s/<h[3-6]>★ ★ ★<\/h[3-6]>/<hr class="estrelavermelha">/ge
+ %s/\(<b>Fonte:<\/b>\)\([A-z]\)/\1 \2/e
+ %s/<\/i> <i>/ /ge
+ %s/<\/b> <b>/ /ge
+ %s/b>Primeira Edi/b>Primeira edi/e
+ %s/<p align="justify"/<p/ge
+ %s/<p align="right"/<p class="direita"/gce
+ %s/<hr >/<hr>/ge
+ %s/name=".\{-}" \(id=".\{-}"\)/\1/ge
+ %s/\(<a href="#tr.\{-}"\)\(><sup>(.\{-})<\/sup><\/a>\)<a id=\(".\{-}"\)><\/a>/\1 id=\3\2/ge
+ %s/<h5>\* \* \*<\/h5>/<hr class="estrelavermelha">/ge
+ %s/<b> <\/b>/ /ge
+ %s/<p align="center">/<p>/ge
+ %s/Editorial "Avante!"/Editorial «Avante!»/ge
+ %s/<h\(.\{-}\)><a id="\(.\{-}\)"><.a>/<h\1 id="\2">/ge
+ %s/<table border="1" align="center">/<table class="comborda">/ge
+ %s/<p> <\/p>\n//ge
 endfunction
 
 function! Capitular()
@@ -376,6 +407,10 @@ endfunction
 
 
 
+					" todos os comandos externos são
+					" experimentais a menos que se
+					" originem de outras fontes
+
 
 function! Tidy()
  execute 'normal G$a<REMOVEtidy>'
@@ -438,6 +473,8 @@ function! PegaTAG()
   echohl None
  endif
 endfunction
+
+autocmd BufReadPost *.htm Atalhos
 
 autocmd BufReadPost *.htm call PegaUnicode()
 autocmd BufReadPost *.htm call PegaTAG()
@@ -613,6 +650,19 @@ function! IgnorarH3()
  %s/<\/a>i<h3>/<\/a>/
 endfunction
 
+function! NivelarEm4()
+ %s/..\/..\/..\/..\/css\/texto/..\/..\/..\/css\/texto/
+ call MANDA()
+ call MacroNivelaEm4()
+endfunction
+
+function! NivelarCapituloEm4()
+ %s/..\/..\/..\/..\/css\/texto/..\/..\/..\/css\/texto/
+ w
+ call MANDAcap()
+ call MacroNivelaEm4()
+endfunction
+
 command Indice :%s/<body>/<body class="indice">/
 command Encapar :call Encapar()
 
@@ -638,6 +688,15 @@ function! Contrib(arg)
    :%s/@mrxCONTRIBhei/209/
   endif
 
+  if a:arg == "avante"
+   :%s/Este texto foi uma contribuição do<\/p>/Este texto foi uma contribuição de<\/p>/
+   :%s/@mrxCONTRIBlink/https:\/\/editorial-avante.pcp.pt\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/avante.svg/
+   :%s/@mrxCONTRIBalt/Edições Avante!/
+   :%s/@mrxCONTRIBwid/250/
+   :%s/@mrxCONTRIBhei/89/
+  endif
+
   if a:arg == "bibliotecaanarquista"
    :%s/Este texto foi uma contribuição do<\/p>/Este texto foi uma contribuição da<\/p>/
    :%s/@mrxCONTRIBlink/https:\/\/www.bibliotecaanarquista.org\//
@@ -655,12 +714,37 @@ function! Contrib(arg)
    :%s/@mrxCONTRIBhei/190/
   endif
 
+  if a:arg == "buala"
+   :%s/Este texto foi uma contribuição do<\/p>/Este texto foi uma contribuição de<\/p>/
+   :%s/@mrxCONTRIBlink/https:\/\/www.buala.org\/pt/
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/buala.png/
+   :%s/@mrxCONTRIBalt/Buala/
+   :%s/@mrxCONTRIBwid/615/
+   :%s/@mrxCONTRIBhei/116/
+  endif
+
   if a:arg == "cemflores"
    :%s/@mrxCONTRIBlink/https:\/\/cemflores.org\//
-   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/cem-flores.jpg/
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/cemflores.jpg/
    :%s/@mrxCONTRIBalt/Cem Flores/
-   :%s/@mrxCONTRIBwid/453/
-   :%s/@mrxCONTRIBhei/98/
+   :%s/@mrxCONTRIBwid/1407/
+   :%s/@mrxCONTRIBhei/304/
+  endif
+
+  if a:arg == "cubadebate"
+   :%s/@mrxCONTRIBlink/https:\/\/cubadebate.cu\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/cubadebate.svg/
+   :%s/@mrxCONTRIBalt/Cuba Debate/
+   :%s/@mrxCONTRIBwid/799/
+   :%s/@mrxCONTRIBhei/278/
+  endif
+
+  if a:arg == "diarioliberdade"
+   :%s/@mrxCONTRIBlink/https:\/\/gz.diarioliberdade.org\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/diarioliberdade.jpg/
+   :%s/@mrxCONTRIBalt/Diário Liberdade/
+   :%s/@mrxCONTRIBwid/288/
+   :%s/@mrxCONTRIBhei/150/
   endif
 
   if a:arg == "revistaoutubro"
@@ -680,6 +764,26 @@ function! Contrib(arg)
    :%s/@mrxCONTRIBhei/484/
   endif
 
+  if a:arg == "edicoescombate"
+   :%s/Este texto foi uma contribuição do<\/p>/Este texto foi uma contribuição das<\/p>/
+   :%s/@mrxCONTRIBlink/https:\/\/combate.info/
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/edicoescombate.png/
+   :%s/@mrxCONTRIBalt/Edições Combate/
+   :%s/@mrxCONTRIBwid/1084/
+   :%s/@mrxCONTRIBhei/455/
+  endif
+
+  if a:arg == "comuneiro"
+   :%s/Este texto foi uma contribuição do<\/p>/Este texto foi uma contribuição de<\/p>/
+   :%s/class="colab/& imutavel/
+   :%s/div class="colab imutavel/div class="colab/
+   :%s/@mrxCONTRIBlink/https:\/\/www.ocomuneiro.com/
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/comuneiro.jpg/
+   :%s/@mrxCONTRIBalt/O Comuneiro/
+   :%s/@mrxCONTRIBwid/377/
+   :%s/@mrxCONTRIBhei/72/
+  endif
+
   if a:arg == "criticamarxista"
    :%s/Este texto foi uma contribuição do<\/p>/Este texto foi uma contribuição da<\/p>/
    :%s/@mrxCONTRIBlink/https:\/\/econtents.bc.unicamp.br\/inpec\/index.php\/cma\/index/
@@ -697,14 +801,45 @@ function! Contrib(arg)
    :%s/@mrxCONTRIBhei/67/
   endif
 
+  if a:arg == "fidelsoldado"
+   :%s/Este texto foi uma contribuição do<\/p>/Este texto foi uma contribuição de<\/p>/
+   :%s/@mrxCONTRIBlink/https:\/\/fidelcastro.cu\/pt-pt/
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/fidel.svg/
+   :%s/@mrxCONTRIBalt/Fidel Soldado de las Ideas/
+   :%s/@mrxCONTRIBwid/800/
+   :%s/@mrxCONTRIBhei/480/
+  endif
+
+  if a:arg == "kfa"
+   :%s/Este texto foi uma contribuição do<\/p>/Este texto foi uma contribuição da<\/p>/
+   :%s/@mrxCONTRIBlink/https:\/\/kfabrasil.portalrpdc.com\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/kfa.png/
+   :%s/@mrxCONTRIBalt/Associação de Amizade com a Coreia - Brasil/
+   :%s/@mrxCONTRIBwid/300/
+   :%s/@mrxCONTRIBhei/300/
+  endif
+
   if a:arg == "lavrapalavra"
    :%s/class="colab/& alta/
+   :%s/div class="colab alta/div class="colab/
    :%s/@mrxCONTRIBlink/https:\/\/lavrapalavra.com\//
    :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/logo_lavra_palavra.png/
    :%s/@mrxCONTRIBalt/LavraPalavra/
    :%s/@mrxCONTRIBwid/144/
    :%s/@mrxCONTRIBhei/123/
   endif
+
+  if a:arg == "marxismo21"
+   :%s/Este texto foi uma contribuição do<\/p>/Este texto foi uma contribuição de<\/p>/
+   :%s/class="colab/& alta/
+   :%s/div class="colab alta/div class="colab/
+   :%s/@mrxCONTRIBlink/https:\/\/marxismo21.org\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/marxismo21.png/
+   :%s/@mrxCONTRIBalt/marxismo21/
+   :%s/@mrxCONTRIBwid/1600/
+   :%s/@mrxCONTRIBhei/780/
+  endif
+
 
   if a:arg == "novacultura"
    :%s/Este texto foi uma contribuição do<\/p>/Este texto foi uma contribuição da<\/p>/
@@ -715,6 +850,14 @@ function! Contrib(arg)
    :%s/@mrxCONTRIBhei/133/
   endif
 
+  if a:arg == "pcb"
+   :%s/@mrxCONTRIBlink/https:\/\/www.pcb.org.br\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/pcb.svg/
+   :%s/@mrxCONTRIBalt/Partido Comunista Brasileiro/
+   :%s/@mrxCONTRIBwid/581/
+   :%s/@mrxCONTRIBhei/242/
+  endif
+
   if a:arg == "pco"
    :%s/@mrxCONTRIBlink/https:\/\/www.pco.org.br\//
    :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/pco.svg/
@@ -723,12 +866,41 @@ function! Contrib(arg)
    :%s/@mrxCONTRIBhei/659/
   endif
 
+  if a:arg == "pcr"
+   :%s/class="colab/& alta/
+   :%s/div class="colab alta/div class="colab/
+   :%s/@mrxCONTRIBlink/https:\/\/pcrbrasil.org\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/pcr.svg/
+   :%s/@mrxCONTRIBalt/Partido Comunista Revolucionário/
+   :%s/@mrxCONTRIBwid/512/
+   :%s/@mrxCONTRIBhei/760/
+  endif
+
+  if a:arg == "pcplisboa"
+   :%s/class="colab/& longa/
+   :%s/div class="colab longa/div class="colab/
+   :%s/@mrxCONTRIBlink/https:\/\/lisboa.pcp.pt\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/pcp-lisboa.jpg/
+   :%s/@mrxCONTRIBalt/Partido Comunista Português - Organização Regional de Lisboa/
+   :%s/@mrxCONTRIBwid/448/
+   :%s/@mrxCONTRIBhei/45/
+  endif
+
+
+  if a:arg == "pstu"
+   :%s/@mrxCONTRIBlink/https:\/\/www.pstu.org.br\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/pstu.svg/
+   :%s/@mrxCONTRIBalt/Partido Socialista dos Trabalhadores Unificado/
+   :%s/@mrxCONTRIBwid/720/
+   :%s/@mrxCONTRIBhei/360/
+  endif
+
   if a:arg == "overmelho"
    :%s/@mrxCONTRIBlink/https:\/\/vermelho.org.br\//
-   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/o-vermelho.png/
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/overmelho.svg/
    :%s/@mrxCONTRIBalt/Portal O Vermelho/
-   :%s/@mrxCONTRIBwid/349/
-   :%s/@mrxCONTRIBhei/115/
+   :%s/@mrxCONTRIBwid/741/
+   :%s/@mrxCONTRIBhei/307/
   endif
   
   if a:arg == "passapalavra"
@@ -739,6 +911,33 @@ function! Contrib(arg)
    :%s/@mrxCONTRIBwid/544/
    :%s/@mrxCONTRIBhei/179/
   endif
+  
+  if a:arg == "proelium"
+   :%s/class="colab/& alta/
+   :%s/div class="colab alta/div class="colab/
+   :%s/@mrxCONTRIBlink/https:\/\/proelium.medium.com\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/proelium.jpg/
+   :%s/@mrxCONTRIBalt/Proelium Finale/
+   :%s/@mrxCONTRIBwid/400/
+   :%s/@mrxCONTRIBhei/400/
+  endif
+  
+  if a:arg == "resistirinfo"
+   :%s/@mrxCONTRIBlink/https:\/\/resistir.info\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/resistirinfo.png/
+   :%s/@mrxCONTRIBalt/resistir.info/
+   :%s/@mrxCONTRIBwid/459/
+   :%s/@mrxCONTRIBhei/98/
+  endif
+
+  if a:arg == "criticadesapiedada"
+   :%s/Este texto foi uma contribuição do<\/p>/Este texto foi uma contribuição da<\/p>/
+   :%s/@mrxCONTRIBlink/https:\/\/criticadesapiedada.com.br/
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/criticadesapiedada.png/
+   :%s/@mrxCONTRIBalt/Crítica Desapiedada/
+   :%s/@mrxCONTRIBwid/1080/
+   :%s/@mrxCONTRIBhei/250/
+  endif
 
   if a:arg == "Modelo"
    :%s/@mrxCONTRIBlink//
@@ -746,6 +945,25 @@ function! Contrib(arg)
    :%s/@mrxCONTRIBalt//
    :%s/@mrxCONTRIBwid//
    :%s/@mrxCONTRIBhei//
+  endif
+
+  if a:arg == "ujr"
+   :%s/Este texto foi uma contribuição do<\/p>/Este texto foi uma contribuição da<\/p>/
+   :%s/@mrxCONTRIBlink/https:\/\/rebeliao.org/
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/ujr.png/
+   :%s/@mrxCONTRIBalt/União da Juventude Rebelião/
+   :%s/@mrxCONTRIBwid/491/
+   :%s/@mrxCONTRIBhei/431/
+  endif
+
+  if a:arg == "victormeyer"
+   :%s/class="colab/& longa/
+   :%s/div class="colab longa/div class="colab/
+   :%s/@mrxCONTRIBlink/https:\/\/centrovictormeyer.org.br\//
+   :%s/@mrxCONTRIBimg/..\/..\/..\/img\/colaboradores\/victormeyer.jpg/
+   :%s/@mrxCONTRIBalt/Centro de Estudos Victor Meyer/
+   :%s/@mrxCONTRIBwid/475/
+   :%s/@mrxCONTRIBhei/90/
   endif
   
   call Desespacar()
@@ -789,6 +1007,7 @@ endfunction
 function! NavegarCapitulos()
  %s/<footer>/&\r\r<nav class="interna">\r<a href="capXX.htm" class="anterior">Anterior<\/a>\r<a href="index.htm" class="ao-meio">Índice<\/a>\r<a href="capYY.htm" class="proximo">Próximo<\/a>\r<\/nav>/ge
  call DetectarCapitulo()
+ %s/cap9\(.htm" class="anterior">Anterior\)/cap09\1/ce
 endfunction
 
 " cópia
@@ -853,8 +1072,9 @@ function! ConverterCapitulo()
   %s/<footer>//ge
   %s/<\/footer>//ge
   %s/<hr >/<hr>/ge
+  %s/<h4>/<h4 class="titulo-capitulo">/c
   call MacroLimpaAntesCapitulo()
-  %s/<h. class="titulo-capitulo">\(.\{-}\)<\/h.>/<h4>\1<\/h4>/g
+  %s/<h. class="titulo-capitulo">\(.\{-}\)<\/h.>/<h4>\1<\/h4>/ge
 
   execute '0put! =repeat(\"\n\",29)'
   execute 'normal 1Gi<!DOCTYPE html>'
@@ -942,10 +1162,12 @@ function! Quotar()
  :s/<p class="quote.">/<p>/e
  :s/^/<blockquote>\r/
  :s/$/\r<\/blockquote>/
+ :%s/\n<\/blockquote>\n<blockquote>//e
 endfunction
 
 function! Figurar()
  :s/^/<figure class="meio">\r/
+ :s/ hspace=".\{-}"//e | s/ vspace=".\{-}"//e | s/ align=".\{-}"//e | s/ border=".\{-}"//e
  :s/$/\r<\/figure>/
 endfunction
 
@@ -959,14 +1181,43 @@ function! DoisAutores()
 endfunction
 
 function! EspecialEspecifico()
- :%s/<p class="toplink"><a href=".*\.htm">continua.*<\/a><\/p>//
- :%s/"\(cap.*.htm" class="[ap][nr][to][ex][ri][im]o\)/"p2\1/ge
- call feedkeys("y") | call Encapar()
+" s/\(height=".\{-}"\).\{-}>/\1>/
+" %s/<p class="toplink"><a href=".\{-}.htm".\{-}>[Cc]ontinua.*/
+" %s/<p class="toplink"><a href="cap.*//e
+"echo "Nenhuma função especial definida"
+
+ " remove link continua >>>
+%s/<p class="toplink"><a href=".*\.htm">continua.*<\/a><\/p>//
+%s/<p><a href=".*\.htm" class="toplink">continua.*<\/a><\/p>//
+%s/<a href=".*\.htm" class="toplink">continua.*<\/a>/
+ ":%s/<nav class="interna".*<\/nav>\n<\/main>/<\/main>/
+
+ " altera nomes de caps
+"%s/"cap\(.*.htm" class="[ap][nr][to][ex][ri][im]o\)/"\1/ge
+
+" insere subtítulo
+"%s/h1>$\n<a/h1>\r<p class="subtitulo"> [texto] <\/p>\r<a/e
+" %s/<p class="note">Notas:/<p class="note"><b>Notas:<\/b>/e
+":call Contrib("cubadebate")
+"%s/<p class="toplink"><a href="cap.\{-}.htm".\{-}>.*/
+%s/<a href=.*><img src="..........armamento.jpg".\{-}><\/a>\n//ge
+:normal cc
+%s/<h3>.*<\/header><\/h3>/<\/header>/e
+"%s/<h2>.*h2><.a>/<h2>Jean Fréville (org.)<\/h2><\/a>\r/e
+"%s/main>\n\n<h4>/main>\r\r<p class="parte">Segunda parte: Lenine e Stalin<\/p>\r<h4>/e
+%s/<table.*\n<tr>\n <td><img src="..........capa_correntes.jpg".*\n<.tr>\n<tr>\n <td.*\n<.tr>\n<.table>\n//ge
+endfunction
+
+function! CreativeCommons()
+ %s/<\/aside>/<p class="info cc by-sa"><a href="https:\/\/creativecommons.org\/licenses\/by-sa\/4.0\/deed.pt-br" target="_blank">Creative Commons<\/a><\/p>\r&/
+endfunction
+
+function! GFDL()
+ %s/<\/aside>/<p class="info gnu"><a href="https:\/\/www.gnu.org\/licenses\/fdl-1.3.html" target="_blank">GNU Free Documentation License<\/a><\/p>\r&/
 endfunction
 
 
 command Atalhos echo "F1:  󰈙 | mF1:  󰉻 | F2: 󰓰   | F3:   | F4: 󰋪 | F5: 󱃱 | F6: 󱪗 󰉭 | F7: 󰚔 | F10: 󰊃 | F11:  | F12: 󰍜"
 
-autocmd BufReadPost *.htm Atalhos
 
 au FileType htm,html,htmldjango setlocal indentexpr=
