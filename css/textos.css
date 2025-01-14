@@ -23,9 +23,9 @@ a, a.link_ext {background: transparent;}
 a:link, a:visited, a:hover {color: #000099; text-decoration: none;}
 a:active {color: #06c; text-decoration: none;}
 
-a.link_ext:hover {color: #ff3300;}
-a.link_ext:active {color: #0000ff;}
-a.link_ext:link, a.link_ext:visited {color: #a90000;}
+a.link_ext:hover {color: #8b008b;}
+a.link_ext:active {color: #8a2be2;}
+a.link_ext:link, a.link_ext:visited {color: #751157;}
 nav, header, main, footer {display: block;}
 
 
@@ -112,7 +112,7 @@ hr {border: 1px solid #a90000;}
  hr.transparente {border: 0 solid transparent; color: transparent; margin: 1.25rem; padding: 0.75rem;}
  hr.estrelavermelha:before {content: '★ ★ ★';}
 
-ol, ul {line-height: 1.675rem; margin-left: 2rem; margin-top: 0; text-align: justify; text-indent: 0;}
+ol, ul {line-height: 1.75em; margin-left: 0; margin-top: 0; text-align: justify; text-indent: 0;}
  li {font-size: inherit; margin-top: 1.25rem; margin-bottom: 1.25rem;}
 
 
@@ -129,9 +129,9 @@ section.editorial hr {margin-top: 2rem; margin-bottom: 2rem;}
 img.imprensa {display: block; width: 20%; height: auto; margin: 2rem; max-width: 200px;}
 img.imprensa.longo {width: 25%; max-width: unset;}
 
- @media screen and (max-width: 480px) {img.imprensa {width: 30%;}}
 .recuado {text-align: justify; text-indent: 0; margin-left: 40%; margin-right: 0;}
 .recuo.curto {margin-left: 4rem; text-indent: 0;}
+.sem.recuo {text-indent: 0; margin-left: 2rem;}
 
 .centralizado {text-align: center; text-indent: 0;}
 .esquerda {text-align: left;}
@@ -413,7 +413,8 @@ aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 11pt;}
  .datas, small, a[href^="#n"] > sup, a[href^="#tr"] > sup {font-size: 9pt;}
 
 header img {height: 60px;}
-p {line-height: 1.7em; margin: 1.625rem 0;}
+p, ol, ul, li {line-height: 1.7em; margin: 1.625rem 0;}
+img.imprensa {width: 30%;}
 }
 
 /* latin-ext */
