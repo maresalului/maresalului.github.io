@@ -1,0 +1,27 @@
+nav button {width: auto; height: 21px; margin-left: auto; background: transparent; border: none; cursor: pointer; margin-top: -5px; padding-right: 0px;}
+nav button::before {content: url(sol.svg);}
+
+body.escuro {background-color: #222; color: #fafafa;}
+ body.escuro main {background-color: #111111;}
+ body.escuro aside.sobre {background-color: #222;}
+ body.escuro h1, body.escuro h2, body.escuro h3, body.escuro h4, body.escuro h5, body.escuro h6 {color: #fafafa;}
+ body.escuro a.link_ext:link {color: #d66a6a;}
+ body.escuro a.link_ext:hover {color: #c74545;}
+ body.escuro a.link_ext:active {color: #d66a6a;}
+ body.escuro a.link_ext:visited {color: #d66a6a;}
+ body.escuro a:link {color: #83a1cd;}
+ body.escuro a:hover {color: #4281a4;}
+ body.escuro a:active {color: #83a1cd;}
+ body.escuro a:visited {color: #83a1cd;}
+ body.escuro img.logo, body.escuro img.inversivel, body.escuro img.logotopo {filter: invert(1);}
+ body.escuro img.logo, body.escuro img.imutavel {filter: invert(0);}
+ body.escuro img[src$="audio.png"] {filter: invert(1)}
+ body.escuro img.bordafoto {background-color: #151515; border-color: black;}
+ body.escuro img {filter: brightness(0.8) contrast(1.2);}
+ body.escuro hr.linha-preta {color: #fafafa;}
+ body.escuro .bordalogotipo {background-color: #141414;}
+ body.escuro th {border-color: #fafafa;}
+ body.escuro tr {border-color: #353535;}
+ body.escuro .celula-cinza {background-color: dimgrey;}
+ body.escuro body.capitulo h1 {color: #fafafa;}
+ body.escuro body.capitulo h2 {color: #fafafa;}
