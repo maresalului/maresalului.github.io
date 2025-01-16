@@ -133,7 +133,7 @@ img.imprensa.longo {width: 25%; max-width: unset;}
 
 .recuado {text-align: justify; text-indent: 0; margin-left: 40%; margin-right: 0;}
 .recuo.curto {margin-left: 4rem; text-indent: 0;}
-.sem.recuo {text-indent: 0; margin-left: 2rem;}
+.semrecuo {text-indent: 0; margin-left: 2rem;}
 
 .centralizado {text-align: center; text-indent: 0;}
 .esquerda {text-align: left;}
