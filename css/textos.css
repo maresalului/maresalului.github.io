@@ -128,6 +128,10 @@ section.editorial h4 {text-align: left;}
 section.editorial h5 {text-align: left; margin-left: 1rem;}
 section.editorial hr {margin-top: 2rem; margin-bottom: 2rem;}
 
+section.poesia {width: fit-content; margin-left: auto; margin-right: auto;}
+section.poesia p {text-indent: 0;}
+section.poesia h4 {text-align: left; margin-left: 0;}
+
 img.imprensa {display: block; width: 20%; height: auto; margin: 2rem; max-width: 200px;}
 img.imprensa.longo {width: 25%; max-width: unset;}
 
