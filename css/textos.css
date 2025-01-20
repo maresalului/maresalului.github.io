@@ -5,7 +5,7 @@
 body {
 background-color: #f3f3f3; 
 color: black; 
-font-family: "Atkinson Hyperlegible", Verdana, "Open Sans", system-ui, sans-serif; 
+font-family: "Atkinson Hyperlegible", "Noto Sans", "Open Sans", system-ui, sans-serif; 
 margin: 0; 
 width: 100%;} 
 
@@ -99,13 +99,16 @@ main * + aside.sobre {margin-top: 0.125rem;}			/* já foi usado em algum lugar? 
 .info.formatos a[href*="audiolivros.htm"]::before {content: url(../img/audio.png);}
 .info.formatos a[href*=".mp3"]::before {content: url(../img/audio.png);}
 .info.formatos a.audio::before {content: url(../img/audio.png);}
-.info.formatos a[href$=".pdf"]::before {content: url(../img/pdf.png);}
+.info.formatos a.video::before {content: url(../img/video.png);}
+.info.formatos a[href$=".pdf"]::before, .info.formatos a.pdf::before {content: url(../img/pdf.png);}
 .info.formatos a[href$=".epub"]::before {content: url(../img/epub.png);}
 
 .info.formatos a[href*="audiolivros.htm"]::before, 
 .info.formatos a[href$=".pdf"]::before, 
+.info.formatos a.pdf::before, 
 .info.formatos a[href$=".mp3"]::before, 
 .info.formatos a.audio::before, 
+.info.formatos a.video::before, 
 .info.formatos a[href$=".epub"]::before  {display: inline-block; vertical-align: text-bottom; image-rendering: pixelated; width: auto; height: 16px; padding-left: 2px; padding-right: 5px;}
 
 a[href^="#n"] > sup, a[href^="#tr"] > sup {font-weight: bold; font-style: normal;}
