@@ -75,7 +75,10 @@ td:last-of-type {padding-top: 0.75rem; padding-bottom: 0.75rem;}
 table img {height: 16px; width: auto; vertical-align: text-bottom; image-rendering: pixelated;}
 td > a:nth-of-type(2) > img {margin-left: 10px;}
 
-.rec {font-variant: normal !important; white-space: normal !important;}
+td a[href$=".pdf"]:first-child::after {content: url(../img/pdf.png);}
+td a[href$=".pdf"]:first-child::after  {display: inline-block; vertical-align: middle; width: auto; height: 16px; padding-right: 2px; padding-left: 10px; image-rendering: pixelated;}
+
+.rec, .duplo {font-variant: normal !important; white-space: normal !important;}
 
 													/*
 --------
@@ -92,6 +95,10 @@ blockquote {margin: 1.25rem 0 1.25rem auto; max-width: 50%;}
  blockquote p {text-indent: 0; line-height: 1.7em;}
  blockquote > cite {display: block; text-align: right;}
 
+.dicionario::before {content: '❋ Leia mais no ';}
+.fonte::before {content: 'Fonte: '; font-weight: bold;}
+.dicionario a, .fonte a {font-weight: bold;}
+
 .datas {font-weight: normal; text-align: right;}
 
 														/*
@@ -105,7 +112,7 @@ h1 {font-size: 1.5rem;}
 h3 {font-size: 1.175rem;}
 p, table, h2 {font-size: 1rem;}
 section.biografia p, .menor {font-size: 0.875rem;}
-section.biografia blockquote * {font-size: 0.75rem;}
+section.biografia blockquote *, section.biografia p.dicionario, section.biografia p.fonte {font-size: 0.75rem;}
 .datas, small {font-size: 0.75rem;}
 
 @media (min-width: 480px) {
@@ -113,7 +120,7 @@ h1 {font-size: 20pt;}
 h3 {font-size: 14pt;}
 p, table, h2 {font-size: 13pt;}
 section.biografia p, .menor {font-size: 12pt;}
-section.biografia blockquote * {font-size: 10pt;}
+section.biografia blockquote *, section.biografia p.dicionario, section.biografia p.fonte {font-size: 10pt;}
 .datas, small {font-size: 9pt;}
 
 p {line-height: 1.7em; margin: 1.625rem 0;}
