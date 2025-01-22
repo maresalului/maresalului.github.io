@@ -48,7 +48,7 @@ a#li-no {content: url(nov.svg); width: 21px; height: auto;}
 --------													*/
 
 header {padding-top: 46px; padding-bottom: 50px; padding-block: 3rem;}
-header img {clear: both; display: block; margin: 0 auto 1.125rem auto; height: 136px; width: auto;}
+header img {clear: both; display: block; margin: 0 auto 1.125rem auto; height: 165px; width: auto;}
 h1 {margin: 1.125rem auto; text-align: center; line-height: 1.25em;}
 h2 {text-align: center; line-height: 1rem; font-weight: normal;}
 
@@ -72,11 +72,11 @@ td:first-child {white-space: nowrap;}
 td:nth-child(2n) {padding-left: 2rem;}
 td:last-of-type {padding-top: 0.75rem; padding-bottom: 0.75rem;}
 
-table img {height: 16px; width: auto; vertical-align: text-bottom; image-rendering: pixelated;}
+table img {height: 48px; width: auto; vertical-align: text-bottom;}
 td > a:nth-of-type(2) > img {margin-left: 10px;}
 
-td a[href$=".pdf"]:first-child::after {content: url(../img/pdf.png);}
-td a[href$=".pdf"]:first-child::after  {display: inline-block; vertical-align: middle; width: auto; height: 16px; padding-right: 2px; padding-left: 10px; image-rendering: pixelated;}
+td a[href$=".pdf"]:first-child::after, td a[href*="pdf#page="]:first-child::after {content: url(../img/pdf.png);}
+td a[href$=".pdf"]:first-child::after, td a[href*="pdf#page="]:first-child::after  {display: inline-block; vertical-align: middle; width: auto; height: 16px; margin-top: -2px; padding-right: 2px; padding-left: 10px; image-rendering: pixelated;}
 
 .rec, .duplo {font-variant: normal !important; white-space: normal !important;}
 
@@ -95,9 +95,11 @@ blockquote {margin: 1.25rem 0 1.25rem auto; max-width: 50%;}
  blockquote p {text-indent: 0; line-height: 1.7em;}
  blockquote > cite {display: block; text-align: right;}
 
-.dicionario::before {content: '❋ Leia mais no ';}
-.fonte::before {content: 'Fonte: '; font-weight: bold;}
 .dicionario a, .fonte a {font-weight: bold;}
+.dicionario {margin-top: .25rem;}
+.dicionario::before {content: '❋ Leia mais no ';}
+.fonte {margin-bottom: .25rem;}
+.fonte::before {content: 'Fonte: '; font-weight: bold;}
 
 .datas {font-weight: normal; text-align: right;}
 
@@ -128,6 +130,7 @@ p {line-height: 1.7em; margin: 1.625rem 0;}
 
 @media (max-width: 480px) {
 blockquote {margin-right: auto; max-width: 75%;}
+header img {height: 175px;}
 }
 
 /* latin-ext */
