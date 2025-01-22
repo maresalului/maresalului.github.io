@@ -20,27 +20,36 @@ highlight EndOfBuffer ctermfg=16
 set spelllang=pt-BR
 set laststatus=1
 au FileType htm,html,htmldjango setlocal indentexpr=
+highlight markdownH1 guifg=#ff8800 ctermfg=DarkYellow
+highlight markdownH1Delimiter guifg=#ff8800 ctermfg=DarkYellow
+highlight markdownH2 guifg=#0088ff ctermfg=Blue
 
 iabbrev linkexterno class="link_ext" target="_blank"
+iabbrev ami Arquivo Marxista na Internet
+iabbrev fdt Fonte para a tradução
+iabbrev fpt Fonte para a tradução
+iabbrev sçi seção inglesa do
+iabbrev sçe seção espanhola do
+iabbrev sçt seção italiana do
 cabbrev linkexterno href="https://" class="link_ext" target="_blank"
+cabbrev mrxcor href="../../../admin/correio.htm" target="_blank"
 
 map <F1> :call MANDA()<cr>
 map m<F1> :call MANDAcap()<cr>
-map m4<F1> :call NivelarCapituloEm4()<cr>
 map <F2> :call MacroInclusaoTabela()<cr>
 map <F3> :call MacroCorrigeAside()<cr>
 map <F4> :Encapar<cr>
 map <F5> :call quickui#listbox#open(content, opts)<cr>
 map <F6> :call IgnorarH3()<cr>
-map m<F6> :%s/<h3>.*<\/header><\/h3>/\r<\/header>/<cr>
-map <F8> ysiw<
+map <F8> S<
 noremap <F10> :call Notar()<CR>
-noremap <F11> :NERDTreeToggle<CR>
+noremap m<F10> :call NotarNovo()<CR>
+
 map <F12> :call quickui#menu#open()<cr>
 map m<F12> :source ~/.config/nvim/nvimrc<cr>
 
-map ma :call ArrumaGeral()<cr>
 map md :call Descodificar()<cr>
+map ma :call ArrumaGeral()<cr>
 map c <Nop>
 map cc 200@l
 map . :s/<\/p>/.&/<cr>
@@ -54,16 +63,18 @@ map F :call Figurar()<cr>
 map ś :%s/<br>\n<span class="H1reduzido">\(.*\)<\/span><\/h1>/<\/h1>\r<p class="subtitulo">\1<\/p>/<cr>
 map ń :call NavegaSemCap()<cr>
 map ĺ :s/\(<a href=".\{-}"\)>/\1 class="link_ext" target="_blank">/<cr>
-map ṕ i<AQUI:s/<AQUI/<\/p>\r<p class="info">/<cr>
+map ṕ i<AQUI:s/<AQUI/<\/p>\r<p class="info"><b>:<\/b>/<cr>
 map é :call EspecialEspecifico()<cr>
+map É :call EspecialPREspecifico()<cr>
+map çç :call CreativeCommons()<cr>
+map ç3 :call CreativeCommons()<cr> :%s/4.0\/deed.pt-br" target="_blank"/3.0\/deed.pt-br" target="_blank"/<cr>
 
-map <C-e> :%s/<a href="http.\{-}<img src=".\{-}soldado-ideias.jpg.\{-}<.a>\n<cr>
 map ww :w<cr>
 map qq :q<cr>
 
-map >> :s/\([A-z]\)>/\1 class="direita">/<cr>
+map >> :call Endireitar()<cr>
 map >< :s/\([A-z]\)>/\1 class="centralizado">/<cr>
-map m/c /class=
+map m/ /class=<cr>
 
 """					       '''					^__^
 ""						''					(oo)\_______
@@ -73,6 +84,8 @@ map m/c /class=
 
 
 command InserirBase call Modelar()
+
+command Relativizar :s/href="https:..www.marxists.org/href="..\/..\/..\/../
 
 command Notar :call Notar()
 
@@ -96,6 +109,31 @@ function! Notar()
   if numero ==# '1'
    execute "normal! G"
    let procurar = '<hr>'
+   let referencia = '@linhanova<p class="note"><b>Notas de rodapé:</b></p>@linhanova<p class="note" id="n' . numero . '">(' . numero . ') Nota (<a href="#r' . numero . '">retornar ao texto</a>)</p>'
+  else
+    let procurar = 'retornar ao texto'
+    let referencia = '<p class="note" id="n' . numero . '">(' . numero . ') Nota (<a href="#r' . numero . '">retornar ao texto</a>)</p>'
+  endif
+  let lnum = search(procurar, 'b')
+  if lnum > 0
+    call append(lnum, referencia)
+  endif
+  :%s/@linhanova/\r/ge
+endfunction
+
+function! NotarNovo()
+  let curline = getline('.')
+  let col = col('.')
+  call inputsave()
+  let numero = input('Digite o número da nota: ')
+  call inputrestore()
+  let novo = '<a href="#n' . numero . '" id="r' . numero . '"><sup>(' . numero . ')</sup></a>'
+  let antes = strpart(curline, 0, col)
+  let depois = strpart(curline, col)
+  call setline('.', antes . novo . depois)
+  if numero ==# '1'
+   execute "normal! G"
+   let procurar = '<footer>'
    let referencia = '@linhanova<p class="note"><b>Notas de rodapé:</b></p>@linhanova<p class="note" id="n' . numero . '">(' . numero . ') Nota (<a href="#r' . numero . '">retornar ao texto</a>)</p>'
   else
     let procurar = 'retornar ao texto'
@@ -288,6 +326,7 @@ function! ArrumaGeral()
  %s/<p class="titulo-capitulo">★★★<\/p>/<hr class="estrelavermelha">/ge
  %s/<p class="titulo-capitulo style1">★ ★ ★<\/p>/<hr class="estrelavermelha">/ge
  %s/<h4>\* \* \*<\/h4>/<hr class="estrelavermelha">/ge
+ %s/<h4><.>\* \* \*<..><\/h4>/<hr class="estrelavermelha">/ge
  %s/<p class="estrelavermelha">★★★<\/p>/<hr class="estrelavermelha">/ge
  %s/<p class="estrelavermelha">★ ★ ★<\/p>/<hr class="estrelavermelha">/ge
  %s/<p class="centralizado">★ ★ ★<\/p>/<hr class="estrelavermelha">/ge
@@ -304,7 +343,6 @@ function! ArrumaGeral()
  %s/<\/b> <b>/ /ge
  %s/b>Primeira Edi/b>Primeira edi/e
  %s/<p align="justify"/<p/ge
- %s/<p align="right"/<p class="direita"/gce
  %s/<hr >/<hr>/ge
  %s/name=".\{-}" \(id=".\{-}"\)/\1/ge
  %s/\(<a href="#tr.\{-}"\)\(><sup>(.\{-})<\/sup><\/a>\)<a id=\(".\{-}"\)><\/a>/\1 id=\3\2/ge
@@ -315,6 +353,28 @@ function! ArrumaGeral()
  %s/<h\(.\{-}\)><a id="\(.\{-}\)"><.a>/<h\1 id="\2">/ge
  %s/<table border="1" align="center">/<table class="comborda">/ge
  %s/<p> <\/p>\n//ge
+ %s/<p align="center"/<p/ge
+ %s/<p align="right"/<p/ge
+ %s/class="tabela-centro-com-Borda"/class="comborda"/ge
+ %s/<cite lang="..">/<cite>/ge
+ %s/<p style="text-align: right">/<p class="direita">/ge
+ %s/<p style="text-align:right">/<p class="direita">/ge
+ %s/<p style="text-align: right;">/<p class="direita">/ge
+ %s/<p style="text-align:right;">/<p class="direita">/ge
+ %s/<.aside>\n>/<\/aside>\r/ge
+ %s/<hr size="1" noshade="noshade" /<hr/ge
+ %s/ style1"/"/ge
+ %s/ dir="ltr"//ge
+ %s/<p.\{-}>★ ★ ★<\/p>/<hr class="estrelavermelha">/gce
+ %s/<div.\{-}>★ ★ ★<\/div>/<hr class="estrelavermelha">/ge
+
+%s/<p class="info"><b>HTML<.b> por \(<a href=".\{-}">José Braz<.a>\) para o .*<.p>/<p class="info"><b>HTML:<\/b> \1.<\/p>/ge
+%s/<p class="info"><b>Direitos de Reprodução:<\/b> licenciado sob uma Licença <a href="https:..creativecommons.org.licenses.by-sa.4.0.deed.pt..." target="_blank" class="link.ext" rel="license".Creative Commons<.a>.<.p>/<p class="info cc by-sa"><a href="https:\/\/creativecommons.org\/licenses\/by-sa\/4.0\/deed.pt-br" target="_blank">Creative Commons<\/a><\/p>/ge
+%s/<p class="info"><b>Direitos de Reprodução:<\/b> <a href="http:..creativecommons.org.licenses.by-sa.3.0.deed.pt.BR. target...blank. rel..license.><img src...........img.licen.a.png. alt=".\{-}".\{-}><.a> licenciado sob uma .icen.a <a href="http....reativecommons.org.licenses.by-sa.3.0.deed.pt.... target=..blank. class..link.ext. rel..license.>Creative Commons<.a>.\{-}<.p>/<p class="info cc by-sa"><a href="https:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/deed.pt-br" target="_blank">Creative Commons<\/a><\/p>/ge
+%s/<p class="info"><b>Direitos de Reprodução:<\/b> licenciado sob uma Licença <a href="https:..creativecommons.org.licenses.by-sa.4.0.deed.pt..." target="_blank" rel="license".Creative Commons<.a>.<.p>/<p class="info cc by-sa"><a href="https:\/\/creativecommons.org\/licenses\/by-sa\/4.0\/deed.pt-br" target="_blank">Creative Commons<\/a><\/p>/ge
+%s/<p class="info"><b>Direitos de Reprodução:<\/b> licenciado sob uma Licença <a href="https:..creativecommons.org.licenses.by-sa.4.0.deed.pt..." target="_blank" rel="license".Creative Commons<.a>.<.p>/<p class="info cc by-sa"><a href="https:\/\/creativecommons.org\/licenses\/by-sa\/4.0\/deed.pt-br" target="_blank">Creative Commons<\/a><\/p>/ge
+%s/<p class="info"><b>Direitos de [Rr]eprodução:<\/b> <img src=..........img.licen.a.png. class="licenca" alt=".\{-}".\{-}> <a href="https:..creativecommons.org.licenses.by-sa.4.0.deed.pt.br.>Creative Commons BY-SA 4.0<.a>.<.p>/<p class="info cc by-sa"><a href="https:\/\/creativecommons.org\/licenses\/by-sa\/4.0\/deed.pt-br" target="_blank">Creative Commons<\/a><\/p>/ge
+
 endfunction
 
 function! Capitular()
@@ -395,7 +455,7 @@ function! PrimeiroCapitulo()
 endfunction
 
 function! UltimoCapitulo()
- %s/ class="ao-meio">Índice<.a>\n<a href="cap...htm" class="proximo">Próximo/ class="proximo">Índice/
+%s/ class="ao-meio">Índice<.a>\n<a href=".\{-}\.htm" class="proximo">Próximo/ class="proximo">Índice/
 endfunction
 
 
@@ -1074,7 +1134,7 @@ function! ConverterCapitulo()
   %s/<hr >/<hr>/ge
   %s/<h4>/<h4 class="titulo-capitulo">/c
   call MacroLimpaAntesCapitulo()
-  %s/<h. class="titulo-capitulo">\(.\{-}\)<\/h.>/<h4>\1<\/h4>/ge
+  %s/<h. class="titulo-capitulo"\(.\{-}\)>\(.\{-}\)<\/h.>/<h4\1>\2<\/h4>/ge
 
   execute '0put! =repeat(\"\n\",29)'
   execute 'normal 1Gi<!DOCTYPE html>'
@@ -1148,6 +1208,13 @@ function! MANDAcap()
  call AprovaCapitulo()
 endfunction
 
+function! MANDAutor()
+ call Tidy()
+ call Descodificar()
+ call ArrumaGeral()
+ call AprovaIndice()
+endfunction
+
 function! NavegaSemCap()
  %s/href="cap\([0-9][0-9].htm" class="anterior"\)/href="\1/e
  %s/href="cap\([0-9][0-9].htm" class="proximo"\)/href="\1/e
@@ -1160,6 +1227,7 @@ endfunction!
 
 function! Quotar()
  :s/<p class="quote.">/<p>/e
+ :s/<p class="toc">/<p>/e
  :s/^/<blockquote>\r/
  :s/$/\r<\/blockquote>/
  :%s/\n<\/blockquote>\n<blockquote>//e
@@ -1180,32 +1248,10 @@ function! DoisAutores()
  :s/<\/h2><\/a>/<\/a><\/h2>/
 endfunction
 
-function! EspecialEspecifico()
-" s/\(height=".\{-}"\).\{-}>/\1>/
-" %s/<p class="toplink"><a href=".\{-}.htm".\{-}>[Cc]ontinua.*/
-" %s/<p class="toplink"><a href="cap.*//e
-"echo "Nenhuma função especial definida"
 
- " remove link continua >>>
-%s/<p class="toplink"><a href=".*\.htm">continua.*<\/a><\/p>//
-%s/<p><a href=".*\.htm" class="toplink">continua.*<\/a><\/p>//
-%s/<a href=".*\.htm" class="toplink">continua.*<\/a>/
- ":%s/<nav class="interna".*<\/nav>\n<\/main>/<\/main>/
-
- " altera nomes de caps
-"%s/"cap\(.*.htm" class="[ap][nr][to][ex][ri][im]o\)/"\1/ge
-
-" insere subtítulo
-"%s/h1>$\n<a/h1>\r<p class="subtitulo"> [texto] <\/p>\r<a/e
-" %s/<p class="note">Notas:/<p class="note"><b>Notas:<\/b>/e
-":call Contrib("cubadebate")
-"%s/<p class="toplink"><a href="cap.\{-}.htm".\{-}>.*/
-%s/<a href=.*><img src="..........armamento.jpg".\{-}><\/a>\n//ge
-:normal cc
-%s/<h3>.*<\/header><\/h3>/<\/header>/e
-"%s/<h2>.*h2><.a>/<h2>Jean Fréville (org.)<\/h2><\/a>\r/e
-"%s/main>\n\n<h4>/main>\r\r<p class="parte">Segunda parte: Lenine e Stalin<\/p>\r<h4>/e
-%s/<table.*\n<tr>\n <td><img src="..........capa_correntes.jpg".*\n<.tr>\n<tr>\n <td.*\n<.tr>\n<.table>\n//ge
+function! EspecialPREspecifico()
+"%s/<a href="#topp" class="link">In&iacute;cio da p&aacute;gina<\/a>/<p class="link"><a href="#topp">Início da página<\/a><\/p>/
+%s/<p class="titulo-capitulo">\(.\{-}\)<\/p>/<h4 class="titulo-capitulo">\1<\/h4>/gce
 endfunction
 
 function! CreativeCommons()
@@ -1216,8 +1262,154 @@ function! GFDL()
  %s/<\/aside>/<p class="info gnu"><a href="https:\/\/www.gnu.org\/licenses\/fdl-1.3.html" target="_blank">GNU Free Documentation License<\/a><\/p>\r&/
 endfunction
 
+function! Endireitar()
+:s/<body>/<body class="indice">/e
+:s/<h5>\(.\{-}\)<\/h5>/<p class="subtitulo">\1<\/p>/e
+:s/<figure class="meio">/<figure class="direita">/e
+:s/\(<[A-z]\)>/\1 class="direita">/e
+:s/<table.\{-}>/<table class="comborda">/e
+endfunction
 
-command Atalhos echo "F1:  󰈙 | mF1:  󰉻 | F2: 󰓰   | F3:   | F4: 󰋪 | F5: 󱃱 | F6: 󱪗 󰉭 | F7: 󰚔 | F10: 󰊃 | F11:  | F12: 󰍜"
+command Atalhos echo "F1:  󰈙 | ⇧F1:  󰉻 | F2: 󰓰   | F3:   | F4: 󰋪 | F5: 󱃱 | F6: 󱪗 󰉭 | F7: 󰚔 | F10: 󰊃 | F12: 󰍜"
+
+function! EspecialEspecifico()
+"echo "Nenhuma função especial definida"
+
+			" remove link continua >>>
+			
+" %s/<p class="toplink"><a href=".\{-}.htm".\{-}>[Cc]ontinua.*/
+" %s/<p class="toplink"><a href="cap.*//e
+"%s/<p class="toplink">.\{-}<a href="cap.\{-}.htm".\{-}>.*/
+" %s/<p class="toplink"><a href=".*\.htm">continua.*<\/a><\/p>//
+" %s/<span class="toplink"><a href=".*\.htm">continua.*<\/a><\/span>//
+" %s/<p><a href=".*\.htm" class="toplink">continua.*<\/a><\/p>//
+" %s/<a href=".*\.htm" class="toplink">continua.*<\/a>/
+" %s/<nav class="interna".*<\/nav>\n<\/main>/<\/main>/
+
+			" altera nomes de caps
+			
+%s/"cap\(.*.htm" class="[ap][nr][to][ex][ri][im]o\)/"\1/ge
+
+			" insere subtítulo
+			
+"%s/h1>$\n<a/h1>\r<p class="subtitulo">   <\/p>\r<a/e
+%s/main>\n\n<h4>/main>\r\r<p class="parte">Capítulo 1. A Concepção Dialética e Metafísica do Concreto<\/p>\r<h4>/e
+
+			" troca autor
+
+" %s/<h2>.*h2><.a>/<h2>Jean Fréville (org.)<\/h2><\/a>\r/e
+
+			" limpezas
+
+" s/\(height=".\{-}"\).\{-}>/\1>/
+" %s/<a href=.*><img src="..\/..\/img\/capa.\{-}><\/a>\n//ge
+" %s/<a href=.*><img src="img\/capa.\{-}><\/a>\n//ge
+ %s/<img src="..\/..\/img\/capa.\{-}jpg".\{-}>\n//ge
+" %s/<h3>.*<\/header><\/h3>/\r<\/header>/e
+" %s/<table.*\n<tr>\n <td><img src="..........capa_correntes.jpg".*\n<.tr>\n<tr>\n <td.*\n<.tr>\n<.table>\n//ge
+
+			" consertos
+			
+" %s/<p class="note">Notas:/<p class="note"><b>Notas:<\/b>/e
+" Encapar
+
+:normal cc
+"%s/<link href="..\/..\/..\/css\/textos.css" rel="stylesheet" type="text\/css">/&<link href="..\/..\/css\/diario.css" rel="stylesheet" type="text\/css">/ge
+"%s/info"><b>Fonte<.b>:/info"><b>Fonte:<\/b>/e
+"%s/info"><b>Tradução para o português da Galiza:<.b> \(<a.\{-}<\/a>\)/info"><b>Tradução:<\/b> \1, para o português da Galiza/e
+"%s/info"><b>HTML de:/info"><b>HTML:/e
+"%s/a> - da versão disponível em \(https.\{-}\)</a>.<\/p>\r<p class="info"><b>Fonte para a tradução:<\/b> <a href="\1">seção inglesa do Arquivo Marxista na Internet<\/a>.</e
+"Relativizar
+
+"%s/<hr.\{-}>\n//gc
+
+endfunction
+
+function! AprovaIndice()
+ let l:eh_unicode = !empty(getbufline('%', 1, '$')->filter({_, line -> line =~ 'utf-8'}))
+ let l:tem_estilo = !empty(getbufline('%', 1, '$')->filter({_, line -> line =~ '<style'}))
+
+  if l:eh_unicode 
+   if !l:tem_estilo
+
+  %s/<header>//ge
+  %s/<\/header>//ge
+  %s/<main>//ge
+  %s/<\/main>//ge
+  %s/<footer>//ge
+  %s/<\/footer>//ge
+  %s/<hr >/<hr>/ge
+  call MacroLimpaAntes()
+  %s/<div><img src="\(.\{-}\)".\{-}class="bordafoto".\{-}><\/div>/<img src="\1" width="225" height="300" alt="">/ge
+  %s/<div class="data">\(.\{-}\)<\/div>/<h2>\1<\/h2>/ge
+  %s/<div class="sugestao">.*Obras disponíveis<.a><\/div>/\r<\/header>\r\r<main>\r<\/main>\r\r<footer>\r\r<section class="biografia">\r<h3><\/h3>/ge
+  %s/<table/\r<\/section>\r\r<table/ge
+  %s/<p class="lapide"><b>Seja um .olunt.\{-}<\/p>//ge
+  %s/<p class="link"><a href="#topp">In.\{-}p>//ge
+  %s/<hr>\n//ge
+  %s/<hr>//ge
+  %s/<p class="lapide"><b>\(.\{-}\)<\/b> (\(.\{-}\))<\/p>/\r<blockquote>\r<p>\1<\/p>\r<cite>\2<\/cite>\r<\/blockquote>\r/ge
+  %s/<p class=".\{-}">Fonte: /<p class="fonte">/ge
 
 
-au FileType htm,html,htmldjango setlocal indentexpr=
+
+  execute '0put! =repeat(\"\n\",19)'
+  execute 'normal 1Gi<!DOCTYPE html>'
+  execute 'normal 2Gi<html lang="pt">'
+  execute 'normal 3Gi<head>'
+  execute 'normal 4Gi<meta charset="utf-8">'
+  execute 'normal 5Gi<meta name="viewport" content="width=device-width, initial-scale=1">'
+  execute 'normal 6Gi<meta name="keywords" content="marxists, arquivo, biblioteca, textos, obras, pdf, documentos, artigos, Arquivo Marxista na Internet">'
+  execute 'normal 7Gi<title></title>'
+  execute 'normal 8Gi<link href="../css/autores.css" rel="stylesheet" type="text/css">'
+  execute 'normal 9Gi</head>'
+  execute 'normal 11Gi<body>'
+  execute 'normal 13Gi<nav>'
+  execute 'normal 14Gi<a href="../index.htm" id="topp"><img src="../img/mia.svg" class="logo" alt="Arquivo Marxista" width="75" height="20"></a>'
+  execute 'normal 15Gi<a href="../biblioteca.htm" title="Biblioteca" id="li-bi"></a>'
+  execute 'normal 16Gi<a href="../admin/novidades.htm" title="Novidades" id="li-no"></a>'
+  execute 'normal 17Gi</nav>'
+  execute 'normal 19Gi<header>'
+  execute 'normal 20G'
+ 
+  %s/<\/body>/<!-- conversão automática em @marxistsDATA -->\r\r<\/footer>\r&/
+  %s/@marxistsDATA/\=strftime("%d\/%m\/%Y")/ge
+
+  %s/href="cap9.htm" class="anterior"/href="cap09.htm" class="anterior"/e
+  %s/<p class="toplink"><a href="[0-9][0-9].htm">continua&gt;&gt;&gt;<\/a><\/p>\n//e
+  %s/<p><span class="toplink"><a href="[0-9][0-9].htm">continua&gt;&gt;&gt;<\/a><\/span><\/p>\n//e
+
+  call MacroCopiaTitulo()
+  call MacroCopiaTituloBiografia()
+  call MacroMoveTabela()
+  call Desespacar()
+  call MacroEscapar()
+
+ " limpeza
+ %s/\(<h1>.\{-}<\/h1>\)\n\(<img.\{-}>\)/\2\r\1/ge
+ %s/<p class="texto-sem-espaco">/<p>/ge
+ %s/<.h2>\n\n<\/header./<\/h2>\r<\/header>/ge
+ %s/<table.\{-}>/<table>/ge
+ %s/<tr>\n\(<th colspan="2" id="i1">Obras disponíveis<\/th>\)\n<\/tr>/<tr>\1<\/tr>/ge
+ %s/\n\n<\/section>/\r<\/section>/ge
+ %s/class="rec"/class="duplo"/g
+ %s/Obras disponíveis:/Obras disponíveis>/ge
+
+   else
+    echohl ErrorMsg
+    echo "O documento tem estilo próprio"
+    echohl None
+   endif
+  else
+    echohl ErrorMsg
+    echo "O documento não está em UTF-8"
+    echohl None
+  endif
+endfunction
+
+function! AutorComFundo()
+%s/<link href="..\/css\/autores.css" rel="stylesheet" type="text\/css">/& <style>header.fundo {background-image: url(img\/fundo.webp);}<\/style>/ge
+%s/<header>/<header class="fundo">/g
+endfunction
+
+filetype indent off
