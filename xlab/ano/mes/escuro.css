@@ -1,5 +1,6 @@
 nav button {width: auto; height: 21px; margin-left: auto; background: transparent; border: none; cursor: pointer; margin-top: -5px; padding-right: 0px;}
 nav button::before {content: url(sol.svg);}
+button.tema:active {transform: scale(0.75);}
 
 body.escuro {background-color: #222; color: #fafafa;}
  body.escuro main {background-color: #111111;}
