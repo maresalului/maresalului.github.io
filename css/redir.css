@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+html {height: 100%; min-height: 100vh;}
+
+:root {font-size: 12pt;}
+
+body {
+background-image: url(../img/chemnitz.jpg); 
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.19);
+color: black; 
+font-family: "Atkinson Hyperlegible", system-ui, sans-serif; 
+margin: 0; 
+height: 100%;
+width: 100%;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+} 
+
+p {font-size: 1rem; line-height: 1.5em; text-align: center; text-indent: 0; margin: 1.5rem 1rem;}
+
+a {background: transparent; font-weight: bold;}
+a:link, a:visited, a:hover {color: #000099; text-decoration: none;}
+a:active {color: #06c; text-decoration: none;}
+
+main {margin: auto; padding: 0; background-color: whitesmoke; max-width: 315px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}

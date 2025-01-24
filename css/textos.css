@@ -119,6 +119,7 @@ hr {border: 1px solid #a90000;}
 
 ol, ul {line-height: 1.75em; margin-left: 0; margin-top: 0; text-align: justify; text-indent: 0;}
  li {font-size: inherit; margin-top: 1.25rem; margin-bottom: 1.25rem;}
+ li p {text-indent: 0;}
 ol.parentese li::marker {content: counter(list-item) ") ";}
 
 
