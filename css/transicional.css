@@ -1,0 +1,43 @@
+ol.parentese li::marker {content: counter(list-item) ") ";}
+
+       .editorial {text-align: justify; text-indent: 0; margin: 1rem 0 1rem 40%;}
+      p.editorial {margin-bottom: 2rem;}
+      p.editorial:has(+ p.editorial) {margin-bottom: 1rem;}
+     hr.editorial {margin-top: 2rem; margin-bottom: 2rem;}
+section.editorial {margin: 1rem 0 2rem 40%;}
+section.editorial p, section.editorial h4, section.editorial h5 {text-indent: 0; margin: 1rem 0 1rem 0;}
+section.editorial h4 {text-align: left;}
+section.editorial h5 {text-align: left; margin-left: 1rem;}
+section.editorial hr {margin-top: 2rem; margin-bottom: 2rem;}
+
+.recuado {text-align: justify; text-indent: 0; margin-left: 40%; margin-right: 0;}
+.recuo.curto {margin-left: 4rem; text-indent: 0;}
+.semrecuo {text-indent: 0; margin-left: 2rem;}
+.semparagrafo {text-indent: 0; margin-left: 0;}
+
+div.colab, div.autorizada {display: block; margin: 2rem auto; text-align: center;}
+ div.colab > p, div.autorizada > p {margin: 0 0 .25rem 0; text-align: center; text-indent: 0; font-weight: bold;}
+ img.colab {margin: 0; width: auto; height: auto; max-width: 35%; max-height: 100px;}
+ img.colab.alta {max-height: 200px;}
+ img.colab.longa {max-width: 45%;}
+
+ figure {width: 20%; max-width: fit-content;}
+ figure.total {width: 100%; margin: 2rem auto;}
+ figure.meio {margin: 2rem auto; width: 50%;}
+ figure.esquerda {float: left; margin: .375rem 2rem 1.5rem 0; clear: left;}
+ figure.direita {float: right; margin: .375rem 0 1.5rem 2rem; clear: right;}
+ figure img {width: 100%; margin: 0 auto; height: auto; display: block;}
+ figcaption {margin: 1rem 0 0 0; text-align: center;}
+figure.meio + figure.meio {margin-top: 4rem;}
+
+.editorial, section.editorial p, section.editorial h4, section.editorial h5, figcaption, caption {font-size: 0.75rem;}
+
+@media (max-width: 480px) {
+img {max-width: 150px; height: auto;}
+img.auto {width: auto; height: auto;}
+img.colab {max-width: 200px;}
+img.larga {max-width: 300px; height: auto;}
+.editorial, section.editorial {margin-left: 2rem;}
+figure.total img {width: calc(100% + 10vw); margin-left: -5vw; max-width: revert;}
+.editorial figure.total img {width: 100%; margin-left: 0; max-width: revert;}
+}

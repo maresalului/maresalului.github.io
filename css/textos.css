@@ -143,6 +143,7 @@ img.imprensa.longo {width: 25%; max-width: unset;}
 .recuado {text-align: justify; text-indent: 0; margin-left: 40%; margin-right: 0;}
 .recuo.curto {margin-left: 4rem; text-indent: 0;}
 .semrecuo {text-indent: 0; margin-left: 2rem;}
+.semparagrafo {text-indent: 0; margin-left: 0;}
 
 .centralizado {text-align: center; text-indent: 0;}
 .esquerda {text-align: left;}
@@ -180,6 +181,9 @@ h4, h5, h6 {clear: both;}
 .matematica {font-family: "Times New Roman", serif;}
 math {display: block; margin-left: auto; margin-right: auto; text-align: center;}
 p math {display: inline; font-family: "Times New Roman", serif;}
+
+sup {font-size: 0.75em;}
+h1 sup {font-size: 0.625em;}
 														/*
 --------
  FOOTER
@@ -225,9 +229,9 @@ body.capitulo h1 {font-size: 18pt;}
 body.capitulo h4:first-of-type {margin-top: 1.375rem;}
 p.parte:has(+ h4) {margin-bottom: 1.375rem;}
 
-body.capitulo nav.interna {display: flex; align-items: center; justify-content: space-between; font-weight: bold; margin-top: 1.5rem; margin-bottom: 3.25rem; width: 100%;}
-body.capitulo .anterior::before {content: "<<< ";}
-body.capitulo .proximo::after {content: " >>>";}
+body.capitulo nav.interna {display: flex; align-items: center; justify-content: space-between; font-weight: bold; margin-top: 1.5rem; margin-bottom: 3.25rem; width: 100%; line-height: 1.5em;}
+body.capitulo .anterior::before {content: "🡰 "; margin-right: 2px;}
+body.capitulo .proximo::after {content: " 🡲"; margin-left: 2px;}
 
 
 
@@ -263,7 +267,7 @@ body.capitulo .proximo::after {content: " >>>";}
 	header div.colab > p {margin: 0 0 .375rem 0; text-align: right; text-indent: 0; font-size: .75rem; font-weight: bold; line-height: 1.2em;}
 	header img.colab {margin: 0; width: auto; height: auto; max-width: 100px; max-height: 50px;}
 
-	.H1reduzido, h1 sup {font-size: 0.9375rem;}
+	.H1reduzido {font-size: 0.9375rem;}
 
 	.link {font-size: 0.915rem; font-weight: bold; text-align: center; text-indent: 0;}
 	
@@ -409,8 +413,8 @@ h6 {font-size: 1rem;}
 p, ol, ul, li, .subtitulo, .parte {font-size: 1rem;}
 .note, .menor, .epigrafe p {font-size: 0.875rem;}
 aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 0.8325rem;}
-.editorial, section.editorial p, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p {font-size: 0.75rem;}
- .datas, small, a[href^="#n"] > sup, a[href^="#tr"] > sup {font-size: 0.75rem;}
+.editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p {font-size: 0.75rem;}
+ .datas, small {font-size: 0.75rem;}
 
 @media (min-width: 480px) {
 h1 {font-size: 22pt;}
@@ -423,8 +427,8 @@ h6 {font-size: 14pt;}
 p, ol, ul, li, .subtitulo, .parte {font-size: 13pt;}
 .note, .menor, .epigrafe p {font-size: 12pt;}
 aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 11pt;}
-.editorial, section.editorial p, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p {font-size: 10pt;}
- .datas, small, a[href^="#n"] > sup, a[href^="#tr"] > sup {font-size: 9pt;}
+.editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p {font-size: 10pt;}
+ .datas, small {font-size: 9pt;}
 
 header img {height: 60px;}
 p, ol, ul, li {line-height: 1.7em; margin: 1.625rem 0;}
