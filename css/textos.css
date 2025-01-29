@@ -66,6 +66,7 @@ h3 {font-weight: normal; margin-top: 0.75rem; margin-bottom: 0; text-transform: 
 
 h1:has(+ .subtitulo), h1:has(+ .parte) {margin-bottom: 0.875rem;}
 header .subtitulo, header .parte {text-align: left; margin-left: 0;}
+p.parte:has(+ p.parte) {margin-bottom: 0;}
 
 														/*
 ------
@@ -166,7 +167,7 @@ figure {width: 20%; max-width: fit-content;}
  figcaption {margin: 1rem 0 0 0; text-align: center;}
 figure.meio + figure.meio {margin-top: 4rem;}
 
-table {margin: 1rem auto auto auto; border-collapse: collapse; border: none;}
+table {margin: 1.625rem auto 1.625rem auto; border-collapse: collapse; border: none;}
  th {border: none; font-weight: bold; text-align: center; padding: 0.5rem 1rem; background-color: black; color: white;}
  td {border: none; color: black; padding: 0.5rem 1rem; background-color: white;}
  th[scope="row"] {background: lightgrey; color: black; text-align: left;}
@@ -175,6 +176,7 @@ table {margin: 1rem auto auto auto; border-collapse: collapse; border: none;}
  td.cinza {background-color: lightgrey;}
  th.cinza {background-color: grey;}
 table.comborda, table.comborda th, table.comborda td {border: 1px solid black;}
+table.colada td, table.colada th {padding: 0.5rem 0;}
 
 h4, h5, h6 {clear: both;}
 
@@ -195,6 +197,7 @@ footer {border-top: 2px solid black; padding-top: 2rem; padding-bottom: 1.5rem;}
  .recomendacao::before {content: '❋ ';}
 
 .note {margin-top: 1.25rem; margin-bottom: 1.25rem; text-align: justify; text-indent: 0; line-height: 1.625em;}
+ footer td {background-color: transparent;}
 
 div.colab, div.autorizada {display: block; margin: 2rem auto; text-align: center;}
  div.colab > p, div.autorizada > p {margin: 0 0 .25rem 0; text-align: center; text-indent: 0; font-weight: bold;}
@@ -410,8 +413,8 @@ h3 {font-size: 1rem;}
 h4 {font-size: 1.25rem;}
 h5 {font-size: 1.175rem;}
 h6 {font-size: 1rem;}
-p, ol, ul, li, .subtitulo, .parte {font-size: 1rem;}
-.note, .menor, .epigrafe p {font-size: 0.875rem;}
+p, ol, ul, li, table, .subtitulo, .parte {font-size: 1rem;}
+.note, .menor, .epigrafe p, footer table {font-size: 0.875rem;}
 aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 0.8325rem;}
 .editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p {font-size: 0.75rem;}
  .datas, small {font-size: 0.75rem;}
@@ -424,8 +427,8 @@ h3 {font-size: 14pt;}
 h4 {font-size: 16pt;}
 h5 {font-size: 15pt;}
 h6 {font-size: 14pt;}
-p, ol, ul, li, .subtitulo, .parte {font-size: 13pt;}
-.note, .menor, .epigrafe p {font-size: 12pt;}
+p, ol, ul, li, table, .subtitulo, .parte {font-size: 13pt;}
+.note, .menor, .epigrafe p, footer table {font-size: 12pt;}
 aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 11pt;}
 .editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p {font-size: 10pt;}
  .datas, small {font-size: 9pt;}
