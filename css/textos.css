@@ -80,7 +80,6 @@ main {background: white; padding-top: 3rem; padding-bottom: 1.5rem; font-variant
 
 aside.sobre {display: block; margin: 0 0 3rem 0; border: 1.5px solid #d9d9d9; text-align: left; background-color: #f3f3f3; padding: 1.25rem;}
 aside.sobre .info {margin: 0.25rem 0; text-align: left; font-weight: normal; line-height: 1.125rem; text-indent: 0;}
-main * + aside.sobre {margin-top: 0.125rem;}			/* já foi usado em algum lugar? */
 
 .by-sa::after, 
 .by-nc::after, 
@@ -229,8 +228,12 @@ body.indice aside.sobre a {text-decoration: none;}
 
 body.capitulo h1 {font-size: 18pt;}
 
-body.capitulo h4:first-of-type {margin-top: 1.375rem;}
-p.parte:has(+ h4) {margin-bottom: 1.375rem;}
+body.capitulo main h4:first-of-type {margin-top: 1.375rem;}
+ p.parte:has(+ h4) {margin-bottom: 1.375rem;}
+
+body.capitulo section.editorial {margin-top: 0;}
+
+body.capitulo section.editorial + h4 {margin-top: 2.875rem;}
 
 body.capitulo nav.interna {display: flex; align-items: center; justify-content: space-between; font-weight: bold; margin-top: 1.5rem; margin-bottom: 3.25rem; width: 100%; line-height: 1.5em;}
 body.capitulo .anterior::before {content: "🡰 "; margin-right: 2px;}
