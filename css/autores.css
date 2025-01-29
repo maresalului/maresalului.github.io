@@ -85,7 +85,7 @@ td a[href$=".pdf"]:first-child::after, td a[href*="pdf#page="]:first-child::afte
  FOOTER
 --------												*/
 
-footer {border-top: 2px solid black; padding-block: 2rem 1.5rem;}
+footer {border-top: 2px solid black; padding-top: 2rem; padding-bottom: 1.5rem;}
 
 h3 {font-family: Alegreya; font-variant-caps: small-caps; font-weight: bold;}
 
