@@ -437,7 +437,10 @@ aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 11pt;}
  .datas, small {font-size: 9pt;}
 
 header img {height: 60px;}
+img + img + header h2 {clear: both; padding-top: 1rem;}
+
 p, ol, ul, li {line-height: 1.7em; margin: 1.625rem 0;}
+
 img.imprensa {width: 30%;}
 }
 
