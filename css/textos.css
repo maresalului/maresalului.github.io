@@ -236,8 +236,8 @@ body.capitulo section.editorial {margin-top: 0;}
 body.capitulo section.editorial + h4 {margin-top: 2.875rem;}
 
 body.capitulo nav.interna {display: flex; align-items: center; justify-content: space-between; font-weight: bold; margin-top: 1.5rem; margin-bottom: 3.25rem; width: 100%; line-height: 1.5em;}
-body.capitulo .anterior::before {content: "🡰 "; margin-right: 2px;}
-body.capitulo .proximo::after {content: " 🡲"; margin-left: 2px;}
+body.capitulo .anterior::before {content: "<<< "; margin-right: 2px;}
+body.capitulo .proximo::after {content: " >>>"; margin-left: 2px;}
 
 
 
