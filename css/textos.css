@@ -57,7 +57,7 @@ h1 {line-height: 1.25em; margin-top: 3rem; margin-bottom: 1.625rem;}
 h2 {color: #000033; margin-top: 1.5rem; margin-bottom: 1.5rem;}
 h3 {color: #000033; margin-top: 1.5rem;}
 
-header {padding-top: 46px; padding-bottom: 50px; padding-top: 3rem; padding-bottom: 3rem;}
+header {padding-top: 46px; padding-bottom: 50px; padding-top: 3.25rem; padding-bottom: 3.25rem;}
 header * {text-align: left; margin-left: 0; margin-right: 0;}
 header img {clear: none; float: left; margin-right: 1rem; height: 54px; width: auto;}
  header img:has(+ img) {margin-right: 0.5rem;}						/* textos com dois autores */
@@ -75,12 +75,12 @@ p.parte:has(+ p.parte) {margin-bottom: 0;}
  MAIN
 ------														*/
 
-main {background: white; padding-top: 3rem; padding-bottom: 1.5rem; font-variant-numeric: lining-nums;}
+main {background: white; padding-top: 3.25rem; padding-bottom: 1.5rem; font-variant-numeric: lining-nums;}
 
 .info.autorizada img {display: inline; height: 1rem; width: auto; margin-inline: 1.5px; vertical-align: text-bottom;}
 .info.autorizada {text-align: center;}
 
-aside.sobre {display: block; margin: 0 0 3rem 0; border: 1.5px solid #d9d9d9; text-align: left; background-color: #f3f3f3; padding: 1.25rem;}
+aside.sobre {display: block; margin: 0 0 3.25rem 0; border: 1.5px solid #d9d9d9; text-align: left; background-color: #f3f3f3; padding: 1.25rem;}
 aside.sobre .info {margin: 0.25rem 0; text-align: left; font-weight: normal; line-height: 1.125rem; text-indent: 0;}
 
 .by-sa::after, 
@@ -195,7 +195,7 @@ h1 sup {font-size: 0.625em;}
  FOOTER
 --------													*/
 
-footer {border-top: 2px solid transparent; padding-top: 2rem; padding-bottom: 1.5rem;}
+footer {border-top: 2px solid transparent; padding-top: 2.5rem; padding-bottom: 1.5rem;}
 
 .recomendacao {text-indent: 0; font-weight: bold;}
  .recomendacao::before {content: '❋ ';}
