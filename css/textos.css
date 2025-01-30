@@ -354,6 +354,8 @@ th, td {padding: 0.5rem;}
 .editorial, section.editorial {margin-left: 2rem;}
 figure.total img {width: calc(100% + 10vw); margin-left: -5vw; max-width: revert;}
 .editorial figure.total img {width: 100%; margin-left: 0; max-width: revert;}
+
+img + img + h2 {clear: both; padding-top: 1rem;}
 }
 
 														/*
@@ -437,8 +439,6 @@ aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 11pt;}
  .datas, small {font-size: 9pt;}
 
 header img {height: 60px;}
-img + img + header h2 {clear: both; padding-top: 1rem;}
-
 p, ol, ul, li {line-height: 1.7em; margin: 1.625rem 0;}
 
 img.imprensa {width: 30%;}
