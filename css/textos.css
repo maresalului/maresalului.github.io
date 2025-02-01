@@ -1,4 +1,26 @@
 @charset "UTF-8";
+																/*
+
+ -------  -----   --------------------
+ MRX.css  3.0.0 - novas vitórias virão
+ -------  -----   --------------------
+
+ Copyright © 2025 Marxists Internet Archive
+ Licensed under LGPL-3.0 (https://www.gnu.org/licenses/lgpl-3.0.en.html)
+
+ This stylesheet contains:
+
+ - Atkinson Hyperlegible (© 2020, Braille Institute of America, Inc.) — Licensed under SIL Open Font License, Version 1.1. 
+    (https://github.com/googlefonts/atkinson-hyperlegible)
+
+ - Derived styles from Ubuntu.com codebase (© 2025, Canonical Ltd) — Licensed under LGPL-3.0.
+    (https://github.com/canonical/ubuntu.com/)
+
+ - Derived styles from Vanilla Framework (© 2025, Canonical Ltd) — Licensed under LGPL-3.0.
+    (https://github.com/canonical/vanilla-framework/)
+
+
+																*/
 
 :root {font-size: 12pt;}
 
@@ -181,6 +203,7 @@ table {margin: 1.625rem auto 1.625rem auto; border-collapse: collapse; border: n
  th.cinza {background-color: grey;}
 table.comborda, table.comborda th, table.comborda td {border: 1px solid black;}
 table.colada td, table.colada th {padding: 0.5rem 0;}
+table.fixa {width: 100%; table-layout: fixed;}
 
 h4, h5, h6 {clear: both;}
 
@@ -357,7 +380,7 @@ ol, ul {margin-left: 1%; margin-right: 1%;}
 th, td {padding: 0.5rem;}
 
 .editorial, section.editorial {margin-left: 2rem;}
-figure.total img {width: calc(100% + 10vw); margin-left: -5vw; max-width: revert;}
+figure.total img, table.fixa {width: calc(100% + 10vw); margin-left: -5vw; max-width: revert;}
 .editorial figure.total img {width: 100%; margin-left: 0; max-width: revert;}
 
 img + img + h2 {clear: both; padding-top: 1rem;}
