@@ -227,6 +227,7 @@ footer {border-top: 2px solid transparent; padding-top: 3.25rem; padding-bottom:
  p.note > a[href^="#"]:last-child {font-weight: bold; font-style: normal; text-decoration: underline dotted;}
   p.note > a[href^="#"]:last-child::before {content: '↑ '; padding-right: 1px;}
  footer td {background-color: transparent;}
+ footer blockquote {}
 
 div.colab, div.autorizada {display: block; margin: 3.25rem auto; text-align: center;}
  div.colab > p, div.autorizada > p {margin: 0 0 .25rem 0; text-align: center; text-indent: 0; font-weight: bold;}
@@ -413,7 +414,6 @@ nav, body > p.toplink:first-of-type {display: none;}	/* Esconde os links no topo
 a[href="#topp"] {display: none;}			/* Esconde o link para o inicio da pagina */
 a:link {text-decoration: none; color: black;}
 a:visited {text-decoration: none; color: black;}
-a[href^="#r"], a[href^="#n"], a[href^="#tr"] {font-weight: bold; color: #000099;}
 }
 
 														/*
@@ -451,7 +451,7 @@ h4 {font-size: 1.25rem;}
 h5 {font-size: 1.175rem;}
 h6 {font-size: 1rem;}
 p, ol, ul, li, table, .subtitulo, .parte {font-size: 1rem;}
-.note, .menor, .epigrafe p, footer table {font-size: 0.875rem;}
+.note, .menor, .epigrafe p, footer table, footer blockquote p {font-size: 0.875rem;}
 aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 0.8325rem;}
 .editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p {font-size: 0.75rem;}
  .datas, small {font-size: 0.75rem;}
@@ -465,7 +465,7 @@ h4 {font-size: 16pt;}
 h5 {font-size: 15pt;}
 h6 {font-size: 14pt;}
 p, ol, ul, li, table, .subtitulo, .parte {font-size: 13pt;}
-.note, .menor, .epigrafe p, footer table {font-size: 12pt;}
+.note, .menor, .epigrafe p, footer table, footer blockquote p {font-size: 12pt;}
 aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 11pt;}
 .editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p {font-size: 10pt;}
  .datas, small {font-size: 9pt;}
