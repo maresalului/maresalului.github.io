@@ -135,7 +135,7 @@ aside.sobre .info {margin: 0.25rem 0; text-align: left; font-weight: normal; lin
 .info.formatos a.video::before, 
 .info.formatos a[href$=".epub"]::before  {display: inline-block; vertical-align: text-bottom; image-rendering: pixelated; width: auto; height: 16px; padding-left: 2px; padding-right: 5px;}
 
-a[href^="#n"] > sup, a[href^="#tr"] > sup {font-weight: bold; font-style: normal;}
+a[href^="#"] > sup, sup > a[href^="#"] {font-weight: bold; font-style: normal;}
 
 hr {border: 1px solid #a90000;}
  hr.transparente {border: 0 solid transparent; color: transparent; margin: 1.25rem; padding: 0.75rem;}
@@ -224,6 +224,8 @@ footer {border-top: 2px solid transparent; padding-top: 3.25rem; padding-bottom:
  .recomendacao::before {content: '❋ ';}
 
 .note {margin-top: 1.25rem; margin-bottom: 1.25rem; text-align: justify; text-indent: 0; line-height: 1.625em;}
+ p.note > a[href^="#"]:last-child {font-weight: bold; font-style: normal; text-decoration: underline dotted;}
+  p.note > a[href^="#"]:last-child::before {content: '↑ '; padding-right: 1px;}
  footer td {background-color: transparent;}
 
 div.colab, div.autorizada {display: block; margin: 3.25rem auto; text-align: center;}
