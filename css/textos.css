@@ -213,6 +213,8 @@ p math {display: inline; font-family: "Times New Roman", serif;}
 
 sup {font-size: 0.75em;}
 h1 sup {font-size: 0.625em;}
+
+abbr, dfn {font-style: normal; text-decoration: underline dotted 1px; cursor: help;}
 														/*
 --------
  FOOTER
@@ -224,10 +226,10 @@ footer {border-top: 2px solid transparent; padding-top: 3.25rem; padding-bottom:
  .recomendacao::before {content: '❋ ';}
 
 .note {margin-top: 1.25rem; margin-bottom: 1.25rem; text-align: justify; text-indent: 0; line-height: 1.625em;}
- p.note > a[href^="#"]:last-child {font-weight: bold; font-style: normal; text-decoration: underline dotted;}
-  p.note > a[href^="#"]:last-child::before {content: '↑ '; padding-right: 1px;}
+ .note > a[href^="#"]:last-child {font-weight: bold; font-style: normal; text-decoration: underline dotted;}
+ .note > a[href^="#"]:last-child::before {content: '↑ '; padding-right: 1px;}
  footer td {background-color: transparent;}
- footer blockquote {}
+ footer blockquote p {margin-top: 1.25rem; margin-bottom: 1.25rem; line-height: 1.625em;}
 
 div.colab, div.autorizada {display: block; margin: 3.25rem auto; text-align: center;}
  div.colab > p, div.autorizada > p {margin: 0 0 .25rem 0; text-align: center; text-indent: 0; font-weight: bold;}
@@ -423,12 +425,15 @@ a:visited {text-decoration: none; color: black;}
 
 .note ~ .datas:first-of-type {margin-top: 3rem;}
 h4:has(+ .subtitulo) {margin-bottom: 0.875rem;}
+body.capitulo main p:not([class]) + h4:first-of-type {margin-top: 2.875rem;}
 main > figure.direita:last-child {float: none; margin-right: 0; margin-left: auto;}
 main > figure.esquerda:last-child {float: none; margin-left: 0; margin-right: auto;}
 header a:last-child h2 {margin-bottom: 2.25rem;}
 header > h2:last-child {margin-bottom: 2.25rem;}
 main > *:last-child, footer > *:last-child {margin-bottom: 0;}
 footer > *:first-child {margin-top: 0;}
+.note:has(b:only-child) {margin-bottom: 2.25rem;}
+.note:has(a[href^="#"]:last-child) {margin-bottom: 2.25rem;}
 
 
 									/* recursos visuais para correção */
