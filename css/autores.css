@@ -1,4 +1,26 @@
 @charset "UTF-8";
+																/*
+
+ -------  -----   --------------------
+ MRX.css  3.0.0 - novas vitórias virão
+ -------  -----   --------------------
+
+ Copyright © 2025 Marxists Internet Archive
+ Licensed under LGPL-3.0 (https://www.gnu.org/licenses/lgpl-3.0.en.html)
+
+ This stylesheet contains:
+
+ - Atkinson Hyperlegible (© 2020, Braille Institute of America, Inc.) — Licensed under SIL Open Font License, Version 1.1. 
+    (https://github.com/googlefonts/atkinson-hyperlegible)
+
+ - Derived styles from Ubuntu.com codebase (© 2025, Canonical Ltd) — Licensed under LGPL-3.0.
+    (https://github.com/canonical/ubuntu.com/)
+
+ - Derived styles from Vanilla Framework (© 2025, Canonical Ltd) — Licensed under LGPL-3.0.
+    (https://github.com/canonical/vanilla-framework/)
+
+
+																*/
 
 :root {font-size: 12pt;}
 
@@ -10,6 +32,8 @@ margin: 0;
 width: 100%;} 
 
 body > * {max-width: 860px; margin-left: auto; margin-right: auto; padding-left: 5%; padding-right: 5%; padding-left: max(calc((100vw - 860px) / 2), 5vw); padding-right: max(calc((100vw - 860px) / 2), 5vw);}
+
+body > nav, body > main {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 16px 0 rgba(0, 0, 0, 0.19);}
 
 														/*
 -----------
@@ -85,7 +109,7 @@ td a[href$=".pdf"]:first-child::after, td a[href*="pdf#page="]:first-child::afte
  FOOTER
 --------												*/
 
-footer {border-top: 2px solid black; padding-top: 2rem; padding-bottom: 1.5rem;}
+footer {border-top: 2px solid transparent; padding-top: 2rem; padding-bottom: 1.5rem;}
 
 h3 {font-family: Alegreya; font-variant-caps: small-caps; font-weight: bold;}
 
