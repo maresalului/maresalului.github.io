@@ -138,6 +138,7 @@ aside.sobre .info {margin: 0.25rem 0; text-align: left; font-weight: normal; lin
 a[href^="#"] > sup, sup > a[href^="#"] {font-weight: bold; font-style: normal;}
 
 hr {border: 1px solid #a90000;}
+ hr.curta {border: 1px solid black; margin: 2.25rem auto; width: 25%;}
  hr.transparente {border: 0 solid transparent; color: transparent; margin: 1.25rem; padding: 0.75rem;}
  hr.estrelavermelha {color: #a90000; text-align: center; text-indent: 0; border: none; margin: 2rem;}
   hr.estrelavermelha:before {content: '★ ★ ★'; word-spacing: 0.25em;}
@@ -228,6 +229,7 @@ footer {border-top: 2px solid transparent; padding-top: 3.25rem; padding-bottom:
 .note {margin-top: 1.25rem; margin-bottom: 1.25rem; text-align: justify; text-indent: 0; line-height: 1.625em;}
  .note > a[href^="#"]:last-child {font-weight: bold; font-style: normal; text-decoration: underline dotted;}
  .note > a[href^="#"]:last-child::before {content: '↑ '; padding-right: 1px;}
+ .note.direita {text-align: right;}
  footer td {background-color: transparent;}
  footer blockquote p {margin-top: 1.25rem; margin-bottom: 1.25rem; line-height: 1.625em;}
 
@@ -432,7 +434,7 @@ header a:last-child h2 {margin-bottom: 2.25rem;}
 header > h2:last-child {margin-bottom: 2.25rem;}
 main > *:last-child, footer > *:last-child {margin-bottom: 0;}
 footer > *:first-child {margin-top: 0;}
-.note:has(b:only-child) {margin-bottom: 2.25rem;}
+.note:has(b:only-child):not([id]) {margin-bottom: 2.25rem;}
 .note:has(a[href^="#"]:last-child) {margin-bottom: 2.25rem;}
 
 
