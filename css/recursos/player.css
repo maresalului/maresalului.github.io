@@ -1,0 +1,7 @@
+audio, video {width: 100%;}
+label {display: block; text-align: center;}
+
+audio:has(+ label), video:has(+ label) {margin-bottom: 0.875rem;}
+
+audio + label::before {content: url(../../img/audio.png); display: inline-block; vertical-align: text-bottom; image-rendering: pixelated; width: auto; height: 16px; padding-left: 2px; padding-right: 5px;}
+

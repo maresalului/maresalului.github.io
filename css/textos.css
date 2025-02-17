@@ -427,6 +427,8 @@ a:visited {text-decoration: none; color: black;}
 
 .note ~ .datas:first-of-type {margin-top: 3rem;}
 h4:has(+ .subtitulo) {margin-bottom: 0.875rem;}
+h5:has(+ .subtitulo) {margin-bottom: 0.875rem;}
+.subtitulo:has(+ .subtitulo) {margin-bottom: 0.875rem;}
 body.capitulo main p:not([class]) + h4:first-of-type {margin-top: 2.875rem;}
 main > figure.direita:last-child {float: none; margin-right: 0; margin-left: auto;}
 main > figure.esquerda:last-child {float: none; margin-left: 0; margin-right: auto;}
@@ -458,7 +460,7 @@ h4 {font-size: 1.25rem;}
 h5 {font-size: 1.175rem;}
 h6 {font-size: 1rem;}
 p, ol, ul, li, table, .subtitulo, .parte {font-size: 1rem;}
-.note, .menor, .epigrafe p, footer table, footer blockquote p {font-size: 0.875rem;}
+.note, .menor, .epigrafe p, footer table, footer blockquote p, label {font-size: 0.875rem;}
 aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 0.8325rem;}
 .editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p {font-size: 0.75rem;}
  .datas, small {font-size: 0.75rem;}
@@ -472,7 +474,7 @@ h4 {font-size: 16pt;}
 h5 {font-size: 15pt;}
 h6 {font-size: 14pt;}
 p, ol, ul, li, table, .subtitulo, .parte {font-size: 13pt;}
-.note, .menor, .epigrafe p, footer table, footer blockquote p {font-size: 12pt;}
+.note, .menor, .epigrafe p, footer table, footer blockquote p, label {font-size: 12pt;}
 aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 11pt;}
 .editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p {font-size: 10pt;}
  .datas, small {font-size: 9pt;}
