@@ -454,6 +454,7 @@ footer .tabela_datas {font-size: 10rem;}
 
 h1 {font-size: 1.675rem;}
 body.capitulo h1 {font-size: 1.625rem;}
+.maior {font-size: 1.5rem;}
 h2 {font-size: 1.175rem;}
 h3 {font-size: 1rem;}
 h4 {font-size: 1.25rem;}
@@ -468,6 +469,7 @@ aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 0.8325r
 @media (min-width: 480px) {
 h1 {font-size: 22pt;}
 body.capitulo h1 {font-size: 20pt;}
+.maior {font-size: 18pt;}
 h2 {font-size: 16pt;}
 h3 {font-size: 14pt;}
 h4 {font-size: 16pt;}
