@@ -124,11 +124,12 @@ aside.sobre .info {margin: 0.25rem 0; text-align: left; font-weight: normal; lin
 .info.formatos a[href*=".mp3"]::before {content: url(../img/audio.png);}
 .info.formatos a.audio::before {content: url(../img/audio.png);}
 .info.formatos a.video::before {content: url(../img/video.png);}
-.info.formatos a[href$=".pdf"]::before, .info.formatos a.pdf::before {content: url(../img/pdf.png);}
+.info.formatos a[href$=".pdf"]::before, a[href*="pdf#page="]::before, .info.formatos a.pdf::before {content: url(../img/pdf.png);}
 .info.formatos a[href$=".epub"]::before {content: url(../img/epub.png);}
 
 .info.formatos a[href*="audiolivros.htm"]::before, 
 .info.formatos a[href$=".pdf"]::before, 
+.info.formatos a[href*="pdf#page="]::before, 
 .info.formatos a.pdf::before, 
 .info.formatos a[href$=".mp3"]::before, 
 .info.formatos a.audio::before, 
@@ -146,6 +147,7 @@ hr {border: 1px solid #a90000;}
 ol, ul {line-height: 1.75em; margin-left: 0; margin-top: 0; text-align: justify; text-indent: 0;}
  li {font-size: inherit; margin-top: 1.25rem; margin-bottom: 1.25rem;}
  li p {text-indent: 0;}
+ li::marker {font-variant-numeric: lining-nums;}
 ol.parentese li::marker {content: counter(list-item) ") ";}
 ul.travessao li {list-style-type: none; padding-left: 1rem;}
  ul.travessao li::marker {content: "— ";}

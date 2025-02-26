@@ -102,6 +102,9 @@ td > a:nth-of-type(2) > img {margin-left: 10px;}
 td a[href$=".pdf"]:first-child::after, td a[href*="pdf#page="]:first-child::after {content: url(../img/pdf.png);}
 td a[href$=".pdf"]:first-child::after, td a[href*="pdf#page="]:first-child::after  {display: inline-block; vertical-align: middle; width: auto; height: 16px; margin-top: -2px; padding-right: 2px; padding-left: 10px; image-rendering: pixelated;}
 
+td a[href$=".epub"]:first-child::after, td a[href*="epub#page="]:first-child::after {content: url(../img/epub.png);}
+td a[href$=".epub"]:first-child::after, td a[href*="epub#page="]:first-child::after  {display: inline-block; vertical-align: middle; width: auto; height: 16px; margin-top: -2px; padding-right: 2px; padding-left: 10px; image-rendering: pixelated;}
+
 .rec, .duplo {font-variant: normal !important; white-space: normal !important;}
 
 													/*
@@ -118,6 +121,14 @@ section.biografia p {text-indent: 0;}
 blockquote {margin: 1.25rem 0 1.25rem auto; max-width: 50%;}
  blockquote p {text-indent: 0; line-height: 1.7em;}
  blockquote > cite {display: block; text-align: right;}
+
+.grafia::before {min-width: 12ch; display: inline-block; font-weight: bold; font-style: normal; font-size: 0.875em;}
+.chines::before {content: 'Chinês ';}
+.pinyin::before {content: 'Pinyin ';}
+.wade-giles::before {content: 'Wade-Giles ';}
+
+.grafia:has(+ .grafia) {margin-bottom: 0rem;}
+.grafia + .grafia {margin-top: 0rem;}
 
 .dicionario a, .fonte a {font-weight: bold;}
 .dicionario {margin-top: .25rem;}
