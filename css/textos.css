@@ -105,12 +105,14 @@ main {background: white; padding-top: 3.25rem; padding-bottom: 3.25rem; font-var
 aside.sobre {display: block; margin: 0 0 3.25rem 0; border: 1.5px solid #d9d9d9; text-align: left; background-color: #f3f3f3; padding: 1.25rem;}
 aside.sobre .info {margin: 0.25rem 0; text-align: left; font-weight: normal; line-height: 1.125rem; text-indent: 0;}
 
+.by::after, 
 .by-sa::after, 
 .by-nc::after, 
 .by-nc-sa::after, 
 .by-nc-nd::after, 
 .info.gnu::after {content: '.';}
 .info.cc::before, .info.gnu::before {content: 'Direitos de reprodução: '; font-weight: bold;}
+ .by a::before {content: url(../img/by.svg) ' '; vertical-align: top;}
  .by-sa a::before {content: url(../img/by-sa.svg) ' '; vertical-align: top;}
  .by-nc a::before {content: url(../img/by-nc.svg) ' '; vertical-align: top;}
  .by-nc-sa a::before {content: url(../img/by-nc-sa.svg) ' '; vertical-align: top;}
@@ -144,11 +146,12 @@ hr {border: 1px solid #a90000;}
  hr.estrelavermelha {color: #a90000; text-align: center; text-indent: 0; border: none; margin: 2rem;}
   hr.estrelavermelha:before {content: '★ ★ ★'; word-spacing: 0.25em;}
 
-ol, ul {line-height: 1.75em; margin-left: 0; margin-top: 0; text-align: justify; text-indent: 0;}
+ol, ul {line-height: 1.75em; margin-left: 0; margin-top: 0; text-align: justify; text-indent: 0; padding-left: 2.875rem;}
  li {font-size: inherit; margin-top: 1.25rem; margin-bottom: 1.25rem;}
  li p {text-indent: 0;}
  li::marker {font-variant-numeric: lining-nums;}
-ol.parentese li::marker {content: counter(list-item) ") ";}
+ol.parentese[type="1"] li::marker {content: counter(list-item) ") ";}
+ ol.parentese[type="A"] li::marker {content: revert;}
 ul.travessao li {list-style-type: none; padding-left: 1rem;}
  ul.travessao li::marker {content: "— ";}
 
@@ -218,6 +221,11 @@ sup {font-size: 0.75em;}
 h1 sup {font-size: 0.625em;}
 
 abbr, dfn {font-style: normal; text-decoration: underline dotted 1px; cursor: help;}
+
+dt {font-weight: bold; margin-top: 1.625rem; margin-bottom: 0.8125rem;}
+dd {line-height: 1.75em; text-align: justify;}
+dd p {text-indent: 0; margin-top: 0.8125rem; margin-bottom: 0.8125rem;}
+
 														/*
 --------
  FOOTER
@@ -233,7 +241,7 @@ footer {border-top: 2px solid transparent; padding-top: 3.25rem; padding-bottom:
  .note > a[href^="#"]:last-child::before {content: '↑ '; padding-right: 1px;}
  .note.direita {text-align: right;}
  footer td {background-color: transparent;}
- footer blockquote p {margin-top: 1.25rem; margin-bottom: 1.25rem; line-height: 1.625em;}
+ footer blockquote p, footer ol, footer ul, footer li {margin-top: 1.25rem; margin-bottom: 1.25rem; line-height: 1.625em;}
 
 div.colab, div.autorizada {display: block; margin: 3.25rem auto; text-align: center;}
  div.colab > p, div.autorizada > p {margin: 0 0 .25rem 0; text-align: center; text-indent: 0; font-weight: bold;}
@@ -462,8 +470,8 @@ h3 {font-size: 1rem;}
 h4 {font-size: 1.25rem;}
 h5 {font-size: 1.175rem;}
 h6 {font-size: 1rem;}
-p, ol, ul, li, table, .subtitulo, .parte {font-size: 1rem;}
-.note, .menor, .epigrafe p, footer table, footer blockquote p, label {font-size: 0.875rem;}
+p, ol, ul, li, table, dt, dd, .subtitulo, .parte {font-size: 1rem;}
+.note, .menor, .epigrafe p, footer table, footer blockquote p, label, footer li {font-size: 0.875rem;}
 aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 0.8325rem;}
 .editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p {font-size: 0.75rem;}
  .datas, small {font-size: 0.75rem;}
@@ -477,8 +485,8 @@ h3 {font-size: 14pt;}
 h4 {font-size: 16pt;}
 h5 {font-size: 15pt;}
 h6 {font-size: 14pt;}
-p, ol, ul, li, table, .subtitulo, .parte {font-size: 13pt;}
-.note, .menor, .epigrafe p, footer table, footer blockquote p, label {font-size: 12pt;}
+p, ol, ul, li, table, dt, dd, .subtitulo, .parte {font-size: 13pt;}
+.note, .menor, .epigrafe p, footer table, footer blockquote p, label, footer li {font-size: 12pt;}
 aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 11pt;}
 .editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p {font-size: 10pt;}
  .datas, small {font-size: 9pt;}
