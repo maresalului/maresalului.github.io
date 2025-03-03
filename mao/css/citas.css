@@ -1,0 +1,7 @@
+.cita {color: grey; text-align: right; margin-bottom: 2.5rem; font-size: 0.875rem;}
+
+@media (min-width: 480px) {
+.cita {font-size: 12pt;}
+}
+
+/* @media screen and (prefers-color-scheme: dark) {.cita{color: darkgrey;}} */
