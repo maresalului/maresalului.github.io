@@ -175,8 +175,9 @@ img.imprensa.longo {width: 25%; max-width: unset;}
 
 .recuado {text-align: justify; text-indent: 0; margin-left: 40%; margin-right: 0;}
 .recuo.curto {margin-left: 4rem; text-indent: 0;}
-.semrecuo {text-indent: 0; margin-left: 2rem;}
-.semparagrafo {text-indent: 0; margin-left: 0;}
+.semrecuo {margin-left: 2rem; text-indent: 0;}
+.semparagrafo {margin-left: 0; text-indent: 0;}
+ol.recuada, ul.recuada {margin-left: 1.5rem;}
 
 .centralizado {text-align: center; text-indent: 0;}
 .esquerda {text-align: left;}
@@ -237,8 +238,8 @@ footer {border-top: 2px solid transparent; padding-top: 3.25rem; padding-bottom:
  .recomendacao::before {content: '❋ ';}
 
 .note {margin-top: 1.25rem; margin-bottom: 1.25rem; text-align: justify; text-indent: 0; line-height: 1.625em;}
- .note > a[href^="#"]:last-child {font-weight: bold; font-style: normal; text-decoration: underline dotted;}
- .note > a[href^="#"]:last-child::before {content: '↑ '; padding-right: 1px;}
+ .note > a[href*="#"]:last-child {font-weight: bold; font-style: normal; text-decoration: underline dotted;}
+ .note > a[href*="#"]:last-child::before {content: '↑ '; padding-right: 1px;}
  .note.direita {text-align: right;}
  footer td {background-color: transparent;}
  footer blockquote p, footer ol, footer ul, footer li {margin-top: 1.25rem; margin-bottom: 1.25rem; line-height: 1.625em;}
@@ -249,7 +250,7 @@ div.colab, div.autorizada {display: block; margin: 3.25rem auto; text-align: cen
  img.colab.alta {max-height: 200px;}
  img.colab.longa {max-width: 45%;}
 
- .datas {font-weight: normal; text-align: right;}
+ .datas {font-weight: normal; text-align: right; clear: both;}
 
 														/*
 -----------
@@ -274,7 +275,8 @@ body.indice aside.sobre a {text-decoration: none;}
 body.capitulo h1 {font-size: 18pt;}
 
 body.capitulo main h4:first-of-type {margin-top: 1.375rem;}
- p.parte:has(+ h4) {margin-bottom: 1.375rem;}
+ p.parte:has(+ h4), p.parte:has(+ h5) {margin-bottom: 1.375rem;}
+ p.parte + h4, p.parte + h5 {margin-top: 1.375rem;}
 
 body.capitulo section.editorial {margin-top: 0;}
 
