@@ -171,8 +171,8 @@ section.poesia, blockquote.poesia {width: fit-content; margin-left: auto; margin
 section.poesia p {text-indent: 0;}
 section.poesia h4 {text-align: left; margin-left: 0;}
 
-img.imprensa {display: block; width: 20%; height: auto; margin: 2rem; max-width: 200px;}
-img.imprensa.longo {width: 25%; max-width: unset;}
+img.imprensa {display: block; width: 30%; height: auto; margin: 2rem; max-width: 200px; max-height: 75px; min-width: 175px;}
+img.imprensa.longa {width: 35%; max-width: 400px;}
 
 .recuado {text-align: justify; text-indent: 0; margin-left: 40%; margin-right: 0;}
 .recuo.curto {margin-left: 4rem; text-indent: 0;}
@@ -236,7 +236,8 @@ dd p {text-indent: 0; margin-top: 0.8125rem; margin-bottom: 0.8125rem;}
 footer {border-top: 2px solid transparent; padding-top: 3.25rem; padding-bottom: 2rem;}
 
 .recomendacao {text-indent: 0; font-weight: bold;}
- .recomendacao::before {content: '❋ ';}
+ .recomendacao::before {content: '❦ '; padding-right: 2px;}
+ .recomendacao + .note {margin-top: 2.25rem;}
 
 .note {margin-top: 1.25rem; margin-bottom: 1.25rem; text-align: justify; text-indent: 0; line-height: 1.625em;}
  .note > a[href*="#"]:last-child {font-weight: bold; font-style: normal; text-decoration: underline dotted;}
@@ -261,7 +262,8 @@ div.colab, div.autorizada {display: block; margin: 3.25rem auto; text-align: cen
 body.indice main a {text-decoration: underline;}
 body.indice aside.sobre a {text-decoration: none;}
 
-.capadelivro {margin: 5px 0 25px 25px; width: 15%; height: auto; float: right; max-width: fit-content; clear: right;}
+.capadelivro {height: auto; max-width: fit-content;}
+ main .capadelivro {margin: 5px 0 25px 25px; width: 15%;float: right; clear: right;}
 
 .toc, .toc1, .toc2, .toc3, .toc4, .toc5 {text-indent: 0; text-align: left; margin-left: 0;}
 .toc, .toc1, .toc2 {font-weight: bold;}
@@ -325,7 +327,7 @@ body.capitulo .proximo::after {content: " >>>"; margin-left: 2px;}
 
 	.link {font-size: 0.915rem; font-weight: bold; text-align: center; text-indent: 0;}
 	
-	.capadelivro.grande {width: 15%;}
+	.capadelivro.grande {}
 
 	/* obsoleto */
 
@@ -395,11 +397,14 @@ ol, ul {margin-left: 1%; margin-right: 1%;}
 .toc3 {padding-left: 9%;}
 .toc4 {padding-left: 12%;}
 .toc5 {padding-left: 15%;}
-.capadelivro, .capadelivro.grande {width: 20%;}
+main .capadelivro {width: 20%;}
 .abnt {margin-left: 20%;}
 th, td {padding: 0.5rem;}
 
 .editorial, section.editorial {margin-left: 2rem;}
+img.imprensa {width: 35%; min-width: unset;}
+img.imprensa.limite {width: 30%;}
+img.imprensa.longa {width: 50%;}
 figure.total img, table.fixa {width: calc(100% + 10vw); margin-left: -5vw; max-width: revert;}
 .editorial figure.total img {width: 100%; margin-left: 0; max-width: revert;}
 
@@ -496,8 +501,6 @@ aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 11pt;}
 
 header img {height: 60px;}
 p, ol, ul, li {line-height: 1.7em; margin: 1.625rem 0;}
-
-img.imprensa {width: 30%;}
 }
 
 /* latin-ext */
