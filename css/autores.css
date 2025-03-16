@@ -100,10 +100,9 @@ table img {height: 48px; width: auto; vertical-align: text-bottom;}
 td > a:nth-of-type(2) > img {margin-left: 10px;}
 
 td a[href$=".pdf"]:first-child::after, td a[href*="pdf#page="]:first-child::after {content: url(../img/pdf.png);}
-td a[href$=".pdf"]:first-child::after, td a[href*="pdf#page="]:first-child::after  {display: inline-block; vertical-align: middle; width: auto; height: 16px; margin-top: -2px; padding-right: 2px; padding-left: 10px; image-rendering: pixelated;}
-
 td a[href$=".epub"]:first-child::after, td a[href*="epub#page="]:first-child::after {content: url(../img/epub.png);}
-td a[href$=".epub"]:first-child::after, td a[href*="epub#page="]:first-child::after  {display: inline-block; vertical-align: middle; width: auto; height: 16px; margin-top: -2px; padding-right: 2px; padding-left: 10px; image-rendering: pixelated;}
+
+td a[href$=".pdf"]:first-child::after, td a[href*="pdf#page="]:first-child::after, td a[href$=".epub"]:first-child::after, td a[href*="epub#page="]:first-child::after {display: inline-block; vertical-align: middle; width: auto; height: 16px; margin-top: -2px; padding-right: 2px; padding-left: 10px; image-rendering: pixelated;}
 
 .rec, .duplo {font-variant: normal !important; white-space: normal !important;}
 

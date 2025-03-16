@@ -1,0 +1,1 @@
+a[href*="htm#"]:has(sup), sup > a[href*="htm#"] {font-weight: bold; font-style: normal;}

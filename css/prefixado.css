@@ -1,0 +1,591 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@charset "UTF-8";
+																/*
+
+ -------  -----   --------------------
+ MRX.css  3.0.0 - novas vitórias virão
+ -------  -----   --------------------
+
+ Copyright © 2025 Marxists Internet Archive
+ Licensed under LGPL-3.0 (https://www.gnu.org/licenses/lgpl-3.0.en.html)
+
+ This stylesheet contains:
+
+ - Atkinson Hyperlegible (© 2020, Braille Institute of America, Inc.) — Licensed under SIL Open Font License, Version 1.1. 
+    (https://github.com/googlefonts/atkinson-hyperlegible)
+
+ - Derived styles from Ubuntu.com codebase (© 2025, Canonical Ltd) — Licensed under LGPL-3.0.
+    (https://github.com/canonical/ubuntu.com/)
+
+ - Derived styles from Vanilla Framework (© 2025, Canonical Ltd) — Licensed under LGPL-3.0.
+    (https://github.com/canonical/vanilla-framework/)
+
+
+																*/
+
+:root {font-size: 12pt;}
+
+body {
+background-color: #f3f3f3; 
+color: black; 
+font-family: "Atkinson Hyperlegible", "Noto Sans", "Open Sans", system-ui, Verdana, sans-serif; 
+margin: 0; 
+width: 100%;} 
+
+body > * {max-width: 860px; margin-left: auto; margin-right: auto; padding-left: 5%; padding-right: 5%; padding-left: max(calc((100vw - 860px) / 2), 5vw); padding-right: max(calc((100vw - 860px) / 2), 5vw);}
+
+body > nav, body > main {-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 16px 0 rgba(0, 0, 0, 0.19);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 16px 0 rgba(0, 0, 0, 0.19);}
+
+														/*
+-----------
+ ELEMENTOS
+-----------													*/
+
+p {line-height: 1.75em; text-align: justify; text-indent: 2rem; margin: 1.5rem 0;}
+
+a, a.link_ext {background: transparent;}
+
+a:link, a:visited, a:hover {color: #000099; text-decoration: none;}
+a:active {color: #06c; text-decoration: none;}
+
+a.link_ext:hover {color: #8b008b;}
+a.link_ext:active {color: #8a2be2;}
+a.link_ext:link, a.link_ext:visited {color: #751157;}
+nav, header, main, footer {display: block;}
+
+
+														/*
+-----
+ NAV
+-----														*/
+
+nav {margin: 0; text-indent: 0;}
+body > nav {-webkit-box-align: center;-ms-flex-align: center;align-items: center; background-color: #222; display: -webkit-box; display: -ms-flexbox; display: flex; gap: 0; height: 50px; margin-left: auto; margin-right: auto;}
+
+body > nav a {margin: 0; display: block; text-decoration: none;}
+nav img.logo {background-color: #a90000; display: block; width: auto; height: 24px; padding: 12px 16px 14px 16px;}
+a#li-bi {content: url(bib.svg); width: 21px; height: auto; margin: 2rem;}
+a#li-no {content: url(nov.svg); width: 21px; height: auto;}
+
+														/*
+--------
+ HEADER
+--------													*/
+
+
+h1, .subtitulo, .parte, h2, h3, h4, h5, h6 {font-weight: bold; text-align: center; margin: 2.875rem 1.5rem;}
+
+h1 {line-height: 1.25em; margin-top: 3rem; margin-bottom: 1.625rem;}
+.subtitulo, .parte {text-indent: 0; margin-top: 0.875rem; margin-bottom: 2rem;}
+h2 {color: #000033; margin-top: 1.5rem; margin-bottom: 1.5rem;}
+h3 {color: #000033; margin-top: 1.5rem;}
+
+header {padding-top: 46px; padding-bottom: 50px; padding-top: 3.25rem; padding-bottom: 3.25rem;}
+header * {text-align: left; margin-left: 0; margin-right: 0;}
+header img {clear: none; float: left; margin-right: 1rem; height: 54px; width: auto;}
+ header img:has(+ img) {margin-right: 0.5rem;}						/* textos com dois autores */
+
+h1 {color: black; margin-bottom: 2rem; margin-top: 0;}
+h2 {margin-bottom: 0.75rem; color: #06c;}
+h3 {font-weight: normal; margin-top: 0.75rem; margin-bottom: 0; text-transform: lowercase;}
+
+h1:has(+ .subtitulo), h1:has(+ .parte) {margin-bottom: 0.875rem;}
+header .subtitulo, header .parte {text-align: left; margin-left: 0;}
+p.parte:has(+ p.parte) {margin-bottom: 0;}
+
+														/*
+------
+ MAIN
+------														*/
+
+main {background: white; padding-top: 3.25rem; padding-bottom: 3.25rem; font-variant-numeric: lining-nums;}
+
+.info.autorizada img {display: inline; height: 1rem; width: auto; margin-inline: 1.5px; vertical-align: text-bottom;}
+.info.autorizada {text-align: center;}
+
+aside.sobre {display: block; margin: 0 0 3.25rem 0; border: 1.5px solid #d9d9d9; text-align: left; background-color: #f3f3f3; padding: 1.25rem;}
+aside.sobre .info {margin: 0.25rem 0; text-align: left; font-weight: normal; line-height: 1.125rem; text-indent: 0;}
+
+.by::after, 
+.by-sa::after, 
+.by-nc::after, 
+.by-nc-sa::after, 
+.by-nc-nd::after, 
+.info.gnu::after {content: '.';}
+.info.cc::before, .info.gnu::before {content: 'Direitos de reprodução: '; font-weight: bold;}
+ .by a::before {content: url(../img/by.svg) ' '; vertical-align: top;}
+ .by-sa a::before {content: url(../img/by-sa.svg) ' '; vertical-align: top;}
+ .by-nc a::before {content: url(../img/by-nc.svg) ' '; vertical-align: top;}
+ .by-nc-sa a::before {content: url(../img/by-nc-sa.svg) ' '; vertical-align: top;}
+ .by-nc-nd a::before {content: url(../img/by-nc-nd.svg) ' '; vertical-align: top;}
+.info.gnu a::before {content: url(../img/gfdl.svg) ' '; vertical-align: top;}
+
+.info.cc a.link_ext::before {content: '';}
+
+.info.formatos:before {content: 'Também disponível em: '; font-weight: bold; display: inline;}
+.info.formatos a[href*="audiolivros.htm"]::before {content: url(../img/audio.png);}
+.info.formatos a[href*=".mp3"]::before {content: url(../img/audio.png);}
+.info.formatos a.audio::before {content: url(../img/audio.png);}
+.info.formatos a.video::before {content: url(../img/video.png);}
+.info.formatos a[href$=".pdf"]::before, .info.formatos a[href*="pdf#page="]::before, .info.formatos a.pdf::before {content: url(../img/pdf.png);}
+.info.formatos a[href$=".epub"]::before {content: url(../img/epub.png);}
+
+.info.formatos a[href*="audiolivros.htm"]::before, 
+.info.formatos a[href$=".pdf"]::before, 
+.info.formatos a[href*="pdf#page="]::before, 
+.info.formatos a.pdf::before, 
+.info.formatos a[href$=".mp3"]::before, 
+.info.formatos a.audio::before, 
+.info.formatos a.video::before, 
+.info.formatos a[href$=".epub"]::before  {display: inline-block; vertical-align: text-bottom; -ms-interpolation-mode: nearest-neighbor; image-rendering: -webkit-optimize-contrast; image-rendering: -moz-crisp-edges; image-rendering: -o-pixelated; image-rendering: pixelated; width: auto; height: 16px; padding-left: 2px; padding-right: 5px;}
+
+a[href^="#"] > sup, sup > a[href^="#"] {font-weight: bold; font-style: normal;}
+
+hr {border: 1px solid #a90000;}
+ hr.curta {border: 1px solid black; margin: 2.25rem auto; width: 25%;}
+ hr.transparente {border: 0 solid transparent; color: transparent; margin: 1.25rem; padding: 0.75rem;}
+ hr.estrelavermelha {color: #a90000; text-align: center; text-indent: 0; border: none; margin: 2rem;}
+  hr.estrelavermelha:before {content: '★ ★ ★'; word-spacing: 0.25em;}
+
+ol, ul {line-height: 1.75em; margin-left: 0; margin-top: 0; text-align: justify; text-indent: 0; padding-left: 2.875rem;}
+ li {font-size: inherit; margin-top: 1.25rem; margin-bottom: 1.25rem;}
+ li p {text-indent: 0;}
+ li::marker {font-variant-numeric: lining-nums;}
+ol.parentese[type="1"] li::marker {content: counter(list-item) ") ";}
+ ol.parentese[type="A"] li::marker {content: revert;}
+ul.travessao li {list-style-type: none; padding-left: 1rem;}
+ ul.travessao li::marker {content: "— ";}
+
+
+       .editorial {text-align: justify; text-indent: 0; margin: 1rem 0 1rem 40%;}
+      p.editorial {margin-bottom: 2rem;}
+      p.editorial:has(+ p.editorial) {margin-bottom: 1rem;}
+     hr.editorial {margin-top: 2rem; margin-bottom: 2rem;}
+section.editorial {margin: 1rem 0 2rem 40%;}
+section.editorial p, section.editorial h4, section.editorial h5 {text-indent: 0; margin: 1rem 0 1rem 0;}
+section.editorial h4 {text-align: left;}
+section.editorial h5 {text-align: left; margin-left: 1rem;}
+section.editorial hr {margin-top: 2rem; margin-bottom: 2rem;}
+
+section.poesia, blockquote.poesia {width: -webkit-fit-content;width: -moz-fit-content;width: fit-content; margin-left: auto; margin-right: auto;}
+section.poesia p {text-indent: 0;}
+section.poesia h4 {text-align: left; margin-left: 0;}
+
+img.imprensa {display: block; width: 20%; height: auto; margin: 2rem; max-width: 200px;}
+img.imprensa.longo {width: 25%; max-width: unset;}
+
+.recuado {text-align: justify; text-indent: 0; margin-left: 40%; margin-right: 0;}
+.recuo.curto {margin-left: 4rem; text-indent: 0;}
+.semrecuo {text-indent: 0; margin-left: 2rem;}
+.semparagrafo {text-indent: 0; margin-left: 0;}
+
+.centralizado {text-align: center; text-indent: 0;}
+.esquerda {text-align: left;}
+.direita {text-align: right;}
+.justificada {text-align: justify;}
+
+img.centralizado {margin-left: auto; margin-right: auto; display: block;}
+
+blockquote {margin: 1.25rem 10%;}
+ blockquote p {text-indent: 0;}
+ blockquote.abnt, blockquote.direita {margin: 1.25rem 0 1.25rem 40%;}
+ blockquote.epigrafe {margin: 1.25rem 0 1.25rem 40%;}
+
+figure {width: 20%; max-width: -webkit-fit-content; max-width: -moz-fit-content; max-width: fit-content;}
+ figure.total {width: 100%; margin: 2rem auto;}
+ figure.meio {margin: 2rem auto; width: 50%;}
+ figure.esquerda {float: left; margin: .375rem 2rem 1.5rem 0; clear: left;}
+ figure.direita {float: right; margin: .375rem 0 1.5rem 2rem; clear: right;}
+ figure img {width: 100%; margin: 0 auto; height: auto; display: block;}
+ figcaption {margin: 1rem 0 0 0; text-align: center;}
+figure.meio + figure.meio {margin-top: 4rem;}
+
+table {margin: 1.625rem auto 1.625rem auto; border-collapse: collapse; border: none;}
+ th {border: none; font-weight: bold; text-align: center; padding: 0.5rem 1rem; background-color: black; color: white;}
+ td {border: none; color: black; padding: 0.5rem 1rem; background-color: white;}
+ th[scope="row"] {background: lightgrey; color: black; text-align: left;}
+ th > small {font-weight: normal;}
+ caption {caption-side: bottom; margin-top: 1rem; font-size: 9pt;}
+ td.cinza {background-color: lightgrey;}
+ th.cinza {background-color: grey;}
+table.comborda, table.comborda th, table.comborda td {border: 1px solid black;}
+table.colada td, table.colada th {padding: 0.5rem 0;}
+table.fixa {width: 100%; table-layout: fixed;}
+
+h4, h5, h6 {clear: both;}
+
+.matematica {font-family: "Times New Roman", serif;}
+math {display: block; margin-left: auto; margin-right: auto; text-align: center;}
+p math {display: inline; font-family: "Times New Roman", serif;}
+
+sup {font-size: 0.75em;}
+h1 sup {font-size: 0.625em;}
+
+abbr, dfn {font-style: normal; -webkit-text-decoration: underline dotted 1px; text-decoration: underline dotted 1px; cursor: help;}
+
+dt {font-weight: bold; margin-top: 1.625rem; margin-bottom: 0.8125rem;}
+dd {line-height: 1.75em; text-align: justify;}
+dd p {text-indent: 0; margin-top: 0.8125rem; margin-bottom: 0.8125rem;}
+
+														/*
+--------
+ FOOTER
+--------													*/
+
+footer {border-top: 2px solid transparent; padding-top: 3.25rem; padding-bottom: 2rem;}
+
+.recomendacao {text-indent: 0; font-weight: bold;}
+ .recomendacao::before {content: '❋ ';}
+
+.note {margin-top: 1.25rem; margin-bottom: 1.25rem; text-align: justify; text-indent: 0; line-height: 1.625em;}
+ .note > a[href^="#"]:last-child {font-weight: bold; font-style: normal; -webkit-text-decoration: underline dotted; text-decoration: underline dotted;}
+ .note > a[href^="#"]:last-child::before {content: '↑ '; padding-right: 1px;}
+ .note.direita {text-align: right;}
+ footer td {background-color: transparent;}
+ footer blockquote p, footer ol, footer ul, footer li {margin-top: 1.25rem; margin-bottom: 1.25rem; line-height: 1.625em;}
+
+div.colab, div.autorizada {display: block; margin: 3.25rem auto; text-align: center;}
+ div.colab > p, div.autorizada > p {margin: 0 0 .25rem 0; text-align: center; text-indent: 0; font-weight: bold;}
+ img.colab {margin: 0; width: auto; height: auto; max-width: 35%; max-height: 100px;}
+ img.colab.alta {max-height: 200px;}
+ img.colab.longa {max-width: 45%;}
+
+ .datas {font-weight: normal; text-align: right;}
+
+														/*
+-----------
+ CAPITULOS
+-----------													*/
+
+body.indice main a {text-decoration: underline;}
+body.indice aside.sobre a {text-decoration: none;}
+
+.capadelivro {margin: 5px 0 25px 25px; width: 15%; height: auto; float: right; max-width: -webkit-fit-content; max-width: -moz-fit-content; max-width: fit-content; clear: right;}
+
+.toc, .toc1, .toc2, .toc3, .toc4, .toc5 {text-indent: 0; text-align: left; margin-left: 0;}
+.toc, .toc1, .toc2 {font-weight: bold;}
+
+ .toc {padding-left: 0; margin-top: 1rem; margin-bottom: 1rem;}
+.toc1 {padding-left: 1.5rem; margin-top: 0; margin-bottom: 0;}
+.toc2 {padding-left: 3rem; margin-top: 0; margin-bottom: 0;}
+.toc3 {padding-left: 4.5rem; margin-top: 0; margin-bottom: 0;}
+.toc4 {padding-left: 6rem; margin-top: 0; margin-bottom: 0;}
+.toc5 {padding-left: 7.5rem; margin-top: 0; margin-bottom: 0;}
+
+body.capitulo h1 {font-size: 18pt;}
+
+body.capitulo main h4:first-of-type {margin-top: 1.375rem;}
+ p.parte:has(+ h4) {margin-bottom: 1.375rem;}
+ p.parte + h4 {margin-top: 1.375rem;}
+
+body.capitulo section.editorial {margin-top: 0;}
+
+body.capitulo section.editorial + h4 {margin-top: 2.875rem;}
+
+body.capitulo nav.interna {display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; font-weight: bold; margin-top: 1.5rem; margin-bottom: 3.25rem; width: 100%; line-height: 1.5em;}
+body.capitulo .anterior::before {content: "<<< "; margin-right: 2px;}
+body.capitulo .proximo::after {content: " >>>"; margin-left: 2px;}
+
+
+
+  /*------------------*/
+ /*  DESCONTINUADOS  */
+/*------------------*/
+
+	.quote2, .quote3, .quote4, .quote5, .quote6, .quote-apresentacao {margin-bottom: 0; margin-right: 4%; text-align: justify; text-indent: 0;}
+	.quote2 {margin-left: 8%; font-weight: bold;}
+	.quote3 {margin-left: 8%;}
+	.quote4 {margin-left: 14%;}
+	.quote5 {margin-left: 38%;}
+	.quote6 {margin-left: 38%; font-size: 0.75rem;}
+	.quote-apresentacao {margin-left: 10%; font-size: 0.75rem; text-indent: 4rem;}
+
+	.date {text-align: right; text-indent: 0;}
+	.tabela_datas {font-size: 0.675rem; text-align: center; font-weight: normal;}
+	.toplink-centro {text-align: center; text-indent: 0; font-size: 0.675rem; font-weight: bold; margin-top: 0;}
+	.toq-citacao {font-size: 1rem; text-align: justify; text-indent: 0; margin-right: 4%; margin-left: 8%; margin-bottom: 0;} /* possivelmente obsoleto */
+	.titulo-capitulo {font-size: 1.1rem; font-weight: bold; margin-bottom: 0; margin-top: 0; text-align: center;}
+	.titulo-cima-linha {font-size: 1.165rem; text-align: center; margin-top: 0; margin-bottom: 0; font-weight: bold; line-height: 1.25em;}
+	.titulo7 {font-size: 1rem; text-align: center;}
+
+	hr.linha-preta {border: 1px solid black;}
+
+	.bordalogotipo {display: block; margin-left: auto; margin-right: auto; padding: 7px; text-align: center; background-color: #f5f5f5;}
+	.Nome-obra {font-size: 1rem;} /* possivelmente obsoleto */
+
+	.heading {margin: 2rem;} /* tipo img */
+	.section-img {text-align: center;} /* tipo div */
+
+	header div.colab {display: block; margin: 0.25rem 0 1rem 2rem; text-align: center; float: right; max-width: 100px;}
+	header div.colab > p {margin: 0 0 .375rem 0; text-align: right; text-indent: 0; font-size: .75rem; font-weight: bold; line-height: 1.2em;}
+	header img.colab {margin: 0; width: auto; height: auto; max-width: 100px; max-height: 50px;}
+
+	.H1reduzido {font-size: 0.9375rem;}
+
+	.link {font-size: 0.915rem; font-weight: bold; text-align: center; text-indent: 0;}
+	
+	.capadelivro.grande {width: 15%;}
+
+	/* obsoleto */
+
+	.tabela-lado-esquerdo {border-spacing: 10px; float: left; padding: 4px;}
+	.tabela-lado-direito {border-spacing: 10px; float: right; padding: 4px;}
+
+	.tabela-centro-com-Borda {border-collapse: collapse; margin-left: auto; margin-right: auto; padding: 10px;}
+	.tabela-centro-com-Borda td {border-spacing: 10px; border: 1px solid; padding: 4px;}
+	.tabela-centro-com-Borda th {border-spacing: 10px; border: 1px solid; padding: 4px;}
+
+	.celula-cinza {background-color: #999999; font-size: 0.915rem; font-weight: bold; text-align: center;}
+
+	.bordafototexto {background-color: white; border: 1px solid #dbdbdb; display: block; margin: 10px; padding: 7px;}
+
+	td.toplink, td.link {padding: 0.125rem; margin-bottom: 0.125rem;} /* corrige erros de espaçamento */
+
+
+	aside.versoes {display: block; float: right; max-width: 25%; margin: 0 0 1rem 2rem;}
+	aside.versoes p {font-size: 0.875rem; text-indent: 0; margin-top: 0; margin-bottom: 0.5rem; line-height: 1rem; text-align: left;}
+	aside.versoes img {height: 16px; width: auto; vertical-align: text-bottom; padding-right: 6px; -ms-interpolation-mode: nearest-neighbor; image-rendering: -webkit-optimize-contrast; image-rendering: -moz-crisp-edges; image-rendering: -o-pixelated; image-rendering: pixelated;}
+ 
+ 	blockquote.trad {margin: 1.25rem 10%;}
+
+	/* substituidas em autor.css */
+
+	.bordafoto {background-color: white; border: 1px solid #dbdbdb; display: block; margin-left: auto; margin-right: auto; padding: 7px; text-align: center;}
+	.tabela-obras {border-spacing: 10px; margin-left: auto; margin-right: auto; padding: 4px;}
+	.author {font-size: 0.675rem; text-align: right; font-weight: bold; font-style: italic; margin-right: 1%;}
+	.sugestao {display: none;}
+	.texto-sem-espaco {font-size: 1rem; line-height: 1.25em; margin-bottom: 0; margin-top: 0; text-align: justify; text-indent: 2rem;}
+	p.lapide {font-size: 0.675rem; text-align: justify; text-indent: 0; margin-top: 2.5rem; margin-right: 10%; margin-left: 10%; margin-bottom: 2.5rem;}
+	.linha-centralizada {text-align: center; text-indent: 0;}
+	.linha-esquerda {text-align: left;}
+	.linha-direita {text-align: right;}
+	.linha-justificada {text-align: justify;}
+
+	img.versoes {height: 16px; -ms-interpolation-mode: nearest-neighbor; image-rendering: -webkit-optimize-contrast; image-rendering: -moz-crisp-edges; image-rendering: -o-pixelated; image-rendering: pixelated; padding-right: 6px; vertical-align: text-bottom; width: auto;}
+	img.licenca {height: 15px; -ms-interpolation-mode: nearest-neighbor; image-rendering: -webkit-optimize-contrast; image-rendering: -moz-crisp-edges; image-rendering: -o-pixelated; image-rendering: pixelated; vertical-align: text-bottom; width: 80px;}
+
+	.estrelavermelha {color: #a90000; text-align: center; text-indent: 0; border: none; margin: 1.5rem 0;}
+
+	.fotodireita {border: 2px solid #dbdbdb; display: block; float: right; margin-left: 1rem; margin-right: 0px; padding: 7px;}
+	
+
+	/* Espacamentos */
+
+	h1 ~ hr:first-of-type {margin-top: 3rem;}						/* Primeira barra */
+	h1 ~ hr:nth-of-type(2) {margin-bottom: 3rem;}						/* Segunda barra */
+	p.link ~ hr {margin-top: 2rem;}								/* Ultima barra */
+	p.link:has(a[href="#topp"]) {margin-top: 2rem; margin-bottom: 2rem; clear: both;}	/* Link para o inicio da pagina*/
+
+														/*
+-----------
+ CELULARES
+-----------													*/
+
+@media (max-width: 480px) {
+img {max-width: 150px; height: auto;}
+img.auto {width: auto; height: auto;}
+img.colab {max-width: 200px;}
+img.larga {max-width: 300px; height: auto;}
+ol, ul {margin-left: 1%; margin-right: 1%;}
+.toc, .toc1, .toc2, .toc3, .toc4, .toc5 {margin-left: 1%;}
+ .toc {padding-left: 0;}
+.toc1 {padding-left: 3%;}
+.toc2 {padding-left: 6%;}
+.toc3 {padding-left: 9%;}
+.toc4 {padding-left: 12%;}
+.toc5 {padding-left: 15%;}
+.capadelivro, .capadelivro.grande {width: 20%;}
+.abnt {margin-left: 20%;}
+th, td {padding: 0.5rem;}
+
+.editorial, section.editorial {margin-left: 2rem;}
+figure.total img, table.fixa {width: calc(100% + 10vw); margin-left: -5vw; max-width: revert;}
+.editorial figure.total img {width: 100%; margin-left: 0; max-width: revert;}
+
+img + img + h2 {clear: both; padding-top: 1rem;}
+}
+
+														/*
+------------
+ IMPRESSORA
+------------													*/
+
+@media print {
+body {background-color: white; line-height: 1.5em;}
+
+body, p, span, ul, ol, li, .quote2, .quote3, .quote4, .toq-citacao, .Nome-obra, .texto-sem-espaco, .titulo7 {font-size: 10pt;}
+
+h1 {font-size: 18pt;}
+h2 {font-size: 16pt;}
+h3 {font-size: 14pt;}
+h4 {font-size: 13pt;}
+h5 {font-size: 12pt;}
+h6 {font-size: 11pt;}
+
+.subtitulo, .parte {font-size: 11pt;}
+
+.info {font-size: 9pt;}
+
+nav, body > p.toplink:first-of-type {display: none;}	/* Esconde os links no topo */
+a[href="#topp"] {display: none;}			/* Esconde o link para o inicio da pagina */
+a:link {text-decoration: none; color: black;}
+a:visited {text-decoration: none; color: black;}
+}
+
+														/*
+---------
+ AJUSTES
+---------													*/
+
+.note ~ .datas:first-of-type {margin-top: 3rem;}
+h4:has(+ .subtitulo) {margin-bottom: 0.875rem;}
+h5:has(+ .subtitulo) {margin-bottom: 0.875rem;}
+.subtitulo:has(+ .subtitulo) {margin-bottom: 0.875rem;}
+body.capitulo main p:not([class]) + h4:first-of-type {margin-top: 2.875rem;}
+main > figure.direita:last-child {float: none; margin-right: 0; margin-left: auto;}
+main > figure.esquerda:last-child {float: none; margin-left: 0; margin-right: auto;}
+header a:last-child h2 {margin-bottom: 2.25rem;}
+header > h2:last-child {margin-bottom: 2.25rem;}
+main > *:last-child, footer > *:last-child {margin-bottom: 0;}
+footer > *:first-child {margin-top: 0;}
+.note:has(b:only-child):not([id]) {margin-bottom: 2.25rem;}
+.note:has(a[href^="#"]:last-child) {margin-bottom: 2.25rem;}
+
+
+									/* recursos visuais para correção */
+
+footer .tabela_datas {font-size: 10rem;}
+
+
+														/*
+-------
+ FONTE
+-------														*/
+
+									/* tamanho dinâmico */
+
+h1 {font-size: 1.675rem;}
+body.capitulo h1 {font-size: 1.625rem;}
+.maior {font-size: 1.5rem;}
+h2 {font-size: 1.175rem;}
+h3 {font-size: 1rem;}
+h4 {font-size: 1.25rem;}
+h5 {font-size: 1.175rem;}
+h6 {font-size: 1rem;}
+p, ol, ul, li, table, dt, dd, .subtitulo, .parte {font-size: 1rem;}
+.note, .menor, .epigrafe p, footer table, footer blockquote p, label, footer li {font-size: 0.875rem;}
+aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 0.8325rem;}
+.editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p {font-size: 0.75rem;}
+ .datas, small {font-size: 0.75rem;}
+
+@media (min-width: 480px) {
+h1 {font-size: 22pt;}
+body.capitulo h1 {font-size: 20pt;}
+.maior {font-size: 18pt;}
+h2 {font-size: 16pt;}
+h3 {font-size: 14pt;}
+h4 {font-size: 16pt;}
+h5 {font-size: 15pt;}
+h6 {font-size: 14pt;}
+p, ol, ul, li, table, dt, dd, .subtitulo, .parte {font-size: 13pt;}
+.note, .menor, .epigrafe p, footer table, footer blockquote p, label, footer li {font-size: 12pt;}
+aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 11pt;}
+.editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p {font-size: 10pt;}
+ .datas, small {font-size: 9pt;}
+
+header img {height: 60px;}
+p, ol, ul, li {line-height: 1.7em; margin: 1.625rem 0;}
+
+img.imprensa {width: 30%;}
+}
+
+/* latin-ext */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: italic; font-weight: 400; font-display: swap; src: url(fontes/atkinson/latin-ext-i.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+
+/* latin */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: italic; font-weight: 400; font-display: swap; src: url(fontes/atkinson/latin-i.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+
+/* latin-ext */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: italic; font-weight: 700; font-display: swap; src: url(fontes/atkinson/latin-ext-bi.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+
+/* latin */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: italic; font-weight: 700; font-display: swap; src: url(fontes/atkinson/latin-bi.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+
+/* latin-ext */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: normal; font-weight: 400; font-display: swap; src: url(fontes/atkinson/latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+
+/* latin */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: normal; font-weight: 400; font-display: swap; src: url(fontes/atkinson/latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+
+/* latin-ext */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: normal; font-weight: 700; font-display: swap; src: url(fontes/atkinson/latin-ext-b.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+
+/* latin */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: normal; font-weight: 700; font-display: swap; src: url(fontes/atkinson/latin-b.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+
+														/*
+-------------
+ MODO ESCURO
+-------------													*/
+
+/*
+@media screen and (prefers-color-scheme: dark) {
+body {background-color: #222; color: #fafafa;}
+  main {background-color: #111111;}
+  aside.sobre {background-color: #222;}
+  h1,  h2,  h3,  h4,  h5,  h6 {color: #fafafa;}
+  a.link_ext:link {color: #d66a6a;}
+  a.link_ext:hover {color: #c74545;}
+  a.link_ext:active {color: #d66a6a;}
+  a.link_ext:visited {color: #d66a6a;}
+  a:link {color: #83a1cd;}
+  a:hover {color: #4281a4;}
+  a:active {color: #83a1cd;}
+  a:visited {color: #83a1cd;}
+  img.inversivel,  img.logotopo {filter: invert(1);}
+  img.logo,  img.imutavel {filter: invert(0);}
+  img[src$="audio.png"] {filter: invert(1)}
+  img.bordafoto {background-color: #151515; border-color: black;}
+  img {filter: brightness(0.8) contrast(1.2);}
+  hr.linha-preta {color: #fafafa;}
+  .bordalogotipo {background-color: #141414;}
+  th {border-color: #fafafa;}
+  tr {border-color: #353535;}
+  .celula-cinza {background-color: dimgrey;}
+  body.capitulo h1 {color: #fafafa;}
+  body.capitulo h2 {color: #fafafa;}
+}*/
+
+/*
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠐⠀⠀⠂⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⠀⠠⠀⣀⢄⡠⣔⢬⠃⠵⠯⠂⡠⢦⠀⠀⡀⠄⠄⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⢀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⢀⡔⣌⣔⣏⠋⠄⡪⡹⡝⠋⡛⣃⠃⠆⡅⡄⠂⠀⠐⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐
+⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡴⡰⣷⠾⡃⡌⢍⠉⠈⠈⠀⠈⠀⠉⠂⠀⠀⠀⠀⠄⠀⠀⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠂⠀⠀⠀⠀⠀⡼⣷⣽⡋⠉⠁⠀⠀⠀⠀⠀⠐⠀⠀⠀⡀⠄⠀⠀⠐⠈⠀⢀⠄⢈⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀			-------		-----			
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⢄⡔⣿⣯⠋⠂⠀⠈⠀⠀⢄⣠⡌⡤⡆⣄⠦⣧⡒⠠⠄⢐⡀⠀⠀⠀⠀⠀⡠⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀			MRX.css		2.9.9
+⠀⠀⠀⢀⠀⠀⠀⠀⠈⠄⠑⣯⡟⡗⠳⠀⠀⠀⠀⣀⡨⣿⡯⡋⡍⡉⢙⠮⠹⢗⠟⡓⢣⢥⢂⣁⠄⡀⠃⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠈			
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣣⣿⠿⡧⠊⠀⠀⠁⡀⣵⡿⠞⡁⠔⠅⠀⠀⠁⠀⠀⠉⠉⠨⠽⢕⠧⣜⠅⡺⡇⠄⠠⠄⠀⠀⠀⠀⠀⠀⠀⠀			"Novas vitórias virão"
+⠀⠀⠀⠀⢈⠀⠂⠀⠂⡸⣾⣷⠠⠀⡀⠀⣠⣚⡕⡁⠁⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠕⡥⠭⣦⢈⡄⠀⠁⠀⠀⠀⠁⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠐⠀⢦⡧⡇⡀⠀⡂⠀⠂⣝⣃⠁⠠⠁⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠈⢣⡕⡷⡕⠀⠱⠑⠀⠀⠀⠀⠀⠀			base		2.3.0
+⠀⠀⠀⠀⠀⠀⠀⠐⠌⣻⡯⡃⡀⡀⠀⠀⠁⠾⡕⠅⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡽⠭⣻⠢⠀⠀⠀⠀⠀⠀⠀⠈			contraste	2.4.1
+⠀⠀⠀⠁⠀⠈⠠⠀⠠⣿⡣⡀⠀⠀⠀⠀⠐⢿⡅⡋⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠠⡿⠵⠀⠀⠀⠀⠄⢀⠀⠀⠀			orientação	3.0.0
+⠀⠀⠀⡀⠀⠀⠐⠀⠤⣾⡏⡒⠄⠀⠀⠀⡈⠉⠟⠿⣷⣯⠦⠆⠤⠠⢀⣀⠄⠀⠀⢀⠀⠁⠀⠀⠀⠀⠆⣜⣷⠀⠃⠀⠀⠀⠀⠀⠀⠀			----------	-----
+⠀⠀⠀⠀⠀⠀⠀⡘⠀⢘⣷⠓⠀⡀⠀⠀⠁⠀⠀⠉⠈⢚⡋⡲⡧⠍⣨⣀⠄⠀⠀⠀⠀⠀⠀⠀⣀⢡⣹⣞⡗⠉⠂⠠⠀⠀⠀⠀⠁⠀
+⠀⠀⠀⠀⠀⠀⠀⢠⠀⢼⣽⡷⡄⠈⠂⠁⠀⠀⠀⠀⠁⠄⠐⠊⡣⢆⠀⢒⠄⠀⠀⠀⠀⠀⠀⠈⡁⢅⣏⡟⢥⠀⠀⠀⠀⠀⠀⠀⠀⠂
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠏⡻⣿⣃⡔⠀⠂⡀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⡀⠀⠠⢰⠂⠥⠶⡿⡛⡁⠂⠀⠂⡀⠄⠀⠀⠈⠀⠀
+⠀⠀⠉⠀⠀⠀⠀⠀⠁⠁⡩⣽⠧⢁⡌⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⢀⡀⠠⠆⢨⣷⢭⡙⠨⠠⡀⠁⠐⠀⠀⠈⠀⠁⠀⢄⢁
+⠀⠀⠀⠀⠀⠀⠀⠀⠄⠁⠡⡛⢪⠝⣦⣥⡢⠀⠀⠀⡀⠀⠀⡀⠀⠀⡔⠔⠔⢀⣥⣡⢆⡜⣟⠌⡀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠀
+⠀⠄⠀⠀⠀⠀⠀⠀⠀⠀⠉⠝⣅⡀⣴⣽⡽⡇⢧⡮⢂⣀⡶⣊⢪⢙⠘⣽⡕⣋⠥⡏⠅⡁⠀⠀⠁⠀⠀⠢⡀⠀⠀⠀⠀⠁⠀⠀⠀⠐
+⠀⠀⠀⠀⠀⠀⠀⠀⠁⠠⠀⠀⠈⠌⠀⠑⢉⠻⠋⠳⢥⠧⡤⠅⠂⠏⢁⠼⡯⠋⠈⠀⠀⠀⠀⠀⠠⠀⠀⠀⠀⠀⠀⠀⠀⠔⠀⠂⠀⠀
+⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠢⠁⣑⠎⠄⡠⡆⡰⡁⠸⠋⠉⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠨⠐⠈⠀⠀⠀⠀⠀⠄⠀⠄⠀
+⠀⠀⠁⡀⠀⠀⠀⠠⠀⠀⠀⠀⠀⠂⠀⠀⠈⠁⠁⠈⠀⠁⠀⠄⠀⡄⠀⠀⠀⠀⠀⠑⠀⠀⠂⠀⠀⠄⠀⠀⠀⠄⠄⠂⠁⠀⠀⠀⠀⠀
+⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠠⠂⠀⠀⠀⠄⠀⠀⠀⠀⠐⠐⠀⠀⠀⠀⠀⠀⠀											*/
+

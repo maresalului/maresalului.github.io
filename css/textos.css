@@ -152,7 +152,7 @@ ol, ul {line-height: 1.75em; margin-left: 0; margin-top: 0; text-align: justify;
  li p {text-indent: 0;}
  li::marker {font-variant-numeric: lining-nums;}
 ol.parentese[type="1"] li::marker {content: counter(list-item) ") ";}
- ol.parentese[type="A"] li::marker {content: revert;}
+ ol.parentese[type="A"], ol.parentese[type="a"] li::marker {content: revert;}
 ul.travessao li {list-style-type: none; padding-left: 1rem;}
  ul.travessao li::marker {content: "— ";}
 
@@ -227,6 +227,8 @@ abbr, dfn {font-style: normal; text-decoration: underline dotted 1px; cursor: he
 dt {font-weight: bold; margin-top: 1.625rem; margin-bottom: 0.8125rem;}
 dd {line-height: 1.75em; text-align: justify;}
 dd p {text-indent: 0; margin-top: 0.8125rem; margin-bottom: 0.8125rem;}
+
+u.erro {text-decoration: red wavy underline;}
 
 														/*
 --------
