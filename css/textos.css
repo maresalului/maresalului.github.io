@@ -172,7 +172,7 @@ section.poesia p {text-indent: 0;}
 section.poesia h4 {text-align: left; margin-left: 0;}
 
 img.imprensa {display: block; width: 30%; height: auto; margin: 2rem; max-width: 200px; max-height: 75px; min-width: 175px;}
-img.imprensa.longa {width: 35%; max-width: 400px;}
+img.imprensa.longa {max-width: 35%;}
 
 .recuado {text-align: justify; text-indent: 0; margin-left: 40%; margin-right: 0;}
 .recuo.curto {margin-left: 4rem; text-indent: 0;}
@@ -405,8 +405,8 @@ th, td {padding: 0.5rem;}
 
 .editorial, section.editorial {margin-left: 2rem;}
 img.imprensa {width: 35%; min-width: unset;}
-img.imprensa.limite {width: 30%;}
-img.imprensa.longa {width: 50%;}
+img.imprensa.limite {max-width: 30%;}
+img.imprensa.longa {max-width: 50%;}
 figure.total img, table.fixa {width: calc(100% + 10vw); margin-left: -5vw; max-width: revert;}
 .editorial figure.total img {width: 100%; margin-left: 0; max-width: revert;}
 
