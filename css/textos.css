@@ -99,9 +99,7 @@ p.parte:has(+ p.parte) {margin-bottom: 0;}
 
 main {background: white; padding-top: 3.25rem; padding-bottom: 3.25rem; font-variant-numeric: lining-nums;}
 
-.info.autorizada {padding-bottom: 10px; border-bottom: 2px dashed #b3b3b3;}
- .info.autorizada + p {padding-top: 10px;}
- .info.autorizada img {display: inline; height: 1rem; width: auto; margin-inline: 1.5px; vertical-align: text-bottom;}
+.info.autorizada img {display: inline; height: 1rem; width: auto; margin-inline: 1.5px; vertical-align: text-bottom;}
 
 aside.sobre {display: block; margin: 0 0 3.25rem 0; border: 1.5px solid #d9d9d9; text-align: left; background-color: #f3f3f3; padding: 1.25rem;}
 aside.sobre .info {margin: 0.25rem 0; text-align: left; font-weight: normal; line-height: 1.125rem; text-indent: 0;}
@@ -203,6 +201,7 @@ figure.meio + figure.meio {margin-top: 4rem;}
 
 table {margin: 1.625rem auto 1.625rem auto; border-collapse: collapse; border: none;}
  th {border: none; font-weight: bold; text-align: center; padding: 0.5rem 1rem; background-color: black; color: white;}
+ th a:link, th a:visited {color: white;}
  td {border: none; color: black; padding: 0.5rem 1rem; background-color: white;}
  th[scope="row"] {background: lightgrey; color: black; text-align: left;}
  th > small {font-weight: normal;}
@@ -463,7 +462,7 @@ footer > *:first-child {margin-top: 0;}
 									/* recursos visuais para correção */
 
 footer .tabela_datas {font-size: 10rem;}
-
+.adendo {background-color: #C07560; color: white; padding-inline: 3px; font-style: italic;}
 
 														/*
 -------
