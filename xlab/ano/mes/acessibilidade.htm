@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="Textos, Obras, Arquivo Marxista na Internet, Marxists">
 <title>Teste de acessibilidade</title>
-<link href="../../../css/textos.css" rel="stylesheet" type="text/css">
+<link href="../../../css/textos.css" rel="stylesheet" type="text/css"> <style>.b {font-weight: bold;}</style>
 </head>
 
 <body>
@@ -29,12 +29,20 @@
 
 <h4>Uso de <code>lang</code> na NoRMA<a href="#n1" id="r1" aria-label="Nota de rodapé 1"><sup>(1)</sup></a></h4>
 
-<p>Teste em citação francesa: <q lang="fr">Ah! Ça ira, ça ira, ça irá!</q>.</p>
+<p>Teste em citação francesa: <q lang="fr">Ah! Ça ira, ça ira, ça ira!</q>.</p>
 <p>Teste em citação inglesa: <cite lang="de">Marxists Internet Archive</cite>.</p>
 <p>Teste em citação alemã: <span lang="de">Die Kommunisten verschmähen es, ihre Ansichten und Absichten zu verheimlichen. Sie erklären es offen, daß ihre Zwecke nur erreicht werden können durch den gewaltsamen Umsturz aller bisherigen Gesellschaftsordnung</span>.</p>
 <p>Teste em citação russa sem alternativa: <cite lang="ru">Пролетарий</cite>.</p>
 <p>Teste em citação russa com <code>aria-label</code>: <cite lang="ru" aria-label="Proletárii">Пролетарий</cite>.</p>
 <p>Teste em citação russa com <code>title</code>: <cite lang="ru" title="Proletárii">Пролетарий</cite>.</p>
+
+<h4>Teste matemático</h4>
+
+<p>Usando frações em span com barra de fração: <span role="math"><sup>1</sup>&frasl;<sub>6</sub></span>.</p>
+<p>Usando frações em span com <code>aria-label</code>: <span role="math" aria-label="fração de um sexto"><sup>1</sup>/<sub>6</sub></span>.</p>
+<p>Usando frações em MathML sem <code>aria-label</code>: <math><mfrac><mn>1</mn><mn>6</mn></mfrac></math>.</p>
+<p>Usando frações em MathML com <code>aria-label</code>: <math aria-label="fração de um sexto"><mfrac><mn>1</mn><mn>6</mn></mfrac></math>.</p>
+<p>Usando frações em MathML com <code>alttext</code>: <math alttext="fração de um sexto"><mfrac><mn>1</mn><mn>6</mn></mfrac></math>.</p>
 
 </main>
 
@@ -42,7 +50,7 @@
 
 <section role="doc-endnotes">
 <p class="note"><b>Notas de rodapé:</b></p>
-<p class="note" id="n1">(1) NoRMA: <b>No</b>rmativa de <b>R</b>edação de <b>M</b>arkup do <b>A</b>rquivo. (<a href="#r1" role="doc-backlink">retornar ao texto</a>)</p>
+<p class="note" id="n1">(1) <abbr>NoRMA</abbr>: Normativa de Redação de Markup do Arquivo. (<a href="#r1" role="doc-backlink">retornar ao texto</a>)</p>
 </section>
 
 <div class="datas">Inclusão: 15/01/2003</div>
