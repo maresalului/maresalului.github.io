@@ -1,0 +1,4 @@
+p > img.formula {height: 1rem; width: auto; max-width: none;}
+.formula.media {height: 1.5rem; vertical-align: middle;}
+.formula.maior {height: 2rem; vertical-align: middle;}
+.formula.topo {vertical-align: top;}
