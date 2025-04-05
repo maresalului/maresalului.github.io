@@ -243,7 +243,7 @@ footer {border-top: 2px solid transparent; padding-top: 3.25rem; padding-bottom:
  .recomendacao + .note {margin-top: 2.25rem;}
 
 .note {margin-top: 1.25rem; margin-bottom: 1.25rem; text-align: justify; text-indent: 0; line-height: 1.625em;}
- .note > a[href*="#"]:last-child {font-weight: bold; font-style: normal; text-decoration: underline dotted;}
+ .note > a[href*="#"]:last-child:not([id]) {font-weight: bold; font-style: normal; text-decoration: underline dotted;}
  p.note > a[href*="#"]:last-child:not([id])::before {content: '↑ '; padding-right: 1px;}
  .note.direita {text-align: right;}
  footer td {background-color: transparent;}
@@ -458,7 +458,7 @@ header > h2:last-child {margin-bottom: 2.25rem;}
 main > *:last-child, footer > *:last-child {margin-bottom: 0;}
 footer > *:first-child {margin-top: 0;}
 .note:has(b:only-child):not([id]) {margin-bottom: 2.25rem;}
-.note:has(a[href^="#"]:last-child) {margin-bottom: 2.25rem;}
+.note:has(a[href^="#"]:last-child:not([id])) {margin-bottom: 2.25rem;}
 p > small:only-child {line-height: 1em;}
 .menosparagrafo + .menosparagrafo {margin-top: 0.5rem;}
 .menosparagrafo:has(+ .menosparagrafo) {margin-bottom: 0.5rem;}
