@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="Textos, Obras, Arquivo Marxista na Internet, Marxists">
 <title>Teste de acessibilidade</title>
-<link href="../../../css/textos.css" rel="stylesheet" type="text/css">
+<link href="../../../css/textos.css" rel="stylesheet" type="text/css"><style>a.nota {vertical-align: super; font-size: 0.75em; font-weight: bold;}</style>
 </head>
 
 <body>
@@ -30,15 +30,15 @@
 
 <h4>Uso de <code>lang</code> na NoRMA<a href="#n1" id="r1" aria-label="Nota de rodapé 1"><sup>(1)</sup></a></h4>
 
-<p>Teste em citação francesa: <span lang="fr">Ah! Ça ira, ça ira, ça ira!</span>.</p>
-<p>Teste em citação inglesa: <cite>Marxists Internet Archive</cite>.</p>
-<p>Teste em citação alemã: <q lang="de">Die Kommunisten verschmähen es, ihre Ansichten und Absichten zu verheimlichen. Sie erklären es offen, daß ihre Zwecke nur erreicht werden können durch den gewaltsamen Umsturz aller bisherigen Gesellschaftsordnung</q>.</p>
-<p>Teste em citação russa com <code>title</code>: <cite>Пролетарий</cite>.</p>
+<p>Teste em citação francesa: <span lang="fr">Ah! Ça ira, ça ira, ça ira!</span></p>
+<p>Teste em citação inglesa: <cite lang="en">Marxists Internet Archive</cite>.</p>
+<p>Teste em citação alemã: <span lang="de">Die Kommunisten verschmähen es, ihre Ansichten und Absichten zu verheimlichen. Sie erklären es offen, daß ihre Zwecke nur erreicht werden können durch den gewaltsamen Umsturz aller bisherigen Gesellschaftsordnung.</span></p>
+<p>Teste em citação russa com <code>title</code>: <cite lang="ru" title="Proletári">Пролетарий</cite>.</p>
 
 <h4>Teste matemático</h4>
 
 <p>Usando frações em span com barra de fração: <span role="math"><sup>1</sup>&frasl;<sub>6</sub></span>.</p>
-<p>Usando frações em span com <code>aria-label</code><a href="#n2" id="r2"><sup aria-label="Nota de rodapé 2"><!-- supostamente não pode usar aria-label em sup -->(2)</sup></a>: <span role="math" aria-label="fração de um sexto"><sup>1</sup>/<sub>6</sub></span>.</p>
+<p>Usando frações em span com <code>aria-label</code>: <span role="math" aria-label="fração de um sexto"><sup>1</sup>/<sub>6</sub></span>.</p>
 <p>Usando frações em MathML sem <code>aria-label</code>: <math><mfrac><mn>1</mn><mn>6</mn></mfrac></math>.</p>
 <p>Usando frações em MathML com <code>aria-label</code>: <math aria-label="fração de um sexto"><mfrac><mn>1</mn><mn>6</mn></mfrac></math>.</p>
 <p>Usando frações em MathML com <code>alttext</code>: <math alttext="fração de um sexto"><mfrac><mn>1</mn><mn>6</mn></mfrac></math>.</p>
@@ -54,6 +54,13 @@
 <p>Usando <code>aria-label</code> num <code>div</code>:</p>
 <div role="math" aria-label="[fórmula:] mais-valia sobre capital variável (m sobre v) é igual a mais-valia sobre valor da força de trabalho variável é igual a sobretrabalho [como numerador] sobre trabalho necessário [como denominador]"><span class="inquebravel"><sup>mais-valia</sup>/<sub>capital variável</sub> (<sup><var>m</var></sup>/<sub><var>v</var></sub>)</span> = <span class="inquebravel"><sup>mais-valia</sup>/<sub>valor da força de trabalho variável</sub></span> = <span class="inquebravel"><sup>sobretrabalho</sup>/<sub>trabalho necessário</sub></span></div>
 
+<p>Leitura de números com &amp;nbsp; como separador: 1&nbsp;096&nbsp;373. Leitura de números com ponto como separador: 2.389.729. Leitura de números com &amp;thinsp; 2&thinsp;843&thinsp;865. Leitura de números envelopados em &lt;data&gt;: <data value="16202312">16&nbsp;202&nbsp;312</data></p>
+
+<h4>Teste de notas de rodapé</h4>
+<p>HTML incorreto, com <code lang="en">aria-label</code> no <code lang="en">sup</code><a href="#n2" id="r2"><sup aria-label="Nota de rodapé 2">(2)</sup></a>.</p>
+<p>HTML correto, com <code lang="en">aria-label</code> no <code lang="en">a</code><sup><a href="#n3" id="r3" aria-label="Nota de rodapé 3">(3)</a></sup>.</p>
+<p>Com classe especial<a href="#n4" id="r4" class="nota" aria-label="Nota de rodapé 4">(4)</a>.</p>
+
 </main>
 
 <footer>
@@ -65,7 +72,7 @@
 </section>
 
 <div class="datas">Inclusão: 15/01/2003</div>
-<div class="datas">Última atualização: 12/04/2025</div>
+<div class="datas">Última atualização: 13/04/2025</div>
 
 <!-- conversão automática em 20/03/2025 -->
 
