@@ -245,7 +245,10 @@ q[lang]::before, q[lang]::after {content: none;}
 footer {border-top: 2px solid transparent; padding-top: 3.25rem; padding-bottom: 2rem;}
 
 .recomendacao {text-indent: 0; font-weight: bold;}
- .recomendacao::before {content: '❦ '; padding-right: 2px;}
+ p.recomendacao::before {content: '❦ '; padding-right: 2px;}
+ ul.recomendacao {padding-left: 2rem;}
+ .recomendacao li::marker {content: '❧ '; font-weight: normal;}
+ p.recomendacao:has(+ ul.recomendacao) {margin-bottom: 0;}
  .recomendacao + .note {margin-top: 2.25rem;}
 
 .note {margin-top: 1.25rem; margin-bottom: 1.25rem; text-align: justify; text-indent: 0; line-height: 1.625em;}
@@ -489,7 +492,7 @@ h5 {font-size: 1.175rem;}
 h6 {font-size: 1rem;}
 p, ol, ul, li, table, dt, dd, .subtitulo, .parte, caption.titulo {font-size: 1rem;}
 .note, .menor, .epigrafe p, footer table, footer blockquote p, label, footer li {font-size: 0.875rem;}
-aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 0.8325rem;}
+aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao, .recomendacao li {font-size: 0.8325rem;}
 .editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p, table small {font-size: 0.75rem;}
  .datas, small {font-size: 0.75rem;}
 
@@ -504,7 +507,7 @@ h5 {font-size: 15pt;}
 h6 {font-size: 14pt;}
 p, ol, ul, li, table, dt, dd, .subtitulo, .parte, caption.titulo {font-size: 13pt;}
 .note, .menor, .epigrafe p, footer table, footer blockquote p, label, footer li {font-size: 12pt;}
-aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao {font-size: 11pt;}
+aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao, .recomendacao li {font-size: 11pt;}
 .editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p, table small {font-size: 10pt;}
  .datas, small {font-size: 9pt;}
 
