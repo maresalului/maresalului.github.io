@@ -192,7 +192,7 @@ blockquote {margin: 1.25rem 10%;}
  blockquote.epigrafe {margin: 1.25rem 0 1.25rem 40%;}
  cite {font-style: italic;}
 
-i > em, em > em {font-style: normal;}
+i > em, em > em, i > cite, em > cite {font-style: normal;}
 
 figure {width: 20%; max-width: fit-content;}
  figure.total {width: 100%; margin: 2rem auto;}
@@ -214,6 +214,8 @@ table {margin: 1.625rem auto 1.625rem auto; border-collapse: collapse; border: n
  caption.titulo {caption-side: top; text-align: left; margin-bottom: 1rem; font-weight: bold; margin-top: 0;}
  td.cinza {background-color: lightgrey;}
  th.cinza {background-color: grey;}
+ td.bordaemcima {border-top: 2px solid black;}
+ td hr.transparente.breve {margin: 0; padding: 0.25rem;}
 table.comborda, table.comborda th, table.comborda td {border: 1px solid black;}
 table.colada td, table.colada th {padding: 0.5rem 0;}
 table.fixa {width: 100%; table-layout: fixed;}
@@ -235,7 +237,6 @@ dd p {text-indent: 0; margin-top: 0.8125rem; margin-bottom: 0.8125rem;}
 
 u.erro {text-decoration: red wavy underline;}
 
-q[lang]::before, q[lang]::after {content: none;}
 
 														/*
 --------
@@ -252,8 +253,9 @@ footer {border-top: 2px solid transparent; padding-top: 3.25rem; padding-bottom:
  .recomendacao + .note {margin-top: 2.25rem;}
 
 .note {margin-top: 1.25rem; margin-bottom: 1.25rem; text-align: justify; text-indent: 0; line-height: 1.625em;}
- .note > a[href*="#"]:last-child:not([id]) {font-weight: bold; font-style: normal; text-decoration: underline dotted;}
- p.note > a[href*="#"]:last-child:not([id])::before {content: '↑ '; padding-right: 1px;}
+ .note > a[href*="#"]:last-child:not([id]), a.retornar.incomum {font-weight: bold; font-style: normal; text-decoration: underline dotted;}
+ p.note > a[href*="#"]:last-child:not([id])::before, a.retornar.incomum::before {content: '↑ '; padding-right: 1px;}
+ a.retornar.abaixo::before {content: '↓ ' !important;}
  .note.direita {text-align: right;}
  footer td {background-color: transparent;}
  footer blockquote p, footer ol, footer ul, footer li {margin-top: 1.25rem; margin-bottom: 1.25rem; line-height: 1.625em;}
@@ -463,6 +465,7 @@ footer > *:first-child {margin-top: 0;}
 p > small:only-child {line-height: 1em;}
 .menosparagrafo + .menosparagrafo {margin-top: 0.5rem;}
 .menosparagrafo:has(+ .menosparagrafo) {margin-bottom: 0.5rem;}
+.indice > main {overflow: hidden;}
 
 
 									/* recursos visuais para correção */
@@ -473,6 +476,7 @@ footer .tabela_datas {font-size: 10rem;}
 p.note:has(a[href^="#"]:last-child:not([id])) + p.note {border-top: 2px dotted black;}*/
 p:empty {min-height: 10rem; background: black; content: 'eitaeitaeita'; color: white;}
 p:empty::before {content: 'ELEMENTO VAZIO APAGAR';}
+*[lang="ru"], *[lang="el"] {font-family: system-ui;}
 
 
 														/*
