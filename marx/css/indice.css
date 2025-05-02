@@ -3,6 +3,17 @@ header div {margin-left: auto; margin-right: auto; max-width: fit-content; margi
 .marx, .engels {margin-left: 0; margin-right: 0;}
 .marx {margin-right: 1rem;}
 
-td:nth-child(2n) {padding-left: 1rem !important; padding-right: 1rem; text-align: center; font-weight: bold;}
+td:nth-child(2n) {padding-left: 1rem !important; padding-right: 0.5rem; text-align: center; font-weight: bold; white-space: nowrap; font-size: 1rem;}
 td:nth-child(3n) {padding-left: 1rem;}
-@media (max-width: 480px) {.marx, .engels {width: 25vw; height: auto;} td:first-child{white-space: normal;}}
+
+@media (max-width: 480px) {
+.marx, .engels
+{width: 25vw; height: auto;}
+
+td:first-child
+{padding-top: 0.75rem; padding-bottom: 0.75rem;}
+
+td:nth-child(2n)
+{padding-left: 0.75rem; padding-right: 0.75rem;}
+
+}
