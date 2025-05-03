@@ -74,23 +74,18 @@ a#li-no {content: url(nov.svg); width: 21px; height: auto;}
 
 h1, .subtitulo, .parte, h2, h3, h4, h5, h6 {font-weight: bold; text-align: center; margin: 2.875rem 1.5rem;}
 
-h1 {line-height: 1.25em; margin-top: 3rem; margin-bottom: 1.625rem;}
-.subtitulo, .parte {text-indent: 0; margin-top: 0.875rem; margin-bottom: 2rem;}
-h2 {color: #000033; margin-top: 1.5rem; margin-bottom: 1.5rem;}
-h3 {color: #000033; margin-top: 1.5rem;}
-
-header {padding-top: 46px; padding-bottom: 50px; padding-top: 3.25rem; padding-bottom: 3.25rem;}
+header {padding-top: 3.25rem; padding-bottom: 3.25rem;}
 header * {text-align: left; margin-left: 0; margin-right: 0;}
 header img {clear: none; float: left; margin-right: 1rem; height: 54px; width: auto;}
- header img:has(+ img) {margin-right: 0.5rem;}						/* textos com dois autores */
+ header img:has(+ img) {margin-right: 0.5rem;}
 
-h1 {color: black; margin-bottom: 2rem; margin-top: 0;}
-h2 {margin-bottom: 0.75rem; color: #06c;}
-h3 {font-weight: normal; margin-top: 0.75rem; margin-bottom: 0; text-transform: lowercase;}
+h1 {margin-top: 0; margin-bottom: 2rem; line-height: 1.25em;}
+h2 {margin-top: 1.5rem; margin-bottom: 0.75rem; color: #06c;}
+h3 {margin-top: 0.75rem; margin-bottom: 0; font-weight: normal; text-transform: lowercase;}
+.subtitulo, .parte {text-indent: 0; margin-top: 0.875rem; margin-bottom: 2rem;}
 
 h1:has(+ .subtitulo), h1:has(+ .parte) {margin-bottom: 0.875rem;}
 header .subtitulo, header .parte {text-align: left; margin-left: 0;}
-p.parte:has(+ p.parte) {margin-bottom: 0;}
 
 														/*
 ------
@@ -277,6 +272,8 @@ div.colab, div.autorizada {display: block; margin: 3.25rem auto; text-align: cen
 body.indice main a {text-decoration: underline;}
 body.indice aside.sobre a {text-decoration: none;}
 
+p.parte:has(+ p.parte) {margin-bottom: 0;}
+
 .capadelivro {height: auto; max-width: fit-content;}
  main .capadelivro {margin: 5px 0 25px 25px; width: 15%;float: right; clear: right;}
 
@@ -384,7 +381,7 @@ body.capitulo .proximo::after {content: " >>>"; margin-left: 2px;}
 
 	.estrelavermelha {color: #a90000; text-align: center; text-indent: 0; border: none; margin: 1.5rem 0;}
 
-	.fotodireita {border: 2px solid #dbdbdb; display: block; float: right; margin-left: 1rem; margin-right: 0px; padding: 7px;}
+	.fotodireita {border: 2px solid #dbdbdb; display: block; float: right; margin-left: 1rem; margin-right: 0; padding: 7px;}
 	
 
 	/* Espacamentos */
