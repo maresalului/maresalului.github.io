@@ -2,3 +2,13 @@ p > img.formula {height: 1rem; width: auto; max-width: none;}
 .formula.media {height: 1.5rem; vertical-align: middle;}
 .formula.maior {height: 2rem; vertical-align: middle;}
 .formula.topo {vertical-align: top;}
+
+
+aside.legado {margin-top: 1rem;}
+aside.legado p {text-align: center; text-indent: 0; font-size: 0.75rem;}
+aside.legado p::before {content: '[';}
+aside.legado p::after {content: ']';}
+
+@media (min-width: 480px) {
+aside.legado p {font-size: 9pt;}
+}
