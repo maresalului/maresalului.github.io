@@ -1,0 +1,7 @@
+.semborda .bordanaesquerda {border-left: 2px solid black;}
+ .semborda .bordanaesquerda.distinta {border-left-style: dotted;}
+
+.semborda .bordanadireita {border-right: 2px solid black;}
+ .semborda .bordanadireita.distinta {border-right-style: dotted;}
+
+.semborda th {background-color: revert; color: revert;}

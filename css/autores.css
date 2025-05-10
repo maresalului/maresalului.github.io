@@ -87,6 +87,8 @@ header.fundo h1, header.fundo h2 {color: white;}
 main {background: white; padding-top: 3rem; padding-bottom: 3rem;}
 
 table {margin: 0; line-height: 1.375rem; border-collapse: collapse; width: 100%;}
+table.semdata tr > td:first-child {display: none;}
+table.semdata tr > td:nth-child(2n) {padding-left: 0;}
 
 tr {border-bottom: 1px solid #d9d9d9;}
 tr:first-child th {padding-top: 0;}
@@ -125,6 +127,8 @@ blockquote {margin: 1.25rem 0 1.25rem auto; max-width: 50%;}
 .chines::before {content: 'Chinês ';}
 .pinyin::before {content: 'Pinyin ';}
 .wade-giles::before {content: 'Wade-Giles ';}
+.devanagari::before {content: 'Devanágari ';}
+.armenio::before {content: 'Armênio ';}
 
 .grafia:has(+ .grafia) {margin-bottom: 0rem;}
 .grafia + .grafia {margin-top: 0rem;}

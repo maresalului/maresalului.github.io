@@ -156,14 +156,16 @@ ol.negrito li::marker, ul.negrito li::marker {font-weight: bold;}
       p.editorial:has(+ p.editorial) {margin-bottom: 1rem;}
      hr.editorial {margin-top: 2rem; margin-bottom: 2rem;}
 section.editorial {margin: 1rem 0 2rem 40%;}
-section.editorial p, section.editorial h4, section.editorial h5 {text-indent: 0; margin: 1rem 0 1rem 0;}
+section.editorial p, section.editorial h4, section.editorial h5, section.epigrafe p {text-indent: 0; margin: 1rem 0 1rem 0;}
 section.editorial h4 {text-align: left;}
 section.editorial h5 {text-align: left; margin-left: 1rem;}
 section.editorial hr {margin-top: 2rem; margin-bottom: 2rem;}
+ 
+section.epigrafe p {text-indent: 0;}
 
 section.poesia, blockquote.poesia {width: fit-content; margin-left: auto; margin-right: auto;}
 section.poesia p {text-indent: 0;}
-section.poesia h4 {text-align: left; margin-left: 0;}
+section.poesia h4, section.poesia h5, section.poesia h6 {text-align: left; margin-left: 0;}
 
 img.imprensa {display: block; width: 30%; height: auto; margin: 2rem; max-width: 200px; max-height: 75px; min-width: 175px;}
 img.imprensa.longa {max-width: 35%;}
@@ -184,7 +186,7 @@ img.centralizado {margin-left: auto; margin-right: auto; display: block;}
 blockquote {margin: 1.25rem 10%;}
  blockquote p {text-indent: 0;}
  blockquote.abnt, blockquote.direita {margin: 1.25rem 0 1.25rem 40%;}
- blockquote.epigrafe {margin: 1.25rem 0 1.25rem 40%;}
+ .epigrafe {margin: 1.25rem 0 1.25rem 40%;}
  cite {font-style: italic;}
 
 i > em, em > em, i > cite, em > cite {font-style: normal;}
@@ -226,6 +228,8 @@ h1 sup {font-size: 0.625em;}
 
 abbr, dfn {font-style: inherit; text-decoration: underline 1px dotted; cursor: help;}
 
+dl {margin-left: 2rem;}
+dl.total {margin-left: 0;}
 dt {font-weight: bold; margin-top: 1.625rem; margin-bottom: 0.8125rem;}
 dd {line-height: 1.75em; text-align: justify;}
 dd p {text-indent: 0; margin-top: 0.8125rem; margin-bottom: 0.8125rem;}
@@ -463,6 +467,9 @@ p > small:only-child {line-height: 1em;}
 .menosparagrafo + .menosparagrafo {margin-top: 0.5rem;}
 .menosparagrafo:has(+ .menosparagrafo) {margin-bottom: 0.5rem;}
 .indice > main {overflow: hidden;}
+section.poesia:last-child > *:last-child {margin-bottom: 0;}
+main > blockquote:last-child > *:last-child {margin-bottom: 0;}
+header:has(:not(img)) h2:last-child {margin-bottom: 0;}
 
 
 									/* recursos visuais para correção */
@@ -474,7 +481,7 @@ p.note:has(a[href^="#"]:last-child:not([id])) + p.note {border-top: 2px dotted b
 p:empty {min-height: 10rem; background: black; content: 'eitaeitaeita'; color: white;}
 p:empty::before {content: 'ELEMENTO VAZIO APAGAR';}
 *[lang="ru"], *[lang="el"] {font-family: system-ui;}
-
+*[lang="ar"] {font-family: "serif";}
 
 														/*
 -------
@@ -494,7 +501,7 @@ h6 {font-size: 1rem;}
 p, ol, ul, li, table, dt, dd, .subtitulo, .parte, caption.titulo {font-size: 1rem;}
 .note, .menor, .epigrafe p, footer table, footer blockquote p, label, footer li {font-size: 0.875rem;}
 aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao, .recomendacao li {font-size: 0.8325rem;}
-.editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p, table small {font-size: 0.75rem;}
+.editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p, table small, .indice section.epigrafe p {font-size: 0.75rem;}
  .datas, small {font-size: 0.75rem;}
 
 @media (min-width: 480px) {
@@ -509,7 +516,7 @@ h6 {font-size: 14pt;}
 p, ol, ul, li, table, dt, dd, .subtitulo, .parte, caption.titulo {font-size: 13pt;}
 .note, .menor, .epigrafe p, footer table, footer blockquote p, label, footer li {font-size: 12pt;}
 aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao, .recomendacao li {font-size: 11pt;}
-.editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p, table small {font-size: 10pt;}
+.editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p, table small, .indice section.epigrafe p {font-size: 10pt;}
  .datas, small {font-size: 9pt;}
 
 header img {height: 60px;}
