@@ -469,7 +469,7 @@ p > small:only-child {line-height: 1em;}
 .indice > main {overflow: hidden;}
 section.poesia:last-child > *:last-child {margin-bottom: 0;}
 main > blockquote:last-child > *:last-child {margin-bottom: 0;}
-header:has(:not(img)) > h2:last-child {margin-bottom: 0;}
+header:not(:has(img)) > h2:last-child {margin-bottom: 0;}
 
 
 									/* recursos visuais para correção */
