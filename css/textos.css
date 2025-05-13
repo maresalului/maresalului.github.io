@@ -191,11 +191,12 @@ blockquote {margin: 1.25rem 10%;}
 
 i > em, em > em, i > cite, em > cite {font-style: normal;}
 
-figure {width: 20%; max-width: fit-content;}
+figure {margin: 2rem auto; width: 70%; max-width: fit-content;}
+ img {height: auto;}
  figure.total {width: 100%; margin: 2rem auto;}
  figure.meio {margin: 2rem auto; width: 50%;}
- figure.esquerda {float: left; margin: .375rem 2rem 1.5rem 0; clear: left;}
- figure.direita {float: right; margin: .375rem 0 1.5rem 2rem; clear: right;}
+ figure.esquerda {float: left; margin: .375rem 2rem 1.5rem 0; clear: left; width: 20%;}
+ figure.direita {float: right; margin: .375rem 0 1.5rem 2rem; clear: right; width: 20%;}
  figure img {width: 100%; margin: 0 auto; height: auto; display: block;}
  figcaption {margin: 1rem 0 0 0; text-align: center;}
 figure.meio + figure.meio {margin-top: 4rem;}
@@ -401,8 +402,6 @@ body.capitulo .proximo::after {content: " >>>"; margin-left: 2px;}
 -----------													*/
 
 @media (max-width: 480px) {
-img {max-width: 150px; height: auto;}
-img.auto {width: auto; height: auto;}
 img.colab {max-width: 200px;}
 img.larga {max-width: 300px; height: auto;}
 ol, ul {margin-left: 1%; margin-right: 1%;}
@@ -421,6 +420,7 @@ th, td {padding: 0.5rem;}
 img.imprensa {width: 35%; min-width: unset;}
 img.imprensa.limite {max-width: 30%;}
 img.imprensa.longa {max-width: 50%;}
+figure {width: 75%; width: calc(100% - 4rem);}
 figure.total img, table.fixa {width: calc(100% + 10vw); margin-left: -5vw; max-width: revert;}
 .editorial figure.total img {width: 100%; margin-left: 0; max-width: revert;}
 
