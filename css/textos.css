@@ -213,6 +213,7 @@ table {margin: 1.625rem auto 1.625rem auto; border-collapse: collapse; border: n
  td.cinza {background-color: lightgrey;}
  th.cinza {background-color: grey;}
  td.bordaemcima {border-top: 2px solid black;}
+ table.comborda td.bordaemcima {border-top: 3px solid black;}
  td hr.transparente.breve {margin: 0; padding: 0.25rem;}
 table.comborda, table.comborda th, table.comborda td {border: 1px solid black;}
 table.colada td, table.colada th {padding: 0.5rem 0;}
@@ -291,6 +292,9 @@ p.parte:has(+ p.parte) {margin-bottom: 0;}
 .toc3 {padding-left: 4.5rem; margin-top: 0; margin-bottom: 0;}
 .toc4 {padding-left: 6rem; margin-top: 0; margin-bottom: 0;}
 .toc5 {padding-left: 7.5rem; margin-top: 0; margin-bottom: 0;}
+
+.toc:has(+ .toc.subtitulo) {margin-bottom: 0;}
+.toc + .toc.subtitulo {margin-top: 0; margin-bottom: 1.5rem;}
 
 body.capitulo h1 {font-size: 18pt;}
 
@@ -500,7 +504,7 @@ h5 {font-size: 1.175rem;}
 h6 {font-size: 1rem;}
 p, ol, ul, li, table, dt, dd, .subtitulo, .parte, caption.titulo {font-size: 1rem;}
 .note, .menor, .epigrafe p, footer table, footer blockquote p, label, footer li {font-size: 0.875rem;}
-aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao, .recomendacao li {font-size: 0.8325rem;}
+aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao, .recomendacao li, .toc.subtitulo {font-size: 0.8325rem;}
 .editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p, table small, .indice section.epigrafe p {font-size: 0.75rem;}
  .datas, small {font-size: 0.75rem;}
 
@@ -515,7 +519,7 @@ h5 {font-size: 15pt;}
 h6 {font-size: 14pt;}
 p, ol, ul, li, table, dt, dd, .subtitulo, .parte, caption.titulo {font-size: 13pt;}
 .note, .menor, .epigrafe p, footer table, footer blockquote p, label, footer li {font-size: 12pt;}
-aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao, .recomendacao li {font-size: 11pt;}
+aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao, .recomendacao li, .toc.subtitulo {font-size: 11pt;}
 .editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p, table small, .indice section.epigrafe p {font-size: 10pt;}
  .datas, small {font-size: 9pt;}
 

@@ -89,6 +89,8 @@ main {background: white; padding-top: 3rem; padding-bottom: 3rem;}
 table {margin: 0; line-height: 1.375rem; border-collapse: collapse; width: 100%;}
 table.semdata tr > td:first-child {display: none;}
 table.semdata tr > td:nth-child(2n) {padding-left: 0;}
+ table.semdata tr > td.duplo {display: block;}
+
 
 tr {border-bottom: 1px solid #d9d9d9;}
 tr:first-child th {padding-top: 0;}
@@ -129,6 +131,7 @@ blockquote {margin: 1.25rem 0 1.25rem auto; max-width: 50%;}
 .wade-giles::before {content: 'Wade-Giles ';}
 .devanagari::before {content: 'Devanágari ';}
 .armenio::before {content: 'Armênio ';}
+.grego::before {content: 'Grego ';}
 
 .grafia:has(+ .grafia) {margin-bottom: 0rem;}
 .grafia + .grafia {margin-top: 0rem;}
@@ -136,8 +139,9 @@ blockquote {margin: 1.25rem 0 1.25rem auto; max-width: 50%;}
 .dicionario a, .fonte a {font-weight: bold;}
 .dicionario {margin-top: .25rem;}
 .dicionario::before {content: '❋ Leia mais no ';}
-.fonte {margin-bottom: .25rem;}
+.fonte {margin-bottom: .25rem; margin-top: .25rem;}
 .fonte::before {content: 'Fonte: '; font-weight: bold;}
+.fonte.imagem::before {content: 'Fonte da imagem: '; font-weight: bold;}
 
 .datas {font-weight: normal; text-align: right;}
 
