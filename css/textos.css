@@ -226,7 +226,7 @@ h4, h5, h6 {clear: both;}
 p math {font-size: inherit;}
 .inquebravel {white-space: nowrap;}
 
-sup, sub {font-size: 0.75em;}
+sup, sub {font-size: 0.75em; line-height: 1em;}
 h1 sup {font-size: 0.625em;}
 
 abbr, dfn {font-style: inherit; text-decoration: underline 1px dotted; cursor: help;}
