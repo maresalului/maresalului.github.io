@@ -169,6 +169,7 @@ section.poesia h4, section.poesia h5, section.poesia h6 {text-align: left; margi
 
 img.imprensa {display: block; width: 30%; height: auto; margin: 2rem; max-width: 200px; max-height: 75px; min-width: 175px;}
 img.imprensa.longa {max-width: 35%;}
+img.imprensa.direita {margin-left: auto; margin-right: 0;}
 
 .recuado {text-align: justify; text-indent: 0; margin-left: 40%; margin-right: 0;}
 .recuo.curto {margin-left: 4rem; text-indent: 0;}
