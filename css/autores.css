@@ -110,6 +110,9 @@ td a[href$=".pdf"]:first-child::after, td a[href*="pdf#page="]:first-child::afte
 
 .rec, .duplo {font-variant: normal !important; white-space: normal !important;}
 
+abbr, dfn {font-style: inherit; text-decoration: underline 1px dotted; cursor: help;}
+
+
 													/*
 --------
  FOOTER
