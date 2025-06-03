@@ -1,0 +1,21 @@
+aside.recomendacao {
+background-color: #f1f1f1;
+border: 1.5px solid #d9d9d9;
+margin: 2rem auto;
+width: fit-content;
+padding: 1rem;
+}
+
+aside.recomendacao p {
+font-size: 10pt; 
+margin: 0; 
+text-indent: 0;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+aside.recomendacao {background-color: revert;}
+}
+
+@media print {
+aside.recomendacao {display: none;}
+}
