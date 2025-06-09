@@ -160,6 +160,7 @@ section.editorial p, section.editorial h4, section.editorial h5, section.epigraf
 section.editorial h4 {text-align: left;}
 section.editorial h5 {text-align: left; margin-left: 1rem;}
 section.editorial hr {margin-top: 2rem; margin-bottom: 2rem;}
+section.editorial ul, section.editorial ol, section.editorial li {margin-bottom: 1rem; margin-top: 1rem;}
  
 section.epigrafe p {text-indent: 0;}
 
@@ -210,10 +211,11 @@ table {margin: 1.625rem auto 1.625rem auto; border-collapse: collapse; border: n
  th[scope="row"] {background: lightgrey; color: black; text-align: left;}
  th > small {font-weight: normal;}
  caption {caption-side: bottom; margin-top: 1rem;}
- caption.titulo {caption-side: top; text-align: left; margin-bottom: 1rem; font-weight: bold; margin-top: 0;}
+ caption.titulo {caption-side: top; text-align: left; margin-bottom: 1rem; font-weight: bold; margin-top: 0; max-width: 90%; max-width: min(860px, 90vw)} /* a lógica do max-width ainda é experimental. há que recalcular */
  td.cinza {background-color: lightgrey;}
  th.cinza {background-color: grey;}
  td.bordaemcima {border-top: 2px solid black;}
+ table.comborda td.legenda {border-left: 1px solid transparent; border-bottom: 1px solid transparent; border-right: 1px solid transparent; padding-top: 1rem; text-align: center;}
  table.comborda td.bordaemcima {border-top: 3px solid black;}
  td hr.transparente.breve {margin: 0; padding: 0.25rem;}
 table.comborda, table.comborda th, table.comborda td {border: 1px solid black;}
@@ -280,6 +282,7 @@ body.indice main a {text-decoration: underline;}
 body.indice aside.sobre a {text-decoration: none;}
 
 p.parte:has(+ p.parte) {margin-bottom: 0;}
+main > *:not(p.parte) + p.parte:not(:first-of-type) {margin-top: 4rem;}						/* experimental */
 
 .capadelivro {height: auto; max-width: fit-content;}
  main .capadelivro {margin: 5px 0 25px 25px; width: 15%;float: right; clear: right;}
@@ -302,6 +305,7 @@ body.capitulo h1 {font-size: 18pt;}
 body.capitulo main h4:first-of-type {margin-top: 1.375rem;}
  p.parte:has(+ h4), p.parte:has(+ h5) {margin-bottom: 1.375rem;}
  p.parte + h4, p.parte + h5 {margin-top: 1.375rem;}
+ p.parte + h4:has(+ p.subtitulo.data) {margin-bottom: 1.375rem;}
 
 body.capitulo section.editorial {margin-top: 0;}
 
@@ -475,6 +479,8 @@ p > small:only-child {line-height: 1em;}
 section.poesia:last-child > *:last-child {margin-bottom: 0;}
 main > blockquote:last-child > *:last-child {margin-bottom: 0;}
 header:not(:has(img)) > h2:last-child {margin-bottom: 0;}
+th.cinza.semborda + th.cinza.semborda {border-left: 1px solid transparent;}
+th.cinza.semborda:has(+ th.cinza.semborda) {border-right: 1px solid transparent;}
 
 
 									/* recursos visuais para correção */
@@ -506,7 +512,7 @@ h6 {font-size: 1rem;}
 p, ol, ul, li, table, dt, dd, .subtitulo, .parte, caption.titulo {font-size: 1rem;}
 .note, .menor, .epigrafe p, footer table, footer blockquote p, label, footer li {font-size: 0.875rem;}
 aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao, .recomendacao li, .toc.subtitulo {font-size: 0.8325rem;}
-.editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p, table small, .indice section.epigrafe p {font-size: 0.75rem;}
+.editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p, table small, .indice section.epigrafe p, td.legenda {font-size: 0.75rem;}
  .datas, small {font-size: 0.75rem;}
 
 @media (min-width: 480px) {
@@ -521,7 +527,7 @@ h6 {font-size: 14pt;}
 p, ol, ul, li, table, dt, dd, .subtitulo, .parte, caption.titulo {font-size: 13pt;}
 .note, .menor, .epigrafe p, footer table, footer blockquote p, label, footer li {font-size: 12pt;}
 aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao, .recomendacao li, .toc.subtitulo {font-size: 11pt;}
-.editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p, table small, .indice section.epigrafe p {font-size: 10pt;}
+.editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p, table small, .indice section.epigrafe p, table.legenda {font-size: 10pt;}
  .datas, small {font-size: 9pt;}
 
 header img {height: 60px;}

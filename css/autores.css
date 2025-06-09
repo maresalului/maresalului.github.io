@@ -145,6 +145,7 @@ blockquote {margin: 1.25rem 0 1.25rem auto; max-width: 50%;}
 .fonte {margin-bottom: .25rem; margin-top: .25rem;}
 .fonte::before {content: 'Fonte: '; font-weight: bold;}
 .fonte.imagem::before {content: 'Fonte da imagem: '; font-weight: bold;}
+.fonte.imagem.fundo::before {content: 'Fonte da imagem de fundo: '; font-weight: bold;}
 
 .datas {font-weight: normal; text-align: right;}
 
