@@ -129,12 +129,15 @@ blockquote {margin: 1.25rem 0 1.25rem auto; max-width: 50%;}
  blockquote > cite {display: block; text-align: right;}
 
 .grafia::before {min-width: 12ch; display: inline-block; font-weight: bold; font-style: normal; font-size: 0.875em;}
-.chines::before {content: 'Chinês ';}
-.pinyin::before {content: 'Pinyin ';}
-.wade-giles::before {content: 'Wade-Giles ';}
-.devanagari::before {content: 'Devanágari ';}
 .armenio::before {content: 'Armênio ';}
+.chines::before {content: 'Chinês ';}
+.devanagari::before {content: 'Devanágari ';}
+.georgiano::before {content: 'Georgiano ';}
 .grego::before {content: 'Grego ';}
+.pinyin::before {content: 'Pinyin ';}
+.russo::before {content: 'Russo ';}
+.ucraniano::before {content: 'Ucraniano ';}
+.wade-giles::before {content: 'Wade-Giles ';}
 
 .grafia:has(+ .grafia) {margin-bottom: 0rem;}
 .grafia + .grafia {margin-top: 0rem;}
