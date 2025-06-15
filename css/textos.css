@@ -168,9 +168,10 @@ section.poesia, blockquote.poesia {width: fit-content; margin-left: auto; margin
 section.poesia p {text-indent: 0;}
 section.poesia h4, section.poesia h5, section.poesia h6 {text-align: left; margin-left: 0;}
 
-img.imprensa {display: block; width: 30%; height: auto; margin: 2rem; max-width: 200px; max-height: 75px; min-width: 175px;}
+img.imprensa {display: block; width: 30%; height: auto; margin: 2rem; max-width: 200px; max-height: 65px; min-width: 175px;}
 img.imprensa.longa {max-width: 35%;}
 img.imprensa.direita {margin-left: auto; margin-right: 0;}
+img.imprensa.linhadupla {max-height: 75px;}
 
 .recuado {text-align: justify; text-indent: 0; margin-left: 40%; margin-right: 0;}
 .recuo.curto {margin-left: 4rem; text-indent: 0;}
@@ -194,7 +195,7 @@ blockquote {margin: 1.25rem 10%;}
 i > em, em > em, i > cite, em > cite {font-style: normal;}
 
 figure {margin: 2rem auto; width: 70%; max-width: fit-content;}
- img {height: auto;}
+ img {height: auto; object-fit: contain;}
  figure.total {width: 100%; margin: 2rem auto;}
  figure.meio {margin: 2rem auto; width: 50%;}
  figure.esquerda {float: left; margin: .375rem 2rem 1.5rem 0; clear: left; width: 20%;}
@@ -447,11 +448,17 @@ img + img + h2 {clear: both; padding-top: 1rem;}
 @media print {
 body {background-color: white;}
 
+body > nav {background-color: white;}
 body > nav, body > main {box-shadow: none;}
 body > header {border-bottom: 2px solid lightgrey}
 body > footer {border-top: 2px solid lightgrey}
 
 body.capitulo nav.interna {display: none;}
+
+abbr, dfn {text-decoration: none;}
+
+nav img.logo {filter: invert(1); background-color: transparent;}
+.capadelivro, #li-bi, #li-no {display: none;}
 
 a:link {text-decoration: none; color: black;}
 a:visited {text-decoration: none; color: black;}
