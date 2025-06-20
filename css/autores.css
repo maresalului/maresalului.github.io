@@ -135,6 +135,7 @@ blockquote {margin: 1.25rem 0 1.25rem auto; max-width: 50%;}
 .georgiano::before {content: 'Georgiano ';}
 .grego::before {content: 'Grego ';}
 .pinyin::before {content: 'Pinyin ';}
+.polones::before {content: 'Polonês ';}
 .russo::before {content: 'Russo ';}
 .ucraniano::before {content: 'Ucraniano ';}
 .wade-giles::before {content: 'Wade-Giles ';}

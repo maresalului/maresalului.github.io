@@ -79,6 +79,8 @@ header * {text-align: left; margin-left: 0; margin-right: 0;}
 header img {clear: none; float: left; margin-right: 1rem; height: 54px; width: auto;}
  header img:has(+ img) {margin-right: 0.5rem;}
 
+header img + img + img + h2 {clear: both; padding-top: 1rem;}
+
 h1 {margin-top: 0; margin-bottom: 2rem; line-height: 1.25em;}
 h2 {margin-top: 1.5rem; margin-bottom: 0.75rem; color: #06c;}
 h3 {margin-top: 0.75rem; margin-bottom: 0; font-weight: normal; text-transform: lowercase;}
@@ -148,7 +150,10 @@ ol.parentese[type="1"] > li::marker {content: counter(list-item) ") ";}
  ol.parentese[type="A"] > li::marker, ol.parentese[type="a"] > li::marker {content: revert;}
 ul.travessao > li {list-style-type: none; padding-left: 1rem;}
  ul.travessao > li::marker {content: "— ";}
-ol.negrito li::marker, ul.negrito li::marker {font-weight: bold;}
+ol.negrito > li::marker, ul.negrito > li::marker {font-weight: bold;}
+ol > li > ol, ol > li > ul {margin-left: -1.875rem;}
+ol > li > ol.recuada, ol > li > ul.recuada {margin-left: 0;}
+ol ul {list-style: disc;}
 
 
        .editorial {text-align: justify; text-indent: 0; margin: 1rem 0 1rem 40%;}
@@ -161,12 +166,16 @@ section.editorial h4 {text-align: left;}
 section.editorial h5 {text-align: left; margin-left: 1rem;}
 section.editorial hr {margin-top: 2rem; margin-bottom: 2rem;}
 section.editorial ul, section.editorial ol, section.editorial li {margin-bottom: 1rem; margin-top: 1rem;}
+
+section.editorial.direita * {text-align: right;}
+section.editorial.direita p {text-align: justify; text-align-last: right;}
  
 section.epigrafe p {text-indent: 0;}
 
 section.poesia, blockquote.poesia {width: fit-content; margin-left: auto; margin-right: auto;}
 section.poesia p {text-indent: 0;}
 section.poesia h4, section.poesia h5, section.poesia h6 {text-align: left; margin-left: 0;}
+
 
 img.imprensa {display: block; width: 30%; height: auto; margin: 2rem; max-width: 200px; max-height: 65px; min-width: 175px;}
 img.imprensa.longa {max-width: 35%;}
@@ -180,9 +189,13 @@ img.imprensa.linhadupla {max-height: 75px;}
 ol.recuada, ul.recuada {margin-left: 1.5rem;}
 
 .centralizado {text-align: center; text-indent: 0;}
+ section.centralizado * {text-indent: 0; text-align: center;}
 .esquerda {text-align: left;}
 .direita {text-align: right;}
+ section.direita * {text-indent: 0; text-align: right;}
 .justificada {text-align: justify;}
+
+section.negrito * {font-weight: bold;}
 
 img.centralizado {margin-left: auto; margin-right: auto; display: block;}
 
@@ -319,6 +332,16 @@ body.capitulo nav.interna {display: flex; align-items: center; justify-content: 
 body.capitulo .anterior::before {content: "<<< "; margin-right: 2px;}
 body.capitulo .proximo::after {content: " >>>"; margin-left: 2px;}
 
+														/*
+------------
+ SEMÂNTICAS								sem formatação
+------------													*/
+
+
+.subtitulo.data, .subtitulo.origem {}
+.editorial.marxists {}
+
+
 
 
   /*------------------*/
@@ -437,7 +460,8 @@ figure {width: 75%; width: calc(100% - 4rem);}
 figure.total img, table.fixa {width: calc(100% + 10vw); margin-left: -5vw; max-width: revert;}
 .editorial figure.total img {width: 100%; margin-left: 0; max-width: revert;}
 
-img + img + h2 {clear: both; padding-top: 1rem;}
+header img + img + h2 {clear: both; padding-top: 1rem;}
+header img + img + h2:last-child {margin-bottom: 0;}
 }
 
 														/*
@@ -477,6 +501,7 @@ main > figure.direita:last-child {float: none; margin-right: 0; margin-left: aut
 main > figure.esquerda:last-child {float: none; margin-left: 0; margin-right: auto;}
 header a:last-child h2 {margin-bottom: 2.25rem;}
 header > h2:last-child {margin-bottom: 2.25rem;}
+header img + img + img + h2:last-child {margin-bottom: 0;}
 main > *:last-child, footer > *:last-child {margin-bottom: 0;}
 footer > *:first-child {margin-top: 0;}
 .note:has(b:only-child):not([id]) {margin-bottom: 2.25rem;}
