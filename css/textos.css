@@ -330,8 +330,8 @@ body.capitulo section.editorial {margin-top: 0;}
 body.capitulo section.editorial + h4 {margin-top: 2.875rem;}
 
 body.capitulo nav.interna {display: flex; align-items: center; justify-content: space-between; font-weight: bold; margin-top: 1.5rem; margin-bottom: 3.25rem; width: 100%; line-height: 1.5em;}
-body.capitulo .anterior::before {content: "<<< "; margin-right: 2px;}
-body.capitulo .proximo::after {content: " >>>"; margin-left: 2px;}
+body.capitulo .anterior::before {content: "← "; margin-right: 3px;}
+body.capitulo .proximo::after {content: " →"; margin-left: 3px;}
 
 														/*
 ------------
@@ -339,7 +339,7 @@ body.capitulo .proximo::after {content: " >>>"; margin-left: 2px;}
 ------------													*/
 
 
-.subtitulo.data, .subtitulo.origem {}
+.subtitulo.data, .subtitulo.origem, .subtitulo.tipo {}
 .editorial.marxists {}
 
 
@@ -548,7 +548,7 @@ h6 {font-size: 1rem;}
 p, ol, ul, li, table, dt, dd, .subtitulo, .parte, caption.titulo {font-size: 1rem;}
 .note, .menor, .epigrafe p, footer table, footer blockquote p, label, footer li, footer li p {font-size: 0.875rem;}
 aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao, .recomendacao li, .toc.subtitulo {font-size: 0.8325rem;}
-.editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p, table small, .indice section.epigrafe p, td.legenda {font-size: 0.75rem;}
+.editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p, table small, .indice section.epigrafe p, td.legenda, footer label {font-size: 0.75rem;}
  .datas, small {font-size: 0.75rem;}
 
 @media (min-width: 480px) {
@@ -563,7 +563,7 @@ h6 {font-size: 14pt;}
 p, ol, ul, li, table, dt, dd, .subtitulo, .parte, caption.titulo {font-size: 13pt;}
 .note, .menor, .epigrafe p, footer table, footer blockquote p, label, footer li, footer li p {font-size: 12pt;}
 aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao, .recomendacao li, .toc.subtitulo {font-size: 11pt;}
-.editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p, table small, .indice section.epigrafe p, table.legenda {font-size: 10pt;}
+.editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p, table small, .indice section.epigrafe p, table.legenda, footer label {font-size: 10pt;}
  .datas, small {font-size: 9pt;}
 
 header img {height: 60px;}
