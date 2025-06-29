@@ -1,0 +1,55 @@
+body {background-color: whitesmoke; font-family: Verdana, "Open Sans", system-ui, sans-serif; margin: 0 auto; padding-bottom: .5rem; width: 92%; max-width: 955px;
+}
+
+body > * {max-width: none; padding: 0; padding-right: 0; background: whitesmoke;}
+
+body > nav, body > main {box-shadow: none;}
+
+body > nav {background-color: inherit; max-width: fit-content;}
+body > nav {align-items: center; background-color: inherit; display: flex; gap: 2ch; height: unset; margin-left: auto; margin-right: auto;}
+
+header {padding: 3rem 0 0 0;}
+header * {text-align: center; margin-left: auto; margin-right: auto;}
+header img {display: none;}
+
+h1 {margin-bottom: 1.625rem; color: #000099;}
+h2 {margin-bottom: 1.5rem; color: black;}
+h3 {margin-top: 1.5rem; font-weight: bold; text-transform: unset;}
+
+main {padding-top: 3rem}
+
+aside.sobre {display: block; margin: 0; border-top: 2px solid #a90000; border-bottom: 2px solid #a90000; text-align: left; background-color: unset; padding: 0.5rem 0; border-left: none; border-right: none;}
+aside.sobre .info {margin: 0; text-align: justify; font-weight: normal; line-height: 1rem; text-indent: 0;}
+
+a#topp img {display: none;}
+a#topp::before {content: 'MIA'}
+nav #li-bi {content: '';}
+nav #li-bi:before {content: 'Biblioteca';}
+nav #li-no {content: '';}
+nav #li-no:before {content: 'Novidades';}
+nav #li-bi, nav #li-no {width: unset; height: unset; margin: 0;}
+body > nav a, aside.sobre a {text-decoration: underline 1px solid !important;}
+
+body > nav {font-size: 0.675rem; font-weight: bold; line-height: 1.5em;}
+
+main {padding-bottom: 2rem;}
+
+footer {padding-top: 1.25rem; border-top: 2px solid #a90000;}
+
+@media (min-width: 480px) {
+body > nav {font-size: 0.675rem;}
+h1 {font-size: 1.875rem;}
+body.capitulo h1 {font-size: 1.25rem;}
+.maior {font-size: 1.5rem;}
+h2 {font-size: 1.4375rem;}
+h3 {font-size: 1.375rem;}
+h4 {font-size: 1.25rem;}
+h5 {font-size: 1.175rem;}
+h6 {font-size: 1.1rem;}
+p, ol, ul, li, table, dt, dd, .subtitulo, .parte, caption.titulo {font-size: 1rem;}
+.note, .menor, .epigrafe p, footer table, footer blockquote p, label, footer li {font-size: 0.875rem;}
+aside.sobre .info, .toc2, .toc3, .toc4, .toc5, .recomendacao, .recomendacao li, .toc.subtitulo {font-size: 0.8325rem;}
+.editorial, section.editorial p, section.editorial li, section.editorial h4, section.editorial h5, figcaption, caption, body.capitulo nav.interna, div.colab > p, div.autorizada > p, table small, .indice section.epigrafe p {font-size: 0.75rem;}
+ .datas, small {font-size: 0.75rem;}
+}
+
