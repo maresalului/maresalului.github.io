@@ -605,7 +605,7 @@ p, ol, ul, li {line-height: 1.7em; margin: 1.625rem 0;}
 
 nav #li-te {width: auto; height: 21px; margin-left: auto; background: transparent; border: none; cursor: pointer; margin-top: -5px; padding-right: 0px; margin-right: -3px;}
 nav #li-te::before {content: url(sol.svg);}
-nav #li-te::after {content: ''; position: absolute; top: -12px; bottom: -12px; left: -12px; right: -12px; z-index: -1;}
+nav #li-te::after {content: ''; position: absolute; top: -12px; bottom: -12px; left: -12px; right: 0px; z-index: -1;}
 nav #li-te:active {transform: scale(0.75); transition: all .15s;}
 
 body.escuro {background-color: #151515; color: #fafafa;}
