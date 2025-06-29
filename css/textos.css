@@ -603,34 +603,36 @@ p, ol, ul, li {line-height: 1.7em; margin: 1.625rem 0;}
  MODO ESCURO
 -------------													*/
 
-/*
-@media screen and (prefers-color-scheme: dark) {
-body {background-color: #222; color: #fafafa;}
-  main {background-color: #111111;}
-  aside.sobre {background-color: #222;}
-  h1,  h2,  h3,  h4,  h5,  h6 {color: #fafafa;}
-  a.link_ext:link {color: #d66a6a;}
-  a.link_ext:hover {color: #c74545;}
-  a.link_ext:active {color: #d66a6a;}
-  a.link_ext:visited {color: #d66a6a;}
-  a:link {color: #83a1cd;}
-  a:hover {color: #4281a4;}
-  a:active {color: #83a1cd;}
-  a:visited {color: #83a1cd;}
-  img.inversivel,  img.logotopo {filter: invert(1);}
-  img.logo,  img.imutavel {filter: invert(0);}
-  img[src$="audio.png"] {filter: invert(1)}
-  img.bordafoto {background-color: #151515; border-color: black;}
-  img {filter: brightness(0.8) contrast(1.2);}
-  hr.linha-preta {color: #fafafa;}
-  .bordalogotipo {background-color: #141414;}
-  th {border-color: #fafafa;}
-  tr {border-color: #353535;}
-  .celula-cinza {background-color: dimgrey;}
-  body.capitulo h1 {color: #fafafa;}
-  body.capitulo h2 {color: #fafafa;}
-  body > nav {box-shadow: none;}
-}*/
+nav #li-te {width: auto; height: 21px; margin-left: auto; background: transparent; border: none; cursor: pointer; margin-top: -5px; padding-right: 0px; margin-right: -3px;}
+nav #li-te::before {content: url(sol.svg);}
+nav #li-te::after {content: ''; position: absolute; top: -12px; bottom: -12px; left: -12px; right: -12px; z-index: -1;}
+nav #li-te:active {transform: scale(0.75); transition: all .15s;}
+
+body.escuro {background-color: #222; color: #fafafa;}
+ body.escuro main {background-color: #111111;}
+ body.escuro aside.sobre {background-color: #222;}
+ body.escuro h1, body.escuro h2,  body.escuro h3, body.escuro h4, body.escuro h5, body.escuro h6 {color: #fafafa;}
+ body.escuro a.link_ext:link {color: #d66a6a;}
+ body.escuro a.link_ext:hover {color: #c74545;}
+ body.escuro a.link_ext:active {color: #d66a6a;}
+ body.escuro a.link_ext:visited {color: #d66a6a;}
+ body.escuro a:link {color: #83a1cd;}
+ body.escuro a:hover {color: #4281a4;}
+ body.escuro a:active {color: #83a1cd;}
+ body.escuro a:visited {color: #83a1cd;}
+ body.escuro img.inversivel {filter: invert(1);}
+ body.escuro img.logo, body.escuro img.imutavel {filter: invert(0);}
+ body.escuro img[src$="audio.png"] {filter: invert(1)}
+ body.escuro img.bordafoto {background-color: #151515; border-color: black;}
+ body.escuro img {filter: brightness(0.8) contrast(1.2);}
+ body.escuro hr.linha-preta {color: #fafafa;}
+ body.escuro .bordalogotipo {background-color: #141414;}
+ body.escuro th {border-color: #fafafa;}
+ body.escuro tr {border-color: #353535;}
+ body.escuro .celula-cinza {background-color: dimgrey;}
+ body.capitulo.escuro h1 {color: #fafafa;}
+ body.capitulo.escuro h2 {color: #fafafa;}
+ body.escuro > nav {box-shadow: none;}
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

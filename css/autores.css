@@ -150,6 +150,7 @@ blockquote {margin: 1.25rem 0 1.25rem auto; max-width: 50%;}
 .fonte::before {content: 'Fonte: '; font-weight: bold;}
 .fonte.imagem::before {content: 'Fonte da imagem: '; font-weight: bold;}
 .fonte.imagem.fundo::before {content: 'Fonte da imagem de fundo: '; font-weight: bold;}
+.fonte.imagem.avatar::before {content: 'Fonte da imagem-avatar: '; font-weight: bold;}
 
 .datas {font-weight: normal; text-align: right;}
 
@@ -182,6 +183,34 @@ p {line-height: 1.7em; margin: 1.625rem 0;}
 blockquote {margin-right: auto; max-width: 75%;}
 header img {height: 175px;}
 }
+
+														/*
+-------------
+ MODO ESCURO
+-------------													*/
+
+nav #li-te {width: auto; height: 21px; margin-left: auto; background: transparent; border: none; cursor: pointer; margin-top: -5px; padding-right: 0px; margin-right: -3px;}
+nav #li-te::before {content: url(sol.svg);}
+nav #li-te::after {content: ''; position: absolute; top: -12px; bottom: -12px; left: -12px; right: -12px; z-index: -1;}
+nav #li-te:active {transform: scale(0.75); transition: all .15s;}
+
+body.escuro {background-color: #222; color: #fafafa;}
+ body.escuro main {background-color: #111111;}
+ body.escuro h1, body.escuro h2,  body.escuro h3 {color: #fafafa;}
+ body.escuro a.link_ext:link {color: #d66a6a;}
+ body.escuro a.link_ext:hover {color: #c74545;}
+ body.escuro a.link_ext:active {color: #d66a6a;}
+ body.escuro a.link_ext:visited {color: #d66a6a;}
+ body.escuro a:link {color: #83a1cd;}
+ body.escuro a:hover {color: #4281a4;}
+ body.escuro a:active {color: #83a1cd;}
+ body.escuro a:visited {color: #83a1cd;}
+ body.escuro img.inversivel {filter: invert(1);}
+ body.escuro img.logo, body.escuro img.imutavel {filter: invert(0);}
+ body.escuro img {filter: brightness(0.8) contrast(1.2);}
+ body.escuro th {border-color: #fafafa;}
+ body.escuro tr {border-color: #353535;}
+ body.escuro > nav {box-shadow: none;}
 
 /* latin-ext */
 @font-face {font-family: 'Atkinson Hyperlegible'; font-style: italic; font-weight: 400; font-display: swap; src: url(fontes/atkinson/latin-ext-i.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
