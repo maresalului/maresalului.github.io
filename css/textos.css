@@ -134,6 +134,8 @@ aside.sobre .info {margin: 0.25rem 0; text-align: left; font-weight: normal; lin
 .info.formatos a.video::before, 
 .info.formatos a[href$=".epub"]::before  {display: inline-block; vertical-align: text-bottom; image-rendering: pixelated; width: auto; height: 16px; padding-left: 2px; padding-right: 5px;}
 
+sup.ajude {font-weight: bold;}
+
 a[href^="#"] > sup, sup > a[href^="#"] {font-weight: bold; font-style: normal;}
 
 hr {border: 1px solid black;}
@@ -152,8 +154,10 @@ ul.travessao > li {list-style-type: none; padding-left: 1rem;}
  ul.travessao > li::marker {content: "— ";}
 ol.negrito > li::marker, ul.negrito > li::marker {font-weight: bold;}
 ol > li > ol, ol > li > ul {margin-left: -1.875rem;}
+blockquote > ol:only-child {margin-left: -1.875rem;}
 ol > li > ol.recuada, ol > li > ul.recuada {margin-left: 0;}
 ol ul {list-style: disc;}
+ol.total {list-style-position: inside; padding-left: 0; text-indent: 2rem;}
 
 
        .editorial {text-align: justify; text-indent: 0; margin: 1rem 0 1rem 40%;}
