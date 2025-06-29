@@ -608,9 +608,10 @@ nav #li-te::before {content: url(sol.svg);}
 nav #li-te::after {content: ''; position: absolute; top: -12px; bottom: -12px; left: -12px; right: -12px; z-index: -1;}
 nav #li-te:active {transform: scale(0.75); transition: all .15s;}
 
-body.escuro {background-color: #222; color: #fafafa;}
- body.escuro main {background-color: #111111;}
- body.escuro aside.sobre {background-color: #222;}
+body.escuro {background-color: #151515; color: #fafafa;}
+ body.escuro nav {background-color: #151515;}
+ body.escuro main {background-color: #1e1c1c;}
+ body.escuro aside.sobre {background-color: #1e1c1c;}
  body.escuro h1, body.escuro h2,  body.escuro h3, body.escuro h4, body.escuro h5, body.escuro h6 {color: #fafafa;}
  body.escuro a.link_ext:link {color: #d66a6a;}
  body.escuro a.link_ext:hover {color: #c74545;}
