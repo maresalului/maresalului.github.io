@@ -5,19 +5,19 @@
  MRX.css  3.0.0 - novas vitórias virão
  -------  -----   --------------------
 
- Copyright © 2025 Marxists Internet Archive
- Licensed under LGPL-3.0 (https://www.gnu.org/licenses/lgpl-3.0.en.html)
+  Copyright © 2025 Marxists Internet Archive
+  Licensed under LGPL-3.0 (https://www.gnu.org/licenses/lgpl-3.0.en.html)
 
- This stylesheet contains:
+  This stylesheet contains:
 
- - Atkinson Hyperlegible (© 2020, Braille Institute of America, Inc.) — Licensed under SIL Open Font License, Version 1.1. 
-    (https://github.com/googlefonts/atkinson-hyperlegible)
+  - Atkinson Hyperlegible (© 2020, Braille Institute of America, Inc.) — Licensed under SIL Open Font License, Version 1.1. 
+     (https://github.com/googlefonts/atkinson-hyperlegible)
 
- - Derived styles from Ubuntu.com codebase (© 2025, Canonical Ltd) — Licensed under LGPL-3.0.
-    (https://github.com/canonical/ubuntu.com/)
+  - Derived styles from Ubuntu.com codebase (© 2025, Canonical Ltd) — Licensed under LGPL-3.0.
+     (https://github.com/canonical/ubuntu.com/)
 
- - Derived styles from Vanilla Framework (© 2025, Canonical Ltd) — Licensed under LGPL-3.0.
-    (https://github.com/canonical/vanilla-framework/)
+  - Derived styles from Vanilla Framework (© 2025, Canonical Ltd) — Licensed under LGPL-3.0.
+     (https://github.com/canonical/vanilla-framework/)
 
 
 																*/
@@ -611,7 +611,7 @@ nav #li-te:active {transform: scale(0.75); transition: all .15s;}
 body.escuro {background-color: #151515; color: #fafafa;}
  body.escuro nav {background-color: #151515;}
  body.escuro main {background-color: #1e1c1c;}
- body.escuro aside.sobre {background-color: #1e1c1c;}
+ body.escuro aside.sobre {background-color: #1e1c1c; border-color: #4d4d4d;}
  body.escuro h1, body.escuro h2,  body.escuro h3, body.escuro h4, body.escuro h5, body.escuro h6 {color: #fafafa;}
  body.escuro a.link_ext:link {color: #d66a6a;}
  body.escuro a.link_ext:hover {color: #c74545;}
@@ -624,10 +624,7 @@ body.escuro {background-color: #151515; color: #fafafa;}
  body.escuro img.inversivel {filter: invert(1);}
  body.escuro img.logo, body.escuro img.imutavel {filter: invert(0);}
  body.escuro img[src$="audio.png"] {filter: invert(1)}
- body.escuro img.bordafoto {background-color: #151515; border-color: black;}
  body.escuro img {filter: brightness(0.8) contrast(1.2);}
- body.escuro hr.linha-preta {color: #fafafa;}
- body.escuro .bordalogotipo {background-color: #141414;}
  body.escuro th {border-color: #fafafa;}
  body.escuro tr {border-color: #353535;}
  body.escuro .celula-cinza {background-color: dimgrey;}
@@ -635,29 +632,4 @@ body.escuro {background-color: #151515; color: #fafafa;}
  body.capitulo.escuro h2 {color: #fafafa;}
  body.escuro > nav {box-shadow: none;}
 
-/*
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠐⠀⠀⠂⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⠀⠠⠀⣀⢄⡠⣔⢬⠃⠵⠯⠂⡠⢦⠀⠀⡀⠄⠄⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⢀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⢀⡔⣌⣔⣏⠋⠄⡪⡹⡝⠋⡛⣃⠃⠆⡅⡄⠂⠀⠐⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐
-⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡴⡰⣷⠾⡃⡌⢍⠉⠈⠈⠀⠈⠀⠉⠂⠀⠀⠀⠀⠄⠀⠀⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠂⠀⠀⠀⠀⠀⡼⣷⣽⡋⠉⠁⠀⠀⠀⠀⠀⠐⠀⠀⠀⡀⠄⠀⠀⠐⠈⠀⢀⠄⢈⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀			-------		-----			
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⢄⡔⣿⣯⠋⠂⠀⠈⠀⠀⢄⣠⡌⡤⡆⣄⠦⣧⡒⠠⠄⢐⡀⠀⠀⠀⠀⠀⡠⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀			MRX.css		2.9.9
-⠀⠀⠀⢀⠀⠀⠀⠀⠈⠄⠑⣯⡟⡗⠳⠀⠀⠀⠀⣀⡨⣿⡯⡋⡍⡉⢙⠮⠹⢗⠟⡓⢣⢥⢂⣁⠄⡀⠃⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠈			
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⣣⣿⠿⡧⠊⠀⠀⠁⡀⣵⡿⠞⡁⠔⠅⠀⠀⠁⠀⠀⠉⠉⠨⠽⢕⠧⣜⠅⡺⡇⠄⠠⠄⠀⠀⠀⠀⠀⠀⠀⠀			"Novas vitórias virão"
-⠀⠀⠀⠀⢈⠀⠂⠀⠂⡸⣾⣷⠠⠀⡀⠀⣠⣚⡕⡁⠁⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠕⡥⠭⣦⢈⡄⠀⠁⠀⠀⠀⠁⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠐⠀⢦⡧⡇⡀⠀⡂⠀⠂⣝⣃⠁⠠⠁⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠈⢣⡕⡷⡕⠀⠱⠑⠀⠀⠀⠀⠀⠀			base		2.3.0
-⠀⠀⠀⠀⠀⠀⠀⠐⠌⣻⡯⡃⡀⡀⠀⠀⠁⠾⡕⠅⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡽⠭⣻⠢⠀⠀⠀⠀⠀⠀⠀⠈			contraste	2.4.1
-⠀⠀⠀⠁⠀⠈⠠⠀⠠⣿⡣⡀⠀⠀⠀⠀⠐⢿⡅⡋⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠠⡿⠵⠀⠀⠀⠀⠄⢀⠀⠀⠀			orientação	3.0.0
-⠀⠀⠀⡀⠀⠀⠐⠀⠤⣾⡏⡒⠄⠀⠀⠀⡈⠉⠟⠿⣷⣯⠦⠆⠤⠠⢀⣀⠄⠀⠀⢀⠀⠁⠀⠀⠀⠀⠆⣜⣷⠀⠃⠀⠀⠀⠀⠀⠀⠀			----------	-----
-⠀⠀⠀⠀⠀⠀⠀⡘⠀⢘⣷⠓⠀⡀⠀⠀⠁⠀⠀⠉⠈⢚⡋⡲⡧⠍⣨⣀⠄⠀⠀⠀⠀⠀⠀⠀⣀⢡⣹⣞⡗⠉⠂⠠⠀⠀⠀⠀⠁⠀
-⠀⠀⠀⠀⠀⠀⠀⢠⠀⢼⣽⡷⡄⠈⠂⠁⠀⠀⠀⠀⠁⠄⠐⠊⡣⢆⠀⢒⠄⠀⠀⠀⠀⠀⠀⠈⡁⢅⣏⡟⢥⠀⠀⠀⠀⠀⠀⠀⠀⠂
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠏⡻⣿⣃⡔⠀⠂⡀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⡀⠀⠠⢰⠂⠥⠶⡿⡛⡁⠂⠀⠂⡀⠄⠀⠀⠈⠀⠀
-⠀⠀⠉⠀⠀⠀⠀⠀⠁⠁⡩⣽⠧⢁⡌⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⢀⡀⠠⠆⢨⣷⢭⡙⠨⠠⡀⠁⠐⠀⠀⠈⠀⠁⠀⢄⢁
-⠀⠀⠀⠀⠀⠀⠀⠀⠄⠁⠡⡛⢪⠝⣦⣥⡢⠀⠀⠀⡀⠀⠀⡀⠀⠀⡔⠔⠔⢀⣥⣡⢆⡜⣟⠌⡀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠀
-⠀⠄⠀⠀⠀⠀⠀⠀⠀⠀⠉⠝⣅⡀⣴⣽⡽⡇⢧⡮⢂⣀⡶⣊⢪⢙⠘⣽⡕⣋⠥⡏⠅⡁⠀⠀⠁⠀⠀⠢⡀⠀⠀⠀⠀⠁⠀⠀⠀⠐
-⠀⠀⠀⠀⠀⠀⠀⠀⠁⠠⠀⠀⠈⠌⠀⠑⢉⠻⠋⠳⢥⠧⡤⠅⠂⠏⢁⠼⡯⠋⠈⠀⠀⠀⠀⠀⠠⠀⠀⠀⠀⠀⠀⠀⠀⠔⠀⠂⠀⠀
-⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠢⠁⣑⠎⠄⡠⡆⡰⡁⠸⠋⠉⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠨⠐⠈⠀⠀⠀⠀⠀⠄⠀⠄⠀
-⠀⠀⠁⡀⠀⠀⠀⠠⠀⠀⠀⠀⠀⠂⠀⠀⠈⠁⠁⠈⠀⠁⠀⠄⠀⡄⠀⠀⠀⠀⠀⠑⠀⠀⠂⠀⠀⠄⠀⠀⠀⠄⠄⠂⠁⠀⠀⠀⠀⠀
-⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠠⠂⠀⠀⠀⠄⠀⠀⠀⠀⠐⠐⠀⠀⠀⠀⠀⠀⠀											*/
+/* junte-se aos voluntários da seção lusófona: marxists.org/portugues/admin/voluntariado.htm */
