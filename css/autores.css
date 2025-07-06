@@ -139,8 +139,9 @@ blockquote {margin: 1.25rem 0 1.25rem auto; max-width: 50%;}
 .russo::before {content: 'Russo ';}
 .ucraniano::before {content: 'Ucraniano ';}
 .wade-giles::before {content: 'Wade-Giles ';}
-*[lang="ru"], *[lang="el"], *[lang="zh"], *[lang="ba"] {font-family: system-ui;}
+*[lang="ru"], *[lang="el"], *[lang="zh"], *[lang="ba"], *[lang="uk"] {font-family: system-ui;}
 *[lang="ar"] {font-family: "serif";}
+*[lang]::before {font-family: "Atkinson Hyperlegible", Verdana, "Open Sans", system-ui, sans-serif;}
 
 .grafia:has(+ .grafia) {margin-bottom: 0rem;}
 .grafia + .grafia {margin-top: 0rem;}
