@@ -1,0 +1,1 @@
+h2::after {content: ''; display: inline-block; width: 18px; height: 18px; background-image: url(../verificado.svg); background-size: contain; background-repeat: no-repeat; background-position: center; vertical-align: middle; margin-bottom: 2px; margin-left: 5px;}
