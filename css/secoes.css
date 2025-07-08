@@ -1,0 +1,232 @@
+@charset "UTF-8";
+																/*
+
+ -------  -----   --------------------
+ MRX.css  3.0.0 - novas vitórias virão
+ -------  -----   --------------------
+
+ Copyright © 2025 Marxists Internet Archive
+ Licensed under LGPL-3.0 (https://www.gnu.org/licenses/lgpl-3.0.en.html)
+
+ This stylesheet contains:
+
+ - Atkinson Hyperlegible (© 2020, Braille Institute of America, Inc.) — Licensed under SIL Open Font License, Version 1.1. 
+    (https://github.com/googlefonts/atkinson-hyperlegible)
+
+ - Derived styles from Ubuntu.com codebase (© 2025, Canonical Ltd) — Licensed under LGPL-3.0.
+    (https://github.com/canonical/ubuntu.com/)
+
+ - Derived styles from Vanilla Framework (© 2025, Canonical Ltd) — Licensed under LGPL-3.0.
+    (https://github.com/canonical/vanilla-framework/)
+
+
+																*/
+
+:root {font-size: 12pt;}
+
+body {
+background-color: #f3f3f3; 
+color: black; 
+font-family: "Atkinson Hyperlegible", Verdana, "Open Sans", system-ui, sans-serif; 
+margin: 0; 
+width: 100%;} 
+
+body > * {max-width: 860px; margin-left: auto; margin-right: auto; padding-left: 5%; padding-right: 5%; padding-left: max(calc((100vw - 860px) / 2), 5vw); padding-right: max(calc((100vw - 860px) / 2), 5vw);}
+
+
+														/*
+-----------
+ ELEMENTOS
+-----------													*/
+
+p {line-height: 1.75em; text-align: justify; text-indent: 2rem; margin: 1.5rem 0;}
+
+a, a.link_ext {background: transparent;}
+
+a:link, a:visited, a:hover {color: #000099; text-decoration: none;}
+a:active {color: #06c; text-decoration: none;}
+
+a.link_ext:hover {color: #8b008b;}
+a.link_ext:active {color: #8a2be2;}
+a.link_ext:link, a.link_ext:visited {color: #751157;}
+nav, header, main, footer {display: block;}
+
+
+														/*
+-----
+ NAV
+-----														*/
+
+nav {margin: 0 0 3rem 0; text-indent: 0;}
+body nav {align-items: center; background-color: transparent; display: flex; gap: 0; height: 50px; margin-left: auto; margin-right: auto;}
+
+body nav a {margin: 0; display: block; text-decoration: none;}
+nav img.logo {background-color: #a90000; display: block; width: auto; height: 24px; padding: 12px 16px 14px 16px;}
+a#li-bi {content: url(bib.svg); width: 21px; height: auto; margin: 2rem;}
+a#li-no {content: url(nov.svg); width: 21px; height: auto;}
+
+														/*
+--------
+ HEADER
+--------													*/
+
+header {padding-block: 0 3rem; color: white; background-color: #000; background-position: center; background-repeat: no-repeat; background-size: cover; box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7); background-image: url(../img/vereinigt.jpg);}
+header p {margin-top: 0; margin-bottom: 0.5rem;}
+header * {text-indent: 0;}
+h1 {margin: 0; text-align: left;}
+header a:link, header a:visited {text-decoration: none; color: white;}
+													/*
+------
+ MAIN
+------													*/
+
+main {padding-top: 3rem; padding-bottom: 3rem;}
+
+blockquote {margin: 1.25rem 0 1.25rem 40%;}
+ blockquote p {text-indent: 0;}
+ p.autor {text-align: right; font-weight: bold; letter-spacing: 0.125rem; text-transform: uppercase;}
+
+main > *:first-child {margin-top: 0 !important;}
+
+h2 {text-align: center; margin: 2rem 0;}
+.subtitulo {text-indent: 0; margin-top: 0.875rem; margin-bottom: 2rem; text-align: center;}
+
+h2:has(+ .subtitulo), h2:has(+ .colab) {margin-bottom: 0.875rem;}
+
+div.colab, div.autorizada {display: block; margin: 1rem 3.25rem; text-align: center;}
+ div.colab p {margin: 1rem; text-align: center; text-indent: 0; line-height: 1.625em;}
+ img.colab {margin: 0 auto 1.125rem auto; width: auto; height: auto; max-width: 35%; max-height: 150px; display: block;}
+
+table {margin: 2rem 0; line-height: 1.375rem; border-collapse: collapse; width: 100%;}
+
+td {padding: 0.75rem 0.125rem;}
+
+th {text-align: left; padding-top: 3rem; padding-bottom: 0.75rem; border-bottom: 2px solid black;}
+
+tr {border-bottom: 1px solid #d9d9d9;}
+
+tr:first-child th {padding-top: 1.5rem;}
+
+tr td img {width: 100%; height: auto; padding: 0;}
+
+td:nth-child(2n) {padding: 0 0 0 1rem; margin: 0; text-align: right; line-height: 1.5rem; vertical-align: bottom; width: 60px;}
+
+td.capitulo {padding-left: 0.25rem;}
+td.capitulo::before {content: '⤷'; padding-right: 0.5rem;}
+
+abbr, dfn {font-style: inherit; text-decoration: underline 1px dotted; cursor: help;}
+
+
+.fonte {margin-bottom: .25rem; margin-top: .25rem;}
+.fonte::before {content: 'Fonte: '; font-weight: bold;}
+.fonte.imagem::before {content: 'Fonte da imagem: '; font-weight: bold;}
+.fonte.imagem.fundo::before {content: 'Fonte da imagem de fundo: '; font-weight: bold;}
+.fonte.imagem.avatar::before {content: 'Fonte da imagem-avatar: '; font-weight: bold;}
+
+.datas {font-weight: normal; text-align: right;}
+
+														/*
+-------
+ FONTE
+-------														*/
+
+									/* tamanho dinâmico */
+
+h1 {font-size: 1.8rem;}
+body.capitulo h1 {font-size: 1.625rem;}
+.maior {font-size: 1.5rem;}
+h2 {font-size: 1.175rem;}
+header p {font-size: 1rem;}
+h4 {font-size: 1.25rem;}
+h5 {font-size: 1.175rem;}
+h6 {font-size: 1rem;}
+p, table {font-size: 1rem;}
+.note {font-size: 0.875rem;}
+.colab p, .menor, .capitulo, blockquote p {font-size: 0.8325rem;}
+.editorial,  {font-size: 0.75rem;}
+.datas, small, blockquote .autor {font-size: 0.75rem;}
+
+@media (min-width: 480px) {
+h1 {font-size: 24pt;}
+body.capitulo h1 {font-size: 20pt;}
+.maior {font-size: 18pt;}
+h2 {font-size: 16pt;}
+header p {font-size: 14pt;}
+h4 {font-size: 16pt;}
+h5 {font-size: 15pt;}
+h6 {font-size: 14pt;}
+p, table {font-size: 13pt;}
+.note {font-size: 12pt;}
+.colab p, .menor, .capitulo, blockquote p {font-size: 11pt;}
+.editorial {font-size: 10pt;}
+.datas, small, blockquote .autor {font-size: 9pt;}
+
+header img {height: 60px;}
+p, ol, ul, li {line-height: 1.7em; margin: 1.625rem 0;}
+}
+
+@media (max-width: 480px) {
+header img {height: 175px;}
+blockquote {margin: 4rem 10%;}
+}
+														/*
+---------
+ AJUSTES
+---------													*/
+
+main > blockquote:first-child > *:first-child {margin-top: 0;}
+
+														/*
+-------------
+ MODO ESCURO
+-------------													*/
+
+nav #li-te {width: auto; height: 21px; margin-left: auto; background: transparent; border: none; cursor: pointer; margin-top: -5px; padding-right: 0px; margin-right: -3px;}
+nav #li-te::before {content: url(sol.svg);}
+nav #li-te::after {content: ''; position: absolute; top: -12px; bottom: -12px; left: -12px; right: 0px; z-index: -1;}
+nav #li-te:active {transform: scale(0.75); transition: all .15s;}
+
+body.escuro {background-color: #151515; color: #fafafa;}
+ body.escuro nav {background-color: #151515;}
+ body.escuro header.fundo {box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0,0,0,.19);}
+ body.escuro main {background-color: #1e1c1c;}
+ body.escuro h1, body.escuro h2,  body.escuro h3 {color: #fafafa;}
+ body.escuro a.link_ext:link {color: #d66a6a;}
+ body.escuro a.link_ext:hover {color: #c74545;}
+ body.escuro a.link_ext:active {color: #d66a6a;}
+ body.escuro a.link_ext:visited {color: #d66a6a;}
+ body.escuro a:link {color: #83a1cd;}
+ body.escuro a:hover {color: #4281a4;}
+ body.escuro a:active {color: #83a1cd;}
+ body.escuro a:visited {color: #83a1cd;}
+ body.escuro img.inversivel {filter: invert(1);}
+ body.escuro img.logo, body.escuro img.imutavel {filter: invert(0);}
+ body.escuro img {filter: brightness(0.8);}
+ body.escuro th {border-color: #fafafa;}
+ body.escuro tr {border-color: #353535;}
+ body.escuro > nav {box-shadow: none;}
+
+/* latin-ext */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: italic; font-weight: 400; font-display: swap; src: url(fontes/atkinson/latin-ext-i.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+
+/* latin */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: italic; font-weight: 400; font-display: swap; src: url(fontes/atkinson/latin-i.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+
+/* latin-ext */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: italic; font-weight: 700; font-display: swap; src: url(fontes/atkinson/latin-ext-bi.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+
+/* latin */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: italic; font-weight: 700; font-display: swap; src: url(fontes/atkinson/latin-bi.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+
+/* latin-ext */
+
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: normal; font-weight: 400; font-display: swap; src: url(fontes/atkinson/latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+
+/* latin */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: normal; font-weight: 400; font-display: swap; src: url(fontes/atkinson/latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+
+/* latin-ext */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: normal; font-weight: 700; font-display: swap; src: url(fontes/atkinson/latin-ext-b.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+
+/* latin */
+@font-face {font-family: 'Atkinson Hyperlegible'; font-style: normal; font-weight: 700; font-display: swap; src: url(fontes/atkinson/latin-b.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
