@@ -76,8 +76,9 @@ h1, .subtitulo, .parte, h2, h3, h4, h5, h6 {font-weight: bold; text-align: cente
 
 header {padding-top: 3.25rem; padding-bottom: 3.25rem;}
 header * {text-align: left; margin-left: 0; margin-right: 0;}
-header img {clear: none; float: left; margin-right: 1rem; height: 54px; width: auto;}
- header img:has(+ img) {margin-right: 0.5rem;}
+header img {clear: none; float: left; margin-right: 1rem; height: 54px; width: auto; margin-bottom: 3rem;}
+ header img:has(+ img) {margin-right: 0.5rem; margin-bottom: 0;}
+ header img + img {margin-bottom: 0;}
 
 header img + img + img + h2 {clear: both; padding-top: 1rem;}
 
@@ -259,6 +260,7 @@ dd {line-height: 1.75em; text-align: justify;}
 dd p {text-indent: 0; margin-top: 0.8125rem; margin-bottom: 0.8125rem;}
 
 u.erro {text-decoration: red wavy underline;}
+u.ilegivel {text-decoration: 1px black underline; text-decoration-skip-ink: none;}
 
 
 														/*
@@ -283,6 +285,7 @@ footer {border-top: 2px solid transparent; padding-top: 3.25rem; padding-bottom:
  footer td {background-color: transparent;}
  footer blockquote p, footer ol, footer ul, footer li, footer li p {margin-top: 1.25rem; margin-bottom: 1.25rem; line-height: 1.625em;}
  footer ol {padding-left: 2rem;}
+ footer h5 {margin-left: 0; margin-right: 0;}
 
 div.colab, div.autorizada {display: block; margin: 3.25rem auto; text-align: center;}
  div.colab > p, div.autorizada > p {margin: 0 0 .25rem 0; text-align: center; text-indent: 0; font-weight: bold;}
@@ -345,6 +348,7 @@ body.capitulo .proximo::after {content: " →"; margin-left: 3px;}
 
 .subtitulo.data, .subtitulo.origem, .subtitulo.tipo {}
 .editorial.marxists {}
+u.ilegivel {}
 
 
 
@@ -508,6 +512,7 @@ header a:last-child h2 {margin-bottom: 2.25rem;}
 header > h2:last-child {margin-bottom: 2.25rem;}
 header img + img + img + h2:last-child {margin-bottom: 0;}
 main > *:last-child, footer > *:last-child {margin-bottom: 0;}
+main > *:last-child > *:last-child {margin-bottom: 0;}
 footer > *:first-child {margin-top: 0;}
 .note:has(b:only-child):not([id]) {margin-bottom: 2.25rem;}
 .note:has(a[href^="#"]:last-child:not([id])) {margin-bottom: 2.25rem;}
@@ -516,11 +521,10 @@ p > small:only-child {line-height: 1em;}
 .menosparagrafo:has(+ .menosparagrafo) {margin-bottom: 0.5rem;}
 .indice > main {overflow: hidden;}
 section.poesia:last-child > *:last-child {margin-bottom: 0;}
-main > blockquote:last-child > *:last-child {margin-bottom: 0;}
-main > section:last-child > *:last-child {margin-bottom: 0;}
 header:not(:has(img)) > h2:last-child {margin-bottom: 0;}
 th.cinza.semborda + th.cinza.semborda {border-left: 1px solid transparent;}
 th.cinza.semborda:has(+ th.cinza.semborda) {border-right: 1px solid transparent;}
+h2 a:visited {color: inherit;}
 
 
 									/* recursos visuais para correção */
