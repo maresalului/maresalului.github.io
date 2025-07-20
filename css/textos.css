@@ -78,7 +78,6 @@ header {padding-top: 3.25rem; padding-bottom: 3.25rem;}
 header * {text-align: left; margin-left: 0; margin-right: 0;}
 header img {clear: none; float: left; margin-right: 1rem; height: 54px; width: auto; margin-bottom: 3rem;}
  header img:has(+ img) {margin-right: 0.5rem; margin-bottom: 0;}
- header img + img {margin-bottom: 0;}
 
 header img + img + img + h2 {clear: both; padding-top: 1rem;}
 
@@ -158,7 +157,8 @@ ol > li > ol, ol > li > ul {margin-left: -1.875rem;}
 blockquote > ol:only-child {margin-left: -1.875rem;}
 ol > li > ol.recuada, ol > li > ul.recuada {margin-left: 0;}
 ol ul {list-style: disc;}
-ol.total {list-style-position: inside; padding-left: 0; text-indent: 2rem;}
+ol.total, ul.total {list-style-position: inside; padding-left: 0; text-indent: 2rem;}
+ul.semrecuo {padding-left: 1rem; margin-left: 0;}
 
 
        .editorial {text-align: justify; text-indent: 0; margin: 1rem 0 1rem 40%;}
@@ -235,7 +235,7 @@ table {margin: 1.625rem auto 1.625rem auto; border-collapse: collapse; border: n
  td.cinza {background-color: lightgrey;}
  th.cinza {background-color: grey;}
  td.bordaemcima {border-top: 2px solid black;}
- table.comborda td.legenda {border-left: 1px solid transparent; border-bottom: 1px solid transparent; border-right: 1px solid transparent; padding-top: 1rem; text-align: center;}
+ table td.legenda {border-left: 1px solid transparent; border-bottom: 1px solid transparent; border-right: 1px solid transparent; padding-top: 1rem; text-align: center;}
  table.comborda td.bordaemcima {border-top: 3px solid black;}
  td hr.transparente.breve {margin: 0; padding: 0.25rem;}
 table.comborda, table.comborda th, table.comborda td {border: 1px solid black;}
@@ -328,8 +328,8 @@ main > *:not(p.parte) + p.parte:not(:first-of-type) {margin-top: 4rem;}						/* 
 body.capitulo h1 {font-size: 18pt;}
 
 body.capitulo main h4:first-of-type {margin-top: 1.375rem;}
- p.parte:has(+ h4), p.parte:has(+ h5) {margin-bottom: 1.375rem;}
- p.parte + h4, p.parte + h5 {margin-top: 1.375rem;}
+ p.parte:has(+ h4), p.parte:has(+ h5), p.parte:has(+ h6) {margin-bottom: 1.375rem;}
+ p.parte + h4, p.parte + h5, p.parte + h6 {margin-top: 1.375rem;}
  p.parte + h4:has(+ p.subtitulo.data) {margin-bottom: 1.375rem;}
 
 body.capitulo section.editorial {margin-top: 0;}
@@ -469,6 +469,7 @@ figure {width: 75%; width: calc(100% - 4rem);}
 figure.total img, table.fixa {width: calc(100% + 10vw); margin-left: -5vw; max-width: revert;}
 .editorial figure.total img {width: 100%; margin-left: 0; max-width: revert;}
 
+header img + img {margin-bottom: 0;}
 header img + img + h2 {clear: both; padding-top: 1rem;}
 header img + img + h2:last-child {margin-bottom: 0;}
 }
@@ -524,7 +525,7 @@ section.poesia:last-child > *:last-child {margin-bottom: 0;}
 header:not(:has(img)) > h2:last-child {margin-bottom: 0;}
 th.cinza.semborda + th.cinza.semborda {border-left: 1px solid transparent;}
 th.cinza.semborda:has(+ th.cinza.semborda) {border-right: 1px solid transparent;}
-h2 a:visited {color: inherit;}
+a abbr {cursor: revert;}
 
 
 									/* recursos visuais para correção */
