@@ -1,0 +1,158 @@
+/* CSS Document */
+
+div#logo {
+width: auto;
+height:60px;
+ display: block;
+    margin-left: auto;
+    margin-right: auto;
+	margin-bottom: 0px;
+	text-align:center;
+}
+
+
+div#titulo {
+width: 700px;
+height:auto;
+ display: block;
+    margin-left: auto;
+    margin-right: auto;
+	margin-top:0px;
+	background-color:#E6EFF9;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-weight: bold; font-size: 11pt; color: #000066; font-family: Verdana, Arial, Helvetica, sans-serif; text-indent:20px;
+}	
+
+div#conteudo {
+width: 700px;
+height:auto;
+ display: block;
+    margin-left: auto;
+    margin-right: auto;
+	margin-top:0px;
+	padding-top:10px;
+	padding-bottom:5px;
+	padding-right:0px;
+	padding-left:0px;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	overflow: hidden; 
+	font-size: 10pt; color: #000000; font-family: Verdana, Arial, Helvetica, sans-serif; text-align:justify;
+}	
+
+div#fonte {
+width: 700px;
+height:auto;
+ display: block;
+    margin-left: auto;
+    margin-right: auto;
+	margin-top:7px;
+	margin-bottom:7px;
+	padding-top:2px;
+	text-indent:20px;
+	font-size: 8pt; font-family: Verdana, Arial, Helvetica, sans-serif;
+		
+}	
+
+div#fonte P {
+ font-size: 8pt;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ text-indent: 2em;
+ text-align: left;
+ margin-top: 0pt;
+ margin-bottom: 0pt;
+ margin-left:10px;
+ line-height: 100%;
+}
+
+
+div#rodape {
+width: 700px;
+height:auto;
+ display: block;
+    margin-left: auto;
+    margin-right: auto;
+	margin-top:0px;
+	background-color:#E6EFF9;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-weight: bold; font-size: 10pt; color: #000066; font-family: Verdana, Arial, Helvetica, sans-serif; text-align:center;
+	border-top-style:solid;
+	border-top-width:1px;
+	text-align:center
+}	
+
+
+
+.bordafoto {
+ padding: 7px;
+ background-color: #ffffff;
+ border: 1px solid #dbdbdb;
+ text-align:right;
+ float:right;
+ margin-left:10px;
+ 
+}
+
+
+
+.fonte-vermelha {
+color: #FF0000
+}
+
+a {
+	color: #336699;
+	font-weight: bold;
+	text-decoration: none;
+	}
+	
+a:visited { 
+	color: #003366;
+	
+	text-decoration: none;
+	}	
+
+a:hover {
+	color: #003366;
+	
+	text-decoration: underline;
+	}
+	
+
+
+
+	
+
+
+
+ img.logodic {width: 700px; height: 60px;}
+
+
+
+
+/* =====================================*/
+/* Adjustments for Mobile Devices       */
+/* =====================================*/
+
+@media (max-width: 480px) {
+  p { font-size: 12pt; margin-left: 1%; margin-right: 1%; margin-bottom: 4pt; margin-top: 4pt; line-height: 125%; }
+  p.indentb { margin-left: 6%; margin-right: 1%; }
+  p.quoteb { margin-left: 6%; margin-right: 1%; }
+  p.index { margin-left: 6%; margin-right: 1%; }
+  h1 { font-size: 18pt; margin-left: 1%; margin-right: 1%; }
+  h2 { font-size: 16pt; margin-left: 1%; margin-right: 1%; }
+  h3 { font-size: 14pt; margin-left: 1%; margin-right: 1%; }
+  h4 { font-size: 13pt; }
+  h5 { margin-left: 1%; }
+  h6 { margin-left: 1%; }
+  img.auto {width: auto ; height: auto; }
+  blockquote {margin-left: 1%; }
+  img.Nome-Letra {width: 11px !important;}
+  img.logodic {width: 100% !important; height: auto;}
+  img.bordafoto {width: 15% !important; height: auto; padding: 0; border: 0;}
+  div {max-width: 95% !important;}
+  div#logo {height: auto; margin-top: 0; margin-bottom: 0;}
+  div.logo {height: auto;}
+  body {margin-top: 0; margin-bottom: 0;}
+}

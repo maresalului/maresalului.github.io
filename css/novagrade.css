@@ -1,0 +1,153 @@
+html {
+font-size: 16px;
+}
+
+body {
+margin: 0 0 3rem 0;
+padding: 0;
+font-family: Verdana, "Open Sans", sans-serif, Helvetica, Arial;
+}
+
+header {
+background-color: #000;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7),0 6px 20px 0 rgba(0,0,0,.19);
+box-sizing: border-box;
+color: #fff;
+margin: 0;
+padding: 70px 5vw;
+text-transform: uppercase;
+width: 100%;
+}
+
+.logo {
+text-transform: uppercase;
+line-height: 1.15;
+font-weight: 400;
+margin: 0 0 2.5rem 0;
+font-family: Jost;
+user-select: none;
+}
+
+main {
+margin: 4rem 5vw 10px 5vw;
+}
+
+.aviso {font-size: 0.825rem; text-align: center; margin: 2rem 10%; line-height: 150%;}
+blockquote {margin: 4rem 0 4rem 50%; line-height: 1.25rem;} 
+blockquote > p {text-align: justify; font-size: 0.75rem;}
+blockquote p.autor {text-align: right; font-size: 0.625rem; font-weight: bold; letter-spacing: 5px; text-transform: uppercase;}
+
+div.logo a {
+color: white;
+text-decoration: none;
+}
+
+a {
+text-decoration: none;
+color: #009;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+b {
+font-weight: 600;
+}
+
+h1 {
+font-size: 1.75rem;
+font-weight: 600;
+margin: 0.5rem 0 0 0;
+text-align: left;
+}
+
+h2 {
+font-size: 1rem;
+font-weight: 400;
+margin: 2.5rem 0 0 0;
+text-align: left;
+}
+
+h2 a {color: white; text-decoration: none;}
+
+h3 {
+text-align: center;
+margin: 4rem 1rem 1rem 1rem;
+}
+
+h4 {
+text-align: center;
+margin-block: 4rem 2rem;
+}
+
+div.grade {
+color: #444;
+display: grid;
+font-size: 0.8rem;
+gap: 4rem 1rem;
+grid-template-columns: repeat(auto-fill,minmax(190px,1fr));
+margin: 4rem 0 0 0;
+padding: 0;
+}
+
+
+
+
+/* artigo grid */
+
+.grade article {
+text-align: center;
+padding: 0;
+display: inline-grid;
+margin: 0;
+}
+
+.grade article:target {border: 1px solid lightgrey;}
+
+article > a {
+margin: 0;
+padding: 0;
+}
+
+article p {
+margin-top: 1rem;
+margin-bottom: 0.25rem;
+}
+
+article p.subtitulo, article p.autor {font-size: 0.5rem; margin-top: 0.25rem;}
+
+article p.colecao {font-size: 0.5rem; margin-top: 1.125rem;}
+article p.parte {font-size: inherit; margin-top: 0.25rem; margin-bottom: 0.25rem;}
+
+article img {
+height: 170px;
+margin: 0;
+object-fit: cover;
+width: 120px;
+border: 1px solid black;
+}
+
+img.horizontal {
+object-fit: contain;
+}
+
+.indicacao {text-align: left; margin: 0.75rem 0 0.75rem 0; font-weight: bold; font-size: 0.875rem;}
+h3.indicacao {font-weight: normal; text-transform: uppercase; margin-top: 3rem; margin-bottom: 1rem;}
+
+.subtitulo {font-size: 0.875rem; text-align: center;}
+
+.espacado {margin-top: 2rem; margin-bottom: 2rem;}
+
+@media (max-width:480px) {
+body {margin: 0 0 4rem 0;}
+header {padding: 40px;}
+div.logo {font-size: 0.75rem;}
+h1 {font-size: 1.5rem;}
+main {margin: 1rem 2.5rem;}
+div.grade {gap: 3rem 2rem; grid-template-columns: repeat(auto-fill,minmax(130px,1fr));}
+blockquote {margin: 4rem 10%;} 
+}

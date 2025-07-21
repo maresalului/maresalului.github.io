@@ -1,0 +1,119 @@
+/* =====================================*/
+/* Adjustments for Mobile Devices       */
+/* =====================================*/
+
+@media (max-width: 480px) {
+  p { font-size: 12pt; margin-left: 1%; margin-right: 1%; margin-bottom: 4pt; margin-top: 4pt; line-height: 125%; }
+  p.indentb { margin-left: 6%; margin-right: 1%; }
+  p.quoteb { margin-left: 6%; margin-right: 1%; }
+  p.index { margin-left: 6%; margin-right: 1%; }
+  h1 { font-size: 18pt; margin-left: 1%; margin-right: 1%; }
+  h2 { font-size: 16pt; margin-left: 1%; margin-right: 1%; }
+  h3 { font-size: 14pt; margin-left: 1%; margin-right: 1%; }
+  h4 { font-size: 13pt; }
+  h5 { margin-left: 1%; }
+  h6 { margin-left: 1%; }
+  img { width: 150px; height: auto; }
+  img.auto {width: 50%; height: auto; }
+  img.larga {width: 300px; height: auto;}
+  blockquote {margin-left: 1%; }
+  .sugestao {text-align: center; text-indent: 0; display: block !important;}
+}
+
+BODY {
+ color: #000000;
+ background-color: whitesmoke;
+ font-family: Verdana, garamond, sans-serif;
+ margin-left: 4%;
+ margin-right: 4%;
+ margin-top: 0;
+}
+
+ 
+ A:link { color: #000099; background: transparent; }
+ A:visited { color:#333399; background: transparent; }
+ A:hover { color: #FF3300; background: transparent; }
+ A:active { color: #0000FF; background: transparent; }
+
+
+P {
+ font-size: 12pt;
+ font-family: Verdana, 'Times New Roman', Times, sans-serif;
+ text-indent: 2em;
+ text-align: justify;
+ line-height: 140%;
+}
+
+
+HR {
+ color: #FF0000;
+}
+
+.link {
+ text-align: center;
+ text-indent: 0;
+ font-size: 11pt;
+ font-weight: bold;
+}
+ 
+ .toplink-centro {
+ text-align: center;
+ text-indent: 0;
+ font-size: 8pt;
+ font-weight: bold;
+ margin-top: 0pt;
+ }
+ 
+ .tabela_datas {
+ font-size: 8pt;
+ text-align: center;
+ font-weight: normal;
+ }
+ 
+ .datas {
+ font-size: 8pt;
+ text-align: right;
+ font-weight: normal;
+ 
+ }
+
+.centralizado {
+ text-align: center;
+ text-indent: 0;
+}
+
+p.lapide {
+ font-size: 8pt;
+ text-align: justify;
+ text-indent: 0;
+ margin-top: 2.5em;
+ margin-right: 10%;
+ margin-left: 10%;
+ margin-bottom: 2.5em;
+}
+	
+.tabela-obras {
+
+padding: 4px;
+margin-left:auto;
+margin-right:auto;
+border-spacing: 4px;
+padding-bottom: 4px;
+padding-left: 4px;
+padding-right: 4px;
+padding-top: 4px;
+
+}
+
+.celula-cinza {
+background-color:#CCCCCC;
+text-align:center;
+font-size: 11pt;
+font-weight: bold;
+}
+
+.sugestao {display: none;} 
+
+img.heading { margin: 2em; }
+div.section-img {text-align: center}
+
