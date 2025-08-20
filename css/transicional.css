@@ -32,6 +32,25 @@ figure.meio + figure.meio {margin-top: 4rem;}
 
 .editorial, section.editorial p, section.editorial h4, section.editorial h5, figcaption, caption {font-size: 0.75rem;}
 
+table {margin: 1.625rem auto 1.625rem auto; border-collapse: collapse; border: none;}
+ th {border: none; font-weight: bold; text-align: center; padding: 0.5rem 1rem; background-color: black; color: white;}
+ th a:link, th a:visited {color: white;}
+ th[scope="row"] a:link, th a:visited {color: revert;}
+ td {border: none; color: black; padding: 0.5rem 1rem; background-color: white;}
+ th[scope="row"] {background: lightgrey; color: black; text-align: left;}
+ th > small {font-weight: normal;}
+ caption {caption-side: bottom; margin-top: 1rem;}
+ caption.titulo {caption-side: top; text-align: left; margin-bottom: 1rem; font-weight: bold; margin-top: 0; max-width: 90%; max-width: min(860px, 90vw)} /* a lógica do max-width ainda é experimental. há que recalcular */
+ td.cinza {background-color: lightgrey;}
+ th.cinza {background-color: grey;}
+ td.bordaemcima {border-top: 2px solid black;}
+ table td.legenda {border-left: 1px solid transparent; border-bottom: 1px solid transparent; border-right: 1px solid transparent; padding-top: 1rem; text-align: center;}
+ table.comborda td.bordaemcima {border-top: 3px solid black;}
+ td hr.transparente.breve {margin: 0; padding: 0.25rem;}
+table.comborda, table.comborda th, table.comborda td {border: 1px solid black;}
+table.colada td, table.colada th {padding: 0.5rem 0;}
+table.fixa {width: 100%; table-layout: fixed;}
+
 @media (max-width: 480px) {
 img {max-width: 150px; height: auto;}
 img.auto {width: auto; height: auto;}

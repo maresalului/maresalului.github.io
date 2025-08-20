@@ -19,6 +19,9 @@
   - Derived styles from Vanilla Framework (© 2025, Canonical Ltd) — Licensed under LGPL-3.0.
      (https://github.com/canonical/vanilla-framework/)
 
+  - Material Icons (© 2020, Google) — Licensed under the Apache License Version 2.0.
+     (https://github.com/google/material-design-icons)
+
 
 																*/
 
@@ -159,6 +162,8 @@ ol > li > ol.recuada, ol > li > ul.recuada {margin-left: 0;}
 ol ul {list-style: disc;}
 ol.total, ul.total {list-style-position: inside; padding-left: 0; text-indent: 2rem;}
 ul.semrecuo {padding-left: 1rem; margin-left: 0;}
+ul.bibliografia {padding: 0;}
+ul.bibliografia li::marker {content: none;}
 
 
        .editorial {text-align: justify; text-indent: 0; margin: 1rem 0 1rem 40%;}
@@ -170,13 +175,18 @@ section.editorial p, section.editorial h4, section.editorial h5, .epigrafe p {te
 section.editorial h4 {text-align: left;}
 section.editorial h5 {text-align: left; margin-left: 1rem;}
 section.editorial hr {margin-top: 2rem; margin-bottom: 2rem;}
-section.editorial ul, section.editorial ol, section.editorial li {margin-bottom: 1rem; margin-top: 1rem;}
+section.editorial ul, section.editorial ol {margin-bottom: 1rem; margin-top: 1rem; margin-left: -1.5rem;}
+section.editorial li {margin-bottom: 1rem; margin-top: 1rem; line-height: 1.75em;}
 
 section.editorial.direita * {text-align: right;}
 section.editorial.direita p {text-align: justify; text-align-last: right;}
  
 section.epigrafe p {text-indent: 0;}
        .epigrafe.direita p {text-align: right;}
+
+.editorial p.atalho {margin-left: auto; margin-right: 0;}
+ .atalho {text-align: right; font-weight: bold; max-width: fit-content; border-bottom: 1px dotted blue;}
+ .atalho a::before {content: '↙ ';}
 
 section.poesia, blockquote.poesia {width: fit-content; margin-left: auto; margin-right: auto;}
 section.poesia p {text-indent: 0;}
@@ -468,6 +478,7 @@ img.imprensa.longa {max-width: 50%;}
 figure {width: 75%; width: calc(100% - 4rem);}
 figure.total img, table.fixa {width: calc(100% + 10vw); margin-left: -5vw; max-width: revert;}
 .editorial figure.total img {width: 100%; margin-left: 0; max-width: revert;}
+.editorial p.atalho {margin-left: revert; margin-right: 0; text-align: left; margin-bottom: 1.75rem;}
 
 header img + img {margin-bottom: 0;}
 header img + img + h2 {clear: both; padding-top: 1rem;}
